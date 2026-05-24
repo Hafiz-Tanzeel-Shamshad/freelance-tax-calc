@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Launch Checklist — FreelanceTaxCalc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"DM Sans",sans-serif;font-size:15px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;padding:40px 24px}
+.container{max-width:900px;margin:0 auto}
+h1{font-family:"DM Serif Display",serif;font-size:32px;color:#0A1628;margin-bottom:8px}
+h1 span{color:#00C896}
+.subtitle{color:#6B7280;margin-bottom:32px;font-size:16px}
+h2{font-family:"DM Serif Display",serif;font-size:22px;color:#0A1628;margin:36px 0 16px;padding-top:16px;border-top:2px solid #E8ECF0}
+h2:first-of-type{border-top:none;padding-top:0;margin-top:0}
+h3{font-size:16px;color:#0A1628;margin:16px 0 8px}
+.checklist{list-style:none;margin-bottom:8px}
+.checklist li{padding:8px 12px;margin-bottom:4px;border-radius:8px;background:#fff;border:1px solid #E8ECF0;display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#374151}
+.checklist li .box{width:18px;height:18px;border:2px solid #D1D5DB;border-radius:4px;flex-shrink:0;margin-top:3px;display:inline-block}
+.checklist li .box.done{background:#00C896;border-color:#00C896;position:relative}
+.checklist li .box.done::after{content:'✓';color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+.checklist li .label{flex:1}
+.checklist li .note{font-size:12px;color:#9CA3AF;display:block;margin-top:2px}
+.tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;margin-left:8px}
+.tag-content{background:#E8F8F5;color:#00C896}
+.tag-tech{background:#E8F0FE;color:#1A73E8}
+.tag-seo{background:#F0E8FF;color:#6C5CE7}
+.tag-adsense{background:#FEF3E8;color:#E8A87C}
+.status-bar{background:#0A1628;color:#fff;border-radius:12px;padding:20px 24px;margin-bottom:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.status-bar .count{font-size:28px;font-weight:700;color:#00C896}
+.status-bar .sub{font-size:13px;color:#B0B8C4}
+.notes{background:#FFF8E1;border:1px solid #FFD700;border-radius:10px;padding:16px 20px;margin-top:24px;font-size:14px;color:#5D4037}
+.notes strong{display:block;margin-bottom:4px}
+@media(max-width:600px){h1{font-size:26px}.status-bar{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>&#9989; Pre-Launch <span>Checklist</span></h1>
+<p class="subtitle">FreelanceTaxCalc &mdash; Run through every item before going live. Updated May 2026.</p>
+
+<div class="status-bar">
+  <div><span class="count">&#10003; 0</span> / <span class="count">42</span></div>
+  <div><span class="sub">Items completed &mdash; check each box as you finish</span></div>
+</div>
+
+<!-- ════════════════════════════════════════ -->
+<h2>&#128187; 1. CONTENT</h2>
+<!-- ════════════════════════════════════════ -->
+
+<h3>Tool Pages (12)</h3>
+<ul class="checklist">
+  <li><span class="box"></span><span class="label">Quarterly Tax Calculator<span class="note">quarterly-tax-calculator.html</span></span></li>
+  <li><span class="box"></span><span class="label">Gig Worker Deduction Finder<span class="note">gig-deduction-finder.html</span></span></li>
+  <li><span class="box"></span><span class="label">First Paycheck Calculator<span class="note">first-paycheck-calculator.html</span></span></li>
+  <li><span class="box"></span><span class="label">Side Hustle Tax Estimator<span class="note">side-hustle-tax-estimator.html</span></span></li>
+  <li><span class="box"></span><span class="label">Finance App Recommender<span class="note">finance-app-recommender.html</span></span></li>
+  <li><span class="box"></span><span class="label">Digital Nomad Tax Calculator<span class="note">digital-nomad-tax-calculator.html</span></span></li>
+  <li><span class="box"></span><span class="label">1099 vs W-2 Calculator<span class="note">1099-vs-w2-calculator.html</span></span></li>
+  <li><span class="box"></span><span class="label">Rate Calculator + Debt Planner<span class="note">rate-calculator-debt-planner.html</span></span></li>
+  <li><span class="box"></span><span class="label">Retirement Calculator<span class="note">retirement-calculator.html</span></span></li>
+  <li><span class="box"></span><span class="label">Budget + Invoice Calculators<span class="note">budget-invoice-calculators.html</span></span></li>
+</ul>
+
+<h3>Guide Pages (4)</h3>
+<ul class="checklist">
+  <li><span class="box"></span><span class="label">Guides listing page<span class="note">guides.html</span></span></li>
+  <li><span class="box"></span><span class="label">Quarterly Taxes Guide<span class="note">guides/quarterly-taxes-guide.html</span></span></li>
+  <li><span class="box"></span><span class="label">Gig Worker Deductions Guide<span class="note">guides/gig-worker-deductions.html</span></span></li>
+  <li><span class="box"></span><span class="label">1099 vs W-2 Comparison Guide<span class="note">guides/1099-vs-w2-comparison.html</span></span></li>
+</ul>
+
+<h3>Legal &amp; Info Pages (5)</h3>
+<ul class="checklist">
+  <li><span class="box"></span><span class="label">About page<span class="note">about.html &mdash; 5 sections, 12-tool grid, promise cards</span></span></li>
+  <li><span class="box"></span><span class="label">Privacy Policy<span class="note">privacy-policy.html &mdash; 13 sections, AdSense language, GDPR/CCPA</span></span></li>
+  <li><span class="box"></span><span class="label">Terms of Service<span class="note">terms.html &mdash; 12 sections, no-financial-advice disclaimer</span></span></li>
+  <li><span class="box"></span><span class="label">Contact page<span class="note">contact.html &mdash; form with validation, Formspree setup</span></span></li>
+  <li><span class="box"></span><span class="label">404 page<span class="note">404.html &mdash; friendly message, navigation links</span></span></li>
+</ul>
+
+<ul class="checklist">
+  <li><span class="box"></span><span class="label">All pages have 500+ words of unique content<span class="tag tag-content">Content</span></span></li>
+  <li><span class="box"></span><span class="label">No placeholder text, lorem ipsum, or #placeholder links remaining<span class="tag tag-content">Content</span></span></li>
+  <li><span class="box"></span><span class="label">All 12 tools functional &amp; produce correct results<span class="tag tag-content">Content</span></span></li>
+</ul>
+
+<!-- ════════════════════════════════════════ -->
+<h2>&#128295; 2. TECHNICAL</h2>
+<!-- ════════════════════════════════════════ -->
+
+<ul class="checklist">
+  <li><span class="box"></span><span class="label">SSL certificate active (HTTPS) — verify no mixed content warnings<span class="tag tag-tech">Tech</span></span></li>
+  <li><span class="box"></span><span class="label">All pages mobile-responsive — test each page at 320px, 768px, 1024px<span class="tag tag-tech">Tech</span></span></li>
+  <li><span class="box"></span><span class="label">PageSpeed Insights score 70+ mobile, 85+ desktop<span class="tag tag-tech">Tech</span><span class="note">Run all pages through https://pagespeed.web.dev</span></span></li>
+  <li><span class="box"></span><span class="label">Sitemap submitted to Google Search Console<span class="tag tag-tech">Tech</span><span class="note">sitemap.xml at https://freelancetaxcalc.online/sitemap.xml</span></span></li>
+  <li><span class="box"></span><span class="label">robots.txt live and accessible<span class="tag tag-tech">Tech</span><span class="note">robots.txt at https://freelancetaxcalc.online/robots.txt</span></span></li>
+  <li><span class="box"></span><span class="label">.htaccess deployed (or Nginx equivalents) — HTTPS redirect, clean URLs, 404<span class="tag tag-tech">Tech</span></span></li>
+  <li><span class="box"></span><span class="label">All internal links working — no 404s, no #placeholder links<span class="tag tag-tech">Tech</span><span class="note">Use a crawler tool like Screaming Frog or Wget</span></span></li>
+  <li><span class="box"></span><span class="label">All external links open in new tab with rel="noopener"<span class="tag tag-tech">Tech</span></span></li>
+  <li><span class="box"></span><span class="label">Contact form has HTML5 validation + Formspree endpoint configured<span class="tag tag-tech">Tech</span></span></li>
+  <li><span class="box"></span><span class="label">404 page returns actual 404 HTTP status code<span class="tag tag-tech">Tech</span><span class="note">Test with curl -I https://freelancetaxcalc.online/nonexistent-page</span></span></li>
+  <li><span class="box"></span><span class="label">Cookie consent banner appears on first visit and stores preference<span class="tag tag-tech">Tech</span></span></li>
+  <li><span class="box"></span><span class="label">Preconnect + preload for Google Fonts on every page<span class="tag tag-tech">Tech</span></span></li>
+  <li><span class="box"></span><span class="label">DNS prefetch for AdSense domains on every page<span class="tag tag-tech">Tech</span></span></li>
+</ul>
+
+<!-- ════════════════════════════════════════ -->
+<h2>&#128270; 3. SEO</h2>
+<!-- ════════════════════════════════════════ -->
+
+<ul class="checklist">
+  <li><span class="box"></span><span class="label">Unique meta title on every page (50-60 chars)<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">Unique meta description on every page (150-160 chars)<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">Canonical URL set on every page<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">JSON-LD schema on every page (WebSite, WebApplication, Article, FAQPage as appropriate)<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">BreadcrumbList JSON-LD on every page<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">Open Graph tags (og:title, og:description, og:type, og:url, og:site_name) on every page<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">Twitter Card tags on every page<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">H1 heading present and unique on every page<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">Logical heading hierarchy (H1 &rarr; H2 &rarr; H3) on every page<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">Image alt attributes on all images<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">Breadcrumb navigation visible on article and legal pages<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">Internal linking between related tools and guides<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">sitemap.xml submitted to Google Search Console<span class="tag tag-seo">SEO</span></span></li>
+  <li><span class="box"></span><span class="label">robots.txt accessible and correct<span class="tag tag-seo">SEO</span></span></li>
+</ul>
+
+<!-- ════════════════════════════════════════ -->
+<h2>&#128176; 4. ADSENSE READINESS</h2>
+<!-- ════════════════════════════════════════ -->
+
+<ul class="checklist">
+  <li><span class="box"></span><span class="label">Domain is at least 2-4 weeks old (AdSense requirement)<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">Privacy Policy includes required AdSense language about cookies and personalized ads<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">Cookie consent banner mechanism is in place<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">No prohibited content (no gambling, adult, drugs, weapons, fake news, etc.)<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">Professional design with clear navigation<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">Contact page has a working form<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">About page has real information about the site/mission<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">Terms of Service page is published<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">Ad unit placeholder code inserted at all 4 positions (top, after results, mid-content, bottom)<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">AdSense script in &lt;head&gt; with correct publisher ID<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">Ad containers have min-height to prevent CLS<span class="tag tag-adsense">AdSense</span></span></li>
+  <li><span class="box"></span><span class="label">No ad units on 404, privacy, or terms pages (policy violation)<span class="tag tag-adsense">AdSense</span></span></li>
+</ul>
+
+<!-- ════════════════════════════════════════ -->
+<h2>&#128640; 5. FINAL LAUNCH CHECKS</h2>
+<!-- ════════════════════════════════════════ -->
+
+<ul class="checklist">
+  <li><span class="box"></span><span class="label">Run full site crawl (Screaming Frog / Sitebulb) — check all URLs, titles, descriptions, status codes<span class="note">Fix any 404s, 301 redirect issues, or missing meta tags</span></span></li>
+  <li><span class="box"></span><span class="label">Test every calculator with sample inputs — verify math correctness<span class="note">Compare against IRS tables, manual calculations</span></span></li>
+  <li><span class="box"></span><span class="label">Clear browser cache and test on fresh incognito/private window<span class="note">Check cookie banner, first-load performance</span></span></li>
+  <li><span class="box"></span><span class="label">Test on actual mobile device (not just Chrome DevTools)<span class="note">Test touch targets, font sizes, scroll performance</span></span></li>
+  <li><span class="box"></span><span class="label">Set up Google Search Console — submit sitemap, request indexing<span class="note">Monitor for crawl errors in the first week</span></span></li>
+  <li><span class="box"></span><span class="label">Set up Google Analytics 4 — verify tracking is working<span class="note">Check real-time reports after visiting</span></span></li>
+  <li><span class="box"></span><span class="label">Final check: replace all XXX placeholders with real AdSense publisher ID and ad slot IDs<span class="note">ca-pub-XXXXXXXXXXXXXXXX, data-ad-slot values</span></span></li>
+</ul>
+
+<div class="notes">
+  <strong>&#128161; After Launch (First Month)</strong>
+  <ul style="margin:8px 0 0 20px;list-style:disc">
+    <li>Monitor Google Search Console for indexing issues and crawl errors</li>
+    <li>Check PageSpeed Insights weekly and address regressions</li>
+    <li>Monitor AdSense approval status — fix any policy violations immediately</li>
+    <li>Respond to contact form submissions within 2-3 business days</li>
+    <li>Add new articles/guides regularly (2-3 per month minimum for SEO growth)</li>
+    <li>Build backlinks: guest posts, directory listings, social sharing</li>
+  </ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var boxes = document.querySelectorAll('.checklist .box');
+  var counts = document.querySelectorAll('.status-bar .count');
+  function updateCount(){
+    var done = document.querySelectorAll('.checklist .box.done').length;
+    var total = boxes.length;
+    counts[0].innerHTML = '&#10003; ' + done;
+    counts[1].innerHTML = total;
+  }
+  boxes.forEach(function(box){
+    box.addEventListener('click', function(){
+      this.classList.toggle('done');
+      updateCount();
+    });
+  });
+  updateCount();
+})();
+</script>
+</body>
+</html>

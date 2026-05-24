@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self-Employed Retirement Calculator 2026 — Best Retirement Plan for Freelancers &amp; Solo 401(k) | FreelanceTaxCalc</title>
+<meta name="description" content="Find the best retirement plan for freelancers and gig workers. Free Solo 401(k), SEP IRA, and SIMPLE IRA calculator with 2026 contribution limits. Max your savings.">
+<link rel="canonical" href="https://freelancetaxcalc.online/tools/retirement-calculator">
+<meta property="og:title" content="Self-Employed Retirement Calculator 2026 — Best Plan for Freelancers">
+<meta property="og:description" content="Find the best retirement plan for freelancers. Compare Solo 401(k), SEP IRA, and SIMPLE IRA limits. Free 2026 calculator.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/tools/retirement-calculator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Self-Employed Retirement Calculator 2026 — Best Plan for Freelancers">
+<meta name="twitter:description" content="Find the best retirement plan for freelancers. Compare Solo 401(k), SEP IRA, and SIMPLE IRA limits. Free 2026 calculator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"Self-Employed Retirement Calculator",
+  "url":"https://freelancetaxcalc.online/tools/retirement-calculator",
+  "description":"Compare Solo 401k, SEP-IRA, and SIMPLE IRA for self-employed people.",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All"
+},{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":3,"name":"Retirement Calculator"}
+  ]
+},{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Can I have both a Solo 401k and a SEP-IRA?","acceptedAnswer":{"@type":"Answer","text":"You can have both accounts, but the total combined employer contributions across all plans cannot exceed the overall limits. For 2026, the total employer contribution is limited to 25% of compensation up to $70,000. Most financial advisors recommend choosing one plan rather than managing both."}},
+    {"@type":"Question","name":"What if I have employees?","acceptedAnswer":{"@type":"Answer","text":"If you have full-time employees (excluding a spouse), you cannot use a Solo 401(k) — it's designed for sole proprietors with no employees. A SEP-IRA requires you to contribute the same percentage for eligible employees. A SIMPLE IRA is best for small businesses with under 100 employees."}},
+    {"@type":"Question","name":"When do I need to set up a Solo 401k?","acceptedAnswer":{"@type":"Answer","text":"A Solo 401(k) must be established by December 31 of the tax year. However, employer profit-sharing contributions can be made up to the tax filing deadline (including extensions). Employee salary deferrals must be made by December 31. SEP-IRAs can be established and contributed to up to the tax filing deadline."}},
+    {"@type":"Question","name":"How much should self-employed people save for retirement?","acceptedAnswer":{"@type":"Answer","text":"Financial experts recommend saving 15-20% of your self-employment income for retirement. This is higher than the 10-15% recommendation for W-2 employees because you lack employer matching and pension benefits. The Solo 401(k) allows the highest contribution limits — up to $70,000 for 2026."}},
+    {"@type":"Question","name":"Are retirement contributions tax deductible?","acceptedAnswer":{"@type":"Answer","text":"Yes. Contributions to Solo 401(k)s, SEP-IRAs, SIMPLE IRAs, and Traditional IRAs are tax deductible in the year they are made, reducing your taxable self-employment income. Roth IRA contributions are not deductible but grow tax-free. The self-employed health insurance deduction is separate from retirement contributions."}}
+  ]
+}]
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:16px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+.site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;font-weight:700;color:#fff}
+.logo-icon{width:32px;height:32px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.header-back{color:#B0B8C4;font-size:14px;transition:color 0.3s ease}
+.header-back:hover{color:#00C896}
+
+.breadcrumb{background:#fff;padding:12px 0;border-bottom:1px solid #E8ECF0;font-size:14px;color:#6B7280}
+.breadcrumb a{color:#00C896}
+.breadcrumb a:hover{color:#00B085}
+.breadcrumb span{color:#6B7280}
+
+.page-title{background:#fff;padding:28px 0 0}
+.page-title h1{font-family:"DM Serif Display",serif;font-size:30px;color:#1A1A2E;margin-bottom:6px}
+.page-title p{color:#6B7280;font-size:15px;max-width:650px}
+
+.tool-section{padding:28px 0 60px}
+.tool-card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:20px}
+.tool-card h2{font-family:"DM Serif Display",serif;font-size:20px;color:#1A1A2E;margin-bottom:16px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:6px}
+.input-wrapper{position:relative;display:flex;align-items:center}
+.input-prefix{position:absolute;left:14px;font-weight:600;color:#6B7280;font-size:16px;pointer-events:none;z-index:1}
+.form-group input,.form-group select{width:100%;padding:12px 14px 12px 32px;border:2px solid #DDE1E7;border-radius:8px;font-size:16px;font-family:inherit;color:#1A1A2E;background:#fff;transition:border-color 0.3s ease;outline:none}
+.form-group select{padding-left:14px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%236B7280'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.form-group input:focus,.form-group select:focus{border-color:#00C896;box-shadow:0 0 0 3px rgba(0,200,150,0.1)}
+.form-group .helper{font-size:12px;color:#9CA3AF;margin-top:3px;line-height:1.4}
+.form-group input[type="range"]{padding:0;border:none;height:6px;border-radius:3px;background:#E8ECF0;outline:none;-webkit-appearance:none;appearance:none}
+.form-group input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;box-shadow:0 2px 6px rgba(0,200,150,0.3)}
+.form-group input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;border:none}
+.range-display{display:flex;justify-content:space-between;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:4px}
+.range-display span{color:#00C896}
+
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+/* Checkboxes */
+.check-group label{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:2px solid #DDE1E7;border-radius:8px;cursor:pointer;transition:all 0.25s ease;margin-bottom:8px}
+.check-group label:hover{border-color:#00C896}
+.check-group label.checked{border-color:#00C896;background:#E8F8F5}
+.check-group label input[type="checkbox"]{width:18px;height:18px;margin-top:3px;accent-color:#00C896}
+.check-group label .chk-text{flex:1}
+.check-group label .chk-title{font-weight:600;font-size:14px;color:#1A1A2E}
+.check-group label .chk-desc{font-size:12px;color:#6B7280;line-height:1.3;margin-top:1px}
+
+.calc-btn{width:100%;padding:16px 24px;background:#00C896;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:600;cursor:pointer;transition:all 0.3s ease;font-family:inherit}
+.calc-btn:hover{background:#00B085;box-shadow:0 4px 14px rgba(0,200,150,0.3);transform:translateY(-1px)}
+.calc-btn:disabled{opacity:0.5;cursor:not-allowed}
+
+.results-area{display:none;margin-top:24px}
+.results-area.visible{display:block;animation:fadeUp 0.5s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+.res-card{border-radius:12px;padding:24px;margin-bottom:16px;border:1px solid #E8ECF0;background:#fff;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.res-card.reveal{opacity:1;transform:translateY(0)}
+.res-card h3{font-family:"DM Serif Display",serif;font-size:17px;color:#1A1A2E;margin-bottom:12px}
+
+.ret-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:0}
+.ret-table th{background:#0A1628;color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.ret-table td{padding:10px 14px;border-bottom:1px solid #F3F4F6;color:#374151}
+.ret-table tr:last-child td{border-bottom:none}
+.ret-table .tax-sav{font-size:12px;color:#9CA3AF}
+
+.rec-card{background:linear-gradient(135deg,#E8F8F5,#fff);border:2px solid #00C896;border-radius:12px;padding:24px;margin-bottom:16px;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.rec-card.reveal{opacity:1;transform:translateY(0)}
+.rec-card .trophy{font-size:28px;margin-bottom:4px}
+.rec-card h3{font-family:"DM Serif Display",serif;font-size:18px;color:#00C896;margin-bottom:6px}
+.rec-card p{font-size:14px;color:#374151;line-height:1.6}
+
+.proj-card{background:#F3F4F6;border-radius:12px;padding:20px;margin-bottom:16px;text-align:center;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.proj-card.reveal{opacity:1;transform:translateY(0)}
+.proj-card .big{font-family:"DM Serif Display",serif;font-size:28px;color:#00C896;margin-bottom:4px}
+.proj-card .lbl{font-size:14px;color:#6B7280}
+
+.amber-box{background:#FFF8E1;border:1px solid #FFD700;border-radius:10px;padding:20px;font-size:14px;color:#5D4037;line-height:1.6;margin-bottom:16px;display:flex;align-items:flex-start;gap:12px}
+
+.res-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.res-actions button{flex:1;min-width:140px;padding:12px 20px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:all 0.3s ease;text-align:center}
+.btn-print{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-print:hover{border-color:#00C896;color:#00C896}
+.btn-recalc{background:#fff;border:2px solid #00C896;color:#00C896}
+.btn-recalc:hover{background:#E8F8F5}
+
+.seo-section{padding:60px 0;background:#fff}
+.seo-section .container{max-width:800px}
+.seo-section h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:16px;margin-top:40px}
+.seo-section h2:first-child{margin-top:0}
+.seo-section p,.seo-section li{font-size:16px;color:#4B5563;line-height:1.8;margin-bottom:12px}
+.seo-section ul{padding-left:24px}
+.seo-section li{margin-bottom:4px}
+
+.faq-item{border:1px solid #E8ECF0;border-radius:8px;margin-bottom:8px;overflow:hidden}
+.faq-question{width:100%;padding:16px 20px;background:#fff;border:none;text-align:left;font-size:16px;font-weight:600;color:#1A1A2E;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
+.faq-question:hover{background:#F9FAFB}
+.faq-question .arrow{transition:transform 0.3s ease;font-size:12px;color:#6B7280}
+.faq-item.open .faq-question .arrow{transform:rotate(180deg)}
+.faq-answer{padding:0 20px;max-height:0;overflow:hidden;transition:all 0.3s ease;font-size:15px;color:#4B5563;line-height:1.7}
+.faq-item.open .faq-answer{padding:0 20px 16px;max-height:500px}
+
+.site-footer{background:#0A1628;color:#B0B8C4;padding:40px 0 24px}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.site-footer a{color:#8892A0;transition:color 0.3s ease}
+.site-footer a:hover{color:#00C896}
+.site-footer .copyright{font-size:13px;color:#667080}
+
+@media(max-width:768px){
+  .page-title h1{font-size:24px}
+  .form-grid{grid-template-columns:1fr}
+  .tool-card{padding:20px}
+  .ret-table{font-size:13px}
+  .ret-table th,.ret-table td{padding:8px 10px}
+  .proj-card .big{font-size:22px}
+  .res-actions{flex-direction:column}
+  .res-actions button{width:100%}
+}
+@media print{
+  .site-header,.breadcrumb,.calc-btn,.res-actions,.site-footer,.seo-section{display:none!important}
+  .results-area{display:block!important}
+  .res-card,.rec-card,.proj-card{opacity:1!important;transform:none!important;border:1px solid #ddd!important}
+  .rec-card{background:#f0fdf9!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="header-logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <a href="/" class="header-back" aria-label="Back to homepage">&larr; Back to Home</a>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> <span aria-hidden="true"> &gt; </span>
+    <a href="/">Tools</a> <span aria-hidden="true"> &gt; </span>
+    <span>Retirement Calculator</span>
+  </div>
+</nav>
+
+<div class="page-title">
+  <div class="container">
+    <h1>&#127969; Self-Employed Retirement Calculator</h1>
+    <p>Compare Solo 401(k), SEP-IRA, SIMPLE IRA, and IRA options. See your maximum contribution for 2026 and find the best plan for your situation.</p>
+  </div>
+</div>
+
+<section class="tool-section" aria-label="Retirement Calculator">
+  <div class="container">
+
+    <div class="tool-card">
+      <h2>&#128176; Your Info</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="netIncome">Net Self-Employment Income</label>
+          <div class="input-wrapper">
+            <span class="input-prefix">$</span>
+            <input type="number" id="netIncome" min="0" step="100" placeholder="Your profit after business expenses" aria-describedby="incHelp">
+          </div>
+          <div class="helper" id="incHelp">Your profit after business expenses (Schedule C line 31)</div>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" min="18" max="80" value="35" placeholder="e.g. 35" style="padding-left:14px">
+          <div class="helper">Affects catch-up contribution eligibility (50+)</div>
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="currentSavings">Current Retirement Savings (Optional)</label>
+          <div class="input-wrapper">
+            <span class="input-prefix">$</span>
+            <input type="number" id="currentSavings" min="0" step="1000" value="0" placeholder="Total across all retirement accounts">
+          </div>
+          <div class="helper">Total across all retirement accounts</div>
+        </div>
+        <div class="form-group">
+          <label>Desired Retirement Age <span id="retireAgeVal">65</span></label>
+          <input type="range" id="retireAge" min="55" max="75" value="65" step="1">
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <h2>&#128196; Accounts to Compare</h2>
+      <p style="font-size:14px;color:#6B7280;margin-bottom:12px;">Select all that apply:</p>
+      <div class="check-group">
+        <label class="checked" id="chkSolo">
+          <input type="checkbox" id="soloChk" checked>
+          <div class="chk-text">
+            <div class="chk-title">Solo 401(k)</div>
+            <div class="chk-desc">Best for sole proprietors with no employees. Highest total contribution limits.</div>
+          </div>
+        </label>
+        <label class="checked" id="chkSep">
+          <input type="checkbox" id="sepChk" checked>
+          <div class="chk-text">
+            <div class="chk-title">SEP-IRA</div>
+            <div class="chk-desc">Simplest setup. Employer contributions only. No employee deferrals.</div>
+          </div>
+        </label>
+        <label class="checked" id="chkSimple">
+          <input type="checkbox" id="simpleChk" checked>
+          <div class="chk-text">
+            <div class="chk-title">SIMPLE IRA</div>
+            <div class="chk-desc">Best if you have a few employees. Lower limits than Solo 401(k).</div>
+          </div>
+        </label>
+        <label class="checked" id="chkIra">
+          <input type="checkbox" id="iraChk" checked>
+          <div class="chk-text">
+            <div class="chk-title">Traditional/Roth IRA</div>
+            <div class="chk-desc">Additional personal account. Lower limits but flexible.</div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <button class="calc-btn" id="calculateBtn">Show My Retirement Options &rarr;</button>
+
+    <div class="results-area" id="resultsArea">
+      <div class="res-card" id="resCard1">
+        <h3>&#128200; Maximum Contribution Summary</h3>
+        <div id="summaryTableArea"></div>
+      </div>
+      <div class="rec-card" id="recCard">
+        <div class="trophy" aria-hidden="true">&#127942;</div>
+        <h3 id="recTitle">For your situation, we recommend: Solo 401(k)</h3>
+        <p id="recText">The Solo 401(k) offers the highest total contribution limit at $70,000 (or $77,500 with catch-up). It allows both employee deferrals and employer profit-sharing contributions, and you can choose between Traditional and Roth options.</p>
+      </div>
+      <div class="res-card" id="resCard2">
+        <h3>&#128196; Side-by-Side Comparison</h3>
+        <div id="featureTableArea"></div>
+      </div>
+      <div class="proj-card" id="projCard">
+        <div class="big" id="projBalance">$0</div>
+        <div class="lbl" id="projText">Estimated balance at retirement</div>
+      </div>
+      <div class="amber-box">
+        <span class="icon" aria-hidden="true">&#9888;&#65039;</span>
+        <p><strong>Important:</strong> Contribution limits shown are for the 2026 tax year. Retirement projections based on 7% estimated annual return. Actual returns vary. Consult a financial advisor for personalized advice.</p>
+      </div>
+      <div class="res-actions">
+        <button class="btn-print" onclick="window.print()" aria-label="Print">&#128424; Print</button>
+        <button class="btn-recalc" id="recalcBtn" aria-label="Recalculate">&#8635; Recalculate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seo-section" aria-label="Retirement information">
+  <div class="container">
+    <h2>Best Retirement Accounts for Self-Employed People in 2026</h2>
+    <p>Self-employed individuals have several powerful retirement savings options that offer much higher contribution limits than traditional W-2 employees. A Solo 401(k) allows you to contribute up to $70,000 in 2026 — more than double the $23,500 an employee can defer. This is because you can contribute as both employee (deferring up to $23,500) and employer (contributing up to 25% of compensation, up to the combined max of $70,000).</p>
+    <p>The SEP-IRA is simpler to set up but only allows employer contributions — you can contribute up to 25% of your net self-employment income, capped at $70,000. The SIMPLE IRA is best if you have employees, with lower limits of $16,500 plus employer match. Each option has unique advantages depending on your income, age, whether you have employees, and your retirement timeline.</p>
+    <p>Choosing the right account can save you tens of thousands of dollars in taxes each year while building substantial retirement wealth. The key is understanding the trade-offs between contribution limits, setup complexity, employee requirements, and investment flexibility.</p>
+
+    <h2>Solo 401(k) vs SEP-IRA: Which Is Better?</h2>
+    <p>The Solo 401(k) is generally the best option for self-employed individuals with no employees who want to maximize contributions. It allows both employee salary deferrals (up to $23,500, or $31,000 if 50+) and employer profit-sharing contributions (up to 25% of compensation), with a combined total of $70,000 ($77,500 with catch-up).</p>
+    <p>The SEP-IRA is simpler — a single form to set up — but only allows employer contributions of up to 25% of net income (max $70,000). You can't make employee-style deferrals, and if you have employees, you must contribute the same percentage for eligible workers. The SEP-IRA has no Roth option and no loan feature.</p>
+    <p><strong>Decision framework:</strong> Choose Solo 401(k) for maximum contributions, Roth option, and loan features. Choose SEP-IRA for simplicity and if you want the flexibility to contribute only in profitable years. Choose SIMPLE IRA if you have employees and want lower administrative burden.</p>
+
+    <h2>2026 Self-Employed Retirement Contribution Limits</h2>
+    <ul>
+      <li><strong>Solo 401(k):</strong> $23,500 employee deferral ($31,000 50+) + up to 25% employer contribution = $70,000 total ($77,500 50+)</li>
+      <li><strong>SEP-IRA:</strong> Up to 25% of net self-employment income, max $70,000</li>
+      <li><strong>SIMPLE IRA:</strong> $16,500 employee deferral ($20,000 50+) + employer match up to 3%</li>
+      <li><strong>Traditional/Roth IRA:</strong> $7,000 ($8,000 50+) — income limits apply for Roth</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Can I have both a Solo 401k and a SEP-IRA? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">You can have both accounts, but the total combined employer contributions across all plans cannot exceed the overall limits. For 2026, the total employer-side contribution is limited to 25% of compensation up to $70,000. Most financial advisors recommend choosing one plan rather than managing both, as the tax benefits don't stack meaningfully.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What if I have employees? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">If you have full-time employees (excluding a spouse), you cannot use a Solo 401(k) — it's designed for sole proprietors with no employees. A SEP-IRA requires you to contribute the same percentage for eligible employees who are 21+, earn $650+ annually, and have worked 3 of the last 5 years. A SIMPLE IRA is best for small businesses with under 100 employees.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">When do I need to set up a Solo 401k? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">A Solo 401(k) must be established by December 31 of the tax year. However, employer profit-sharing contributions can be made up to the tax filing deadline (including extensions, typically October 15). Employee salary deferrals must be made by December 31. SEP-IRAs offer more flexibility — they can be established and contributed to up to the tax filing deadline.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How much should self-employed people save for retirement? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">Financial experts recommend saving 15-20% of your self-employment income for retirement. This is higher than the 10-15% recommendation for W-2 employees because you lack employer matching and a pension. The Solo 401(k) allows the highest contribution limits — up to $70,000 for 2026 — making it the most powerful tool for self-employed retirement saving.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Are retirement contributions tax deductible? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">Yes. Contributions to Solo 401(k)s, SEP-IRAs, SIMPLE IRAs, and Traditional IRAs are tax deductible in the year they are made, reducing your taxable self-employment income. Roth IRA contributions are not deductible but grow tax-free and can be withdrawn tax-free in retirement. The right choice depends on whether you want tax savings now or tax-free income later.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <span class="copyright">&copy; 2026 FreelanceTaxCalc &mdash; Free tools for independent workers.</span>
+    <a href="/">Back to Home</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  var netIncome = document.getElementById('netIncome');
+  var age = document.getElementById('age');
+  var currentSavings = document.getElementById('currentSavings');
+  var retireAge = document.getElementById('retireAge');
+  var retireAgeVal = document.getElementById('retireAgeVal');
+  var calculateBtn = document.getElementById('calculateBtn');
+  var recalcBtn = document.getElementById('recalcBtn');
+  var resultsArea = document.getElementById('resultsArea');
+  var summaryTableArea = document.getElementById('summaryTableArea');
+  var recTitle = document.getElementById('recTitle');
+  var recText = document.getElementById('recText');
+  var featureTableArea = document.getElementById('featureTableArea');
+  var projBalance = document.getElementById('projBalance');
+  var projText = document.getElementById('projText');
+
+  // Checkbox styling
+  document.querySelectorAll('.check-group label').forEach(function(lbl){
+    var chk = lbl.querySelector('input[type="checkbox"]');
+    chk.addEventListener('change', function(){
+      lbl.classList.toggle('checked', this.checked);
+    });
+  });
+
+  retireAge.addEventListener('input', function(){
+    retireAgeVal.textContent = this.value;
+  });
+
+  function isChecked(id){ return document.getElementById(id).checked; }
+
+  function getCompensation(net){
+    // Compensation for retirement purposes: net - SE tax deduction
+    return net * 0.9235 * 0.5; // simplified SE deduction adjustment
+  }
+
+  calculateBtn.addEventListener('click', function(){
+    var inc = parseFloat(netIncome.value) || 0;
+    var ageVal = parseInt(age.value) || 35;
+    var savings = parseFloat(currentSavings.value) || 0;
+    var retire = parseInt(retireAge.value);
+    var catchUp = ageVal >= 50;
+
+    if(inc <= 0){
+      netIncome.style.borderColor = '#FF6B6B';
+      setTimeout(function(){ netIncome.style.borderColor = ''; },1500);
+      return;
+    }
+
+    calculateBtn.textContent = 'Calculating...';
+    calculateBtn.disabled = true;
+
+    setTimeout(function(){
+      compute(inc, ageVal, savings, retire, catchUp);
+      calculateBtn.textContent = 'Show My Retirement Options \u2192';
+      calculateBtn.disabled = false;
+    }, 500);
+  });
+
+  function compute(inc, ageVal, savings, retire, catchUp){
+    var comp = inc * 0.9235; // SE income base
+    var seTax = comp * 0.153 * 0.5; // SE deduction
+    var netComp = inc - seTax; // Adjusted net for contribution calculations
+    var marginalRate = 0.22;
+    if(inc > 180000) marginalRate = 0.32;
+    else if(inc > 100000) marginalRate = 0.24;
+    else if(inc > 50000) marginalRate = 0.22;
+    else marginalRate = 0.15;
+
+    var results = {};
+
+    // Solo 401(k)
+    if(isChecked('soloChk')){
+      var empDeferral = catchUp ? 31000 : 23500;
+      var employer = Math.min(netComp * 0.25, 70000 - empDeferral);
+      var soloTotal = Math.min(empDeferral + employer, catchUp ? 77500 : 70000);
+      var soloTaxSav = soloTotal * marginalRate;
+      results.solo = {max: soloTotal, taxSav: soloTaxSav, empDefer: empDeferral, employer: Math.max(0, soloTotal - empDeferral)};
+    }
+
+    // SEP-IRA
+    if(isChecked('sepChk')){
+      var sepMax = Math.min(netComp * 0.25, 70000);
+      var sepTaxSav = sepMax * marginalRate;
+      results.sep = {max: sepMax, taxSav: sepTaxSav};
+    }
+
+    // SIMPLE IRA
+    if(isChecked('simpleChk')){
+      var simpleDefer = catchUp ? 20000 : 16500;
+      var simpleMatch = Math.min(inc * 0.03, simpleDefer); // 3% match
+      var simpleTotal = simpleDefer + simpleMatch;
+      var simpleTaxSav = simpleTotal * marginalRate;
+      results.simple = {max: simpleTotal, taxSav: simpleTaxSav, defer: simpleDefer, match: simpleMatch};
+    }
+
+    // IRA
+    if(isChecked('iraChk')){
+      var iraMax = catchUp ? 8000 : 7000;
+      var iraTaxSav = iraMax * marginalRate;
+      results.ira = {max: iraMax, taxSav: iraTaxSav};
+    }
+
+    // Summary table
+    var html = '<table class="ret-table"><thead><tr><th>Account Type</th><th>Max Contribution</th><th>Tax Savings*</th></tr></thead><tbody>';
+    if(results.solo) html += '<tr><td><strong>Solo 401(k)</strong></td><td>$' + results.solo.max.toLocaleString() + '</td><td>$' + Math.round(results.solo.taxSav).toLocaleString() + ' <span class="tax-sav">*</span></td></tr>';
+    if(results.sep) html += '<tr><td><strong>SEP-IRA</strong></td><td>$' + results.sep.max.toLocaleString() + '</td><td>$' + Math.round(results.sep.taxSav).toLocaleString() + ' <span class="tax-sav">*</span></td></tr>';
+    if(results.simple) html += '<tr><td><strong>SIMPLE IRA</strong></td><td>$' + results.simple.max.toLocaleString() + '</td><td>$' + Math.round(results.simple.taxSav).toLocaleString() + ' <span class="tax-sav">*</span></td></tr>';
+    if(results.ira) html += '<tr><td><strong>Traditional/Roth IRA</strong></td><td>$' + results.ira.max.toLocaleString() + '</td><td>$' + Math.round(results.ira.taxSav).toLocaleString() + ' <span class="tax-sav">*</span></td></tr>';
+    html += '</tbody></table><p class="tax-sav" style="font-size:11px;color:#9CA3AF;margin-top:4px;">* Tax savings estimated at ' + (marginalRate*100) + '% marginal rate. Roth IRA contributions are not tax deductible.</p>';
+    summaryTableArea.innerHTML = html;
+
+    // Recommendation
+    var bestType = 'Solo 401(k)';
+    var bestText = '';
+    if(results.solo && (!results.sep || results.solo.max >= (results.sep ? results.sep.max : 0)) && (!results.simple || results.solo.max >= (results.simple ? results.simple.max : 0))){
+      bestType = 'Solo 401(k)';
+      bestText = 'The Solo 401(k) offers the highest total contribution limit at $' + results.solo.max.toLocaleString() + ' (or $77,500 with catch-up). It allows both employee deferrals and employer profit-sharing contributions, and you can choose between Traditional and Roth options. The Solo 401(k) also offers loan features and higher catch-up limits.';
+      if(results.solo.empDefer > 0) bestText += ' You can defer $' + results.solo.empDefer.toLocaleString() + ' as an employee plus up to $' + Math.round(results.solo.employer).toLocaleString() + ' as an employer.';
+    } else if(results.sep){
+      bestType = 'SEP-IRA';
+      bestText = 'The SEP-IRA offers a maximum contribution of $' + results.sep.max.toLocaleString() + ' with the simplest setup — just one form. No employee deferrals or Roth option, but extremely flexible and easy to maintain. Best if you want simplicity over maximum contribution power.';
+    } else if(results.simple){
+      bestType = 'SIMPLE IRA';
+      bestText = 'The SIMPLE IRA allows contributions of up to $' + results.simple.max.toLocaleString() + ' including employer match. Best for small businesses with employees, with lower administrative requirements than a 401(k).';
+    } else {
+      bestType = 'IRA';
+      bestText = 'The Traditional or Roth IRA offers a contribution limit of $' + (results.ira ? results.ira.max : 7000).toLocaleString() + '. While lower than employer plans, IRAs offer flexibility, low fees, and thousands of investment options.';
+    }
+    recTitle.textContent = '\uD83C\uDFC6 For your situation, we recommend: ' + bestType;
+    recText.textContent = bestText;
+
+    // Feature comparison
+    var featHtml = '<table class="ret-table"><thead><tr><th>Feature</th>';
+    if(results.solo) featHtml += '<th>Solo 401(k)</th>';
+    if(results.sep) featHtml += '<th>SEP-IRA</th>';
+    if(results.simple) featHtml += '<th>SIMPLE IRA</th>';
+    if(results.ira) featHtml += '<th>IRA</th>';
+    featHtml += '</tr></thead><tbody>';
+
+    featHtml += '<tr><td><strong>Max Contribution</strong></td>';
+    if(results.solo) featHtml += '<td>$' + results.solo.max.toLocaleString() + '</td>';
+    if(results.sep) featHtml += '<td>$' + results.sep.max.toLocaleString() + '</td>';
+    if(results.simple) featHtml += '<td>$' + results.simple.max.toLocaleString() + '</td>';
+    if(results.ira) featHtml += '<td>$' + results.ira.max.toLocaleString() + '</td>';
+    featHtml += '</tr>';
+
+    featHtml += '<tr><td><strong>Setup Complexity</strong></td>';
+    if(results.solo) featHtml += '<td>Medium</td>';
+    if(results.sep) featHtml += '<td>Low</td>';
+    if(results.simple) featHtml += '<td>Medium</td>';
+    if(results.ira) featHtml += '<td>Low</td>';
+    featHtml += '</tr>';
+
+    featHtml += '<tr><td><strong>Employee Deferrals</strong></td>';
+    if(results.solo) featHtml += '<td>Yes</td>';
+    if(results.sep) featHtml += '<td>No</td>';
+    if(results.simple) featHtml += '<td>Yes</td>';
+    if(results.ira) featHtml += '<td>Yes</td>';
+    featHtml += '</tr>';
+
+    featHtml += '<tr><td><strong>Roth Option</strong></td>';
+    if(results.solo) featHtml += '<td>Yes</td>';
+    if(results.sep) featHtml += '<td>No</td>';
+    if(results.simple) featHtml += '<td>Yes (2026)</td>';
+    if(results.ira) featHtml += '<td>Yes (Roth)</td>';
+    featHtml += '</tr>';
+
+    featHtml += '<tr><td><strong>Loan Feature</strong></td>';
+    if(results.solo) featHtml += '<td>Yes</td>';
+    if(results.sep) featHtml += '<td>No</td>';
+    if(results.simple) featHtml += '<td>No</td>';
+    if(results.ira) featHtml += '<td>No</td>';
+    featHtml += '</tr>';
+
+    featHtml += '<tr><td><strong>Best For</strong></td>';
+    if(results.solo) featHtml += '<td>Solo owners</td>';
+    if(results.sep) featHtml += '<td>Simplicity</td>';
+    if(results.simple) featHtml += '<td>Small team</td>';
+    if(results.ira) featHtml += '<td>Supplemental</td>';
+    featHtml += '</tr>';
+
+    featHtml += '</tbody></table>';
+    featureTableArea.innerHTML = featHtml;
+
+    // Projection
+    var best = results.solo || results.sep || results.simple || results.ira;
+    if(best){
+      var annualContrib = best.max;
+      var years = retire - ageVal;
+      var rate = 0.07;
+      var future = savings;
+      for(var y=0; y<years; y++){
+        future = (future + annualContrib) * (1 + rate);
+      }
+      projBalance.textContent = '$' + Math.round(future).toLocaleString();
+      projText.textContent = 'Estimated balance at retirement (age ' + retire + ') — contributing max to ' + bestType + ' | ' + years + ' years at 7% annual return';
+    }
+
+    // Show
+    resultsArea.classList.add('visible');
+    resultsArea.style.display = 'block';
+    var cards = [document.getElementById('resCard1'), document.getElementById('recCard'), document.getElementById('resCard2'), document.getElementById('projCard')];
+    cards.forEach(function(el, i){
+      setTimeout(function(){ el.classList.add('reveal'); }, 100 + i*100);
+    });
+    resultsArea.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  recalcBtn.addEventListener('click', function(){
+    resultsArea.classList.remove('visible');
+    resultsArea.style.display = 'none';
+    document.querySelectorAll('.res-card, .rec-card, .proj-card').forEach(function(el){ el.classList.remove('reveal'); });
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // FAQ
+  document.querySelectorAll('.faq-question').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = this.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  // Enter
+  document.querySelectorAll('.tool-card input, .tool-card select').forEach(function(el){
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); calculateBtn.click(); }
+    });
+  });
+})();
+</script>
+<!-- Related Tools -->
+<section class="related-tools" aria-label="Related Tools">
+  <div class="container">
+    <h2>Related Tools You Might Need</h2>
+    <div class="related-grid">
+      <a href="/tools/quarterly-tax-calculator.html">Quarterly Tax Estimator<small>See how retirement contributions reduce taxes</small></a>
+      <a href="/tools/gig-deduction-finder.html">Gig Worker Deduction Finder<small>Maximize retirement + expense deductions</small></a>
+      <a href="/tools/freelance-hourly-rate-calculator.html">Freelance Hourly Rate Calculator<small>Set rate to hit retirement goals</small></a>
+      <a href="/tools/finance-app-recommender.html">Best Finance App Recommender<small>Find an app to track retirement savings</small></a>
+    </div>
+  </div>
+</section>
+
+<style>
+.related-tools{{background:#fff;padding:48px 0;border-top:1px solid #E8ECF0;margin-top:0}}
+.related-tools h2{{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;text-align:center;margin-bottom:24px}}
+.related-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto}}
+.related-grid a{{display:block;background:#F4F6F9;border-radius:10px;padding:16px;font-size:14px;color:#1A1A2E;font-weight:500;transition:all 0.3s ease;text-decoration:none;border:1px solid transparent}}
+.related-grid a:hover{{background:#F0FDF9;border-color:#00C896;color:#00C896;transform:translateY(-2px)}}
+.related-grid a small{{display:block;font-weight:400;color:#6B7280;font-size:13px;margin-top:4px}}
+</style>
+</body>
+</html>

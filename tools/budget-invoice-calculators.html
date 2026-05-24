@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>50/30/20 Budget Calculator &amp; Freelance Invoice Tax Calculator 2026 — VAT, GST &amp; Sales Tax | FreelanceTaxCalc</title>
+<meta name="description" content="Free 50/30/20 budget calculator for students and freelance invoice tax calculator. Do freelancers charge sales tax? Calculate VAT, GST, and sales tax on invoices. 2026.">
+<link rel="canonical" href="https://freelancetaxcalc.online/tools/budget-invoice-calculators">
+<meta property="og:title" content="50/30/20 Budget &amp; Freelance Invoice Tax Calculator — VAT, GST, Sales Tax">
+<meta property="og:description" content="Free 50/30/20 budget planner + freelance invoice tax calculator. Do freelancers charge sales tax? Calculate VAT &amp; GST. 2026.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/tools/budget-invoice-calculators">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="50/30/20 Budget &amp; Freelance Invoice Tax Calculator — VAT, GST, Sales Tax">
+<meta name="twitter:description" content="Free 50/30/20 budget planner + freelance invoice tax calculator. Do freelancers charge sales tax? Calculate VAT &amp; GST. 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:16px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+.site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;font-weight:700;color:#fff}
+.logo-icon{width:32px;height:32px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.header-back{color:#B0B8C4;font-size:14px;transition:color 0.3s ease}
+.header-back:hover{color:#00C896}
+
+.breadcrumb{background:#fff;padding:12px 0;border-bottom:1px solid #E8ECF0;font-size:14px;color:#6B7280}
+.breadcrumb a{color:#00C896}
+.breadcrumb a:hover{color:#00B085}
+.breadcrumb span{color:#6B7280}
+
+.section-divider{text-align:center;padding:40px 0 20px}
+.section-divider h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E}
+.section-divider p{color:#6B7280;font-size:14px;margin-top:4px}
+
+.tool-card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:20px}
+.tool-card h2{font-family:"DM Serif Display",serif;font-size:20px;color:#1A1A2E;margin-bottom:16px}
+
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:6px}
+.form-group input[type="number"]{width:100%;padding:12px 14px;border:2px solid #DDE1E7;border-radius:8px;font-size:16px;font-family:inherit;color:#1A1A2E;outline:none;transition:border-color 0.3s ease}
+.form-group input[type="number"]:focus{border-color:#00C896}
+.form-group .helper{font-size:12px;color:#9CA3AF;margin-top:3px}
+
+/* Sliders */
+.slider-group{margin-bottom:14px}
+.slider-group label{display:flex;justify-content:space-between;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:4px}
+.slider-group label span{color:#00C896}
+.slider-group input[type="range"]{width:100%;height:6px;border-radius:3px;background:#E8ECF0;outline:none;-webkit-appearance:none;appearance:none}
+.slider-group input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;box-shadow:0 2px 6px rgba(0,200,150,0.3)}
+.slider-group input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;border:none}
+
+/* Select */
+.form-group select{width:100%;padding:12px 14px;border:2px solid #DDE1E7;border-radius:8px;font-size:15px;font-family:inherit;color:#1A1A2E;background:#fff;outline:none;transition:border-color 0.3s ease;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%236B7280'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;-webkit-appearance:none;appearance:none}
+.form-group select:focus{border-color:#00C896}
+
+/* BUDGET RESULTS */
+.budget-grid{display:grid;grid-template-columns:3fr 2fr;gap:24px;align-items:start}
+.budget-card{border-radius:12px;padding:20px;margin-bottom:10px}
+.budget-card.needs{background:#E8F0FE;border-left:4px solid #1A73E8}
+.budget-card.wants{background:#FEF3E8;border-left:4px solid #E8A87C}
+.budget-card.savings{background:#E8F8F5;border-left:4px solid #00C896}
+.budget-card .cat-title{font-weight:700;font-size:16px;margin-bottom:2px}
+.budget-card .cat-amt{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;margin-bottom:2px}
+.budget-card .cat-desc{font-size:13px;color:#6B7280;line-height:1.4}
+.budget-card .cat-pct{font-size:13px;color:#9CA3AF;margin-bottom:4px}
+.encourage{font-size:15px;color:#00C896;font-weight:600;margin-top:8px;text-align:center}
+
+/* Donut */
+.donut-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut{width:160px;height:160px;border-radius:50%;position:relative;margin-bottom:12px}
+.donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:90px;height:90px;background:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut-center .val{font-size:18px;font-weight:700;color:#1A1A2E;line-height:1.1}
+.donut-center .lbl{font-size:11px;color:#6B7280}
+.donut-legend{font-size:13px;line-height:1.8;text-align:left}
+.donut-legend span{display:flex;align-items:center;gap:6px}
+.donut-legend .dot{width:10px;height:10px;border-radius:3px;display:inline-block;flex-shrink:0}
+
+.tips-box{background:#F3F4F6;border-radius:10px;padding:16px;margin-top:12px;font-size:13px;color:#374151;line-height:1.7}
+.tips-box h3{font-weight:700;font-size:14px;color:#1A1A2E;margin-bottom:6px}
+.tips-box ul{padding-left:18px}
+.tips-box li{margin-bottom:3px}
+
+/* INVOICE RESULTS */
+.invoice-results{background:#0A1628;border-radius:12px;padding:24px;color:#fff;margin-top:16px}
+.invoice-results .ir-row{display:flex;justify-content:space-between;padding:8px 0;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.invoice-results .ir-total{border-top:2px solid #00C896;margin-top:4px;padding-top:10px;font-size:18px;font-weight:700}
+.invoice-results .ir-total span{color:#00C896}
+.invoice-results .ir-note{font-size:13px;color:#B0B8C4;margin-top:8px;line-height:1.5;text-align:center}
+
+.invoice-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+.amber-box{background:#FFF8E1;border:1px solid #FFD700;border-radius:8px;padding:16px;margin:12px 0;font-size:13px;color:#5D4037;line-height:1.6;display:flex;align-items:flex-start;gap:10px}
+
+.site-footer{background:#0A1628;color:#B0B8C4;padding:40px 0 24px}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.site-footer a{color:#8892A0;transition:color 0.3s ease}
+.site-footer a:hover{color:#00C896}
+.site-footer .copyright{font-size:13px;color:#667080}
+
+@media(max-width:768px){
+  .budget-grid{grid-template-columns:1fr}
+  .invoice-form-grid{grid-template-columns:1fr}
+  .tool-card{padding:20px}
+  .donut{width:140px;height:140px}
+  .donut-center{width:80px;height:80px}
+}
+@media print{
+  .site-header,.breadcrumb,.site-footer,.amber-box{display:none!important}
+  .tool-card{box-shadow:none;border:1px solid #ddd;break-inside:avoid}
+}
+</style>
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"Budget Calculator & Freelance Invoice Tax Tool",
+  "url":"https://freelancetaxcalc.online/tools/budget-invoice-calculators.html",
+  "description":"Free online calculator for freelancers and self-employed people.",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All"
+},{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":3,"name":"Budget Calculator & Freelance Invoice Tax Tool"}
+  ]
+}]
+</script></head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="header-logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <a href="/" class="header-back" aria-label="Back to homepage">&larr; Back to Home</a>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> <span aria-hidden="true"> &gt; </span>
+    <a href="/">Tools</a> <span aria-hidden="true"> &gt; </span>
+    <span>Budget &amp; Invoice Calculators</span>
+  </div>
+</nav>
+
+<!-- ============= TOOL A: STUDENT BUDGET ============= -->
+<section class="tool-section" style="padding:28px 0 20px" aria-label="Student Budget Calculator">
+  <div class="container">
+    <div class="section-divider">
+      <h2>&#127891; Student Budget Calculator</h2>
+      <p>Split your income using the 50/30/20 rule — needs, wants, and savings.</p>
+    </div>
+
+    <div class="tool-card">
+      <h2>&#128176; Your Income</h2>
+      <div class="budget-grid">
+        <div>
+          <div class="form-group">
+            <label for="monthlyIncome">Monthly Take-Home Income</label>
+            <div class="input-wrapper" style="position:relative">
+              <span style="position:absolute;left:14px;font-weight:600;color:#6B7280;z-index:1">$</span>
+              <input type="number" id="monthlyIncome" min="0" step="100" placeholder="What hits your bank account each month" value="3000" style="padding-left:32px">
+            </div>
+            <div class="helper">What hits your bank account each month</div>
+          </div>
+
+          <div class="slider-group">
+            <label>Needs <span id="needsPctVal">50%</span></label>
+            <input type="range" id="needsPct" min="40" max="60" value="50" step="1">
+          </div>
+          <div class="slider-group">
+            <label>Wants <span id="wantsPctVal">30%</span></label>
+            <input type="range" id="wantsPct" min="20" max="40" value="30" step="1">
+          </div>
+          <div class="slider-group">
+            <label>Savings / Debt <span id="savingsPctVal">20%</span></label>
+            <input type="range" id="savingsPct" min="10" max="30" value="20" step="1">
+            <div style="font-size:12px;color:#9CA3AF;margin-top:2px">Must equal 100% — sliders auto-adjust</div>
+          </div>
+        </div>
+
+        <div class="donut-wrap">
+          <div class="donut" id="budgetDonut" style="background:conic-gradient(#1A73E8 0deg 180deg, #E8A87C 180deg 288deg, #00C896 288deg 360deg)">
+            <div class="donut-center">
+              <span class="val" id="donutTotal">$3,000</span>
+              <span class="lbl">monthly</span>
+            </div>
+          </div>
+          <div class="donut-legend">
+            <span><span class="dot" style="background:#1A73E8"></span> Needs</span>
+            <span><span class="dot" style="background:#E8A87C"></span> Wants</span>
+            <span><span class="dot" style="background:#00C896"></span> Savings</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="budgetResults">
+        <div class="budget-card needs">
+          <div class="cat-pct" id="needsLabel">NEEDS (50%)</div>
+          <div class="cat-amt" id="needsAmt">$1,500</div>
+          <div class="cat-desc">Rent, food, utilities, transport, minimum debt payments, insurance</div>
+        </div>
+        <div class="budget-card wants">
+          <div class="cat-pct" id="wantsLabel">WANTS (30%)</div>
+          <div class="cat-amt" id="wantsAmt">$900</div>
+          <div class="cat-desc">Dining out, entertainment, shopping, hobbies, subscriptions, travel</div>
+        </div>
+        <div class="budget-card savings">
+          <div class="cat-pct" id="savingsLabel">SAVINGS / DEBT (20%)</div>
+          <div class="cat-amt" id="savingsAmt">$600</div>
+          <div class="cat-desc">Emergency fund, extra debt payments, investments, future goals</div>
+        </div>
+        <div class="encourage" id="encourageMsg">&#128161; If you save $600/month, that's $7,200 per year toward your future!</div>
+      </div>
+
+      <div class="tips-box">
+        <h3>&#128161; Budget Tips</h3>
+        <ul>
+          <li>If your rent exceeds 30% of income, consider roommates or a more affordable place</li>
+          <li>Automate savings: set up auto-transfer from checking to savings on payday</li>
+          <li>Track every dollar for 30 days to see where your money really goes</li>
+          <li>The 50/30/20 rule is a guideline — adjust percentages to fit your life</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= TOOL B: INVOICE TAX ============= -->
+<section class="tool-section" style="padding:20px 0 60px" aria-label="Freelance Invoice Tax Calculator">
+  <div class="container">
+    <div class="section-divider">
+      <h2>&#128221; Freelance Invoice Tax Calculator</h2>
+      <p>Know whether to add VAT, GST, HST, or sales tax to your invoices.</p>
+    </div>
+
+    <div class="tool-card">
+      <h2>&#127758; Invoice Details</h2>
+      <div class="invoice-form-grid">
+        <div class="form-group">
+          <label for="yourCountry">Your Country</label>
+          <select id="yourCountry">
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="eu">EU Country</option>
+            <option value="au">Australia</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="clientCountry">Client Country</label>
+          <select id="clientCountry">
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="eu">EU Country</option>
+            <option value="au">Australia</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="invoice-form-grid">
+        <div class="form-group">
+          <label for="invoiceAmount">Invoice Amount</label>
+          <div class="input-wrapper" style="position:relative">
+            <span style="position:absolute;left:14px;font-weight:600;color:#6B7280;z-index:1">$</span>
+            <input type="number" id="invoiceAmount" min="0" step="10" placeholder="e.g. 2500" value="2500" style="padding-left:32px">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="serviceType">Service Type</label>
+          <select id="serviceType">
+            <option value="digital">Digital Services</option>
+            <option value="physical">Physical Goods</option>
+            <option value="professional">Professional Services</option>
+            <option value="consulting">Consulting</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="invoiceCalcBtn" style="width:100%;padding:14px;background:#00C896;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:8px;transition:all 0.3s ease">Calculate Invoice Tax &rarr;</button>
+
+      <div class="invoice-results" id="invoiceResults" style="display:none">
+        <div class="ir-row"><span>Tax Type</span><span id="invTaxType">VAT</span></div>
+        <div class="ir-row"><span>Tax Rate</span><span id="invTaxRate">0%</span></div>
+        <div class="ir-row"><span>Tax to Add</span><span id="invTaxAmt">$0.00</span></div>
+        <div class="ir-row ir-total"><span>Final Invoice Total</span><span id="invTotal">$0.00</span></div>
+        <div class="ir-note" id="invNote">No tax required for this transaction.</div>
+        <div class="ir-note" id="invReg" style="margin-top:4px;color:#FFD700;font-size:12px">Registration: You do not need to register for VAT/GST in the client's country.</div>
+      </div>
+
+      <div class="amber-box" style="margin-bottom:0;margin-top:16px">
+        <span style="font-size:16px">&#9888;&#65039;</span>
+        <p><strong>Important:</strong> Tax rules vary by jurisdiction and change frequently. Verify all tax requirements with a local accountant before issuing invoices. This tool provides estimates based on common rules.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <span class="copyright">&copy; 2026 FreelanceTaxCalc &mdash; Free tools for independent workers.</span>
+    <a href="/">Back to Home</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // ─── TOOL A: STUDENT BUDGET ───
+  var monthlyIncome = document.getElementById('monthlyIncome');
+  var needsPct = document.getElementById('needsPct');
+  var wantsPct = document.getElementById('wantsPct');
+  var savingsPct = document.getElementById('savingsPct');
+
+  var budgetSliders = [needsPct, wantsPct, savingsPct];
+  var lastBudgetSlider = 'needs';
+  needsPct.addEventListener('input', function(){ lastBudgetSlider = 'needs'; updateBudget(); });
+  wantsPct.addEventListener('input', function(){ lastBudgetSlider = 'wants'; updateBudget(); });
+  savingsPct.addEventListener('input', function(){ lastBudgetSlider = 'savings'; updateBudget(); });
+  monthlyIncome.addEventListener('input', updateBudget);
+
+  function updateBudget(){
+    var inc = parseFloat(monthlyIncome.value) || 0;
+    var n = parseFloat(needsPct.value);
+    var w = parseFloat(wantsPct.value);
+    var s = parseFloat(savingsPct.value);
+
+    // Auto-adjust to 100% — anchor the slider the user just moved
+    var total = n + w + s;
+    if(total !== 100){
+      if(lastBudgetSlider === 'wants'){
+        wantsPct.value = Math.max(0, Math.min(100, w));
+        needsPct.value = Math.max(0, Math.min(100, 100 - w - s));
+        savingsPct.value = 100 - parseFloat(needsPct.value) - w;
+      } else if(lastBudgetSlider === 'savings'){
+        savingsPct.value = Math.max(0, Math.min(100, s));
+        needsPct.value = Math.max(0, Math.min(100, 100 - w - s));
+        wantsPct.value = 100 - parseFloat(needsPct.value) - s;
+      } else {
+        needsPct.value = Math.max(0, Math.min(100, n));
+        var remaining = 100 - n;
+        var wRatio = w / (w + s || 1);
+        wantsPct.value = Math.round(remaining * wRatio);
+        savingsPct.value = remaining - Math.round(remaining * wRatio);
+      }
+      n = parseFloat(needsPct.value);
+      w = parseFloat(wantsPct.value);
+      s = parseFloat(savingsPct.value);
+    }
+
+    document.getElementById('needsPctVal').textContent = n + '%';
+    document.getElementById('wantsPctVal').textContent = w + '%';
+    document.getElementById('savingsPctVal').textContent = s + '%';
+
+    var nAmt = inc * n / 100;
+    var wAmt = inc * w / 100;
+    var sAmt = inc * s / 100;
+
+    document.getElementById('needsAmt').textContent = '$' + nAmt.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    document.getElementById('wantsAmt').textContent = '$' + wAmt.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    document.getElementById('savingsAmt').textContent = '$' + sAmt.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    document.getElementById('needsLabel').textContent = 'NEEDS (' + n + '%)';
+    document.getElementById('wantsLabel').textContent = 'WANTS (' + w + '%)';
+    document.getElementById('savingsLabel').textContent = 'SAVINGS / DEBT (' + s + '%)';
+
+    var yearly = sAmt * 12;
+    document.getElementById('encourageMsg').textContent = '\uD83D\uDCA1 If you save $' + Math.round(sAmt).toLocaleString() + '/month, that\'s $' + Math.round(yearly).toLocaleString() + ' per year toward your future!';
+    document.getElementById('donutTotal').textContent = '$' + (inc).toLocaleString();
+
+    // Donut chart
+    var nDeg = n / 100 * 360;
+    var wDeg = w / 100 * 360;
+    var sDeg = s / 100 * 360;
+    document.getElementById('budgetDonut').style.background = 'conic-gradient(#1A73E8 0deg ' + nDeg + 'deg, #E8A87C ' + nDeg + 'deg ' + (nDeg + wDeg) + 'deg, #00C896 ' + (nDeg + wDeg) + 'deg 360deg)';
+  }
+  updateBudget();
+
+  // ─── TOOL B: INVOICE TAX ───
+  var invCalcBtn = document.getElementById('invoiceCalcBtn');
+  var invResults = document.getElementById('invoiceResults');
+
+  invCalcBtn.addEventListener('click', function(){
+    var your = document.getElementById('yourCountry').value;
+    var client = document.getElementById('clientCountry').value;
+    var amount = parseFloat(document.getElementById('invoiceAmount').value) || 0;
+    var service = document.getElementById('serviceType').value;
+
+    if(amount <= 0){
+      document.getElementById('invoiceAmount').style.borderColor = '#FF6B6B';
+      setTimeout(function(){ document.getElementById('invoiceAmount').style.borderColor = ''; }, 1500);
+      return;
+    }
+
+    var taxType = 'None';
+    var taxRate = 0;
+    var taxAmt = 0;
+    var note = 'No tax required for this transaction.';
+    var reg = 'Registration: You do not need to register for VAT/GST in the client\'s country.';
+
+    // Simplified tax rules
+    if(your === 'us' && client === 'us'){
+      taxType = 'Sales Tax';
+      taxRate = 0.08; // avg
+      taxAmt = amount * taxRate;
+      note = 'US to US: Sales tax may apply based on your nexus in the client\'s state. The rate shown (8%) is a national average.';
+      reg = 'Registration: You may need to register for sales tax in states where you have nexus (physical presence or economic nexus).';
+    }
+    else if(your === 'us' && client === 'eu'){
+      taxType = 'VAT (MOSS)';
+      taxRate = 0.20;
+      taxAmt = amount * taxRate;
+      note = 'US to EU: Digital services to EU consumers require VAT under the MOSS scheme (20% avg). B2B may use reverse charge.';
+      reg = 'Registration: You may need to register for VAT via the MOSS (Mini One Stop Shop) portal in the EU.';
+    }
+    else if(your === 'uk' && client === 'uk'){
+      taxType = 'VAT';
+      taxRate = 0.20;
+      taxAmt = amount * taxRate;
+      note = 'UK to UK: Standard 20% VAT applies if you are VAT-registered (threshold: \u00a390,000 turnover).';
+      reg = 'Registration: You must register for VAT if your turnover exceeds \u00a390,000 in the last 12 months.';
+    }
+    else if(your === 'uk' && client === 'eu'){
+      taxType = 'VAT';
+      taxRate = 0.20;
+      taxAmt = amount * taxRate;
+      note = 'UK to EU: Post-Brexit, UK businesses may need to register for VAT in the EU for B2C digital services. B2B usually uses reverse charge.';
+      reg = 'Registration: You may need to register for VAT in the specific EU country for B2C digital services.';
+    }
+    else if(your === 'ca' && client === 'ca'){
+      taxType = 'GST/HST';
+      taxRate = 0.13; // blended
+      taxAmt = amount * taxRate;
+      note = 'Canada: GST/HST rate depends on the province. Shown at 13% (Ontario HST). Ranges from 5% (GST only) to 15% (Quebec).';
+      reg = 'Registration: You need to register if your gross revenue exceeds $30,000 CAD in any 12-month period.';
+    }
+    else if(your === 'ca' && client === 'us'){
+      taxType = 'None';
+      taxRate = 0;
+      taxAmt = 0;
+      note = 'Canada to US: Canadian businesses typically do not charge GST on exports to US clients. No tax required.';
+      reg = 'Registration: No registration required in the US for occasional cross-border services.';
+    }
+    else if(your === 'eu' && client === 'eu'){
+      taxType = 'Reverse Charge / VAT';
+      taxRate = service === 'physical' ? 0.20 : 0;
+      taxAmt = amount * taxRate;
+      if(service === 'digital' || service === 'professional' || service === 'consulting'){
+        note = 'EU to EU B2B: Reverse charge applies — no VAT charged, client accounts for VAT. B2C: VAT at destination country rate.';
+        taxAmt = 0;
+      } else {
+        note = 'EU to EU: Physical goods taxed at origin country rate for distance selling (or destination if threshold exceeded).';
+      }
+      reg = 'Registration: For B2B services, no registration needed (reverse charge). For B2C, you may need MOSS registration.';
+    }
+    else if(your === 'eu' && client === 'us'){
+      taxType = 'None';
+      taxRate = 0;
+      taxAmt = 0;
+      note = 'EU to US: EU businesses typically do not charge VAT on exports to US clients. No tax required.';
+      reg = 'Registration: No VAT registration needed for US clients.';
+    }
+    else if(your === 'au' && client === 'au'){
+      taxType = 'GST';
+      taxRate = 0.10;
+      taxAmt = amount * taxRate;
+      note = 'Australia: 10% GST applies if your turnover exceeds $75,000 AUD.';
+      reg = 'Registration: You must register for GST if your turnover exceeds $75,000 AUD.';
+    }
+    else if(your === 'au' && (client === 'us' || client === 'uk' || client === 'eu')){
+      taxType = 'None';
+      taxRate = 0;
+      taxAmt = 0;
+      note = 'Australia to export: Australian GST does not apply to exports. No tax required.';
+      reg = 'Registration: No GST registration needed for export services.';
+    }
+    else {
+      taxType = 'Check local rules';
+      taxRate = 0;
+      taxAmt = 0;
+      note = 'Other country combination: Tax rules vary significantly. Consult a local accountant or tax professional.';
+      reg = 'Registration: Requirements vary by jurisdiction. Seek professional advice.';
+    }
+
+    var total = amount + taxAmt;
+    var cur = '$';
+    if(your === 'uk') cur = '\u00a3';
+    else if(your === 'eu') cur = '\u20ac';
+
+    document.getElementById('invTaxType').textContent = taxType;
+    document.getElementById('invTaxRate').textContent = (taxRate * 100) + '%';
+    document.getElementById('invTaxAmt').textContent = cur + taxAmt.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    document.getElementById('invTotal').textContent = cur + total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    document.getElementById('invNote').textContent = note;
+    document.getElementById('invReg').textContent = reg;
+
+    invResults.style.display = 'block';
+    invResults.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+})();
+</script>
+<!-- Related Tools -->
+<section class="related-tools" aria-label="Related Tools">
+  <div class="container">
+    <h2>Related Tools You Might Need</h2>
+    <div class="related-grid">
+      <a href="/tools/first-paycheck-calculator.html">First Paycheck Calculator<small>Budget your actual take-home pay</small></a>
+      <a href="/tools/finance-app-recommender.html">Best Finance App Recommender<small>Find an app to track your budget</small></a>
+      <a href="/tools/rate-calculator-debt-planner.html">Debt Payoff Planner<small>Pay off debt with your budget surplus</small></a>
+      <a href="/tools/freelance-hourly-rate-calculator.html">Freelance Hourly Rate Calculator<small>Set rates for invoicing clients</small></a>
+    </div>
+  </div>
+</section>
+
+<style>
+.related-tools{{background:#fff;padding:48px 0;border-top:1px solid #E8ECF0;margin-top:0}}
+.related-tools h2{{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;text-align:center;margin-bottom:24px}}
+.related-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto}}
+.related-grid a{{display:block;background:#F4F6F9;border-radius:10px;padding:16px;font-size:14px;color:#1A1A2E;font-weight:500;transition:all 0.3s ease;text-decoration:none;border:1px solid transparent}}
+.related-grid a:hover{{background:#F0FDF9;border-color:#00C896;color:#00C896;transform:translateY(-2px)}}
+.related-grid a small{{display:block;font-weight:400;color:#6B7280;font-size:13px;margin-top:4px}}
+</style>
+</body>
+</html>

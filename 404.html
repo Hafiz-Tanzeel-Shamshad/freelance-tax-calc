@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found | FreelanceTaxCalc</title>
+<meta name="description" content="Page not found. The page you're looking for doesn't exist or has been moved. Find free tax calculators for freelancers on our homepage.">
+<link rel="canonical" href="https://freelancetaxcalc.online/404.html">
+<meta property="og:title" content="Page Not Found | FreelanceTaxCalc">
+<meta property="og:description" content="The page you're looking for doesn't exist. Try our free tax calculators.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/404.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Page Not Found | FreelanceTaxCalc">
+<meta name="twitter:description" content="The page you're looking for doesn't exist. Try our free tax calculators.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.8;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+a{color:#00C896;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.skip-link{position:absolute;top:-100px;left:8px;background:#00C896;color:#fff;padding:8px 16px;z-index:9999;border-radius:0 0 8px 8px;font-weight:600;font-size:14px}
+.skip-link:focus{top:0}
+.sticky-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.95);backdrop-filter:blur(10px);height:72px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.sticky-header .container{display:flex;align-items:center;justify-content:space-between;height:100%}
+.logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:24px;font-weight:700;color:#fff}
+.logo-icon{width:36px;height:36px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:15px;color:#B0B8C4;transition:color 0.3s ease}
+.nav-links a:hover{color:#00C896}
+.nav-cta{background:#00C896;color:#fff!important;padding:10px 24px;border-radius:8px;font-weight:600}
+.nav-cta:hover{background:#00B085!important}
+.hamburger{display:none;flex-direction:column;cursor:pointer;background:none;border:none;padding:8px;gap:5px}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s ease}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-nav{display:none;position:fixed;top:72px;left:0;right:0;background:#0A1628;padding:24px;z-index:999;border-bottom:1px solid rgba(255,255,255,0.05);transform:translateY(-100%);opacity:0;transition:all 0.3s ease}
+.mobile-nav.open{display:block;transform:translateY(0);opacity:1}
+.mobile-nav a{display:block;padding:12px 0;font-size:16px;color:#B0B8C4;border-bottom:1px solid rgba(255,255,255,0.05)}
+.mobile-nav .nav-cta{text-align:center;margin-top:12px;color:#fff!important}
+.error-section{display:flex;align-items:center;justify-content:center;min-height:60vh;padding:140px 24px 80px;text-align:center}
+.error-content{max-width:500px}
+.error-code{font-family:"DM Serif Display",serif;font-size:120px;color:#0A1628;line-height:1;margin-bottom:8px;opacity:0.1;font-weight:700}
+.error-content h1{font-family:"DM Serif Display",serif;font-size:32px;color:#0A1628;margin-bottom:12px}
+.error-content p{color:#6B7280;font-size:16px;margin-bottom:24px}
+.error-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.error-links a{padding:10px 24px;border-radius:8px;font-weight:600;font-size:14px;transition:all 0.2s ease}
+.error-links .primary-link{background:#00C896;color:#fff}
+.error-links .primary-link:hover{background:#00B085;text-decoration:none}
+.error-links .secondary-link{background:#fff;color:#0A1628;border:1px solid #D1D5DB}
+.error-links .secondary-link:hover{border-color:#00C896;text-decoration:none}
+.search-prompt{margin-top:32px;padding:16px;background:#fff;border:1px solid #E8ECF0;border-radius:10px;font-size:14px;color:#6B7280}
+.search-prompt strong{display:block;margin-bottom:4px;color:#0A1628}
+.footer{background:#0A1628;color:#B0B8C4;padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;margin-bottom:40px}
+.footer-brand .logo{margin-bottom:12px}
+.footer-tagline{font-size:14px;color:#8892A0;margin-bottom:24px;max-width:280px}
+.footer-copy{font-size:13px;color:#667080;margin-top:24px}
+.footer h4{font-family:"DM Serif Display",serif;font-size:16px;color:#fff;margin-bottom:16px}
+.footer ul li{margin-bottom:8px}
+.footer ul li a{font-size:14px;color:#8892A0;transition:color 0.3s ease}
+.footer ul li a:hover{color:#00C896}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;font-size:13px;color:#667080;text-align:center;line-height:1.6}
+@media print{body{font-size:12px;background:#fff}.sticky-header,.footer,.hamburger,.mobile-nav{display:none}}
+@media(max-width:768px){
+  .error-code{font-size:80px}
+  .error-content h1{font-size:24px}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .nav-links{display:none}.hamburger{display:flex}
+}
+@media(min-width:769px){.mobile-nav{display:none!important}}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="sticky-header" role="banner">
+  <div class="container">
+    <a href="/" class="logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/guides/index.html">Guides</a>
+      <a href="/legal/about.html">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/" class="nav-cta">Try Free Tools &rarr;</a>
+    </nav>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="/guides/index.html">Guides</a>
+    <a href="/legal/about.html">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/" class="nav-cta">Try Free Tools &rarr;</a>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<section class="error-section">
+  <div class="error-content">
+    <div class="error-code" aria-hidden="true">404</div>
+    <h1>Oops! Page Not Found</h1>
+    <p>The page you're looking for doesn't exist, has been moved, or took an unexpected vacation. Maybe it's filing its own taxes somewhere.</p>
+    <div class="error-links">
+      <a href="/" class="primary-link">&larr; Back to Home</a>
+      <a href="/" class="secondary-link">All Tools</a>
+      <a href="/guides/index.html" class="secondary-link">Guides</a>
+      <a href="/contact" class="secondary-link">Contact Us</a>
+    </div>
+    <div class="search-prompt">
+      <strong>&#128269; Looking for a specific tool?</strong>
+      Try one of our most popular calculators: <a href="/tools/quarterly-tax-calculator.html">Quarterly Tax</a>, <a href="/tools/gig-deduction-finder.html">Deduction Finder</a>, or <a href="/tools/1099-vs-w2-calculator.html">1099 vs W-2</a>.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="FreelanceTaxCalc Home">
+          <span class="logo-icon" aria-hidden="true">$</span>
+          Freelance<span class="logo-dot">.</span>TaxCalc
+        </a>
+        <p class="footer-tagline">Free financial tools for independent workers.</p>
+        <p class="footer-copy">&copy; 2026 FreelanceTaxCalc. All rights reserved.</p>
+      </div>
+      <div>
+        <h4>Free Tools</h4>
+        <ul>
+          <li><a href="/tools/quarterly-tax-calculator.html">Quarterly Tax Estimator</a></li>
+          <li><a href="/tools/gig-deduction-finder.html">Gig Worker Deduction Finder</a></li>
+          <li><a href="/tools/digital-nomad-tax-calculator.html">Digital Nomad Tax Calculator</a></li>
+          <li><a href="/tools/first-paycheck-calculator.html">First Paycheck Calculator</a></li>
+          <li><a href="/tools/rate-calculator-debt-planner.html">Freelancer Rate Calculator</a></li>
+          <li><a href="/tools/retirement-calculator.html">Retirement Calculator</a></li>
+          <li><a href="/tools/side-hustle-tax-estimator.html">Side Hustle Tax Estimator</a></li>
+          <li><a href="/tools/budget-invoice-calculators.html">Budget Calculator</a></li>
+          <li><a href="/tools/budget-invoice-calculators.html">Invoice Tax Calculator</a></li>
+          <li><a href="/tools/finance-app-recommender.html">Finance App Recommender</a></li>
+          <li><a href="/tools/1099-vs-w2-calculator.html">1099 vs W-2 Calculator</a></li>
+          <li><a href="/tools/rate-calculator-debt-planner.html">Debt Payoff Planner</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/guides/index.html">Guides</a></li>
+          <li><a href="/legal/about.html">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/legal/terms.html">Terms of Service</a></li>
+          <li><a href="/legal/about.html">Disclaimer</a></li>
+          <li><a href="#cookie-preferences">Cookie Settings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Popular Tools</h4>
+        <ul>
+          <li><a href="/tools/quarterly-tax-calculator.html">Quarterly Tax Estimator</a></li>
+          <li><a href="/tools/gig-deduction-finder.html">DoorDash Deductions</a></li>
+          <li><a href="/tools/1099-vs-w2-calculator.html">1099 Calculator</a></li>
+          <li><a href="/tools/digital-nomad-tax-calculator.html">Digital Nomad Taxes</a></li>
+          <li><a href="/tools/first-paycheck-calculator.html">First Paycheck Calculator</a></li>
+          <li><a href="/tools/side-hustle-tax-estimator.html">Side Hustle Tax Tool</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      This website provides estimates for informational purposes only. Not financial or tax advice. | We use cookies and display ads. See <a href="/legal/privacy-policy.html">Privacy Policy</a> for details.
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var h=document.querySelector('.hamburger');var m=document.querySelector('.mobile-nav');if(h&&m){h.addEventListener('click',function(){var e=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',!e);this.classList.toggle('active');m.classList.toggle('open');});document.querySelectorAll('.mobile-nav a').forEach(function(l){l.addEventListener('click',function(){h.classList.remove('active');m.classList.remove('open');h.setAttribute('aria-expanded','false');});});}
+window.addEventListener('resize',function(){if(window.innerWidth>768&&m){h.classList.remove('active');m.classList.remove('open');h.setAttribute('aria-expanded','false');}});})();
+</script>
+</body>
+</html>

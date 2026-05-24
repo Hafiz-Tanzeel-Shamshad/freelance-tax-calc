@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Budgeting App &amp; Expense Tracker for Freelancers 2026 — Free Quiz &amp; App Match | FreelanceTaxCalc</title>
+<meta name="description" content="Find the best budgeting app and expense tracker for freelancers. Free quiz matches you with YNAB, Monarch, QuickBooks, Wave, and more. Best tax app for self-employed 2026.">
+<link rel="canonical" href="https://freelancetaxcalc.online/tools/finance-app-recommender">
+<meta property="og:title" content="Best Budgeting App &amp; Expense Tracker for Freelancers — Free Quiz">
+<meta property="og:description" content="Find the best finance app for freelancers and gig workers. Free quiz matches you with YNAB, Monarch, QuickBooks, and Wave. 2026.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/tools/finance-app-recommender">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Best Budgeting App &amp; Expense Tracker for Freelancers — Free Quiz">
+<meta name="twitter:description" content="Find the best finance app for freelancers and gig workers. Free quiz matches you with YNAB, Monarch, QuickBooks, and Wave. 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"Best Finance App Recommender Quiz",
+  "url":"https://freelancetaxcalc.online/tools/finance-app-recommender",
+  "description":"Answer 5 questions and get a personalized finance app recommendation.",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All"
+},{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":3,"name":"Best Finance App Recommender"}
+  ]
+}]
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:16px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:800px;margin:0 auto;padding:0 24px}
+
+/* HEADER */
+.site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;font-weight:700;color:#fff}
+.logo-icon{width:32px;height:32px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.header-back{color:#B0B8C4;font-size:14px;transition:color 0.3s ease}
+.header-back:hover{color:#00C896}
+
+/* BREADCRUMB */
+.breadcrumb{background:#fff;padding:12px 0;border-bottom:1px solid #E8ECF0;font-size:14px;color:#6B7280}
+.breadcrumb a{color:#00C896}
+.breadcrumb a:hover{color:#00B085}
+.breadcrumb span{color:#6B7280}
+
+/* PAGE TITLE */
+.page-title{background:#fff;padding:28px 0 0}
+.page-title h1{font-family:"DM Serif Display",serif;font-size:30px;color:#1A1A2E;margin-bottom:6px;text-align:center}
+.page-title p{color:#6B7280;font-size:15px;text-align:center;max-width:550px;margin:0 auto}
+
+/* QUIZ SECTION */
+.quiz-section{padding:32px 0 60px}
+.quiz-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.08);min-height:400px}
+
+/* PROGRESS */
+.quiz-progress{margin-bottom:28px}
+.progress-text{display:flex;justify-content:space-between;font-size:14px;color:#6B7280;margin-bottom:8px}
+.progress-text span:last-child{font-weight:600;color:#00C896}
+.progress-track{height:6px;background:#E8ECF0;border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:#00C896;border-radius:3px;transition:width 0.5s ease;width:0%}
+
+/* SLIDES */
+.slide-container{position:relative;overflow:hidden}
+.quiz-slide{display:none;animation:slideIn 0.4s ease}
+.quiz-slide.active{display:block}
+@keyframes slideIn{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideOut{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(-30px)}}
+
+.quiz-question{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;margin-bottom:20px;line-height:1.3}
+
+/* ANSWERS */
+.answers{display:grid;gap:12px}
+.answer-card{display:flex;align-items:center;gap:14px;padding:16px 18px;border:2px solid #E8ECF0;border-radius:12px;cursor:pointer;transition:all 0.25s ease;background:#fff;user-select:none}
+.answer-card:hover{border-color:#00C896;transform:translateY(-1px)}
+.answer-card.selected{border-color:#00C896;background:#E8F8F5;transform:scale(1.01);box-shadow:0 2px 12px rgba(0,200,150,0.15)}
+.answer-card .ans-icon{font-size:28px;flex-shrink:0;width:40px;text-align:center}
+.answer-card .ans-text{flex:1}
+.answer-card .ans-title{font-weight:600;font-size:16px;color:#1A1A2E}
+.answer-card .ans-desc{font-size:14px;color:#6B7280;line-height:1.4;margin-top:2px}
+.answer-card .ans-check{width:22px;height:22px;border-radius:50%;border:2px solid #DDE1E7;display:flex;align-items:center;justify-content:center;font-size:12px;color:transparent;flex-shrink:0;transition:all 0.25s ease}
+.answer-card.selected .ans-check{background:#00C896;border-color:#00C896;color:#fff}
+
+/* QUIZ NAV */
+.quiz-nav{display:flex;justify-content:space-between;margin-top:24px;gap:12px}
+.quiz-nav button{padding:14px 28px;border-radius:10px;font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;transition:all 0.3s ease}
+.btn-next{background:#00C896;color:#fff;border:none;flex:1}
+.btn-next:hover:not(:disabled){background:#00B085;box-shadow:0 4px 12px rgba(0,200,150,0.25);transform:translateY(-1px)}
+.btn-next:disabled{opacity:0.4;cursor:not-allowed}
+.btn-back{background:#fff;color:#6B7280;border:2px solid #DDE1E7;width:120px}
+.btn-back:hover{border-color:#00C896;color:#00C896}
+.btn-back.hidden{visibility:hidden}
+
+/* RESULTS */
+.results-area{display:none;animation:fadeUp 0.6s ease}
+.results-area.visible{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* TOP PICK */
+.top-pick{background:#fff;border-radius:16px;border:2px solid #00C896;border-left:6px solid #00C896;padding:28px;margin-bottom:16px;position:relative;opacity:0;transform:translateY(16px);transition:all 0.5s ease}
+.top-pick.reveal{opacity:1;transform:translateY(0)}
+.top-badge{display:inline-block;background:#00C896;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.top-pick h3{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;margin-bottom:4px}
+.top-pick .price{font-size:15px;color:#6B7280;margin-bottom:8px}
+.top-pick .tagline{font-size:14px;color:#00C896;font-weight:600;margin-bottom:12px}
+.top-pick .pros,.top-pick .cons{font-size:14px;color:#374151;margin-bottom:4px;padding-left:0}
+.top-pick .pros li,.top-pick .cons li{margin-bottom:3px;display:flex;align-items:center;gap:6px}
+.top-pick .pros li::before{content:'\2705';font-size:13px}
+.top-pick .cons li::before{content:'\26A0\FE0F';font-size:13px}
+.top-pick .visit-btn{display:inline-block;background:#00C896;color:#fff;padding:12px 28px;border-radius:8px;font-weight:600;font-size:15px;margin-top:14px;transition:all 0.3s ease;border:none;cursor:pointer;font-family:inherit;text-align:center}
+.top-pick .visit-btn:hover{background:#00B085;box-shadow:0 4px 12px rgba(0,200,150,0.25)}
+
+/* Runner ups */
+.runner-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.runner-card{background:#fff;border:1px solid #E8ECF0;border-radius:12px;padding:20px;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.runner-card.reveal{opacity:1;transform:translateY(0)}
+.runner-card .num{font-size:11px;color:#9CA3AF;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.runner-card h4{font-family:"DM Serif Display",serif;font-size:17px;color:#1A1A2E;margin:2px 0}
+.runner-card .price{font-size:13px;color:#6B7280;margin-bottom:6px}
+.runner-card .tagline{font-size:13px;color:#00C896;font-weight:600;margin-bottom:8px}
+.runner-card p{font-size:13px;color:#374151;line-height:1.5;margin-bottom:8px}
+.runner-card .visit-btn-sm{display:inline-block;background:#00C896;color:#fff;padding:8px 18px;border-radius:6px;font-weight:600;font-size:13px;transition:all 0.3s ease;border:none;cursor:pointer;font-family:inherit}
+.runner-card .visit-btn-sm:hover{background:#00B085}
+
+/* Comparison table */
+.comp-table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:14px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,0.05);opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.comp-table.reveal{opacity:1;transform:translateY(0)}
+.comp-table th{background:#0A1628;color:#fff;padding:12px 16px;text-align:left;font-weight:600;font-size:13px}
+.comp-table td{padding:10px 16px;border-bottom:1px solid #F3F4F6;color:#374151}
+.comp-table tr:last-child td{border-bottom:none}
+
+/* Retake */
+.retake-area{text-align:center;margin-bottom:24px}
+.retake-btn{background:transparent;color:#00C896;border:2px solid #00C896;padding:14px 32px;border-radius:10px;font-weight:600;font-size:15px;cursor:pointer;transition:all 0.3s ease;font-family:inherit}
+.retake-btn:hover{background:#E8F8F5}
+
+/* Affiliate disclaimer */
+.aff-disc{background:#F9FAFB;border:1px solid #E8ECF0;border-radius:8px;padding:14px 18px;font-size:13px;color:#6B7280;margin-bottom:20px;text-align:center;line-height:1.5}
+
+/* DISCLAIMER */
+.disclaimer-bar{background:#FFF8E1;border:1px solid #FFD700;padding:20px;margin:0 24px 24px;border-radius:8px;display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#5D4037;line-height:1.6}
+.disclaimer-bar .icon{font-size:18px;flex-shrink:0;margin-top:2px}
+
+/* FOOTER */
+.site-footer{background:#0A1628;color:#B0B8C4;padding:40px 0 24px}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.site-footer a{color:#8892A0;transition:color 0.3s ease}
+.site-footer a:hover{color:#00C896}
+.site-footer .copyright{font-size:13px;color:#667080}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .page-title h1{font-size:24px}
+  .quiz-card{padding:20px;min-height:auto}
+  .quiz-question{font-size:19px}
+  .answer-card{padding:14px;gap:10px}
+  .answer-card .ans-icon{font-size:22px;width:32px}
+  .answer-card .ans-title{font-size:15px}
+  .answer-card .ans-desc{font-size:13px;display:none}
+  .quiz-nav{flex-direction:column}
+  .btn-back{width:100%}
+  .top-pick{padding:20px}
+  .top-pick h3{font-size:19px}
+  .runner-grid{grid-template-columns:1fr}
+  .comp-table{font-size:12px}
+  .comp-table th,.comp-table td{padding:8px 10px}
+}
+
+@media print{
+  .site-header,.breadcrumb,.quiz-nav,.retake-area,.aff-disc,.site-footer,.disclaimer-bar{display:none!important}
+  .results-area{display:block!important}
+  .top-pick,.runner-card,.comp-table{border:1px solid #ddd;box-shadow:none;opacity:1!important;transform:none!important}
+  .quiz-card{box-shadow:none;border:1px solid #ddd}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="header-logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <a href="/" class="header-back" aria-label="Back to homepage">&larr; Back to Home</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> <span aria-hidden="true"> &gt; </span>
+    <a href="/">Tools</a> <span aria-hidden="true"> &gt; </span>
+    <span>Finance App Recommender</span>
+  </div>
+</nav>
+
+<!-- PAGE TITLE -->
+<div class="page-title">
+  <div class="container">
+    <h1>&#129302; Best Finance App Recommender</h1>
+    <p>Answer 5 quick questions and get a personalized finance app recommendation. Takes 60 seconds.</p>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<section class="quiz-section" aria-label="Finance app recommender quiz">
+  <div class="container">
+    <div class="quiz-card">
+
+      <!-- Progress -->
+      <div class="quiz-progress">
+        <div class="progress-text">
+          <span>Find your app</span>
+          <span id="progressLabel">Question 1 of 5</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="slide-container">
+
+        <!-- Q1 -->
+        <div class="quiz-slide active" data-q="1">
+          <div class="quiz-question">What best describes your work?</div>
+          <div class="answers">
+            <div class="answer-card" data-value="employee" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128084;</span>
+              <div class="ans-text">
+                <div class="ans-title">Full-time employee</div>
+                <div class="ans-desc">Regular salary, W-2 worker</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="freelancer" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128187;</span>
+              <div class="ans-text">
+                <div class="ans-title">Freelancer/Self-employed</div>
+                <div class="ans-desc">Variable income, 1099 work</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="gigWorker" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128663;</span>
+              <div class="ans-text">
+                <div class="ans-title">Gig worker</div>
+                <div class="ans-desc">Uber, DoorDash, delivery, marketplace</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="student" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#127891;</span>
+              <div class="ans-text">
+                <div class="ans-title">Student</div>
+                <div class="ans-desc">Learning, part-time work, tight budget</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn-back hidden" aria-label="Previous question">Back</button>
+            <button class="btn-next" disabled aria-label="Next question">Next &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz-slide" data-q="2">
+          <div class="quiz-question">What's your biggest money challenge?</div>
+          <div class="answers">
+            <div class="answer-card" data-value="overspender" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128176;</span>
+              <div class="ans-text">
+                <div class="ans-title">I overspend</div>
+                <div class="ans-desc">I spend without realizing where it goes</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="noVisibility" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128200;</span>
+              <div class="ans-text">
+                <div class="ans-title">No visibility</div>
+                <div class="ans-desc">I don't know where my money goes</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="taxAnxious" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128695;</span>
+              <div class="ans-text">
+                <div class="ans-title">Tax anxiety</div>
+                <div class="ans-desc">Taxes confuse and scare me</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="wealthBuilder" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128200;</span>
+              <div class="ans-text">
+                <div class="ans-title">Building wealth</div>
+                <div class="ans-desc">I want to save and invest more</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn-back" aria-label="Previous question">&larr; Back</button>
+            <button class="btn-next" disabled aria-label="Next question">Next &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz-slide" data-q="3">
+          <div class="quiz-question">How does your income arrive?</div>
+          <div class="answers">
+            <div class="answer-card" data-value="steady" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128197;</span>
+              <div class="ans-text">
+                <div class="ans-title">Same every month</div>
+                <div class="ans-desc">Predictable paychecks</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="variable" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128200;</span>
+              <div class="ans-text">
+                <div class="ans-title">Varies monthly</div>
+                <div class="ans-desc">Ups and downs each month</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="mixed" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128188;</span>
+              <div class="ans-text">
+                <div class="ans-title">Mix of both</div>
+                <div class="ans-desc">Regular salary + irregular freelance</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="beginner" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#127891;</span>
+              <div class="ans-text">
+                <div class="ans-title">Just started</div>
+                <div class="ans-desc">New job or first income</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn-back" aria-label="Previous question">&larr; Back</button>
+            <button class="btn-next" disabled aria-label="Next question">Next &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quiz-slide" data-q="4">
+          <div class="quiz-question">Where are you located?</div>
+          <div class="answers">
+            <div class="answer-card" data-value="usa" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#127482;&#127480;</span>
+              <div class="ans-text">
+                <div class="ans-title">United States</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="canada" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#127464;&#127462;</span>
+              <div class="ans-text">
+                <div class="ans-title">Canada</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="uk" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#127468;&#127467;</span>
+              <div class="ans-text">
+                <div class="ans-title">United Kingdom</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="europe" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#127758;</span>
+              <div class="ans-text">
+                <div class="ans-title">Europe or Other</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn-back" aria-label="Previous question">&larr; Back</button>
+            <button class="btn-next" disabled aria-label="Next question">Next &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="quiz-slide" data-q="5">
+          <div class="quiz-question">What's your app budget?</div>
+          <div class="answers">
+            <div class="answer-card" data-value="free" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128154;</span>
+              <div class="ans-text">
+                <div class="ans-title">Free only</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="under10" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#9749;</span>
+              <div class="ans-text">
+                <div class="ans-title">Under $10/month</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="under30" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#128179;</span>
+              <div class="ans-text">
+                <div class="ans-title">Under $30/month</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+            <div class="answer-card" data-value="any" tabindex="0">
+              <span class="ans-icon" aria-hidden="true">&#127942;</span>
+              <div class="ans-text">
+                <div class="ans-title">Best available, price doesn't matter</div>
+              </div>
+              <span class="ans-check">&#10003;</span>
+            </div>
+          </div>
+          <div class="quiz-nav">
+            <button class="btn-back" aria-label="Previous question">&larr; Back</button>
+            <button class="btn-next" disabled aria-label="See results">See My Results &rarr;</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-area" id="resultsArea">
+
+      <div class="aff-disc">
+        &#128209; <strong>Affiliate Disclosure:</strong> Some links may earn us a commission at no extra cost to you. We recommend apps based on features and fit, not commissions.
+      </div>
+
+      <div id="topPickArea"></div>
+
+      <div class="runner-grid" id="runnerArea"></div>
+
+      <div id="compTableArea"></div>
+
+      <div class="retake-area">
+        <button class="retake-btn" id="retakeBtn" aria-label="Take quiz again">&#8635; Take Quiz Again</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-bar" role="note">
+  <span class="icon" aria-hidden="true">&#9888;&#65039;</span>
+  <p><strong>Disclaimer:</strong> App recommendations are based on quiz answers and feature matching. Your experience may vary. Always review app privacy policies and terms before use.</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <span class="copyright">&copy; 2026 FreelanceTaxCalc &mdash; Free tools for independent workers.</span>
+    <a href="/">Back to Home</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // ─── APP DATABASE ───
+  var apps = [
+    {id:'ynab', name:'YNAB', price:'$14.99/mo', url:'https://youneedabudget.com',
+     tagline:'Discipline-focused budgeting', pro:['Zero-based budgeting', 'Handles irregular income beautifully', 'Great mobile app with real-time sync'],
+     con:['Steep learning curve', 'Paid only — no free tier'],
+     scores:{employee:5, freelancer:8, gigWorker:8, student:3, overspender:10, noVisibility:9, taxAnxious:3, wealthBuilder:6, steady:7, variable:10, mixed:9, beginner:4, usa:10, canada:10, uk:7, europe:3, free:0, under10:0, under30:10, any:8}},
+
+    {id:'monarch', name:'Monarch Money', price:'$14.99/mo', url:'https://monarchmoney.com',
+     tagline:'Full financial picture with investments', pro:['Beautiful, modern UI', 'Tracks investments alongside budget', 'Great for couples'],
+     con:['No free plan', 'Overkill for simple budgeting needs'],
+     scores:{employee:9, freelancer:6, gigWorker:4, student:3, overspender:7, noVisibility:8, taxAnxious:2, wealthBuilder:10, steady:9, variable:5, mixed:7, beginner:5, usa:10, canada:7, uk:4, europe:3, free:0, under10:0, under30:10, any:9}},
+
+    {id:'copilot', name:'Copilot', price:'$13/mo', url:'https://copilot.money',
+     tagline:'AI-powered budgeting for Apple users', pro:['AI categorization that learns', 'Stunning design', 'Smart spending alerts'],
+     con:['iOS/Mac only — no Android', 'US only (no Canada/UK support)'],
+     scores:{employee:9, freelancer:7, gigWorker:5, student:4, overspender:9, noVisibility:9, taxAnxious:2, wealthBuilder:8, steady:9, variable:6, mixed:7, beginner:5, usa:10, canada:0, uk:0, europe:0, free:0, under10:0, under30:10, any:8}},
+
+    {id:'wave', name:'Wave', price:'Free', url:'https://waveapps.com',
+     tagline:'Free invoicing + accounting for freelancers', pro:['100% free forever', 'Invoicing, receipt scanning, tax reports', 'Good for basic accounting'],
+     con:['Limited budgeting features', 'US and Canada only'],
+     scores:{employee:2, freelancer:10, gigWorker:8, student:2, overspender:3, noVisibility:5, taxAnxious:9, wealthBuilder:3, steady:3, variable:9, mixed:7, beginner:2, usa:10, canada:10, uk:0, europe:0, free:10, under10:10, under30:10, any:10}},
+
+    {id:'flyfin', name:'FlyFin', price:'$15/mo', url:'https://flyfin.tax',
+     tagline:'For freelancers who hate tax season', pro:['AI deduction finder', 'CPA review included', 'Quarterly tax estimates'],
+     con:['Tax-focused — not a full budgeting app', 'US only'],
+     scores:{employee:2, freelancer:10, gigWorker:10, student:1, overspender:2, noVisibility:4, taxAnxious:10, wealthBuilder:2, steady:2, variable:10, mixed:8, beginner:2, usa:10, canada:0, uk:0, europe:0, free:0, under10:0, under30:10, any:8}},
+
+    {id:'quickbooks', name:'QuickBooks Self-Employed', price:'$15/mo', url:'https://quickbooks.intuit.com/self-employed/',
+     tagline:'All-in-one tax + books for freelancers', pro:['Mileage tracking with GPS', 'TurboTax integration', 'Profit and loss reports'],
+     con:['Not a budgeting app', 'Can be slow and clunky'],
+     scores:{employee:2, freelancer:9, gigWorker:9, student:1, overspender:2, noVisibility:4, taxAnxious:9, wealthBuilder:3, steady:2, variable:9, mixed:7, beginner:2, usa:10, canada:8, uk:5, europe:3, free:0, under10:0, under30:10, any:7}},
+
+    {id:'pocketguard', name:'PocketGuard', price:'Free / $12.99/mo Plus', url:'https://pocketguard.com',
+     tagline:'For overspenders who need limits', pro:['"In My Pocket" safe-to-spend feature', 'Bill negotiation service', 'Simple and intuitive'],
+     con:['Limited investment tracking', 'Basic free version'],
+     scores:{employee:8, freelancer:6, gigWorker:5, student:7, overspender:10, noVisibility:8, taxAnxious:2, wealthBuilder:4, steady:8, variable:5, mixed:6, beginner:7, usa:10, canada:8, uk:5, europe:4, free:7, under10:8, under30:10, any:7}},
+
+    {id:'goodbudget', name:'Goodbudget', price:'Free / $10/mo', url:'https://goodbudget.com',
+     tagline:'Digital envelope budgeting', pro:['Classic envelope system', 'Syncs with a partner', 'Debt tracking tools'],
+     con:['Manual entry on free plan', 'No automatic bank sync on free'],
+     scores:{employee:7, freelancer:5, gigWorker:4, student:8, overspender:7, noVisibility:7, taxAnxious:2, wealthBuilder:6, steady:7, variable:6, mixed:6, beginner:7, usa:10, canada:10, uk:8, europe:7, free:9, under10:10, under30:10, any:7}},
+
+    {id:'creditkarma', name:'Credit Karma', price:'Free', url:'https://creditkarma.com',
+     tagline:'Free budgeting + credit monitoring', pro:['100% free', 'Credit score tracking included', 'Very easy to use'],
+     con:['Ad-supported', 'Limited depth for power users', 'US only'],
+     scores:{employee:6, freelancer:5, gigWorker:4, student:10, overspender:6, noVisibility:8, taxAnxious:3, wealthBuilder:4, steady:6, variable:5, mixed:5, beginner:10, usa:10, canada:0, uk:0, europe:0, free:10, under10:10, under30:10, any:10}},
+
+    {id:'emma', name:'Emma', price:'Free / Pro \u00a34.99/mo', url:'https://emma-app.com',
+     tagline:'UK-focused money management', pro:['Bank sync with UK banks', 'Bill tracking and alerts', 'Crypto portfolio tracking'],
+     con:['UK-focused — limited US support', 'Prem features behind paywall'],
+     scores:{employee:8, freelancer:6, gigWorker:5, student:8, overspender:7, noVisibility:8, taxAnxious:3, wealthBuilder:6, steady:8, variable:6, mixed:7, beginner:8, usa:3, canada:2, uk:10, europe:8, free:7, under10:8, under30:10, any:7}},
+
+    {id:'moneydance', name:'Moneydance', price:'$9/mo (or one-time)', url:'https://moneydance.com',
+     tagline:'Multi-currency for international users', pro:['Multi-currency support', 'No subscription required (one-time purchase)', 'Investment tracking'],
+     con:['Dated interface', 'Desktop-focused, weaker mobile'],
+     scores:{employee:7, freelancer:7, gigWorker:5, student:3, overspender:4, noVisibility:5, taxAnxious:2, wealthBuilder:7, steady:7, variable:6, mixed:6, beginner:3, usa:7, canada:7, uk:8, europe:9, free:0, under10:10, under30:10, any:8}},
+
+    {id:'spendee', name:'Spendee', price:'Free / Premium $2.99/mo', url:'https://spendee.com',
+     tagline:'Visual budgeting with shared wallets', pro:['Beautiful charts and UI', 'Shared wallets for couples/groups', 'Multi-currency support'],
+     con:['Bank sync in premium only', 'Limited investment features'],
+     scores:{employee:7, freelancer:6, gigWorker:5, student:8, overspender:7, noVisibility:8, taxAnxious:2, wealthBuilder:5, steady:7, variable:6, mixed:6, beginner:7, usa:5, canada:6, uk:7, europe:8, free:7, under10:10, under30:10, any:7}}
+  ];
+
+  // ─── QUIZ ENGINE ───
+  var slides = document.querySelectorAll('.quiz-slide');
+  var progressFill = document.getElementById('progressFill');
+  var progressLabel = document.getElementById('progressLabel');
+  var resultsArea = document.getElementById('resultsArea');
+  var topPickArea = document.getElementById('topPickArea');
+  var runnerArea = document.getElementById('runnerArea');
+  var compTableArea = document.getElementById('compTableArea');
+  var retakeBtn = document.getElementById('retakeBtn');
+
+  var totalQ = 5;
+  var currentQ = 1;
+  var answers = {};
+
+  function showSlide(num){
+    slides.forEach(function(s){
+      var q = parseInt(s.getAttribute('data-q'));
+      s.classList.toggle('active', q === num);
+    });
+    currentQ = num;
+    progressFill.style.width = (num / totalQ * 100) + '%';
+    progressLabel.textContent = 'Question ' + num + ' of ' + totalQ;
+    // Show/hide back
+    slides.forEach(function(s){
+      var back = s.querySelector('.btn-back');
+      if(back) back.classList.toggle('hidden', num <= 1);
+    });
+    // Update next button text on last
+    slides.forEach(function(s){
+      var next = s.querySelector('.btn-next');
+      if(next){
+        if(parseInt(s.getAttribute('data-q')) === totalQ) next.textContent = 'See My Results \u2192';
+        else next.textContent = 'Next \u2192';
+      }
+    });
+  }
+
+  // Answer click
+  document.querySelectorAll('.answer-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      var slide = this.closest('.quiz-slide');
+      // Deselect others
+      slide.querySelectorAll('.answer-card').forEach(function(c){ c.classList.remove('selected'); });
+      this.classList.add('selected');
+      var nextBtn = slide.querySelector('.btn-next');
+      nextBtn.disabled = false;
+    });
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); this.click(); }
+    });
+  });
+
+  // Next
+  document.querySelectorAll('.btn-next').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var slide = this.closest('.quiz-slide');
+      var selected = slide.querySelector('.answer-card.selected');
+      if(!selected) return;
+      var qNum = parseInt(slide.getAttribute('data-q'));
+      answers[qNum] = selected.getAttribute('data-value');
+      if(qNum < totalQ){
+        showSlide(qNum + 1);
+      } else {
+        // Show results
+        showResults();
+      }
+    });
+  });
+
+  // Back
+  document.querySelectorAll('.btn-back').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var slide = this.closest('.quiz-slide');
+      var qNum = parseInt(slide.getAttribute('data-q'));
+      if(qNum > 1) showSlide(qNum - 1);
+    });
+  });
+
+  // ─── RESULTS ───
+  function showResults(){
+    document.querySelector('.quiz-card').style.display = 'none';
+    resultsArea.classList.add('visible');
+    resultsArea.style.display = 'block';
+
+    // Build user profile scores
+    var profile = {};
+    // Q1: work type
+    var q1 = answers[1];
+    profile[q1] = 10;
+    if(q1 === 'freelancer'){ profile.gigWorker = 5; profile.employee = 2; }
+    else if(q1 === 'gigWorker'){ profile.freelancer = 6; }
+    else if(q1 === 'employee'){ profile.wealthBuilder = 5; }
+    else if(q1 === 'student'){ profile.beginner = 8; }
+
+    // Q2: challenge
+    var q2 = answers[2];
+    profile[q2] = 10;
+    if(q2 === 'overspender'){ profile.budgeter = 7; }
+    else if(q2 === 'taxAnxious'){ profile.freelancer = 6; profile.gigWorker = 6; }
+    else if(q2 === 'wealthBuilder'){ profile.investing = 7; }
+
+    // Q3: income style
+    var q3 = answers[3];
+    if(q3 === 'steady') profile.steady = 10;
+    else if(q3 === 'variable'){ profile.variable = 10; profile.irregularIncome = 9; }
+    else if(q3 === 'mixed'){ profile.mixed = 10; profile.irregularIncome = 7; }
+    else if(q3 === 'beginner'){ profile.beginner = 10; profile.student = 5; }
+
+    // Q4: location
+    var q4 = answers[4];
+    profile[q4] = 10;
+
+    // Q5: budget
+    var q5 = answers[5];
+    if(q5 === 'free'){ profile.free = 10; profile.freeBudget = 10; }
+    else if(q5 === 'under10'){ profile.under10 = 10; }
+    else if(q5 === 'under30'){ profile.under30 = 10; }
+    else if(q5 === 'any'){ profile.any = 10; }
+
+    // Score apps
+    var scored = apps.map(function(app){
+      var score = 0;
+      for(var key in profile){
+        if(app.scores[key]) score += app.scores[key] * profile[key];
+      }
+      return {app:app, score:score};
+    });
+
+    scored.sort(function(a,b){ return b.score - a.score; });
+    var top3 = scored.slice(0, 3);
+
+    // Render
+    renderTopPick(top3[0].app);
+    renderRunners(top3.slice(1));
+    renderComparison(top3);
+
+    // Reveal with stagger
+    setTimeout(function(){ document.querySelector('.top-pick').classList.add('reveal'); }, 100);
+    setTimeout(function(){
+      document.querySelectorAll('.runner-card').forEach(function(c,i){
+        setTimeout(function(){ c.classList.add('reveal'); }, i * 120);
+      });
+    }, 300);
+    setTimeout(function(){ document.querySelector('.comp-table').classList.add('reveal'); }, 700);
+
+    resultsArea.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  function renderTopPick(app){
+    topPickArea.innerHTML = '<div class="top-pick">' +
+      '<div class="top-badge">\uD83C\uDFC6 Best Match</div>' +
+      '<h3>' + app.name + '</h3>' +
+      '<div class="price">' + app.price + '</div>' +
+      '<div class="tagline">Best for: ' + app.tagline + '</div>' +
+      '<ul class="pros">' + app.pro.map(function(p){ return '<li>' + p + '</li>'; }).join('') + '</ul>' +
+      '<ul class="cons">' + app.con.map(function(c){ return '<li>' + c + '</li>'; }).join('') + '</ul>' +
+      '<a href="' + app.url + '" target="_blank" rel="noopener" class="visit-btn">Visit ' + app.name + ' \u2192</a>' +
+      '</div>';
+  }
+
+  function renderRunners(runners){
+    runnerArea.innerHTML = '';
+    runners.forEach(function(item, i){
+      var app = item.app;
+      var num = i + 2;
+      var div = document.createElement('div');
+      div.className = 'runner-card';
+      div.innerHTML = '<div class="num">#' + num + ' Runner-Up</div>' +
+        '<h4>' + app.name + '</h4>' +
+        '<div class="price">' + app.price + '</div>' +
+        '<div class="tagline">' + app.tagline + '</div>' +
+        '<p>' + app.pro[0] + '</p>' +
+        '<a href="' + app.url + '" target="_blank" rel="noopener" class="visit-btn-sm">Visit \u2192</a>';
+      runnerArea.appendChild(div);
+    });
+  }
+
+  function renderComparison(top3){
+    var html = '<table class="comp-table"><thead><tr><th>Feature</th>';
+    top3.forEach(function(item, i){
+      html += '<th>#' + (i+1) + ': ' + item.app.name + '</th>';
+    });
+    html += '</tr></thead><tbody>';
+    html += '<tr><td><strong>Price</strong></td>';
+    top3.forEach(function(item){ html += '<td>' + item.app.price + '</td>'; });
+    html += '</tr>';
+    html += '<tr><td><strong>Best For</strong></td>';
+    top3.forEach(function(item){ html += '<td>' + item.app.tagline + '</td>'; });
+    html += '</tr>';
+    html += '<tr><td><strong>Match Score</strong></td>';
+    top3.forEach(function(item){ html += '<td>' + Math.round(item.score * 100 / 100) + '</td>'; });
+    html += '</tr>';
+    html += '<tr><td><strong>Platform</strong></td>';
+    top3.forEach(function(item){
+      var p = 'iOS, Android, Web';
+      if(item.app.id === 'copilot') p = 'iOS, Mac only';
+      else if(item.app.id === 'moneydance') p = 'Desktop, iOS, Android';
+      html += '<td>' + p + '</td>';
+    });
+    html += '</tr>';
+    html += '</tbody></table>';
+    compTableArea.innerHTML = html;
+  }
+
+  // Retake
+  retakeBtn.addEventListener('click', function(){
+    answers = {};
+    resultsArea.classList.remove('visible');
+    resultsArea.style.display = 'none';
+    document.querySelector('.quiz-card').style.display = 'block';
+    showSlide(1);
+    document.querySelectorAll('.answer-card').forEach(function(c){ c.classList.remove('selected'); });
+    document.querySelectorAll('.btn-next').forEach(function(b){ b.disabled = true; });
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+<!-- Related Tools -->
+<section class="related-tools" aria-label="Related Tools">
+  <div class="container">
+    <h2>Related Tools You Might Need</h2>
+    <div class="related-grid">
+      <a href="/tools/budget-invoice-calculators.html">Student Budget Calculator<small>Apply 50/30/20 rule after choosing an app</small></a>
+      <a href="/tools/retirement-calculator.html">Retirement Calculator<small>Pick the right retirement plan for your app</small></a>
+      <a href="/tools/rate-calculator-debt-planner.html">Debt Payoff Planner<small>Pay off debt with your budgeting app</small></a>
+      <a href="/tools/first-paycheck-calculator.html">First Paycheck Calculator<small>See your take-home pay</small></a>
+    </div>
+  </div>
+</section>
+
+<style>
+.related-tools{{background:#fff;padding:48px 0;border-top:1px solid #E8ECF0;margin-top:0}}
+.related-tools h2{{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;text-align:center;margin-bottom:24px}}
+.related-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto}}
+.related-grid a{{display:block;background:#F4F6F9;border-radius:10px;padding:16px;font-size:14px;color:#1A1A2E;font-weight:500;transition:all 0.3s ease;text-decoration:none;border:1px solid transparent}}
+.related-grid a:hover{{background:#F0FDF9;border-color:#00C896;color:#00C896;transform:translateY(-2px)}}
+.related-grid a small{{display:block;font-weight:400;color:#6B7280;font-size:13px;margin-top:4px}}
+</style>
+</body>
+</html>

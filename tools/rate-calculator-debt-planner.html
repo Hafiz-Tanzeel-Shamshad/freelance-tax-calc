@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelance Rate Calculator with Taxes 2026 — Salary to Hourly &amp; Value-Based Pricing | FreelanceTaxCalc</title>
+<meta name="description" content="Free freelance rate calculator with taxes. Convert salary to hourly rate, value-based pricing calculator, and freelance day rate calculator. Canada support. How much to charge as a freelancer.">
+<link rel="canonical" href="https://freelancetaxcalc.online/tools/rate-calculator-debt-planner">
+<meta property="og:title" content="Freelance Rate Calculator with Taxes 2026 — Salary to Hourly &amp; Value-Based Pricing">
+<meta property="og:description" content="Free freelance rate calculator with taxes. Convert salary to hourly rate, value-based pricing, day rate &amp; Canada support. Plus debt avalanche vs snowball planner.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/tools/rate-calculator-debt-planner">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Freelance Rate Calculator with Taxes 2026 — Salary to Hourly &amp; Value-Based Pricing">
+<meta name="twitter:description" content="Free freelance rate calculator with taxes. Convert salary to hourly, value-based pricing, day rate &amp; Canada. Plus debt avalanche vs snowball planner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:16px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* HEADER */
+.site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;font-weight:700;color:#fff}
+.logo-icon{width:32px;height:32px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.header-back{color:#B0B8C4;font-size:14px;transition:color 0.3s ease}
+.header-back:hover{color:#00C896}
+
+/* BREADCRUMB */
+.breadcrumb{background:#fff;padding:12px 0;border-bottom:1px solid #E8ECF0;font-size:14px;color:#6B7280}
+.breadcrumb a{color:#00C896}
+.breadcrumb a:hover{color:#00B085}
+.breadcrumb span{color:#6B7280}
+
+/* SECTION DIVIDER */
+.section-divider{text-align:center;padding:40px 0 20px}
+.section-divider h2{font-family:"DM Serif Display",serif;font-size:28px;color:#1A1A2E}
+.section-divider p{color:#6B7280;font-size:15px;margin-top:4px}
+
+/* TOOL CARD */
+.tool-card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:20px}
+.tool-card h2{font-family:"DM Serif Display",serif;font-size:20px;color:#1A1A2E;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+
+/* ===== TOOL A: RATE CALCULATOR ===== */
+.rate-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.rate-inputs .form-group{margin-bottom:18px}
+.rate-inputs label{display:flex;justify-content:space-between;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:4px}
+.rate-inputs label span{color:#00C896;font-weight:700}
+.rate-inputs input[type="range"]{width:100%;height:6px;border-radius:3px;background:#E8ECF0;outline:none;-webkit-appearance:none;appearance:none}
+.rate-inputs input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;box-shadow:0 2px 6px rgba(0,200,150,0.3)}
+.rate-inputs input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;border:none}
+.rate-inputs .helper{font-size:12px;color:#9CA3AF;margin-top:2px}
+
+/* Rate results */
+.rate-results{background:#0A1628;border-radius:12px;padding:24px;color:#fff}
+.rate-results .rr-row{display:flex;justify-content:space-between;padding:6px 0;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.rate-results .rr-row:last-child{border-bottom:none}
+.rate-results .rr-total{border-top:2px solid #00C896;margin-top:6px;padding-top:8px}
+.rate-results .big-rate{font-family:"DM Serif Display",serif;font-size:32px;color:#00C896;text-align:center;padding:8px 0}
+.rate-results .big-label{font-size:13px;color:#B0B8C4;text-align:center}
+.rate-results .sub-rate{text-align:center;font-size:14px;color:#9CA3AF;margin-top:4px}
+.rate-results .monthly-target{text-align:center;font-size:16px;color:#B0B8C4;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.06)}
+.rate-results .monthly-target span{color:#00C896;font-weight:700}
+.rate-results .note{font-size:12px;color:#667080;text-align:center;margin-top:8px;line-height:1.5}
+
+/* Industry ref */
+.industry-ref{background:#F3F4F6;border-radius:10px;padding:16px;margin-top:16px;font-size:13px;color:#374151}
+.industry-ref h3{font-size:14px;font-weight:700;color:#1A1A2E;margin-bottom:8px}
+.industry-ref .ir-row{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px dotted #E8ECF0}
+.industry-ref .ir-row:last-child{border-bottom:none}
+
+/* Why card */
+.why-card{background:#E8F8F5;border:1px solid #00C896;border-radius:10px;padding:16px;margin-top:16px;font-size:13px;color:#374151;line-height:1.6}
+.why-card h3{font-size:14px;font-weight:700;color:#00C896;margin-bottom:4px}
+
+/* ===== TOOL B: DEBT PAYOFF ===== */
+.debt-section{margin-top:40px}
+
+/* Debt rows */
+.debt-row{display:grid;grid-template-columns:3fr 2fr 2fr 2fr auto;gap:8px;align-items:center;margin-bottom:8px;padding:10px 12px;background:#F9FAFB;border-radius:8px;border:1px solid #E8ECF0}
+.debt-row input{width:100%;padding:8px 10px;border:2px solid #DDE1E7;border-radius:6px;font-size:14px;font-family:inherit;color:#1A1A2E;outline:none;transition:border-color 0.3s ease}
+.debt-row input:focus{border-color:#00C896}
+.debt-row .del-btn{background:none;border:none;color:#FF6B6B;font-size:18px;cursor:pointer;padding:4px 8px;border-radius:4px;transition:background 0.2s}
+.debt-row .del-btn:hover{background:#FFF0F0}
+
+.add-debt-btn{display:inline-flex;align-items:center;gap:4px;color:#00C896;font-weight:600;font-size:14px;cursor:pointer;background:none;border:none;padding:8px 0;font-family:inherit}
+.add-debt-btn:hover{color:#00B085}
+
+/* Extra payment */
+.extra-payment{margin:16px 0}
+.extra-payment label{font-weight:600;font-size:14px;color:#1A1A2E;display:block;margin-bottom:4px}
+.extra-payment input{padding:10px 14px;border:2px solid #DDE1E7;border-radius:8px;font-size:16px;font-family:inherit;color:#1A1A2E;width:200px;outline:none;transition:border-color 0.3s ease}
+.extra-payment input:focus{border-color:#00C896}
+.extra-payment .helper{font-size:12px;color:#9CA3AF;margin-top:2px}
+
+/* Method selector */
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.method-card{border:2px solid #E8ECF0;border-radius:10px;padding:16px;cursor:pointer;text-align:center;transition:all 0.25s ease}
+.method-card:hover{border-color:#00C896}
+.method-card.selected{border-color:#00C896;background:#E8F8F5}
+.method-card .icon{font-size:24px;margin-bottom:4px}
+.method-card .name{font-weight:700;font-size:15px;color:#1A1A2E}
+.method-card .desc{font-size:12px;color:#6B7280;margin-top:2px;line-height:1.3}
+
+/* Calc button */
+.calc-btn{width:100%;padding:14px 24px;background:#00C896;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;transition:all 0.3s ease;font-family:inherit;margin-top:8px}
+.calc-btn:hover{background:#00B085;box-shadow:0 4px 14px rgba(0,200,150,0.3)}
+
+/* Debt results */
+.debt-results{display:none;margin-top:20px}
+.debt-results.visible{display:block;animation:fadeUp 0.5s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+.comp-table{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:14px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,0.05)}
+.comp-table th{background:#0A1628;color:#fff;padding:12px 16px;text-align:left;font-weight:600}
+.comp-table td{padding:10px 16px;border-bottom:1px solid #F3F4F6;color:#374151}
+.comp-table tr:last-child td{border-bottom:none}
+
+.winner-box{background:linear-gradient(135deg,#E8F8F5,#fff);border:2px solid #00C896;border-radius:10px;padding:20px;margin-bottom:16px;text-align:center;font-size:15px;color:#374151;line-height:1.6}
+.winner-box .emoji{font-size:28px;margin-bottom:4px}
+.winner-box strong{color:#00C896}
+
+.celebration{background:#0A1628;border-radius:12px;padding:24px;text-align:center;color:#fff;margin-bottom:16px}
+.celebration .big{font-family:"DM Serif Display",serif;font-size:24px;color:#00C896;margin-bottom:4px}
+.celebration .sub{font-size:14px;color:#B0B8C4}
+
+.schedule-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:16px}
+.schedule-table th{background:#F3F4F6;color:#1A1A2E;padding:8px 12px;text-align:left;font-weight:600;position:sticky;top:0}
+.schedule-table td{padding:6px 12px;border-bottom:1px solid #F3F4F6;color:#374151}
+
+/* DISCLAIMER */
+.disclaimer-bar{background:#FFF8E1;border:1px solid #FFD700;padding:20px;margin:0 24px 24px;border-radius:8px;display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#5D4037;line-height:1.6}
+.disclaimer-bar .icon{font-size:18px;flex-shrink:0;margin-top:2px}
+
+/* FOOTER */
+.site-footer{background:#0A1628;color:#B0B8C4;padding:40px 0 24px}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.site-footer a{color:#8892A0;transition:color 0.3s ease}
+.site-footer a:hover{color:#00C896}
+.site-footer .copyright{font-size:13px;color:#667080}
+
+/* ===== MODE TABS ===== */
+.mode-tabs{display:flex;gap:4px;background:#F3F4F6;border-radius:12px;padding:4px;margin-bottom:20px}
+.mode-tab{flex:1;padding:10px 12px;text-align:center;border:none;border-radius:10px;font-weight:600;font-size:13px;cursor:pointer;transition:all 0.25s ease;background:transparent;color:#6B7280;font-family:inherit}
+.mode-tab.active{background:#fff;color:#1A1A2E;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.mode-tab:hover:not(.active){color:#00C896}
+
+/* Currency + tax row */
+.rate-options{display:flex;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.rate-opt-group{display:flex;align-items:center;gap:6px;background:#F3F4F6;border-radius:8px;padding:4px;font-size:13px}
+.rate-opt-group label{cursor:pointer}
+.rate-opt-btn{padding:6px 12px;border:none;border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;transition:all 0.2s ease;background:transparent;color:#6B7280;font-family:inherit}
+.rate-opt-btn.active{background:#fff;color:#1A1A2E;box-shadow:0 1px 4px rgba(0,0,0,0.1)}
+.rate-opt-btn:hover:not(.active){color:#00C896}
+.tax-bracket-select{padding:6px 10px;border:2px solid #DDE1E7;border-radius:6px;font-size:13px;font-family:inherit;color:#1A1A2E;outline:none;background:#fff;cursor:pointer}
+.tax-bracket-select:focus{border-color:#00C896}
+
+/* Salary mode */
+.salary-inputs .form-group{margin-bottom:18px}
+.salary-inputs label{display:flex;justify-content:space-between;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:4px}
+.salary-inputs label span{color:#00C896;font-weight:700}
+.salary-inputs input[type="range"]{width:100%;height:6px;border-radius:3px;background:#E8ECF0;outline:none;-webkit-appearance:none;appearance:none}
+.salary-inputs input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;box-shadow:0 2px 6px rgba(0,200,150,0.3)}
+.salary-inputs input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;border:none}
+
+/* Value-based pricing */
+.vbp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vbp-grid .form-group{margin-bottom:14px}
+.vbp-grid label{display:flex;justify-content:space-between;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:4px}
+.vbp-grid label span{color:#00C896;font-weight:700}
+.vbp-grid input[type="range"]{width:100%;height:6px;border-radius:3px;background:#E8ECF0;outline:none;-webkit-appearance:none;appearance:none}
+.vbp-grid input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;box-shadow:0 2px 6px rgba(0,200,150,0.3)}
+.vbp-grid input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#00C896;cursor:pointer;border:none}
+.vbp-results{background:#0A1628;border-radius:12px;padding:24px;color:#fff;margin-top:16px}
+.vbp-results .vbp-row{display:flex;justify-content:space-between;padding:6px 0;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.vbp-results .vbp-row:last-child{border-bottom:none}
+.vbp-results .vbp-big{font-family:"DM Serif Display",serif;font-size:28px;color:#00C896;text-align:center;padding:8px 0}
+.vbp-results .vbp-label{font-size:13px;color:#B0B8C4;text-align:center}
+.vbp-result-card{background:linear-gradient(135deg,#E8F8F5,#fff);border:2px solid #00C896;border-radius:10px;padding:16px;text-align:center;font-size:14px;color:#374151;margin-top:12px;line-height:1.6}
+.vbp-result-card strong{color:#00C896}
+
+@media(max-width:768px){
+  .rate-grid{grid-template-columns:1fr}
+  .method-grid{grid-template-columns:1fr}
+  .debt-row{grid-template-columns:1fr 1fr;gap:6px}
+  .debt-row .del-btn{grid-column:span 2;text-align:right}
+}
+@media print{
+  .site-header,.breadcrumb,.calc-btn,.add-debt-btn,.site-footer,.disclaimer-bar{display:none!important}
+  .debt-results,.rate-results{display:block!important}
+  .tool-card{box-shadow:none;border:1px solid #ddd;break-inside:avoid}
+  .rate-results{background:#0A1628!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"Freelance Rate Calculator & Debt Payoff Planner",
+  "url":"https://freelancetaxcalc.online/tools/rate-calculator-debt-planner.html",
+  "description":"Free online calculator for freelancers and self-employed people.",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All"
+},{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":3,"name":"Freelance Rate Calculator & Debt Payoff Planner"}
+  ]
+}]
+</script></head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="header-logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <a href="/" class="header-back" aria-label="Back to homepage">&larr; Back to Home</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> <span aria-hidden="true"> &gt; </span>
+    <a href="/">Tools</a> <span aria-hidden="true"> &gt; </span>
+    <span>Rate Calculator &amp; Debt Planner</span>
+  </div>
+</nav>
+
+<!-- ============= TOOL A: RATE CALCULATOR ============= -->
+<section class="tool-section" style="padding:28px 0 20px" aria-label="Freelancer Rate Calculator">
+  <div class="container">
+    <div class="section-divider">
+      <h2>&#9200; Freelancer Rate Calculator — Hourly, Salary-to-Hourly &amp; Value-Based Pricing</h2>
+      <p>Find your minimum hourly rate, convert salary to freelance rate, or calculate value-based pricing. With Canada support and SE tax included.</p>
+    </div>
+
+    <div class="tool-card">
+      <div class="mode-tabs" id="modeTabs" role="tablist">
+        <button class="mode-tab active" data-mode="hourly" role="tab" aria-selected="true">&#9200; Hourly Rate</button>
+        <button class="mode-tab" data-mode="salary" role="tab" aria-selected="false">&#128184; Salary &rarr; Hourly</button>
+        <button class="mode-tab" data-mode="vbp" role="tab" aria-selected="false">&#128202; Value-Based Pricing</button>
+      </div>
+
+      <!-- Currency + tax options -->
+      <div class="rate-options">
+        <div class="rate-opt-group">
+          <span style="font-size:12px;color:#6B7280;padding-left:4px">Currency:</span>
+          <button class="rate-opt-btn active" data-currency="USD">$ USD</button>
+          <button class="rate-opt-btn" data-currency="CAD">C$ CAD</button>
+        </div>
+        <div class="rate-opt-group">
+          <span style="font-size:12px;color:#6B7280;padding-left:4px">Est. Income Tax:</span>
+          <select class="tax-bracket-select" id="taxBracket">
+            <option value="10">10% (Low income)</option>
+            <option value="12" selected>12% (Lower middle)</option>
+            <option value="22">22% (Middle)</option>
+            <option value="24">24% (Upper middle)</option>
+            <option value="32">32% (High income)</option>
+          </select>
+        </div>
+        <label class="rate-opt-group" style="cursor:pointer;padding:0 8px;gap:6px">
+          <input type="checkbox" id="includeSE" checked>
+          <span style="font-size:12px;color:#1A1A2E;font-weight:500">Include SE tax (15.3%)</span>
+        </label>
+      </div>
+
+      <!-- MODE: Hourly Rate -->
+      <div class="rate-mode-content" id="modeHourly">
+        <div class="rate-grid">
+          <div class="rate-inputs">
+            <div class="form-group">
+              <label>Desired Annual Take-Home <span id="rateIncomeVal">$75,000</span></label>
+              <input type="range" id="rateIncome" min="20000" max="200000" value="75000" step="1000">
+            </div>
+            <div class="form-group">
+              <label>Annual Business Expenses <span id="rateExpenseVal">$5,000</span></label>
+              <input type="range" id="rateExpense" min="0" max="30000" value="5000" step="500">
+              <div class="helper">Software, equipment, home office, marketing, insurance</div>
+            </div>
+            <div class="form-group">
+              <label>Billable Hours Per Week <span id="rateHoursVal">25</span></label>
+              <input type="range" id="rateHours" min="10" max="40" value="25" step="1">
+              <div class="helper">Not all work hours are billable (admin, emails, proposals)</div>
+            </div>
+            <div class="form-group">
+              <label>Weeks Off Per Year <span id="rateWeeksOffVal">4</span></label>
+              <input type="range" id="rateWeeksOff" min="0" max="8" value="4" step="1">
+              <div class="helper">Vacation, holidays, sick days, and personal time</div>
+            </div>
+            <div class="form-group">
+              <label>Buffer / Profit Margin <span id="rateBufferVal">20%</span></label>
+              <input type="range" id="rateBuffer" min="5" max="40" value="20" step="1">
+              <div class="helper">Extra buffer for slow months, marketing, emergencies</div>
+            </div>
+          </div>
+          <div>
+            <div class="rate-results" id="rateResults">
+              <div class="rr-row"><span>Working Weeks/Year</span><span id="rWorkingWeeks">48</span></div>
+              <div class="rr-row"><span>Billable Hours/Year</span><span id="rBillableHours">1,200</span></div>
+              <div style="height:8px"></div>
+              <div class="rr-row"><span>Income Target</span><span id="rTarget">$75,000</span></div>
+              <div class="rr-row"><span>+ Business Expenses</span><span id="rExpenses">$5,000</span></div>
+              <div class="rr-row"><span>+ Tax Buffer (SE + income)</span><span id="rTaxBuffer">$17,600</span></div>
+              <div class="rr-row rr-total"><span>Revenue Needed</span><span id="rRevenueNeeded">$97,600</span></div>
+              <div style="height:8px"></div>
+              <div class="big-rate" id="rMinRate">$81.33</div>
+              <div class="big-label">Minimum Hourly Rate</div>
+              <div class="sub-rate">Recommended rate: <strong id="rRecRate">$97.60</strong>/hr</div>
+              <div class="monthly-target">Monthly revenue target: <span id="rMonthly">$8,133</span></div>
+              <div class="sub-rate" style="margin-top:6px">Day rate (8 hrs): <strong id="rDayRate">$650.67</strong></div>
+              <div class="note">Rate is per billable hour. Adjust buffer up for irregular income.</div>
+            </div>
+            <div class="industry-ref" id="industryRef">
+              <h3>&#128200; Industry Rate Reference (US)</h3>
+              <div class="ir-row"><span>Web Developer</span><span id="irDev">$75–150/hr</span></div>
+              <div class="ir-row"><span>Designer</span><span id="irDesign">$50–125/hr</span></div>
+              <div class="ir-row"><span>Copywriter</span><span id="irCopy">$50–100/hr</span></div>
+              <div class="ir-row"><span>Consultant</span><span id="irConsult">$100–300/hr</span></div>
+              <div class="ir-row"><span>Virtual Assistant</span><span id="irVA">$25–75/hr</span></div>
+              <div class="ir-row"><span>Video Editor</span><span id="irVideo">$50–125/hr</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODE: Salary → Hourly -->
+      <div class="rate-mode-content" id="modeSalary" style="display:none">
+        <div class="rate-grid">
+          <div class="salary-inputs">
+            <div class="form-group">
+              <label>Current W-2 Salary <span id="salSalaryVal">$80,000</span></label>
+              <input type="range" id="salSalary" min="25000" max="250000" value="80000" step="1000">
+              <div class="helper">Your current or expected employee salary</div>
+            </div>
+            <div class="form-group">
+              <label>Employer Benefits Value <span id="salBenefitsVal">$15,000</span></label>
+              <input type="range" id="salBenefits" min="0" max="50000" value="15000" step="1000">
+              <div class="helper">401k match, health insurance, PTO, training — typically 20–40% of salary</div>
+            </div>
+            <div class="form-group">
+              <label>Billable Hours Per Week <span id="salHoursVal">25</span></label>
+              <input type="range" id="salHours" min="10" max="40" value="25" step="1">
+            </div>
+            <div class="form-group">
+              <label>Weeks Off Per Year <span id="salWeeksOffVal">4</span></label>
+              <input type="range" id="salWeeksOff" min="0" max="8" value="4" step="1">
+            </div>
+            <div class="why-card">
+              <h3>&#128176; Why Your Freelance Rate Needs to Be Higher</h3>
+              <p>A $80,000 W-2 employee actually costs the employer ~$95,000+ when you add payroll taxes (7.65% employer FICA), benefits, 401k match, PTO, and training costs. As a freelancer, you absorb all of this — so your rate must cover the full employment cost, not just the salary.</p>
+            </div>
+          </div>
+          <div>
+            <div class="rate-results" id="salResults">
+              <div class="rr-row"><span>W-2 Salary</span><span id="srSalary">$80,000</span></div>
+              <div class="rr-row"><span>+ Benefits Value</span><span id="srBenefits">$15,000</span></div>
+              <div class="rr-row"><span>+ SE Tax (you pay both halves)</span><span id="srSETax">$12,240</span></div>
+              <div class="rr-row"><span>+ Income Tax on extra earnings</span><span id="srIncomeTax">$3,600</span></div>
+              <div class="rr-row rr-total"><span>Freelance Revenue Needed</span><span id="srRevenue">$110,840</span></div>
+              <div style="height:8px"></div>
+              <div class="big-rate" id="srRate">$92.37</div>
+              <div class="big-label">Equivalent Freelance Hourly Rate</div>
+              <div class="sub-rate">Day rate (8 hrs): <strong id="srDayRate">$738.93</strong></div>
+              <div class="monthly-target">Monthly target: <span id="srMonthly">$9,237</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODE: Value-Based Pricing -->
+      <div class="rate-mode-content" id="modeVbp" style="display:none">
+        <div class="vbp-grid">
+          <div>
+            <div class="form-group">
+              <label>Project Price (what you charge) <span id="vbpPriceVal">$5,000</span></label>
+              <input type="range" id="vbpPrice" min="500" max="50000" value="5000" step="250">
+            </div>
+            <div class="form-group">
+              <label>Estimated Hours to Complete <span id="vbpHoursVal">40</span></label>
+              <input type="range" id="vbpHours" min="5" max="200" value="40" step="5">
+            </div>
+            <div class="form-group">
+              <label>Client's Estimated Value from Project <span id="vbpClientVal">$25,000</span></label>
+              <input type="range" id="vbpClient" min="1000" max="100000" value="25000" step="1000">
+              <div class="helper">How much money/value your client will gain from the project</div>
+            </div>
+            <div class="why-card">
+              <h3>&#128200; What Is Value-Based Pricing?</h3>
+              <p>Instead of billing by time, you charge based on the value you deliver to the client. If your project saves them $50,000, charging $5,000 (10% of value) feels fair to both sides. The hourly rate becomes a side note — you're paid for results, not hours.</p>
+            </div>
+          </div>
+          <div>
+            <div class="vbp-results" id="vbpResults">
+              <div class="vbp-row"><span>Project Price</span><span id="vrPrice">$5,000</span></div>
+              <div class="vbp-row"><span>Estimated Hours</span><span id="vrHours">40</span></div>
+              <div class="vbp-row"><span>Effective Hourly Rate</span><span id="vrEffRate">$125.00/hr</span></div>
+              <div style="height:8px"></div>
+              <div class="vbp-row"><span>Client's Est. Value</span><span id="vrClient">$25,000</span></div>
+              <div class="vbp-row"><span>Your Price as % of Value</span><span id="vrPct">20.0%</span></div>
+              <div style="height:8px"></div>
+              <div class="vbp-big" id="vrComparison">$125.00</div>
+              <div class="vbp-label">Your Effective Hourly Rate</div>
+            </div>
+            <div class="vbp-result-card" id="vbpCard">
+              Your <strong>$125.00/hr</strong> effective rate is based on the project value, not hours. Value-based pricing lets you earn more by focusing on outcomes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= TOOL B: DEBT PAYOFF PLANNER ============= -->
+<section class="tool-section" style="padding:20px 0 60px" id="debt-section" aria-label="Debt Payoff Planner">
+  <div class="container">
+    <div class="section-divider">
+      <h2>&#128179; Debt Payoff Planner</h2>
+      <p>Compare Avalanche vs Snowball methods and find your debt-free date.</p>
+    </div>
+
+    <div class="tool-card">
+      <h2>&#128221; Add Your Debts</h2>
+      <div id="debtList"></div>
+      <button class="add-debt-btn" id="addDebtBtn">+ Add Another Debt</button>
+
+      <div class="extra-payment">
+        <label for="extraPayment">Extra Monthly Payment for Debt</label>
+        <input type="number" id="extraPayment" min="0" step="10" value="0" placeholder="e.g. 50">
+        <div class="helper">Even $50/month extra can save thousands in interest</div>
+      </div>
+
+      <div style="margin:16px 0 8px">
+        <label style="font-weight:600;font-size:14px;color:#1A1A2E;display:block;margin-bottom:8px;">Method</label>
+        <div class="method-grid" id="methodGrid">
+          <div class="method-card selected" data-method="compare">
+            <div class="icon" aria-hidden="true">&#128196;</div>
+            <div class="name">Compare Both</div>
+            <div class="desc">See Avalanche &amp; Snowball side by side</div>
+          </div>
+          <div class="method-card" data-method="avalanche">
+            <div class="icon" aria-hidden="true">&#9889;</div>
+            <div class="name">Avalanche</div>
+            <div class="desc">Pay highest interest first — saves the most money</div>
+          </div>
+          <div class="method-card" data-method="snowball">
+            <div class="icon" aria-hidden="true">&#10052;</div>
+            <div class="name">Snowball</div>
+            <div class="desc">Pay smallest balance first — best for motivation</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="debtCalcBtn">Show My Payoff Plan &rarr;</button>
+
+      <div class="debt-results" id="debtResults">
+        <div id="comparisonArea"></div>
+        <div id="winnerArea"></div>
+        <div class="celebration" id="celebrationArea" style="display:none">
+          <div class="emoji" style="font-size:32px" aria-hidden="true">&#127881;</div>
+          <div class="big" id="debtFreeDate">YOU COULD BE DEBT-FREE BY: January 2028</div>
+          <div class="sub" id="debtFreeMonths">That's 18 months from now!</div>
+        </div>
+        <div style="margin-top:12px">
+          <h3 style="font-size:16px;color:#1A1A2E;margin-bottom:8px;">&#128202; Payoff Schedule (First 24 months)</h3>
+          <div style="max-height:400px;overflow-y:auto">
+            <table class="schedule-table" id="scheduleTable"></table>
+          </div>
+        </div>
+        <div style="margin-top:12px">
+          <button class="calc-btn" onclick="window.print()" style="background:#fff;color:#00C896;border:2px solid #00C896">&#128424; Print Plan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-bar" role="note">
+  <span class="icon" aria-hidden="true">&#9888;&#65039;</span>
+  <p><strong>Disclaimer:</strong> These tools provide estimates for informational purposes only. Rate calculations are simplified estimates. Debt payoff results assume consistent payments with no missed or late payments. Consult a financial advisor for personalized advice.</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <span class="copyright">&copy; 2026 FreelanceTaxCalc &mdash; Free tools for independent workers.</span>
+    <a href="/">Back to Home</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // ─── TOOL A: RATE CALCULATOR (ALL MODES) ───
+  var currency = 'USD';
+  var sym = function(){ return currency === 'CAD' ? 'C$' : '$'; };
+  var fmt = function(n){ return sym() + Number(Math.round(n)).toLocaleString(); };
+  var fmt2 = function(n){ return sym() + n.toFixed(2); };
+
+  // --- Mode tabs ---
+  var modeTabs = document.querySelectorAll('.mode-tab');
+  modeTabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      modeTabs.forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      this.classList.add('active'); this.setAttribute('aria-selected','true');
+      document.querySelectorAll('.rate-mode-content').forEach(function(el){ el.style.display = 'none'; });
+      document.getElementById('mode' + this.getAttribute('data-mode').charAt(0).toUpperCase() + this.getAttribute('data-mode').slice(1)).style.display = '';
+    });
+  });
+
+  // --- Currency toggle ---
+  document.querySelectorAll('.rate-opt-btn[data-currency]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.rate-opt-btn[data-currency]').forEach(function(b){ b.classList.remove('active'); });
+      this.classList.add('active');
+      currency = this.getAttribute('data-currency');
+      updateRate(); updateSalary(); updateVbp();
+      updateIndustryRef();
+    });
+  });
+
+  // --- Tax bracket + SE toggle ---
+  document.getElementById('taxBracket').addEventListener('change', function(){ updateRate(); updateSalary(); });
+  document.getElementById('includeSE').addEventListener('change', function(){ updateRate(); updateSalary(); });
+
+  function getTotalTaxRate(){
+    var incomeTax = parseFloat(document.getElementById('taxBracket').value) / 100;
+    var seTax = document.getElementById('includeSE').checked ? 0.153 : 0;
+    return incomeTax + seTax;
+  }
+
+  // ─── MODE 1: HOURLY RATE ───
+  var rateIncome = document.getElementById('rateIncome');
+  var rateExpense = document.getElementById('rateExpense');
+  var rateHours = document.getElementById('rateHours');
+  var rateWeeksOff = document.getElementById('rateWeeksOff');
+  var rateBuffer = document.getElementById('rateBuffer');
+
+  [rateIncome, rateExpense, rateHours, rateWeeksOff, rateBuffer].forEach(function(el){
+    el.addEventListener('input', updateRate);
+  });
+
+  function updateRate(){
+    var inc = parseFloat(rateIncome.value);
+    var exp = parseFloat(rateExpense.value);
+    var hrs = parseFloat(rateHours.value);
+    var off = parseFloat(rateWeeksOff.value);
+    var buf = parseFloat(rateBuffer.value);
+
+    document.getElementById('rateIncomeVal').textContent = fmt(inc);
+    document.getElementById('rateExpenseVal').textContent = fmt(exp);
+    document.getElementById('rateHoursVal').textContent = hrs;
+    document.getElementById('rateWeeksOffVal').textContent = off;
+    document.getElementById('rateBufferVal').textContent = buf + '%';
+
+    var workingWeeks = Math.max(1, 52 - off);
+    var billable = workingWeeks * hrs;
+    var taxRate = getTotalTaxRate();
+    var needs = inc + exp;
+    // Tax is on revenue needed, iterative calculation:
+    // revenue = needs + revenue * taxRate => revenue = needs / (1 - taxRate)
+    var revenueNeeded = taxRate < 1 ? needs / (1 - taxRate) : needs * 2;
+    var taxBuffer = revenueNeeded - needs;
+    var minRate = billable > 0 ? revenueNeeded / billable : 0;
+    var recRate = minRate * (1 + buf / 100);
+    var monthly = revenueNeeded / 12;
+    var dayRate = minRate * 8;
+
+    document.getElementById('rWorkingWeeks').textContent = workingWeeks;
+    document.getElementById('rBillableHours').textContent = billable.toLocaleString();
+    document.getElementById('rTarget').textContent = fmt(inc);
+    document.getElementById('rExpenses').textContent = fmt(exp);
+    document.getElementById('rTaxBuffer').textContent = fmt(Math.round(taxBuffer));
+    document.getElementById('rRevenueNeeded').textContent = fmt(Math.round(revenueNeeded));
+    document.getElementById('rMinRate').textContent = fmt2(minRate);
+    document.getElementById('rRecRate').textContent = fmt2(recRate);
+    document.getElementById('rMonthly').textContent = fmt(Math.round(monthly));
+    document.getElementById('rDayRate').textContent = fmt2(dayRate);
+  }
+  updateRate();
+
+  function updateIndustryRef(){
+    var s = currency === 'CAD' ? 'C$' : '$';
+    var cadRates = ['C$95\u2013190/hr','C$65\u2013160/hr','C$65\u2013130/hr','C$130\u2013380/hr','C$32\u201395/hr','C$65\u2013160/hr'];
+    var usdRates = ['$75\u2013150/hr','$50\u2013125/hr','$50\u2013100/hr','$100\u2013300/hr','$25\u201375/hr','$50\u2013125/hr'];
+    var rates = currency === 'CAD' ? cadRates : usdRates;
+    document.getElementById('irDev').textContent = rates[0];
+    document.getElementById('irDesign').textContent = rates[1];
+    document.getElementById('irCopy').textContent = rates[2];
+    document.getElementById('irConsult').textContent = rates[3];
+    document.getElementById('irVA').textContent = rates[4];
+    document.getElementById('irVideo').textContent = rates[5];
+    document.getElementById('industryRef').querySelector('h3').textContent = '\uD83D\uDCA0 Industry Rate Reference (' + (currency === 'CAD' ? 'Canada' : 'US') + ')';
+  }
+
+  // ─── MODE 2: SALARY → HOURLY ───
+  var salSalary = document.getElementById('salSalary');
+  var salBenefits = document.getElementById('salBenefits');
+  var salHours = document.getElementById('salHours');
+  var salWeeksOff = document.getElementById('salWeeksOff');
+
+  [salSalary, salBenefits, salHours, salWeeksOff].forEach(function(el){
+    el.addEventListener('input', updateSalary);
+  });
+
+  function updateSalary(){
+    var salary = parseFloat(salSalary.value);
+    var benefits = parseFloat(salBenefits.value);
+    var hrs = parseFloat(salHours.value);
+    var off = parseFloat(salWeeksOff.value);
+
+    document.getElementById('salSalaryVal').textContent = fmt(salary);
+    document.getElementById('salBenefitsVal').textContent = fmt(benefits);
+    document.getElementById('salHoursVal').textContent = hrs;
+    document.getElementById('salWeeksOffVal').textContent = off;
+
+    var taxRate = getTotalTaxRate();
+    // Total employment cost = salary + benefits
+    var totalCost = salary + benefits;
+    // Revenue needed = totalCost / (1 - taxRate)
+    var revenueNeeded = taxRate < 1 ? totalCost / (1 - taxRate) : totalCost * 2;
+    var seTaxAmount = revenueNeeded - totalCost;
+    // Approx additional income tax on the freelance premium
+    var incomeTaxOnly = parseFloat(document.getElementById('taxBracket').value) / 100;
+    var extraTax = (revenueNeeded - salary) * incomeTaxOnly;
+
+    var workingWeeks = Math.max(1, 52 - off);
+    var billable = workingWeeks * hrs;
+    var rate = billable > 0 ? revenueNeeded / billable : 0;
+    var dayRate = rate * 8;
+    var monthly = revenueNeeded / 12;
+
+    document.getElementById('srSalary').textContent = fmt(salary);
+    document.getElementById('srBenefits').textContent = fmt(benefits);
+    document.getElementById('srSETax').textContent = fmt(Math.round(seTaxAmount));
+    document.getElementById('srIncomeTax').textContent = fmt(Math.round(extraTax));
+    document.getElementById('srRevenue').textContent = fmt(Math.round(revenueNeeded));
+    document.getElementById('srRate').textContent = fmt2(rate);
+    document.getElementById('srDayRate').textContent = fmt2(dayRate);
+    document.getElementById('srMonthly').textContent = fmt(Math.round(monthly));
+  }
+  updateSalary();
+
+  // ─── MODE 3: VALUE-BASED PRICING ───
+  var vbpPrice = document.getElementById('vbpPrice');
+  var vbpHours = document.getElementById('vbpHours');
+  var vbpClient = document.getElementById('vbpClient');
+
+  [vbpPrice, vbpHours, vbpClient].forEach(function(el){
+    el.addEventListener('input', updateVbp);
+  });
+
+  function updateVbp(){
+    var price = parseFloat(vbpPrice.value);
+    var hrs = parseFloat(vbpHours.value);
+    var clientVal = parseFloat(vbpClient.value);
+
+    document.getElementById('vbpPriceVal').textContent = fmt(price);
+    document.getElementById('vbpHoursVal').textContent = hrs;
+    document.getElementById('vbpClientVal').textContent = fmt(clientVal);
+
+    var effRate = hrs > 0 ? price / hrs : 0;
+    var pct = clientVal > 0 ? (price / clientVal) * 100 : 0;
+
+    document.getElementById('vrPrice').textContent = fmt(price);
+    document.getElementById('vrHours').textContent = hrs;
+    document.getElementById('vrEffRate').textContent = fmt2(effRate) + '/hr';
+    document.getElementById('vrClient').textContent = fmt(clientVal);
+    document.getElementById('vrPct').textContent = pct.toFixed(1) + '%';
+    document.getElementById('vrComparison').textContent = fmt2(effRate);
+
+    var card = document.getElementById('vbpCard');
+    card.innerHTML = 'Your <strong>' + fmt2(effRate) + '/hr</strong> effective rate is based on the project value, not hours. Value-based pricing lets you earn more by focusing on outcomes.';
+    if(pct < 15){
+      card.innerHTML += ' <br><span style="color:#00C896">&#9989; Great price-to-value ratio (under 15%).</span>';
+    } else if(pct < 30){
+      card.innerHTML += ' <br><span style="color:#FFD700">&#9888; Moderate ratio (15\u201330%). Consider raising your price.</span>';
+    } else {
+      card.innerHTML += ' <br><span style="color:#FF6B6B">&#9888; You\'re charging over 30% of the client\'s value. Ensure the ROI is clear.</span>';
+    }
+  }
+  updateVbp();
+
+  // ─── TOOL B: DEBT PAYOFF ───
+  var debtList = document.getElementById('debtList');
+  var addDebtBtn = document.getElementById('addDebtBtn');
+  var debtCalcBtn = document.getElementById('debtCalcBtn');
+  var extraPayment = document.getElementById('extraPayment');
+  var methodCards = document.querySelectorAll('.method-card');
+  var debtResults = document.getElementById('debtResults');
+  var comparisonArea = document.getElementById('comparisonArea');
+  var winnerArea = document.getElementById('winnerArea');
+  var celebrationArea = document.getElementById('celebrationArea');
+  var debtFreeDate = document.getElementById('debtFreeDate');
+  var debtFreeMonths = document.getElementById('debtFreeMonths');
+  var scheduleTable = document.getElementById('scheduleTable');
+
+  var debtIdCounter = 0;
+  var maxDebts = 12;
+
+  function createDebtRow(name, balance, rate, minPayment){
+    var id = debtIdCounter++;
+    var div = document.createElement('div');
+    div.className = 'debt-row';
+    div.dataset.id = id;
+    div.innerHTML = '<input type="text" class="debt-name" value="' + name + '" placeholder="Debt name" aria-label="Debt name">' +
+      '<input type="number" class="debt-balance" value="' + balance + '" min="0" step="100" placeholder="Balance" aria-label="Balance">' +
+      '<input type="number" class="debt-rate" value="' + rate + '" min="0" max="100" step="0.1" placeholder="Rate %" aria-label="Interest rate">' +
+      '<input type="number" class="debt-min" value="' + minPayment + '" min="0" step="10" placeholder="Min payment" aria-label="Minimum payment">' +
+      '<button class="del-btn" aria-label="Remove debt">&times;</button>';
+    div.querySelector('.del-btn').addEventListener('click', function(){
+      if(document.querySelectorAll('.debt-row').length > 1) div.remove();
+    });
+    return div;
+  }
+
+  function addDefaultDebts(){
+    debtList.appendChild(createDebtRow('Chase Visa', 4500, 22.99, 100));
+    debtList.appendChild(createDebtRow('Discover Card', 3200, 18.99, 85));
+  }
+
+  addDefaultDebts();
+
+  addDebtBtn.addEventListener('click', function(){
+    if(document.querySelectorAll('.debt-row').length >= maxDebts) return;
+    debtList.appendChild(createDebtRow('', '', '', ''));
+  });
+
+  // Method selector
+  methodCards.forEach(function(card){
+    card.addEventListener('click', function(){
+      methodCards.forEach(function(c){ c.classList.remove('selected'); });
+      this.classList.add('selected');
+    });
+  });
+
+  // Calculate debt
+  debtCalcBtn.addEventListener('click', function(){
+    var rows = document.querySelectorAll('.debt-row');
+    var debts = [];
+    rows.forEach(function(row){
+      var name = row.querySelector('.debt-name').value || 'Debt';
+      var balance = parseFloat(row.querySelector('.debt-balance').value) || 0;
+      var rate = parseFloat(row.querySelector('.debt-rate').value) || 0;
+      var minPay = parseFloat(row.querySelector('.debt-min').value) || 0;
+      if(balance > 0 && minPay > 0) debts.push({name:name, balance:balance, rate:rate, min:minPay});
+    });
+
+    if(debts.length === 0){
+      document.querySelectorAll('.debt-row')[0].querySelector('.debt-balance').style.borderColor = '#FF6B6B';
+      setTimeout(function(){ document.querySelectorAll('.debt-row')[0].querySelector('.debt-balance').style.borderColor = ''; }, 1500);
+      return;
+    }
+
+    var extra = parseFloat(extraPayment.value) || 0;
+    var method = document.querySelector('.method-card.selected').getAttribute('data-method');
+
+    debtResults.classList.add('visible');
+    debtResults.style.display = 'block';
+
+    if(method === 'compare' || method === 'avalanche'){
+      var avResult = simulate(debts, extra, 'avalanche');
+      var snResult = method === 'compare' ? simulate(debts, extra, 'snowball') : null;
+      renderComparison(avResult, snResult, method);
+    } else {
+      var snResult = simulate(debts, extra, 'snowball');
+      renderComparison(null, snResult, 'snowball');
+    }
+
+    debtResults.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  function simulate(debts, extra, method){
+    var d = debts.map(function(x){ return {name:x.name, balance:x.balance, rate:x.rate, min:x.min, paid:false}; });
+    var totalPaid = 0;
+    var totalInterest = 0;
+    var months = 0;
+    var schedule = [];
+    var debtFreeMonth = 0;
+    var firstPaidMonth = 0;
+
+    while(true){
+      var active = d.filter(function(x){ return x.balance > 0; });
+      if(active.length === 0) break;
+
+      months++;
+      // Sort by method
+      if(method === 'avalanche') active.sort(function(a,b){ return b.rate - a.rate || a.balance - b.balance; });
+      else active.sort(function(a,b){ return a.balance - b.balance || b.rate - a.rate; });
+
+      var totalMin = 0;
+      // Apply extra to target first so schedule reflects it
+      if(extra > 0 && active.length > 0){
+        var target = active[0];
+        var extraPay = Math.min(extra, target.balance);
+        target.balance -= extraPay;
+        totalPaid += extraPay;
+      }
+
+      d.forEach(function(x){
+        if(x.balance > 0){
+          var interest = x.balance * (x.rate / 100 / 12);
+          totalInterest += interest;
+          x.balance += interest;
+          var pay = Math.min(x.min, x.balance);
+          x.balance -= pay;
+          totalPaid += pay;
+          totalMin += pay;
+          schedule.push({month:months, debt:x.name, payment:pay.toFixed(2), balance:Math.max(0,x.balance).toFixed(2)});
+        }
+      });
+
+      // Check first paid
+      active.forEach(function(x){
+        if(x.balance <= 0 && !x.paid){
+          x.paid = true;
+          if(firstPaidMonth === 0) firstPaidMonth = months;
+        }
+      });
+
+      // Safety
+      if(months > 600) break;
+    }
+
+    return {totalPaid: totalPaid, totalInterest: totalInterest, months: months, schedule: schedule, firstPaid: firstPaidMonth};
+  }
+
+  function renderComparison(avResult, snResult, method){
+    var html = '';
+
+    if(method === 'compare' && avResult && snResult){
+      html += '<table class="comp-table"><thead><tr><th></th><th>&#9889; Avalanche</th><th>&#10052; Snowball</th></tr></thead><tbody>';
+      html += '<tr><td><strong>Debt-Free Date</strong></td><td>' + formatDate(avResult.months) + '</td><td>' + formatDate(snResult.months) + '</td></tr>';
+      html += '<tr><td><strong>Total Interest Paid</strong></td><td>$' + Math.round(avResult.totalInterest).toLocaleString() + '</td><td>$' + Math.round(snResult.totalInterest).toLocaleString() + '</td></tr>';
+      html += '<tr><td><strong>First Debt Paid Off</strong></td><td>Month ' + avResult.firstPaid + '</td><td>Month ' + snResult.firstPaid + '</td></tr>';
+      html += '<tr><td><strong>Total Paid</strong></td><td>$' + Math.round(avResult.totalPaid).toLocaleString() + '</td><td>$' + Math.round(snResult.totalPaid).toLocaleString() + '</td></tr>';
+      html += '</tbody></table>';
+      comparisonArea.innerHTML = html;
+
+      // Winner
+      var intDiff = Math.abs(avResult.totalInterest - snResult.totalInterest);
+      var monthDiff = Math.abs(avResult.months - snResult.months);
+      var avWinner = avResult.months <= snResult.months && avResult.totalInterest <= snResult.totalInterest;
+      var winnerName = avWinner ? 'Avalanche' : 'Snowball';
+      var loserName = avWinner ? 'Snowball' : 'Avalanche';
+      var fasterBy = avWinner ? snResult.months - avResult.months : avResult.months - snResult.months;
+
+      winnerArea.innerHTML = '<div class="winner-box"><div class="emoji" aria-hidden="true">&#127942;</div><strong>' + winnerName + '</strong> saves you $' + Math.round(intDiff).toLocaleString() + ' more and gets you debt-free ' + (fasterBy > 0 ? fasterBy + ' months earlier' : 'at the same time') + '.<br>However, ' + loserName + ' gives you a quick win in just Month ' + (avWinner ? snResult.firstPaid : avResult.firstPaid) + '.</div>';
+
+      // Celebration
+      var best = avResult.months <= snResult.months ? avResult : snResult;
+      celebrationArea.style.display = 'block';
+      debtFreeDate.textContent = '\uD83C\uDF89 YOU COULD BE DEBT-FREE BY: ' + formatDate(best.months).toUpperCase();
+      debtFreeMonths.textContent = "That's " + best.months + " months from now!";
+
+      // Schedule (show best method)
+      var schedule = avResult.months <= snResult.months ? avResult.schedule : snResult.schedule;
+      var schHtml = '<thead><tr><th>Month</th><th>Debt</th><th>Payment</th><th>New Balance</th></tr></thead><tbody>';
+      var seen = 0;
+      schedule.forEach(function(s){
+        if(seen >= 24) return;
+        schHtml += '<tr><td>' + s.month + '</td><td>' + s.name + '</td><td>$' + s.payment + '</td><td>$' + s.balance + '</td></tr>';
+        seen++;
+      });
+      schHtml += '</tbody>';
+      scheduleTable.innerHTML = schHtml;
+
+    } else {
+      var result = avResult || snResult;
+      var methodName = method === 'avalanche' ? 'Avalanche' : 'Snowball';
+      html += '<table class="comp-table"><thead><tr><th></th><th>' + methodName + '</th></tr></thead><tbody>';
+      html += '<tr><td><strong>Debt-Free Date</strong></td><td>' + formatDate(result.months) + '</td></tr>';
+      html += '<tr><td><strong>Total Interest Paid</strong></td><td>$' + Math.round(result.totalInterest).toLocaleString() + '</td></tr>';
+      html += '<tr><td><strong>First Debt Paid Off</strong></td><td>Month ' + result.firstPaid + '</td></tr>';
+      html += '<tr><td><strong>Total Paid</strong></td><td>$' + Math.round(result.totalPaid).toLocaleString() + '</td></tr>';
+      html += '</tbody></table>';
+      comparisonArea.innerHTML = html;
+      winnerArea.innerHTML = '';
+      celebrationArea.style.display = 'block';
+      debtFreeDate.textContent = '\uD83C\uDF89 YOU COULD BE DEBT-FREE BY: ' + formatDate(result.months).toUpperCase();
+      debtFreeMonths.textContent = "That's " + result.months + " months from now!";
+
+      var schHtml = '<thead><tr><th>Month</th><th>Debt</th><th>Payment</th><th>New Balance</th></tr></thead><tbody>';
+      var seen = 0;
+      result.schedule.forEach(function(s){
+        if(seen >= 24) return;
+        schHtml += '<tr><td>' + s.month + '</td><td>' + s.name + '</td><td>$' + s.payment + '</td><td>$' + s.balance + '</td></tr>';
+        seen++;
+      });
+      schHtml += '</tbody>';
+      scheduleTable.innerHTML = schHtml;
+    }
+  }
+
+  function formatDate(months){
+    var now = new Date();
+    var d = new Date(now.getFullYear(), now.getMonth() + months, 1);
+    return d.toLocaleDateString('en-US', {month:'long', year:'numeric'});
+  }
+})();
+</script>
+<!-- Related Tools -->
+<section class="related-tools" aria-label="Related Tools">
+  <div class="container">
+    <h2>Related Tools You Might Need</h2>
+    <div class="related-grid">
+      <a href="/tools/freelance-hourly-rate-calculator.html">Freelance Hourly Rate Calculator<small>Calculate rate to pay debt faster</small></a>
+      <a href="/tools/budget-invoice-calculators.html">Student Budget Calculator<small>Budget for debt payments</small></a>
+      <a href="/tools/first-paycheck-calculator.html">First Paycheck Calculator<small>See how debt affects take-home pay</small></a>
+      <a href="/tools/retirement-calculator.html">Retirement Calculator<small>Balance debt payoff with retirement savings</small></a>
+    </div>
+  </div>
+</section>
+
+<style>
+.related-tools{{background:#fff;padding:48px 0;border-top:1px solid #E8ECF0;margin-top:0}}
+.related-tools h2{{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;text-align:center;margin-bottom:24px}}
+.related-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto}}
+.related-grid a{{display:block;background:#F4F6F9;border-radius:10px;padding:16px;font-size:14px;color:#1A1A2E;font-weight:500;transition:all 0.3s ease;text-decoration:none;border:1px solid transparent}}
+.related-grid a:hover{{background:#F0FDF9;border-color:#00C896;color:#00C896;transform:translateY(-2px)}}
+.related-grid a small{{display:block;font-weight:400;color:#6B7280;font-size:13px;margin-top:4px}}
+</style>
+</body>
+</html>

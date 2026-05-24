@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1099 vs W-2 Calculator 2026 — Should I Take a Contractor or Employee Offer? | FreelanceTaxCalc</title>
+<meta name="description" content="Free 1099 vs W-2 calculator for 2026. See how much more you need as a contractor vs employee. Should you take the W-2 or 1099 job offer? Compare take-home pay.">
+<link rel="canonical" href="https://freelancetaxcalc.online/tools/1099-vs-w2-calculator">
+<meta property="og:title" content="1099 vs W-2 Calculator 2026 — Contractor or Employee? Comparison">
+<meta property="og:description" content="Should you take a W-2 or 1099 job offer? Compare contractor vs employee take-home pay after taxes, benefits, and costs. Free 2026 calculator.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/tools/1099-vs-w2-calculator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="1099 vs W-2 Calculator 2026 — Contractor or Employee? Comparison">
+<meta name="twitter:description" content="Should you take a W-2 or 1099 job offer? Compare contractor vs employee take-home pay after taxes, benefits, and costs. Free 2026 calculator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"1099 vs W-2 Tax Calculator",
+  "url":"https://freelancetaxcalc.online/tools/1099-vs-w2-calculator",
+  "description":"Compare the true after-tax value of 1099 contractor vs W-2 employee offers.",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All"
+},{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":3,"name":"1099 vs W-2 Calculator"}
+  ]
+},{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How much more should a 1099 rate be vs W-2 salary?","acceptedAnswer":{"@type":"Answer","text":"A general rule of thumb is that a 1099 contractor rate should be 20-30% higher than an equivalent W-2 salary. This accounts for the employer portion of FICA (7.65%), health insurance, retirement benefits, paid time off, and the self-employment tax burden. Use our calculator above for your exact numbers."}},
+    {"@type":"Question","name":"Can I negotiate a higher 1099 rate to cover taxes?","acceptedAnswer":{"@type":"Answer","text":"Yes, absolutely. When evaluating a 1099 contract offer, you should factor in the additional costs you'll bear: the employer half of FICA (7.65%), health insurance premiums, retirement contributions, paid time off, and the risk of gaps between contracts. A good starting point is asking for 25-35% more than the W-2 equivalent."}},
+    {"@type":"Question","name":"What deductions do 1099 contractors get that W-2 employees don't?","acceptedAnswer":{"@type":"Answer","text":"1099 contractors can deduct a wide range of business expenses including home office costs, vehicle mileage, equipment and software, health insurance premiums, retirement contributions, professional development, and half of their self-employment tax. They also qualify for the QBI deduction (20% of qualified business income). These deductions can significantly reduce taxable income."}},
+    {"@type":"Question","name":"Is it better to be W-2 or 1099 for taxes?","acceptedAnswer":{"@type":"Answer","text":"From a pure tax perspective, W-2 is generally simpler and has lower built-in taxes since your employer pays half of FICA. However, 1099 contractors can deduct business expenses and may end up with a lower effective tax rate if they have significant deductions. The choice often comes down to your specific situation, income level, and how much you value benefits and stability."}}
+  ]
+}]
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:16px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* HEADER */
+.site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;font-weight:700;color:#fff}
+.logo-icon{width:32px;height:32px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.header-back{color:#B0B8C4;font-size:14px;transition:color 0.3s ease}
+.header-back:hover{color:#00C896}
+
+/* BREADCRUMB */
+.breadcrumb{background:#fff;padding:12px 0;border-bottom:1px solid #E8ECF0;font-size:14px;color:#6B7280}
+.breadcrumb a{color:#00C896}
+.breadcrumb a:hover{color:#00B085}
+.breadcrumb span{color:#6B7280}
+
+/* PAGE TITLE */
+.page-title{background:#fff;padding:28px 0 0}
+.page-title h1{font-family:"DM Serif Display",serif;font-size:32px;color:#1A1A2E;margin-bottom:6px}
+.page-title p{color:#6B7280;font-size:15px;max-width:650px}
+
+/* TOOL */
+.tool-section{padding:28px 0 60px}
+.tool-card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:20px}
+.tool-card h2{font-family:"DM Serif Display",serif;font-size:18px;color:#1A1A2E;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.tool-card h2 .badge{padding:2px 10px;border-radius:12px;font-size:11px;font-weight:700;font-family:"DM Sans",sans-serif}
+.badge-w2{background:#E8F0FE;color:#1A73E8}
+.badge-1099{background:#E8F8F5;color:#00C896}
+
+/* Form grid */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:6px}
+.input-wrapper{position:relative;display:flex;align-items:center}
+.input-prefix{position:absolute;left:14px;font-weight:600;color:#6B7280;font-size:16px;pointer-events:none;z-index:1}
+.form-group input,.form-group select{width:100%;padding:12px 14px 12px 32px;border:2px solid #DDE1E7;border-radius:8px;font-size:15px;font-family:inherit;color:#1A1A2E;background:#fff;transition:border-color 0.3s ease;outline:none}
+.form-group select{padding-left:14px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%236B7280'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.form-group input:focus,.form-group select:focus{border-color:#00C896;box-shadow:0 0 0 3px rgba(0,200,150,0.1)}
+.form-group .helper{font-size:12px;color:#9CA3AF;margin-top:3px;line-height:1.4}
+
+/* About you */
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+/* Calc button */
+.calc-btn{width:100%;padding:16px 24px;background:#00C896;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:600;cursor:pointer;transition:all 0.3s ease;font-family:inherit}
+.calc-btn:hover{background:#00B085;box-shadow:0 4px 14px rgba(0,200,150,0.3);transform:translateY(-1px)}
+.calc-btn:disabled{opacity:0.5;cursor:not-allowed}
+
+/* RESULTS */
+.results-area{display:none;margin-top:24px}
+.results-area.visible{display:block;animation:fadeUp 0.5s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.comp-card{border-radius:12px;padding:24px;border:2px solid #E8ECF0;background:#fff;position:relative;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.comp-card.reveal{opacity:1;transform:translateY(0)}
+.comp-card.w2{border-left:5px solid #1A73E8}
+.comp-card.c1099{border-left:5px solid #00C896}
+.comp-card h3{font-family:"DM Serif Display",serif;font-size:17px;margin-bottom:12px;text-align:center;padding-bottom:10px;border-bottom:1px dashed #E8ECF0}
+.comp-card.w2 h3{color:#1A73E8}
+.comp-card.c1099 h3{color:#00C896}
+.comp-row{display:flex;justify-content:space-between;padding:5px 0;font-size:14px;color:#1A1A2E}
+.comp-row .sub{color:#9CA3AF;font-size:12px}
+.comp-divider{border-top:2px solid #E8ECF0;margin:8px 0}
+.comp-total{display:flex;justify-content:space-between;padding:8px 0;font-size:18px;font-weight:700}
+.comp-card.w2 .comp-total{color:#1A73E8}
+.comp-card.c1099 .comp-total{color:#00C896}
+.comp-plus{font-size:13px;color:#6B7280;line-height:1.6;margin-top:8px;text-align:center}
+.comp-plus span{display:block}
+
+/* Winner card */
+.winner-card{background:linear-gradient(135deg,#E8F8F5,#fff);border:2px solid #00C896;border-radius:12px;padding:24px;text-align:center;margin-bottom:16px;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.winner-card.reveal{opacity:1;transform:translateY(0)}
+.winner-card .trophy{font-size:36px;margin-bottom:6px}
+.winner-card h3{font-family:"DM Serif Display",serif;font-size:22px;color:#00C896;margin-bottom:4px}
+.winner-card .diff{font-size:28px;font-weight:700;color:#00C896;margin-bottom:4px}
+.winner-card .sub{font-size:15px;color:#374151}
+
+/* Breakeven */
+.breakeven-card{background:#F3F4F6;border-radius:12px;padding:20px;margin-bottom:16px;text-align:center;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.breakeven-card.reveal{opacity:1;transform:translateY(0)}
+.breakeven-card h3{font-family:"DM Serif Display",serif;font-size:17px;color:#1A1A2E;margin-bottom:8px}
+.breakeven-amount{font-size:24px;font-weight:700;color:#00C896}
+.breakeven-sub{font-size:14px;color:#6B7280;margin-top:4px}
+
+/* Considerations */
+.consider-box{background:#fff;border:1px solid #E8ECF0;border-radius:12px;padding:20px;margin-bottom:16px;font-size:14px;color:#374151;line-height:1.7;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.consider-box.reveal{opacity:1;transform:translateY(0)}
+.consider-box h3{font-family:"DM Serif Display",serif;font-size:17px;color:#1A1A2E;margin-bottom:8px}
+.consider-box ul{padding-left:20px;margin-bottom:8px}
+.consider-box li{margin-bottom:4px}
+
+/* Result actions */
+.res-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.res-actions button{flex:1;min-width:140px;padding:12px 20px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:all 0.3s ease;text-align:center}
+.btn-print{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-print:hover{border-color:#00C896;color:#00C896}
+.btn-copy{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-copy:hover{border-color:#00C896;color:#00C896}
+.btn-recalc{background:#fff;border:2px solid #00C896;color:#00C896}
+.btn-recalc:hover{background:#E8F8F5}
+
+/* SEO */
+.seo-section{padding:60px 0;background:#fff}
+.seo-section .container{max-width:800px}
+.seo-section h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:16px;margin-top:40px}
+.seo-section h2:first-child{margin-top:0}
+.seo-section p,.seo-section li{font-size:16px;color:#4B5563;line-height:1.8;margin-bottom:12px}
+.seo-section ul{padding-left:24px}
+.seo-section li{margin-bottom:4px}
+
+/* FAQ */
+.faq-item{border:1px solid #E8ECF0;border-radius:8px;margin-bottom:8px;overflow:hidden}
+.faq-question{width:100%;padding:16px 20px;background:#fff;border:none;text-align:left;font-size:16px;font-weight:600;color:#1A1A2E;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
+.faq-question:hover{background:#F9FAFB}
+.faq-question .arrow{transition:transform 0.3s ease;font-size:12px;color:#6B7280}
+.faq-item.open .faq-question .arrow{transform:rotate(180deg)}
+.faq-answer{padding:0 20px;max-height:0;overflow:hidden;transition:all 0.3s ease;font-size:15px;color:#4B5563;line-height:1.7}
+.faq-item.open .faq-answer{padding:0 20px 16px;max-height:500px}
+
+/* DISCLAIMER */
+.disclaimer-bar{background:#FFF8E1;border:1px solid #FFD700;padding:20px;margin:0 24px 24px;border-radius:8px;display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#5D4037;line-height:1.6}
+.disclaimer-bar .icon{font-size:18px;flex-shrink:0;margin-top:2px}
+
+/* FOOTER */
+.site-footer{background:#0A1628;color:#B0B8C4;padding:40px 0 24px}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.site-footer a{color:#8892A0;transition:color 0.3s ease}
+.site-footer a:hover{color:#00C896}
+.site-footer .copyright{font-size:13px;color:#667080}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .page-title h1{font-size:26px}
+  .form-grid,.about-grid{grid-template-columns:1fr}
+  .comp-grid{grid-template-columns:1fr}
+  .winner-card .diff{font-size:22px}
+  .tool-card{padding:20px}
+  .res-actions{flex-direction:column}
+  .res-actions button{width:100%}
+}
+@media print{
+  .site-header,.breadcrumb,.calc-btn,.res-actions,.site-footer,.seo-section,.disclaimer-bar{display:none!important}
+  .results-area{display:block!important}
+  .comp-card,.winner-card,.breakeven-card,.consider-box{opacity:1!important;transform:none!important;border:1px solid #ddd!important}
+  .winner-card{background:#f0fdf9!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="header-logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <a href="/" class="header-back" aria-label="Back to homepage">&larr; Back to Home</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> <span aria-hidden="true"> &gt; </span>
+    <a href="/">Tools</a> <span aria-hidden="true"> &gt; </span>
+    <span>1099 vs W-2 Calculator</span>
+  </div>
+</nav>
+
+<!-- PAGE TITLE -->
+<div class="page-title">
+  <div class="container">
+    <h1>&#9878; 1099 vs W-2 Tax Calculator</h1>
+    <p>Compare the true after-tax, after-benefits value of a contractor offer vs an employee offer. See which one actually puts more money in your pocket.</p>
+  </div>
+</div>
+
+<!-- TOOL -->
+<section class="tool-section" aria-label="1099 vs W-2 Comparison Calculator">
+  <div class="container">
+
+    <!-- FORM -->
+    <div class="tool-card">
+      <h2>&#128188; The Offers</h2>
+      <p style="font-size:14px;color:#6B7280;margin-bottom:16px;">Enter both offers to compare:</p>
+      <div class="form-grid">
+        <div>
+          <h2 style="font-size:16px;margin-bottom:12px;"><span class="badge badge-w2">W-2</span> Employee Offer</h2>
+          <div class="form-group">
+            <label for="w2Salary">Annual Salary</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="w2Salary" min="0" step="1000" placeholder="e.g. 75000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="w2State">State</label>
+            <select id="w2State"></select>
+          </div>
+          <div class="form-group">
+            <label for="w2Benefits">Benefits Value (Annual Estimate)</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="w2Benefits" min="0" step="100" value="0" placeholder="Health ins, 401k match, PTO value">
+            </div>
+            <div class="helper">Health insurance, 401k match, PTO value, etc.</div>
+          </div>
+        </div>
+        <div>
+          <h2 style="font-size:16px;margin-bottom:12px;"><span class="badge badge-1099">1099</span> Contractor Offer</h2>
+          <div class="form-group">
+            <label for="c1099Rate">Annual Contract Rate</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="c1099Rate" min="0" step="1000" placeholder="e.g. 95000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="c1099Expenses">Expected Business Expenses</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="c1099Expenses" min="0" step="100" value="0" placeholder="Equipment, software, home office, mileage">
+            </div>
+            <div class="helper">Equipment, software, home office, mileage, etc.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <h2>&#128100; About You</h2>
+      <div class="about-grid">
+        <div class="form-group">
+          <label for="filingStatus">Filing Status</label>
+          <select id="filingStatus">
+            <option value="single">Single</option>
+            <option value="mfj">Married Filing Jointly</option>
+            <option value="mfs">Married Filing Separately</option>
+            <option value="hoh">Head of Household</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="healthIns">Health Insurance (annual, as contractor)</label>
+          <div class="input-wrapper">
+            <span class="input-prefix">$</span>
+            <input type="number" id="healthIns" min="0" step="100" value="5000" placeholder="e.g. 5000">
+          </div>
+          <div class="helper">What you'd pay annually for health insurance</div>
+        </div>
+        <div class="form-group">
+          <label for="retirementContrib">Retirement Contributions (annual)</label>
+          <div class="input-wrapper">
+            <span class="input-prefix">$</span>
+            <input type="number" id="retirementContrib" min="0" step="100" value="0" placeholder="e.g. 6000">
+          </div>
+          <div class="helper">SEP-IRA, Solo 401k, or traditional IRA contributions</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="calc-btn" id="calculateBtn">Compare Take-Home Pay &rarr;</button>
+
+    <!-- RESULTS -->
+    <div class="results-area" id="resultsArea">
+
+      <div class="comp-grid">
+        <div class="comp-card w2" id="cardW2">
+          <h3>&#128188; W-2 Employee</h3>
+          <div class="comp-row"><span>Gross Salary</span><span id="w2Gross">$0</span></div>
+          <div class="comp-row"><span>Federal Tax</span><span id="w2Fed">$0</span></div>
+          <div class="comp-row"><span>State Tax</span><span id="w2StateTax">$0</span></div>
+          <div class="comp-row"><span>FICA (7.65%)</span><span id="w2Fica">$0</span></div>
+          <div class="comp-divider"></div>
+          <div class="comp-total"><span>TAKE-HOME</span><span id="w2Takehome">$0</span></div>
+          <div class="comp-plus">
+            <span>+ Benefits worth <strong id="w2BenefitsVal">$0</strong></span>
+            <span style="font-size:12px;color:#9CA3AF;">+ Job security &amp; paid time off</span>
+          </div>
+        </div>
+
+        <div class="comp-card c1099" id="card1099">
+          <h3>&#128188; 1099 Contractor</h3>
+          <div class="comp-row"><span>Gross Contract</span><span id="c1099Gross">$0</span></div>
+          <div class="comp-row sub"><span>&minus; Expenses</span><span id="c1099Exp">$0</span></div>
+          <div class="comp-row"><span>SE Tax (15.3%)</span><span id="c1099Se">$0</span></div>
+          <div class="comp-row"><span>Federal Tax</span><span id="c1099Fed">$0</span></div>
+          <div class="comp-row"><span>State Tax</span><span id="c1099StateTax">$0</span></div>
+          <div class="comp-row sub"><span>&minus; Health Insurance</span><span id="c1099Health">$0</span></div>
+          <div class="comp-row sub"><span>&minus; Retirement</span><span id="c1099Retire">$0</span></div>
+          <div class="comp-divider"></div>
+          <div class="comp-total"><span>TAKE-HOME</span><span id="c1099Takehome">$0</span></div>
+          <div class="comp-plus">
+            <span>+ Deductions &amp; flexibility</span>
+            <span style="font-size:12px;color:#9CA3AF;">+ Higher retirement limits</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="winner-card" id="winnerCard">
+        <div class="trophy" aria-hidden="true">&#127942;</div>
+        <h3 id="winnerTitle">The [X] Offer Puts More In Your Pocket</h3>
+        <div class="diff" id="winnerDiff">$0</div>
+        <div class="sub" id="winnerSub">Difference in take-home pay</div>
+      </div>
+
+      <div class="breakeven-card" id="breakevenCard">
+        <h3>&#9878; Breakeven Calculator</h3>
+        <p style="font-size:14px;color:#6B7280;margin-bottom:8px;">What contract rate equals your W-2 salary?</p>
+        <div class="breakeven-amount" id="breakevenAmt">$0</div>
+        <div class="breakeven-sub">You need to earn at least this as a 1099 contractor to match the W-2 take-home pay</div>
+      </div>
+
+      <div class="consider-box" id="considerBox">
+        <h3>&#128176; Beyond the Numbers</h3>
+        <ul>
+          <li><strong>1099:</strong> Deduct business expenses, higher retirement limits (SEP-IRA up to $69K), more flexibility, but no benefits or job security</li>
+          <li><strong>W-2:</strong> Employer pays half FICA (7.65%), health insurance, retirement match, unemployment insurance, paid vacation, more stability</li>
+          <li><strong>General rule:</strong> A 1099 rate should be <strong>20-30% higher</strong> than an equivalent W-2 salary to account for taxes and benefits</li>
+        </ul>
+      </div>
+
+      <div class="res-actions">
+        <button class="btn-print" onclick="window.print()" aria-label="Print results">&#128424; Print</button>
+        <button class="btn-copy" id="copyBtn" aria-label="Copy summary">&#128203; Copy</button>
+        <button class="btn-recalc" id="recalcBtn" aria-label="Recalculate">&#8635; Recalculate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-bar" role="note">
+  <span class="icon" aria-hidden="true">&#9888;&#65039;</span>
+  <p><strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual tax situations vary based on your specific circumstances, deductions, credits, and local tax laws. Consult a CPA or tax professional for advice specific to your situation.</p>
+</div>
+
+<!-- SEO CONTENT -->
+<section class="seo-section" aria-label="Additional comparison information">
+  <div class="container">
+    <h2>1099 Contractor vs W-2 Employee: The Real Difference</h2>
+    <p>Choosing between a 1099 contractor role and a W-2 employee position isn't just about the gross income. The two classifications have fundamentally different tax treatments, benefit structures, and legal protections. A $100,000 W-2 salary and a $100,000 1099 contract rate are not equal — the contractor will pay roughly 15.3% in self-employment tax (both halves of Social Security and Medicare) while the employee only pays 7.65% with their employer covering the other half.</p>
+    <p>Beyond taxes, W-2 employees typically receive health insurance, retirement matches, paid time off, and unemployment protection. Contractors must provide all of these themselves. On the other hand, 1099 contractors can deduct business expenses (home office, equipment, mileage, software) and may qualify for the QBI deduction (20% of qualified business income). They also have access to higher retirement contribution limits through SEP-IRAs or Solo 401(k)s.</p>
+    <p>The key insight: a 1099 rate needs to be significantly higher than a W-2 salary — typically 20-30% — to deliver the same after-tax, after-benefits outcome. Use our calculator above to compare your specific offers.</p>
+
+    <h2>Why Contractors Need to Charge More</h2>
+    <p>When you work as a 1099 contractor, you're running a business. Your "employer" no longer pays: the employer half of FICA (7.65% of your wages), health insurance premiums (employers typically cover 50-80%), retirement contributions (average 3-5% match), workers' compensation insurance, unemployment insurance, paid vacation (10-15 days/year), sick days (5-10 days/year), and holidays (10-12/year). These costs typically add 25-35% on top of your base salary.</p>
+    <p>Additionally, contractors face income volatility — gaps between contracts, late payments, and the administrative burden of running a business (invoicing, bookkeeping, quarterly tax filings). These factors justify a premium hourly or annual rate compared to an equivalent W-2 role.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How much more should a 1099 rate be vs W-2 salary? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">A general rule of thumb is that a 1099 contractor rate should be 20-30% higher than an equivalent W-2 salary. This accounts for the employer portion of FICA (7.65%), health insurance (5-10%), retirement benefits (3-5%), paid time off (5-8%), and the risk premium for self-employment. For a $75,000 W-2 salary, a fair 1099 rate would be roughly $90,000–$97,500. Use our calculator above for your exact numbers.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Can I negotiate a higher 1099 rate to cover taxes? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">Yes, absolutely. When evaluating a 1099 contract offer, factor in all the additional costs you'll bear: the employer half of FICA (7.65%), health insurance premiums, retirement contributions, paid time off, and risk of gaps between contracts. A good starting point is asking for 25-35% more than the W-2 equivalent. Many companies have conversion budgets that account for this difference.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What deductions do 1099 contractors get that W-2 employees don't? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">1099 contractors can deduct a wide range of business expenses including home office costs, vehicle mileage, equipment and software, health insurance premiums, retirement contributions, professional development, and half of their self-employment tax. They also qualify for the QBI deduction (20% of qualified business income). These deductions can significantly reduce taxable income, sometimes making the effective tax rate lower than a W-2 earner at the same gross income level.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is it better to be W-2 or 1099 for taxes? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">From a pure tax perspective, W-2 is generally simpler and has lower built-in taxes since your employer pays half of FICA (7.65%). However, 1099 contractors can deduct business expenses and may end up with a lower effective tax rate if they have significant deductions — especially with the QBI deduction. The choice often comes down to your specific situation, income level, and how much you value benefits, stability, and simplicity over flexibility and deduction opportunities.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <span class="copyright">&copy; 2026 FreelanceTaxCalc &mdash; Free tools for independent workers.</span>
+    <a href="/">Back to Home</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  var stateRates = {
+    'Alabama':0.05,'Alaska':0,'Arizona':0.025,'Arkansas':0.049,'California':0.075,
+    'Colorado':0.044,'Connecticut':0.05,'Delaware':0.055,'Florida':0,'Georgia':0.0549,
+    'Hawaii':0.072,'Idaho':0.058,'Illinois':0.0495,'Indiana':0.0315,'Iowa':0.057,
+    'Kansas':0.0525,'Kentucky':0.045,'Louisiana':0.0425,'Maine':0.0645,'Maryland':0.05,
+    'Massachusetts':0.05,'Michigan':0.0405,'Minnesota':0.0785,'Mississippi':0.047,
+    'Missouri':0.0495,'Montana':0.0575,'Nebraska':0.0584,'Nevada':0,'New Hampshire':0,
+    'New Jersey':0.0637,'New Mexico':0.04875,'New York':0.065,'North Carolina':0.045,
+    'North Dakota':0.029,'Ohio':0.035,'Oklahoma':0.0475,'Oregon':0.0875,
+    'Pennsylvania':0.0307,'Rhode Island':0.054,'South Carolina':0.064,'South Dakota':0,
+    'Tennessee':0,'Texas':0,'Utah':0.0485,'Vermont':0.0675,'Virginia':0.0575,
+    'Washington':0,'West Virginia':0.0535,'Wisconsin':0.053,'Wyoming':0,
+    'District of Columbia':0.0675
+  };
+
+  var stateSel = document.getElementById('w2State');
+  for(var s in stateRates){
+    if(stateRates.hasOwnProperty(s)){
+      var o = document.createElement('option');
+      o.value = s; o.textContent = s;
+      stateSel.appendChild(o);
+    }
+  }
+
+  var w2Salary = document.getElementById('w2Salary');
+  var w2Benefits = document.getElementById('w2Benefits');
+  var c1099Rate = document.getElementById('c1099Rate');
+  var c1099Expenses = document.getElementById('c1099Expenses');
+  var filingStatus = document.getElementById('filingStatus');
+  var healthIns = document.getElementById('healthIns');
+  var retirementContrib = document.getElementById('retirementContrib');
+  var calculateBtn = document.getElementById('calculateBtn');
+  var recalcBtn = document.getElementById('recalcBtn');
+  var copyBtn = document.getElementById('copyBtn');
+  var resultsArea = document.getElementById('resultsArea');
+
+  function fm(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function getBrackets(status){
+    if(status === 'hoh') return [[17000,0.1],[64850,0.12],[103350,0.22],[197300,0.24],[250525,0.32],[626350,0.35],[Infinity,0.37]];
+    var m = status === 'mfj' ? 2 : 1;
+    return [[11925*m,0.1],[48475*m,0.12],[103350*m,0.22],[197300*m,0.24],[250525*m,0.32],[626350*m,0.35],[Infinity,0.37]];
+  }
+
+  function calcFed(taxable, brackets){
+    var tax = 0, prev = 0;
+    for(var i=0;i<brackets.length;i++){
+      var limit = brackets[i][0], rate = brackets[i][1];
+      if(taxable > prev){ var chunk = Math.min(taxable, limit) - prev; if(chunk>0) tax += chunk*rate; }
+      prev = limit;
+    }
+    return tax;
+  }
+
+  function calculate(){
+    var w2Sal = parseFloat(w2Salary.value) || 0;
+    var w2Ben = parseFloat(w2Benefits.value) || 0;
+    var c1099 = parseFloat(c1099Rate.value) || 0;
+    var c1099Exp = parseFloat(c1099Expenses.value) || 0;
+    var status = filingStatus.value;
+    var state = stateSel.value;
+    var stateRate = stateRates[state] || 0;
+    var health = parseFloat(healthIns.value) || 0;
+    var retire = parseFloat(retirementContrib.value) || 0;
+
+    if(w2Sal <= 0 && c1099 <= 0){
+      if(w2Sal<=0) w2Salary.style.borderColor='#FF6B6B';
+      if(c1099<=0) c1099Rate.style.borderColor='#FF6B6B';
+      setTimeout(function(){ w2Salary.style.borderColor=''; c1099Rate.style.borderColor=''; },1500);
+      return;
+    }
+
+    calculateBtn.textContent='Calculating...';
+    calculateBtn.disabled=true;
+    setTimeout(function(){
+      compute(w2Sal,w2Ben,c1099,c1099Exp,status,state,stateRate,health,retire);
+      calculateBtn.textContent='Compare Take-Home Pay \u2192';
+      calculateBtn.disabled=false;
+    },500);
+  }
+
+  function compute(w2Sal,w2Ben,c1099,c1099Exp,status,state,stateRate,health,retire){
+    var stdDed = 15250;
+    if(status==='mfj') stdDed=30500;
+    else if(status==='hoh') stdDed=23350;
+    var brackets = getBrackets(status);
+
+    // W-2
+    var taxableW2 = Math.max(0, w2Sal - stdDed);
+    var fedW2 = calcFed(taxableW2, brackets);
+    var stateW2 = taxableW2 * stateRate;
+    var ficaW2 = Math.min(w2Sal, 176100)*0.062 + w2Sal*0.0145;
+    if(status==='single' && w2Sal>200000) ficaW2 += (w2Sal-200000)*0.009;
+    var takehomeW2 = w2Sal - fedW2 - stateW2 - ficaW2;
+
+    // 1099
+    var net1099 = Math.max(0, c1099 - c1099Exp);
+    // SE tax
+    var seBase = net1099 * 0.9235;
+    var ssCap = 176100;
+    var seSs = Math.min(seBase, ssCap) * 0.124;
+    var seMc = seBase * 0.029;
+    if(status==='single' && (w2Sal+net1099)>200000) seMc += (w2Sal+net1099-200000)*0.009;
+    var seTax = seSs + seMc;
+    var seDed = seTax * 0.5;
+
+    var agi1099 = net1099 - seDed - health - retire;
+    var taxable1099 = Math.max(0, agi1099 - stdDed);
+    // QBI: 20% of net1099
+    var qbi = Math.min(net1099*0.20, taxable1099);
+    taxable1099 = Math.max(0, taxable1099 - qbi);
+
+    var fed1099 = calcFed(taxable1099, brackets);
+    var state1099 = taxable1099 * stateRate;
+    var takehome1099 = c1099 - c1099Exp - seTax - fed1099 - state1099 - health - retire;
+
+    // Update cards
+    document.getElementById('w2Gross').textContent = fm(w2Sal);
+    document.getElementById('w2Fed').textContent = fm(fedW2);
+    document.getElementById('w2StateTax').textContent = fm(stateW2);
+    document.getElementById('w2Fica').textContent = fm(ficaW2);
+    document.getElementById('w2Takehome').textContent = fm(takehomeW2);
+    document.getElementById('w2BenefitsVal').textContent = fm(w2Ben);
+
+    document.getElementById('c1099Gross').textContent = fm(c1099);
+    document.getElementById('c1099Exp').textContent = '-'+fm(c1099Exp);
+    document.getElementById('c1099Se').textContent = fm(seTax);
+    document.getElementById('c1099Fed').textContent = fm(fed1099);
+    document.getElementById('c1099StateTax').textContent = fm(state1099);
+    document.getElementById('c1099Health').textContent = '-'+fm(health);
+    document.getElementById('c1099Retire').textContent = '-'+fm(retire);
+    document.getElementById('c1099Takehome').textContent = fm(takehome1099);
+
+    // Winner
+    var diff = takehomeW2 - takehome1099;
+    var winnerTitle = document.getElementById('winnerTitle');
+    var winnerDiff = document.getElementById('winnerDiff');
+    var winnerSub = document.getElementById('winnerSub');
+    if(diff > 0){
+      winnerTitle.textContent = '\uD83C\uDFC6 The W-2 Offer Puts $' + Math.round(diff).toLocaleString() + ' More In Your Pocket';
+      winnerDiff.textContent = '+' + fm(diff);
+      winnerSub.textContent = 'W-2 comes out ahead by ' + (w2Sal>0 ? Math.round(diff/w2Sal*100) : 0) + '% of salary';
+    } else {
+      var absDiff = Math.abs(diff);
+      winnerTitle.textContent = '\uD83C\uDFC6 The 1099 Offer Puts $' + Math.round(absDiff).toLocaleString() + ' More In Your Pocket';
+      winnerDiff.textContent = '+' + fm(absDiff);
+      winnerSub.textContent = '1099 comes out ahead by ' + (c1099>0 ? Math.round(absDiff/c1099*100) : 0) + '% of contract rate';
+    }
+
+    // Breakeven
+    var breakeven = 0;
+    if(c1099 <= 0 && w2Sal > 0){
+      // Estimate required 1099 rate to match W-2 takehome
+      var guess = w2Sal * 1.25;
+      for(var iter=0;iter<50;iter++){
+        var n = Math.max(0, guess - 0);
+        var sb = n*0.9235;
+        var sst = Math.min(sb,176100)*0.124 + sb*0.029;
+        var sd = sst*0.5;
+        var ag = n - sd;
+        var tx = Math.max(0, ag - stdDed);
+        var f = calcFed(tx, brackets);
+        var st = tx * stateRate;
+        var th = guess - sst - f - st;
+        if(Math.abs(th - takehomeW2) < 100) break;
+        guess += (takehomeW2 - th) * 0.5;
+      }
+      breakeven = Math.round(guess);
+    }
+    document.getElementById('breakevenAmt').textContent = breakeven > 0 ? '$' + breakeven.toLocaleString() : 'Enter a W-2 salary to calculate';
+
+    // Show results
+    resultsArea.classList.add('visible');
+    resultsArea.style.display = 'block';
+
+    var els = [document.getElementById('cardW2'), document.getElementById('card1099'), document.getElementById('winnerCard'), document.getElementById('breakevenCard'), document.getElementById('considerBox')];
+    els.forEach(function(el, i){
+      setTimeout(function(){ el.classList.add('reveal'); }, 100 + i*80);
+    });
+
+    resultsArea.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  calculateBtn.addEventListener('click', calculate);
+
+  recalcBtn.addEventListener('click', function(){
+    resultsArea.classList.remove('visible');
+    resultsArea.style.display = 'none';
+    document.querySelectorAll('.comp-card, .winner-card, .breakeven-card, .consider-box').forEach(function(el){ el.classList.remove('reveal'); });
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  copyBtn.addEventListener('click', function(){
+    var text = '1099 vs W-2 Comparison - FreelanceTaxCalc\n';
+    text += 'W-2 Take-Home: ' + document.getElementById('w2Takehome').textContent + '\n';
+    text += '1099 Take-Home: ' + document.getElementById('c1099Takehome').textContent + '\n';
+    text += document.getElementById('winnerTitle').textContent + '\n';
+    text += '\nGenerated at FreelanceTaxCalc.online';
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text).then(function(){
+        copyBtn.textContent = '\u2713 Copied!';
+        setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy'; },2000);
+      });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      copyBtn.textContent = '\u2713 Copied!';
+      setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy'; },2000);
+    }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = this.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  // Enter
+  document.querySelectorAll('.tool-card input, .tool-card select').forEach(function(el){
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); calculateBtn.click(); }
+    });
+  });
+})();
+</script>
+<!-- Related Tools -->
+<section class="related-tools" aria-label="Related Tools">
+  <div class="container">
+    <h2>Related Tools You Might Need</h2>
+    <div class="related-grid">
+      <a href="/tools/quarterly-tax-calculator.html">Quarterly Tax Estimator<small>Calculate quarterly taxes if you go 1099</small></a>
+      <a href="/tools/gig-deduction-finder.html">Gig Worker Deduction Finder<small>Find deductions as a 1099 worker</small></a>
+      <a href="/tools/freelance-hourly-rate-calculator.html">Freelance Hourly Rate Calculator<small>Set your 1099 hourly rate</small></a>
+      <a href="/tools/retirement-calculator.html">Retirement Calculator<small>Choose retirement plan for contractors</small></a>
+    </div>
+  </div>
+</section>
+
+<style>
+.related-tools{{background:#fff;padding:48px 0;border-top:1px solid #E8ECF0;margin-top:0}}
+.related-tools h2{{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;text-align:center;margin-bottom:24px}}
+.related-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto}}
+.related-grid a{{display:block;background:#F4F6F9;border-radius:10px;padding:16px;font-size:14px;color:#1A1A2E;font-weight:500;transition:all 0.3s ease;text-decoration:none;border:1px solid transparent}}
+.related-grid a:hover{{background:#F0FDF9;border-color:#00C896;color:#00C896;transform:translateY(-2px)}}
+.related-grid a small{{display:block;font-weight:400;color:#6B7280;font-size:13px;margin-top:4px}}
+</style>
+</body>
+</html>

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary Calculator After Taxes 2026 — Free Take Home Pay &amp; First Paycheck Estimator | FreelanceTaxCalc</title>
+<meta name="description" content="Free salary calculator after taxes 2026. Estimate your take-home pay, first paycheck, and gross to net for any salary or hourly rate — by state, filing status &amp; 401(k).">
+<link rel="canonical" href="https://freelancetaxcalc.online/tools/first-paycheck-calculator">
+<meta property="og:title" content="Salary Calculator After Taxes 2026 — Free Take Home Pay Estimator">
+<meta property="og:description" content="Free salary calculator after taxes 2026. See your take-home pay, gross to net breakdown, and what gets taken out of your paycheck by state.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/tools/first-paycheck-calculator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Salary Calculator After Taxes 2026 — Free Take Home Pay Estimator">
+<meta name="twitter:description" content="Free salary calculator after taxes 2026. See your gross to net pay breakdown and what gets taken out of your paycheck by state.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"First Paycheck Calculator",
+  "url":"https://freelancetaxcalc.online/tools/first-paycheck-calculator",
+  "description":"See exactly what your first paycheck will look like after taxes and deductions.",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All"
+},{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":3,"name":"First Paycheck Calculator"}
+  ]
+},{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How much will I take home on a $50,000 salary?","acceptedAnswer":{"@type":"Answer","text":"Typically $38,000-$42,000 depending on your state. Use our calculator above for your exact number based on your specific state, filing status, and 401(k) contributions."}},
+    {"@type":"Question","name":"What is FICA tax?","acceptedAnswer":{"@type":"Answer","text":"FICA stands for Federal Insurance Contributions Act. It includes Social Security (6.2% of your wages up to $176,100) and Medicare (1.45% of all wages). These taxes fund retirement benefits and healthcare for seniors."}},
+    {"@type":"Question","name":"Why was my first paycheck smaller than expected?","acceptedAnswer":{"@type":"Answer","text":"Several factors can make your first paycheck smaller: you may have started mid-pay-period (partial pay), your employer may deduct a prorated amount for benefits, or you might see one-time deductions like uniform costs or background check fees. Check with HR for a breakdown."}},
+    {"@type":"Question","name":"Can I change how much tax is taken out?","acceptedAnswer":{"@type":"Answer","text":"Yes! Submit a new W-4 form to your employer to adjust your federal income tax withholding. The IRS has a Tax Withholding Estimator to help you get it just right — aiming for a small refund or owing a small amount is ideal."}},
+    {"@type":"Question","name":"Do I get this money back?","acceptedAnswer":{"@type":"Answer","text":"If too much tax was withheld from your paychecks, you'll get a refund after filing your annual tax return. If too little was withheld, you'll owe money when you file. The goal is to get as close to zero as possible — that means more money in each paycheck."}},
+    {"@type":"Question","name":"What actually gets taken out of my paycheck?","acceptedAnswer":{"@type":"Answer","text":"Your paycheck has federal income tax, state income tax (unless you're in a no-tax state), Social Security (6.2%), Medicare (1.45%), and any voluntary deductions like 401(k), health insurance, HSA, or FSA. Your employer may also deduct things like parking, gym membership, or commuting benefits if you signed up."}},
+    {"@type":"Question","name":"How do I estimate my new job paycheck?","acceptedAnswer":{"@type":"Answer","text":"Use our new job paycheck estimator above. Enter your offer salary or hourly rate, select your state and filing status, and add any 401(k) contribution. The calculator shows your gross to net breakdown per paycheck and annually. Most first paychecks are smaller due to mid-period start dates or prorated benefits."}},
+    {"@type":"Question","name":"How much will I take home on $50,000?","acceptedAnswer":{"@type":"Answer","text":"On a $50,000 salary as a single filer, your take-home pay ranges from ~$36,000 in high-tax states (California, New York, Oregon) to ~$40,000 in no-tax states (Texas, Florida, Nevada). The exact amount depends on your state, filing status, and 401(k) contributions. Use our salary calculator after taxes above for your exact number."}},
+    {"@type":"Question","name":"Is it better to be paid salary or hourly?","acceptedAnswer":{"@type":"Answer","text":"Salary gives you predictable paychecks and typically includes benefits (PTO, health insurance, 401(k)). Hourly means you get paid for every hour worked, including overtime (1.5x after 40 hours). For first-time workers, hourly can be better if your job offers overtime. Salary is better if you value stability and benefits. Both get the same taxes taken out."}}
+  ]
+}]
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:18px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* HEADER */
+.site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;font-weight:700;color:#fff}
+.logo-icon{width:32px;height:32px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.header-back{color:#B0B8C4;font-size:14px;transition:color 0.3s ease}
+.header-back:hover{color:#00C896}
+
+/* BREADCRUMB */
+.breadcrumb{background:#fff;padding:12px 0;border-bottom:1px solid #E8ECF0;font-size:14px;color:#6B7280}
+.breadcrumb a{color:#00C896}
+.breadcrumb a:hover{color:#00B085}
+.breadcrumb span{color:#6B7280}
+
+/* PAGE TITLE */
+.page-title{background:#fff;padding:28px 0 0}
+.page-title h1{font-family:"DM Serif Display",serif;font-size:34px;color:#1A1A2E;margin-bottom:6px}
+.page-title p{color:#6B7280;font-size:16px;max-width:650px}
+
+/* TOOL SECTION */
+.tool-section{padding:28px 0 60px}
+.calc-wrap{max-width:660px;margin:0 auto}
+
+/* INPUT CARD */
+.input-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:28px}
+.input-card h2{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;margin-bottom:20px;text-align:center}
+
+/* Mode toggle */
+.mode-toggle{display:flex;background:#F3F4F6;border-radius:12px;padding:4px;margin-bottom:24px}
+.mode-btn{flex:1;padding:12px;text-align:center;border:none;border-radius:10px;font-weight:600;font-size:16px;cursor:pointer;transition:all 0.3s ease;background:transparent;color:#6B7280;font-family:inherit}
+.mode-btn.active{background:#fff;color:#1A1A2E;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+
+/* Form fields */
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-weight:600;font-size:15px;color:#1A1A2E;margin-bottom:6px}
+.input-wrapper{position:relative;display:flex;align-items:center}
+.input-prefix{position:absolute;left:16px;font-weight:600;color:#6B7280;font-size:18px;pointer-events:none;z-index:1}
+.form-group input[type="number"]{width:100%;padding:16px 16px 16px 38px;border:2px solid #E8ECF0;border-radius:12px;font-size:22px;font-weight:600;font-family:inherit;color:#1A1A2E;background:#fff;transition:all 0.3s ease;outline:none}
+.form-group input[type="number"]:focus{border-color:#00C896;box-shadow:0 0 0 4px rgba(0,200,150,0.1)}
+.form-group input[type="number"]::placeholder{color:#D1D5DB;font-weight:400;font-size:18px}
+.form-group .helper{font-size:14px;color:#9CA3AF;margin-top:4px;line-height:1.5}
+
+/* Range slider */
+.range-group{margin-bottom:20px}
+.range-group label{display:flex;justify-content:space-between;font-weight:600;font-size:15px;color:#1A1A2E;margin-bottom:6px}
+.range-group label span{color:#00C896}
+.range-slider{width:100%;height:8px;border-radius:4px;background:#E8ECF0;outline:none;-webkit-appearance:none;appearance:none}
+.range-slider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#00C896;cursor:pointer;box-shadow:0 2px 6px rgba(0,200,150,0.3)}
+.range-slider::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#00C896;cursor:pointer;border:none}
+.range-value{text-align:center;font-size:22px;font-weight:700;color:#00C896;margin-top:4px}
+
+/* Pay frequency */
+.freq-group{margin-bottom:20px}
+.freq-group label{display:block;font-weight:600;font-size:15px;color:#1A1A2E;margin-bottom:8px}
+.freq-pills{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.freq-pill{padding:12px;border:2px solid #E8ECF0;border-radius:10px;background:#fff;cursor:pointer;text-align:center;font-size:14px;font-weight:500;transition:all 0.25s ease;font-family:inherit}
+.freq-pill:hover{border-color:#00C896}
+.freq-pill.selected{border-color:#00C896;background:#E8F8F5;color:#00C896;font-weight:600}
+
+/* State select */
+.form-group select{width:100%;padding:14px 16px;border:2px solid #E8ECF0;border-radius:12px;font-size:16px;font-family:inherit;color:#1A1A2E;background:#fff;transition:border-color 0.3s ease;outline:none;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' fill='%236B7280'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.form-group select:focus{border-color:#00C896;box-shadow:0 0 0 4px rgba(0,200,150,0.1)}
+
+/* Status toggle */
+.status-toggle{display:flex;background:#F3F4F6;border-radius:10px;padding:3px;margin-bottom:20px}
+.status-btn{flex:1;padding:10px;text-align:center;border:none;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;transition:all 0.3s ease;background:transparent;color:#6B7280;font-family:inherit}
+.status-btn.active{background:#fff;color:#1A1A2E;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+
+/* 401k slider */
+.k-label{display:flex;justify-content:space-between;font-weight:600;font-size:15px;color:#1A1A2E;margin-bottom:6px}
+.k-label span{color:#00C896}
+.k-helper{font-size:14px;color:#9CA3AF;margin-top:4px}
+
+/* Calc button */
+.calc-action{text-align:center;margin-top:24px}
+.calc-btn{width:100%;padding:18px 32px;background:#00C896;color:#fff;border:none;border-radius:14px;font-size:20px;font-weight:700;cursor:pointer;transition:all 0.3s ease;font-family:inherit}
+.calc-btn:hover{transform:scale(1.02);background:#00B085;box-shadow:0 6px 20px rgba(0,200,150,0.3)}
+.calc-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none!important}
+
+/* RESULTS */
+.results-area{display:none}
+.results-area.visible{display:block;animation:fadeUp 0.6s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* Pay Stub */
+.paystub{background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:24px;border:2px solid #E8ECF0}
+.paystub-title{font-family:"DM Serif Display",serif;font-size:20px;color:#1A1A2E;margin-bottom:16px;text-align:center;padding-bottom:12px;border-bottom:2px dashed #E8ECF0}
+.paystub-period{text-align:center;font-size:14px;color:#6B7280;margin-bottom:16px}
+.paystub-section{font-weight:700;font-size:14px;color:#6B7280;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;margin-top:12px}
+.paystub-row{display:flex;justify-content:space-between;padding:6px 0;font-size:16px;color:#1A1A2E}
+.paystub-row.deduction{color:#6B7280}
+.paystub-divider{border-top:2px solid #E8ECF0;margin:8px 0}
+.paystub-total{display:flex;justify-content:space-between;padding:10px 0;font-size:20px;font-weight:700;color:#1A1A2E}
+.paystub-takehome{display:flex;justify-content:space-between;padding:12px 0;font-size:28px;font-weight:700;color:#00C896}
+.paystub-pct{text-align:center;font-size:16px;color:#6B7280;margin-top:4px}
+
+/* Donut */
+.donut-section{margin-bottom:24px;text-align:center}
+.donut-wrapper{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+.donut{width:180px;height:180px;border-radius:50%;position:relative;flex-shrink:0;transition:background 0.8s ease}
+.donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100px;height:100px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.donut-center .val{font-size:20px;font-weight:700;color:#00C896;line-height:1.1}
+.donut-center .lbl{font-size:11px;color:#6B7280}
+.donut-legend{text-align:left;font-size:14px;line-height:2}
+.donut-legend span{display:flex;align-items:center;gap:8px}
+.donut-legend .dot{width:12px;height:12px;border-radius:3px;display:inline-block;flex-shrink:0}
+
+/* Annual summary table */
+.summary-table{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:15px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.summary-table th{background:#0A1628;color:#fff;padding:14px 20px;text-align:left;font-weight:600;font-size:14px}
+.summary-table th:first-child{border-radius:12px 0 0 0}
+.summary-table th:last-child{border-radius:0 12px 0 0}
+.summary-table td{padding:14px 20px;border-bottom:1px solid #F3F4F6;color:#1A1A2E}
+.summary-table tr:last-child td{border-bottom:none}
+.summary-table tr:last-child td:first-child{border-radius:0 0 0 12px}
+.summary-table tr:last-child td:last-child{border-radius:0 0 12px 0}
+.summary-table .total-row td{font-weight:700;color:#00C896;background:#E8F8F5}
+
+/* Encouragement */
+.encourage-card{background:linear-gradient(135deg,#E8F8F5,#fff);border:1px solid #00C896;border-radius:16px;padding:24px;margin-bottom:24px}
+.encourage-card h3{font-family:"DM Serif Display",serif;font-size:20px;color:#00C896;margin-bottom:8px}
+.encourage-card p{font-size:15px;color:#374151;line-height:1.6;margin-bottom:6px}
+.encourage-card .tip{font-size:14px;color:#6B7280;padding-left:16px;margin-top:4px}
+
+/* Result buttons */
+.res-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.res-actions button{flex:1;min-width:140px;padding:14px 20px;border-radius:10px;font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;transition:all 0.3s ease;text-align:center}
+.btn-print{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-print:hover{border-color:#00C896;color:#00C896}
+.btn-copy{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-copy:hover{border-color:#00C896;color:#00C896}
+.btn-recalc{background:#fff;border:2px solid #00C896;color:#00C896}
+.btn-recalc:hover{background:#E8F8F5}
+
+/* MODE HIDING */
+.mode-salary,.mode-hourly{display:block}
+body.mode-hourly .mode-salary{display:none}
+body.mode-hourly .mode-hourly{display:block}
+body.mode-salary .mode-hourly{display:none}
+body.mode-salary .mode-salary{display:block}
+
+/* SEO CONTENT */
+.seo-section{padding:60px 0;background:#fff}
+.seo-section .container{max-width:800px}
+.seo-section h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:16px;margin-top:40px}
+.seo-section h2:first-child{margin-top:0}
+.seo-section p,.seo-section li{font-size:17px;color:#4B5563;line-height:1.8;margin-bottom:12px}
+.seo-section ul{padding-left:24px}
+.seo-section li{margin-bottom:4px}
+
+/* FAQ */
+.faq-item{border:1px solid #E8ECF0;border-radius:10px;margin-bottom:8px;overflow:hidden}
+.faq-question{width:100%;padding:18px 20px;background:#fff;border:none;text-align:left;font-size:17px;font-weight:600;color:#1A1A2E;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
+.faq-question:hover{background:#F9FAFB}
+.faq-question .arrow{transition:transform 0.3s ease;font-size:12px;color:#6B7280}
+.faq-item.open .faq-question .arrow{transform:rotate(180deg)}
+.faq-answer{padding:0 20px;max-height:0;overflow:hidden;transition:all 0.3s ease;font-size:16px;color:#4B5563;line-height:1.7}
+.faq-item.open .faq-answer{padding:0 20px 18px;max-height:500px}
+
+/* DISCLAIMER */
+.disclaimer-bar{background:#FFF8E1;border:1px solid #FFD700;padding:20px;margin:0 24px 24px;border-radius:10px;display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#5D4037;line-height:1.6}
+.disclaimer-bar .icon{font-size:18px;flex-shrink:0;margin-top:2px}
+
+/* FOOTER */
+.site-footer{background:#0A1628;color:#B0B8C4;padding:40px 0 24px}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.site-footer a{color:#8892A0;transition:color 0.3s ease}
+.site-footer a:hover{color:#00C896}
+.site-footer .copyright{font-size:13px;color:#667080}
+
+/* PRINT */
+@media print{
+  .site-header,.breadcrumb,.res-actions,.site-footer,.seo-section,.disclaimer-bar{display:none!important}
+  .results-area{display:block!important}
+  .paystub,.summary-table,.encourage-card,.donut-section{box-shadow:none;border:1px solid #ddd!important;break-inside:avoid}
+  .calc-action,.input-card{display:none}
+  body{background:#fff!important;font-size:12px}
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .page-title h1{font-size:26px}
+  .input-card,.paystub{padding:20px}
+  .freq-pills{grid-template-columns:1fr}
+  .form-group input[type="number"]{font-size:18px}
+  .paystub-takehome{font-size:22px}
+  .donut-wrapper{flex-direction:column;gap:16px}
+  .summary-table{font-size:14px}
+  .summary-table th,.summary-table td{padding:10px 14px}
+  .res-actions{flex-direction:column}
+  .res-actions button{width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="header-logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <a href="/" class="header-back" aria-label="Back to homepage">&larr; Back to Home</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> <span aria-hidden="true"> &gt; </span>
+    <a href="/">Tools</a> <span aria-hidden="true"> &gt; </span>
+    <span>First Paycheck Calculator</span>
+  </div>
+</nav>
+
+<!-- PAGE TITLE -->
+<div class="page-title">
+  <div class="container">
+    <h1>Salary Calculator After Taxes 2026</h1>
+    <p>See exactly what your take-home pay will be — federal &amp; state taxes, FICA, and 401(k). Works for salary or hourly. No confusing jargon, promise.</p>
+  </div>
+</div>
+
+<!-- TOOL -->
+<section class="tool-section" aria-label="First Paycheck Calculator">
+  <div class="container calc-wrap">
+    <div class="input-card">
+      <h2>Tell us about your job &rarr;</h2>
+
+      <!-- Mode toggle -->
+      <div class="mode-toggle" role="tablist">
+        <button class="mode-btn active" data-mode="salary" role="tab" aria-selected="true" aria-label="Salary mode">&#128176; Salary</button>
+        <button class="mode-btn" data-mode="hourly" role="tab" aria-selected="false" aria-label="Hourly mode">&#9200; Hourly</button>
+      </div>
+
+      <!-- Salary -->
+      <div class="form-group mode-salary">
+        <label for="annualSalary">Annual Salary</label>
+        <div class="input-wrapper">
+          <span class="input-prefix">$</span>
+          <input type="number" id="annualSalary" min="0" step="100" placeholder="e.g. 55000" aria-describedby="salHelp">
+        </div>
+        <div class="helper" id="salHelp">The yearly salary from your offer letter</div>
+      </div>
+
+      <!-- Hourly -->
+      <div class="form-group mode-hourly">
+        <label for="hourlyRate">Hourly Rate</label>
+        <div class="input-wrapper">
+          <span class="input-prefix">$</span>
+          <input type="number" id="hourlyRate" min="0" step="0.5" placeholder="e.g. 22.50" aria-describedby="hourlyHelp">
+        </div>
+        <div class="helper" id="hourlyHelp">Your pay rate per hour</div>
+      </div>
+
+      <div class="range-group mode-hourly">
+        <label>Hours Per Week <span id="hoursDisplay">40</span></label>
+        <input type="range" class="range-slider" id="hoursPerWeek" min="20" max="50" value="40" step="1" aria-label="Hours per week">
+      </div>
+
+      <!-- Pay frequency -->
+      <div class="freq-group">
+        <label>Pay Frequency</label>
+        <div class="freq-pills" role="radiogroup" aria-label="Pay frequency">
+          <button class="freq-pill" data-periods="52" role="radio" aria-checked="false">&#128197; Weekly</button>
+          <button class="freq-pill selected" data-periods="26" role="radio" aria-checked="true">&#128197; Bi-weekly</button>
+          <button class="freq-pill" data-periods="24" role="radio" aria-checked="false">&#128197; Twice/Month</button>
+          <button class="freq-pill" data-periods="12" role="radio" aria-checked="false">&#128197; Monthly</button>
+        </div>
+      </div>
+
+      <!-- State -->
+      <div class="form-group">
+        <label for="stateSelect">State</label>
+        <select id="stateSelect" aria-describedby="stateHelp"></select>
+        <div class="helper" id="stateHelp">We calculate state income tax for your location</div>
+      </div>
+
+      <!-- Filing status -->
+      <div class="status-toggle" role="radiogroup" aria-label="Filing status">
+        <button class="status-btn active" data-status="single" role="radio" aria-checked="true">Single</button>
+        <button class="status-btn" data-status="married" role="radio" aria-checked="false">Married</button>
+      </div>
+
+      <!-- 401(k) -->
+      <div class="range-group">
+        <div class="k-label">401(k) Contribution <span id="kDisplay">0%</span></div>
+        <input type="range" class="range-slider" id="kPercent" min="0" max="20" value="0" step="1" aria-label="401k contribution percentage">
+        <div class="k-helper" id="kHelper">Contributing 0% = $0.00 per paycheck (pre-tax!)</div>
+      </div>
+
+      <div class="calc-action">
+        <button class="calc-btn" id="calculateBtn">Show Me My Paycheck &#127881;</button>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-area" id="resultsArea">
+
+      <!-- Pay stub -->
+      <div class="paystub">
+        <div class="paystub-title">&#128179; Your Estimated Paycheck</div>
+        <div class="paystub-period" id="psPeriod">Pay Period: Bi-weekly</div>
+
+        <div class="paystub-section">Earnings</div>
+        <div class="paystub-row"><span>Gross Pay</span><span id="psGross">$0.00</span></div>
+
+        <div class="paystub-divider"></div>
+        <div class="paystub-section">Deductions</div>
+        <div class="paystub-row deduction"><span>Federal Income Tax</span><span id="psFederal">– $0.00</span></div>
+        <div class="paystub-row deduction"><span>State Income Tax</span><span id="psState">– $0.00</span></div>
+        <div class="paystub-row deduction"><span>Social Security (6.2%)</span><span id="psSS">– $0.00</span></div>
+        <div class="paystub-row deduction"><span>Medicare (1.45%)</span><span id="psMedicare">– $0.00</span></div>
+        <div class="paystub-row deduction"><span>401(k) Contribution</span><span id="psK">– $0.00</span></div>
+
+        <div class="paystub-divider"></div>
+        <div class="paystub-takehome"><span>YOUR TAKE-HOME PAY</span><span id="psTakehome">$0.00</span></div>
+        <div class="paystub-pct">That's <strong id="psPct">0%</strong> of your gross pay</div>
+      </div>
+
+      <!-- Donut -->
+      <div class="donut-section" id="donutSection">
+        <div class="donut-wrapper">
+          <div class="donut" id="donutChart" style="background:conic-gradient(#E8ECF0 0deg, #E8ECF0 360deg)">
+            <div class="donut-center">
+              <span class="val" id="donutVal">$0</span>
+              <span class="lbl">take-home</span>
+            </div>
+          </div>
+          <div class="donut-legend" id="donutLegend"></div>
+        </div>
+      </div>
+
+      <!-- Annual summary -->
+      <table class="summary-table" id="summaryTable">
+        <thead><tr><th></th><th>Per Paycheck</th><th>Annually</th></tr></thead>
+        <tbody>
+          <tr><td>Gross Pay</td><td id="sumGrossPer">$0</td><td id="sumGrossYear">$0</td></tr>
+          <tr><td>All Taxes + Deductions</td><td id="sumDedPer">$0</td><td id="sumDedYear">$0</td></tr>
+          <tr class="total-row"><td>Your Take-Home</td><td id="sumHomePer">$0</td><td id="sumHomeYear">$0</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Encouragement -->
+      <div class="encourage-card">
+        <h3>&#127881; You keep <span id="encPct">0</span>% of what you earn!</h3>
+        <p>First-time worker? Here's how to make every paycheck count:</p>
+        <div class="tip">&#8226; <strong>Start micro-investing</strong> — Even $5/week in an app like Acorns, Stash, or Robinhood builds the habit. Your future self will thank you.</div>
+        <div class="tip">&#8226; <strong>Get the full 401(k) match</strong> — If your employer offers matching, contribute enough to get it all. That's a 100% return on your money, instantly.</div>
+        <div class="tip">&#8226; <strong>Follow the 50/30/20 budget</strong> — 50% for needs, 30% for wants, 20% for savings/investing. Starting this with your first paycheck sets you up for life.</div>
+        <div class="tip">&#8226; <strong>Automate your savings</strong> — Set up an automatic transfer on payday. What you don't see, you won't spend. Start with 10% and adjust from there.</div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="res-actions">
+        <button class="btn-print" onclick="window.print()" aria-label="Print paycheck">&#128424; Print Paycheck</button>
+        <button class="btn-copy" id="copyBtn" aria-label="Copy summary">&#128203; Copy Summary</button>
+        <button class="btn-recalc" id="recalcBtn" aria-label="Recalculate">&#8635; Recalculate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-bar" role="note">
+  <span class="icon" aria-hidden="true">&#9888;&#65039;</span>
+  <p><strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual paychecks may vary based on your specific tax situation, benefits, pre-tax deductions, and employer policies.</p>
+</div>
+
+<!-- SEO CONTENT -->
+<section class="seo-section" aria-label="Additional information">
+  <div class="container">
+    <h2>Why Is My Paycheck Less Than My Salary?</h2>
+    <p>If you've ever looked at your first paycheck and thought "wait, where's the rest?" — you're not alone. That gap between your salary and your take-home pay is called payroll withholding. Your employer is required by law to take out federal income tax, state income tax, Social Security, and Medicare from every paycheck. Plus, if you signed up for benefits like health insurance or a 401(k), those come out too.</p>
+    <p>The amount withheld for taxes depends on the W-4 form you filled out when you started. If you claimed "Single" with no adjustments, your employer withholds at the standard rate. That's usually pretty close to what you'll actually owe — but not always. Some people end up with a big refund (too much withheld) or a surprise tax bill (too little withheld).</p>
+    <p>The good news? All of this is normal. Your first paycheck might feel small, but you're building toward tax refunds, retirement savings, and Social Security benefits down the road.</p>
+
+    <h2>What Gets Taken Out of Your Paycheck?</h2>
+    <p><strong>Federal Income Tax</strong> &mdash; This goes to the IRS and funds the federal government. How much depends on your income bracket and W-4 settings. The more you earn, the higher the percentage.</p>
+    <p><strong>State Income Tax</strong> &mdash; Some states take a chunk too. Nine states (Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, Wyoming) have no state income tax. Others range from about 2.5% to nearly 9%.</p>
+    <p><strong>Social Security (6.2%)</strong> &mdash; This funds retirement benefits for current retirees. You only pay this on the first $176,100 of your wages (2026 cap). Once you earn over that, Social Security stops withholding for the year.</p>
+    <p><strong>Medicare (1.45%)</strong> &mdash; This funds healthcare for seniors. Unlike Social Security, Medicare applies to every dollar you earn. High earners pay an extra 0.9% above $200,000.</p>
+
+    <h2>Take Home Pay by State: How Much $50,000 Is Worth Near You</h2>
+    <p>Your take-home pay varies dramatically by where you live. On a $50,000 salary as a single filer: in Texas (no state tax), you take home ~$40,000. In California, ~$37,500. In New York City (state + city tax), ~$36,200. That's a difference of nearly $4,000 per year just based on location. Use the calculator above with your specific state selected to see your exact take-home pay. The nine states with no income tax — Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming — generally offer the highest take-home pay on the same salary.</p>
+
+    <h2>Gross to Net Pay Calculator: Understanding What You Actually Earn</h2>
+    <p>Your gross pay (the number in your offer letter) is not what goes into your bank account. The journey from gross to net looks like this: start with your annual salary or hourly rate, subtract pre-tax deductions (401(k), health insurance, HSA), then subtract federal income tax (based on your W-4 and tax brackets), state income tax (varies by state, 0-9%), Social Security (6.2% up to $176,100), and Medicare (1.45%). What's left is your net pay — your actual take-home. Use our gross to net pay calculator above to see the full breakdown for your specific situation.</p>
+
+    <h2>Hourly to Salary Calculator with Taxes</h2>
+    <p>Converting your hourly rate to an annual salary? Multiply your hourly rate by hours worked per week times 52 weeks. A $25/hour worker at 40 hours/week earns $52,000/year. But after taxes — using the calculator above — a single filer in Florida would take home about $41,500, while the same worker in Oregon would take home about $38,000. Our hourly to salary calculator with taxes handles this automatically: just switch to Hourly mode, enter your rate and hours, and see your estimated take-home pay per paycheck and annually.</p>
+
+    <h2>How to Get More Money in Each Paycheck</h2>
+    <p><strong>1. Adjust your W-4.</strong> If you got a huge refund last year (over $1,000), you're letting the government borrow your money interest-free. Claim more allowances or adjust the additional withholding section to keep more now.</p>
+    <p><strong>2. Optimize your 401(k).</strong> Contributing to a 401(k) reduces your taxable income dollar-for-dollar. If your employer offers a match, contribute at least enough to get the full match — it's an immediate 100% return on your money.</p>
+    <p><strong>3. Use pre-tax benefits.</strong> Health insurance premiums, HSA or FSA contributions, and commuter benefits all come out of your paycheck before taxes, lowering your taxable income.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How much will I take home on a $50,000 salary? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">Typically $38,000–$42,000 depending on your state. A single filer in Texas (no state tax) earning $50,000 might take home about $40,000 annually, while the same salary in California would be closer to $37,500. Use our calculator above for your exact number based on your specific state, filing status, and 401(k) contributions.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is FICA tax? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">FICA stands for Federal Insurance Contributions Act. It's the combined tax for Social Security (6.2% of your wages up to $176,100) and Medicare (1.45% of all wages). Your employer pays an equal amount on your behalf. These taxes fund retirement benefits and healthcare for seniors — think of it as paying into the system for future you.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Why was my first paycheck smaller than expected? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">Several things can make your first paycheck smaller: you may have started mid-pay-period (partial pay), your employer may deduct a prorated amount for benefits that kick in mid-month, or you might see one-time deductions like uniform costs or background check fees. Some employers also delay the first paycheck by a week for processing. Check with HR for a full breakdown &mdash; they're used to explaining this!</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Can I change how much tax is taken out? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">Yes! Submit a new W-4 form to your employer to adjust your federal income tax withholding. The IRS has a Tax Withholding Estimator to help you get it just right. Aiming for a small refund (under $500) or owing a small amount is ideal — that means more money in each paycheck throughout the year instead of a big refund in April.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do I get this money back? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">If too much tax was withheld from your paychecks, you'll get a refund after filing your annual tax return. If too little was withheld, you'll owe money when you file. The goal is to get as close to zero as possible — that means you kept more money in each paycheck rather than giving the government an interest-free loan. Use the IRS W-4 calculator to dial it in perfectly.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What actually gets taken out of my paycheck? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">Your paycheck has federal income tax, state income tax (unless you're in a no-tax state like Texas, Florida, or Nevada), Social Security (6.2% up to $176,100), Medicare (1.45%), and any voluntary deductions like 401(k), health insurance premiums, HSA, or FSA contributions. Your employer may also deduct parking, gym memberships, or commuter benefits if you signed up. Use the pay stub breakdown above to see each deduction for your specific situation.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How do I estimate my new job paycheck? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">Use our new job paycheck estimator above. Enter your offer letter salary (or hourly rate in Hourly mode), select your state and filing status (Single or Married), and adjust your 401(k) contribution if you plan to enroll. The calculator shows your gross to net pay breakdown per paycheck and annually. Remember: your first actual paycheck may be smaller if you start mid-period or have prorated benefit deductions. Check with HR for your specific start date and pay schedule.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How much will I take home on $50,000? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">On a $50,000 salary as a single filer, your take-home pay ranges from ~$36,000 in high-tax states (California, New York, Oregon) to ~$40,000 in no-tax states (Texas, Florida, Nevada). With a 5% 401(k) contribution, those numbers drop by about $2,000 but you're saving for retirement tax-free. Use our salary calculator after taxes above with your specific state selected to see your exact number.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is it better to be paid salary or hourly? <span class="arrow" aria-hidden="true">&#9660;</span></button>
+      <div class="faq-answer">Salary gives you predictable paychecks and typically includes benefits like PTO, health insurance, and retirement plans. Hourly means you get paid for every hour worked, plus overtime (1.5x after 40 hours/week). For first-time workers, hourly can be better if your job offers overtime opportunities. Salary is better if you value stability, benefits, and predictable income. Both salary and hourly have the same taxes taken out — use our calculator in either mode to see your take-home pay.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <span class="copyright">&copy; 2026 FreelanceTaxCalc &mdash; Free tools for independent workers.</span>
+    <a href="/">Back to Home</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // State rates
+  var stateRates = {
+    'Alabama':0.05,'Alaska':0,'Arizona':0.025,'Arkansas':0.049,'California':0.075,
+    'Colorado':0.044,'Connecticut':0.05,'Delaware':0.055,'Florida':0,'Georgia':0.0549,
+    'Hawaii':0.072,'Idaho':0.058,'Illinois':0.0495,'Indiana':0.0315,'Iowa':0.057,
+    'Kansas':0.0525,'Kentucky':0.045,'Louisiana':0.0425,'Maine':0.0645,'Maryland':0.05,
+    'Massachusetts':0.05,'Michigan':0.0405,'Minnesota':0.0785,'Mississippi':0.047,
+    'Missouri':0.0495,'Montana':0.0575,'Nebraska':0.0584,'Nevada':0,'New Hampshire':0,
+    'New Jersey':0.0637,'New Mexico':0.04875,'New York':0.065,'North Carolina':0.045,
+    'North Dakota':0.029,'Ohio':0.035,'Oklahoma':0.0475,'Oregon':0.0875,
+    'Pennsylvania':0.0307,'Rhode Island':0.054,'South Carolina':0.064,'South Dakota':0,
+    'Tennessee':0,'Texas':0,'Utah':0.0485,'Vermont':0.0675,'Virginia':0.0575,
+    'Washington':0,'West Virginia':0.0535,'Wisconsin':0.053,'Wyoming':0,
+    'District of Columbia':0.0675
+  };
+
+  // Populate states
+  var stateSelect = document.getElementById('stateSelect');
+  for(var s in stateRates){
+    if(stateRates.hasOwnProperty(s)){
+      var o = document.createElement('option');
+      o.value = s;
+      o.textContent = s;
+      stateSelect.appendChild(o);
+    }
+  }
+
+  // DOM refs
+  var modeBtns = document.querySelectorAll('.mode-btn');
+  var freqPills = document.querySelectorAll('.freq-pill');
+  var statusBtns = document.querySelectorAll('.status-btn');
+  var annualSalary = document.getElementById('annualSalary');
+  var hourlyRate = document.getElementById('hourlyRate');
+  var hoursSlider = document.getElementById('hoursPerWeek');
+  var hoursDisplay = document.getElementById('hoursDisplay');
+  var kSlider = document.getElementById('kPercent');
+  var kDisplay = document.getElementById('kDisplay');
+  var kHelper = document.getElementById('kHelper');
+  var calculateBtn = document.getElementById('calculateBtn');
+  var recalcBtn = document.getElementById('recalcBtn');
+  var copyBtn = document.getElementById('copyBtn');
+  var resultsArea = document.getElementById('resultsArea');
+
+  var periods = 26;
+
+  // Mode toggle
+  modeBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      modeBtns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      document.body.className = 'mode-' + this.getAttribute('data-mode');
+    });
+  });
+
+  // Frequency
+  freqPills.forEach(function(pill){
+    pill.addEventListener('click', function(){
+      freqPills.forEach(function(p){ p.classList.remove('selected'); p.setAttribute('aria-checked','false'); });
+      this.classList.add('selected');
+      this.setAttribute('aria-checked','true');
+      periods = parseInt(this.getAttribute('data-periods'));
+    });
+  });
+
+  // Status
+  statusBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      statusBtns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-checked','false'); });
+      this.classList.add('active');
+      this.setAttribute('aria-checked','true');
+    });
+  });
+
+  // Sliders
+  hoursSlider.addEventListener('input', function(){
+    hoursDisplay.textContent = this.value;
+  });
+
+  kSlider.addEventListener('input', function(){
+    updateKHelper();
+  });
+
+  function updateKHelper(){
+    var pct = parseInt(kSlider.value);
+    kDisplay.textContent = pct + '%';
+    var gross = getAnnualIncome();
+    var perPay = gross / periods;
+    var kAmt = perPay * (pct / 100);
+    kHelper.textContent = 'Contributing ' + pct + '% = $' + kAmt.toFixed(2) + ' per paycheck (pre-tax!)';
+  }
+
+  function getAnnualIncome(){
+    var mode = document.querySelector('.mode-btn.active').getAttribute('data-mode');
+    if(mode === 'salary'){
+      return parseFloat(annualSalary.value) || 0;
+    } else {
+      var rate = parseFloat(hourlyRate.value) || 0;
+      var hours = parseInt(hoursSlider.value);
+      return rate * hours * 52;
+    }
+  }
+
+  function getGrossPerPeriod(){
+    return getAnnualIncome() / periods;
+  }
+
+  function getStatus(){
+    return document.querySelector('.status-btn.active').getAttribute('data-status');
+  }
+
+  function getState(){
+    return stateSelect.value;
+  }
+
+  // ─── CALCULATE ───
+  function calculate(){
+    var annual = getAnnualIncome();
+    if(annual <= 0){
+      var mode = document.querySelector('.mode-btn.active').getAttribute('data-mode');
+      if(mode === 'salary'){
+        annualSalary.focus();
+        annualSalary.style.borderColor = '#FF6B6B';
+        setTimeout(function(){ annualSalary.style.borderColor = ''; }, 1500);
+      } else {
+        hourlyRate.focus();
+        hourlyRate.style.borderColor = '#FF6B6B';
+        setTimeout(function(){ hourlyRate.style.borderColor = ''; }, 1500);
+      }
+      return;
+    }
+
+    var grossPer = getGrossPerPeriod();
+    var status = getStatus();
+    var state = getState();
+    var stateRate = stateRates[state] || 0;
+    var kPct = parseInt(kSlider.value);
+    var kAmt = grossPer * (kPct / 100);
+
+    // Pre-401k annual
+    var annualPreK = annual;
+    // Post-401k annual
+    var annualTaxable = annualPreK * (1 - kPct / 100);
+
+    // Standard deduction 2026
+    var stdDed = status === 'married' ? 30500 : 15250;
+    var taxableAnnual = Math.max(0, annualTaxable - stdDed);
+
+    // Federal brackets 2026
+    var mult = status === 'married' ? 2 : 1;
+    var brackets = [[11925*mult,0.1],[48475*mult,0.12],[103350*mult,0.22],[197300*mult,0.24],[250525*mult,0.32],[626350*mult,0.35],[Infinity,0.37]];
+    var fedTaxAnnual = 0;
+    var prev = 0;
+    for(var b=0;b<brackets.length;b++){
+      var limit = brackets[b][0];
+      var rate = brackets[b][1];
+      if(taxableAnnual > prev){
+        var chunk = Math.min(taxableAnnual, limit) - prev;
+        if(chunk > 0) fedTaxAnnual += chunk * rate;
+      }
+      prev = limit;
+    }
+    var fedPer = fedTaxAnnual / periods;
+
+    // State
+    var stateTaxAnnual = taxableAnnual * stateRate;
+    var statePer = stateTaxAnnual / periods;
+
+    // SS: 6.2% up to $176,100
+    var ssAnnual = Math.min(annualTaxable, 176100) * 0.062;
+    var ssPer = ssAnnual / periods;
+
+    // Medicare: 1.45% all
+    var mcAnnual = annualTaxable * 0.0145;
+    // Additional Medicare 0.9% over $200k single, $250k married
+    if(status === 'single' && annualTaxable > 200000) mcAnnual += (annualTaxable - 200000) * 0.009;
+    else if(status === 'married' && annualTaxable > 250000) mcAnnual += (annualTaxable - 250000) * 0.009;
+    var mcPer = mcAnnual / periods;
+
+    // Total per check
+    var totalDedPer = fedPer + statePer + ssPer + mcPer + kAmt;
+    var takehomePer = grossPer - totalDedPer;
+    var pct = grossPer > 0 ? (takehomePer / grossPer) * 100 : 0;
+
+    // Annual
+    var takehomeAnnual = takehomePer * periods;
+    var totalDedAnnual = totalDedPer * periods;
+
+    // ─── UPDATE UI ───
+    var fm = function(n){ return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); };
+    var fm0 = function(n){ return '$' + Math.round(n).toLocaleString('en-US'); };
+    var periodLabel = '';
+    freqPills.forEach(function(p){
+      if(p.classList.contains('selected')) periodLabel = p.textContent.trim().replace('📅 ','');
+    });
+
+    resultsArea.classList.add('visible');
+    resultsArea.style.display = 'block';
+    calculateBtn.disabled = true;
+    calculateBtn.textContent = 'Calculating...';
+
+    setTimeout(function(){
+      document.getElementById('psPeriod').textContent = 'Pay Period: ' + periodLabel;
+      document.getElementById('psGross').textContent = fm(grossPer);
+      document.getElementById('psFederal').textContent = '– ' + fm(fedPer);
+      document.getElementById('psState').textContent = '– ' + fm(statePer);
+      document.getElementById('psSS').textContent = '– ' + fm(ssPer);
+      document.getElementById('psMedicare').textContent = '– ' + fm(mcPer);
+      document.getElementById('psK').textContent = '– ' + fm(kAmt);
+      document.getElementById('psTakehome').textContent = fm(takehomePer);
+      document.getElementById('psPct').textContent = pct.toFixed(1) + '%';
+
+      // Summary table
+      document.getElementById('sumGrossPer').textContent = fm0(grossPer);
+      document.getElementById('sumGrossYear').textContent = fm0(annualPreK);
+      document.getElementById('sumDedPer').textContent = fm0(totalDedPer);
+      document.getElementById('sumDedYear').textContent = fm0(totalDedAnnual);
+      document.getElementById('sumHomePer').textContent = fm0(takehomePer);
+      document.getElementById('sumHomeYear').textContent = fm0(takehomeAnnual);
+      document.getElementById('encPct').textContent = pct.toFixed(1);
+
+      // Donut chart
+      var colors = ['#00C896','#FF6B6B','#E8A87C','#FFD700','#A8D8EA','#FF8A5C'];
+      var segments = [];
+      if(takehomePer > 0) segments.push({pct: takehomePer / grossPer * 100, color: colors[0], label: 'Take-Home', val: takehomePer});
+      if(fedPer > 0) segments.push({pct: fedPer / grossPer * 100, color: colors[1], label: 'Federal Tax', val: fedPer});
+      if(ssPer > 0) segments.push({pct: ssPer / grossPer * 100, color: colors[2], label: 'Social Security', val: ssPer});
+      if(mcPer > 0) segments.push({pct: mcPer / grossPer * 100, color: colors[3], label: 'Medicare', val: mcPer});
+      if(statePer > 0) segments.push({pct: statePer / grossPer * 100, color: colors[4], label: 'State Tax', val: statePer});
+      if(kAmt > 0) segments.push({pct: kAmt / grossPer * 100, color: colors[5], label: '401(k)', val: kAmt});
+
+      var gradient = '';
+      var angle = 0;
+      segments.forEach(function(seg){
+        var end = angle + seg.pct / 100 * 360;
+        gradient += (gradient ? ', ' : '') + seg.color + ' ' + angle + 'deg ' + end + 'deg';
+        angle = end;
+      });
+      if(gradient){
+        document.getElementById('donutChart').style.background = 'conic-gradient(' + gradient + ')';
+      }
+
+      var legendHtml = '';
+      segments.forEach(function(seg){
+        legendHtml += '<span><span class="dot" style="background:' + seg.color + '"></span> ' + seg.label + ' (' + Math.round(seg.pct) + '%)</span>';
+      });
+      document.getElementById('donutLegend').innerHTML = legendHtml;
+      document.getElementById('donutVal').textContent = fm0(takehomePer);
+
+      calculateBtn.textContent = 'Show Me My Paycheck \uD83C\uDF89';
+      calculateBtn.disabled = false;
+
+      // Scroll to results
+      if(window.innerWidth < 768){
+        resultsArea.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    }, 600);
+  }
+
+  calculateBtn.addEventListener('click', calculate);
+  recalcBtn.addEventListener('click', function(){
+    resultsArea.classList.remove('visible');
+    resultsArea.style.display = 'none';
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // Copy
+  copyBtn.addEventListener('click', function(){
+    var g = document.getElementById('psGross').textContent;
+    var f = document.getElementById('psFederal').textContent;
+    var s = document.getElementById('psState').textContent;
+    var ss = document.getElementById('psSS').textContent;
+    var mc = document.getElementById('psMedicare').textContent;
+    var k = document.getElementById('psK').textContent;
+    var th = document.getElementById('psTakehome').textContent;
+    var pct = document.getElementById('psPct').textContent;
+    var period = document.getElementById('psPeriod').textContent;
+
+    var text = 'First Paycheck Calculator - FreelanceTaxCalc\n';
+    text += period + '\n';
+    text += 'Gross Pay: ' + g + '\n';
+    text += 'Federal Tax: ' + f + '\n';
+    text += 'State Tax: ' + s + '\n';
+    text += 'Social Security: ' + ss + '\n';
+    text += 'Medicare: ' + mc + '\n';
+    text += '401(k): ' + k + '\n';
+    text += 'Take-Home Pay: ' + th + ' (' + pct + ')\n';
+    text += '\nGenerated at FreelanceTaxCalc.online';
+
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text).then(function(){
+        copyBtn.textContent = '\u2713 Copied!';
+        setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy Summary'; }, 2000);
+      });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      copyBtn.textContent = '\u2713 Copied!';
+      setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy Summary'; }, 2000);
+    }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = this.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  // Enter triggers
+  document.querySelectorAll('.input-card input, .input-card select').forEach(function(el){
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); calculateBtn.click(); }
+    });
+  });
+
+  // Update k helper on start
+  updateKHelper();
+})();
+</script>
+<!-- Related Tools -->
+<section class="related-tools" aria-label="Related Tools">
+  <div class="container">
+    <h2>Related Tools You Might Need</h2>
+    <div class="related-grid">
+      <a href="/tools/side-hustle-tax-estimator.html">Side Hustle Tax Estimator<small>Add side income to your paycheck calculation</small></a>
+      <a href="/tools/quarterly-tax-calculator.html">Quarterly Tax Estimator<small>Plan quarterly payments if self-employed</small></a>
+      <a href="/tools/freelance-hourly-rate-calculator.html">Freelance Hourly Rate Calculator<small>Convert salary to freelance rate</small></a>
+      <a href="/tools/budget-invoice-calculators.html">Student Budget Calculator<small>Budget your take-home pay with 50/30/20</small></a>
+    </div>
+  </div>
+</section>
+
+<style>
+.related-tools{{background:#fff;padding:48px 0;border-top:1px solid #E8ECF0;margin-top:0}}
+.related-tools h2{{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;text-align:center;margin-bottom:24px}}
+.related-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto}}
+.related-grid a{{display:block;background:#F4F6F9;border-radius:10px;padding:16px;font-size:14px;color:#1A1A2E;font-weight:500;transition:all 0.3s ease;text-decoration:none;border:1px solid transparent}}
+.related-grid a:hover{{background:#F0FDF9;border-color:#00C896;color:#00C896;transform:translateY(-2px)}}
+.related-grid a small{{display:block;font-weight:400;color:#6B7280;font-size:13px;margin-top:4px}}
+</style>
+</body>
+</html>

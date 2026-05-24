@@ -1,0 +1,13 @@
+# ────────────────────────────────────────────
+# robots.txt — FreelanceTaxCalc
+# ────────────────────────────────────────────
+
+User-agent: *
+Allow: /
+
+# Block helper/asset files from crawl
+Disallow: /assets/
+Disallow: /pre-launch-checklist.html
+
+# Sitemap location
+Sitemap: https://freelancetaxcalc.online/sitemap.xml

@@ -28,7 +28,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.8;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+body{font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.8;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:#00C896;text-decoration:none}
 a:hover{text-decoration:underline}
 img{max-width:100%}
@@ -130,7 +130,7 @@ th{background:#0A1628;color:#fff;font-weight:600}
 td{background:#fff}
 tr:nth-child(even) td{background:#F9FAFB}
 
-@media print{body{font-size:12px;line-height:1.6;background:#fff}.site-header,.article-sidebar,.cta-box,.faq-section,.author-box{display:none}.article-layout{display:block;max-width:100%;padding:0}.article-main{max-width:100%}}
+@media print{body{font-size:12px;line-height:1.6;background:#fff;overflow-x:hidden}.site-header,.article-sidebar,.cta-box,.faq-section,.author-box{display:none}.article-layout{display:block;max-width:100%;padding:0}.article-main{max-width:100%}}
 @media(max-width:900px){.article-layout{grid-template-columns:1fr}.article-sidebar{display:none}}
 @media(max-width:600px){.article-header h1{font-size:26px}.article-body h2{font-size:22px}.related-grid{grid-template-columns:1fr}}
 </style>

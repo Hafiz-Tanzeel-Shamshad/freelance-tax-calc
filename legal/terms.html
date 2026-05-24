@@ -25,7 +25,7 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.8;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+body{font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.8;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:#00C896;text-decoration:none}
 a:hover{text-decoration:underline}
 ul{list-style:none}
@@ -80,7 +80,7 @@ ul{list-style:none}
 .footer ul li a{font-size:14px;color:#8892A0;transition:color 0.3s ease}
 .footer ul li a:hover{color:#00C896}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;font-size:13px;color:#667080;text-align:center;line-height:1.6}
-@media print{body{font-size:12px;background:#fff}.sticky-header,.footer,.toc-sidebar,.hamburger,.mobile-nav{display:none}.legal-layout{display:block;max-width:100%;padding:0}.legal-content{max-width:100%}}
+@media print{body{font-size:12px;background:#fff;overflow-x:hidden}.sticky-header,.footer,.toc-sidebar,.hamburger,.mobile-nav{display:none}.legal-layout{display:block;max-width:100%;padding:0}.legal-content{max-width:100%}}
 @media(max-width:900px){.legal-layout{grid-template-columns:1fr}.toc-sidebar{display:none}}
 @media(max-width:768px){
   .page-hero h1{font-size:28px}.page-hero{padding:100px 0 40px}

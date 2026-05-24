@@ -28,7 +28,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.8;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+body{font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.8;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:#00C896;text-decoration:none}
 a:hover{text-decoration:underline}
 img{max-width:100%;height:auto}
@@ -147,10 +147,13 @@ th{background:#0A1628;color:#fff;font-weight:600}
 td{background:#fff}
 tr:nth-child(even) td{background:#F9FAFB}
 
-@media print{body{font-size:12px;line-height:1.6;background:#fff}.site-header,.article-sidebar,.cta-box,.faq-section,.author-box,.related-articles{display:none}.article-layout{display:block;max-width:100%;padding:0}.article-main{max-width:100%}
+@media print{body{font-size:12px;line-height:1.6;background:#fff;overflow-x:hidden}.site-header,.article-sidebar,.cta-box,.faq-section,.author-box,.related-articles{display:none}.article-layout{display:block;max-width:100%;padding:0}.article-main{max-width:100%}
 }
 @media(max-width:900px){.article-layout{grid-template-columns:1fr}.article-sidebar{display:none}}
 @media(max-width:600px){.article-header h1{font-size:26px}.article-body h2{font-size:22px}.related-grid{grid-template-columns:1fr}.toc{padding:16px}}
+
+.table-wrap{overflow-x:auto;margin:16px 0}
+.table-wrap table{width:100%}
 </style>
   <script type="application/ld+json">
   {
@@ -246,7 +249,7 @@ tr:nth-child(even) td{background:#F9FAFB}
         <h2 id="2026-due-dates">2026 Quarterly Tax Due Dates</h2>
         <p>The IRS divides the tax year into four payment periods. For the 2026 tax year, the due dates are:</p>
 
-        <table>
+        <div class="table-wrap"><table>
           <thead><tr><th>Quarter</th><th>Income Period</th><th>Due Date</th></tr></thead>
           <tbody>
             <tr><td>Q1</td><td>January 1 &ndash; March 31</td><td>April 15, 2026</td></tr>
@@ -254,7 +257,7 @@ tr:nth-child(even) td{background:#F9FAFB}
             <tr><td>Q3</td><td>June 1 &ndash; August 31</td><td>September 15, 2026</td></tr>
             <tr><td>Q4</td><td>September 1 &ndash; December 31</td><td>January 15, 2027</td></tr>
           </tbody>
-        </table>
+        </table></div>
 
         <p>If a due date falls on a weekend or federal holiday, the deadline moves to the next business day. The IRS publishes official due dates each year in <a href="https://www.irs.gov/publications/p505" target="_blank" rel="noopener">Publication 505</a>.</p>
 

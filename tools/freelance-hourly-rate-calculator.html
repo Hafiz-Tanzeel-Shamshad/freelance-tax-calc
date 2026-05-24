@@ -45,7 +45,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:16px;line-height:1.7;color:#1A1A2E;background:#F4F6F9}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:16px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 .container{max-width:1000px;margin:0 auto;padding:0 24px}
 .site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
@@ -92,7 +92,7 @@ a{text-decoration:none;color:inherit}
 .calc-btn{width:100%;padding:16px 24px;background:#00C896;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer;transition:all 0.3s ease;font-family:inherit;margin-top:8px}
 .calc-btn:hover{background:#00B085;box-shadow:0 4px 14px rgba(0,200,150,0.3);transform:translateY(-1px)}
 .calc-btn:disabled{opacity:0.4;cursor:not-allowed;transform:none!important}
-.mode-body{display:none}
+.mode-body{display:none;overflow-x:hidden}
 .mode-body.active{display:block}
 .industry-ref{margin-top:16px;background:#F9FAFB;border:1px solid #E8ECF0;border-radius:8px;padding:16px}
 .industry-ref h4{font-size:15px;color:#1A1A2E;margin-bottom:8px}
@@ -159,6 +159,7 @@ a{text-decoration:none;color:inherit}
 
 @media print{.site-header,.breadcrumb,.calc-btn,.res-actions,.site-footer,.seo-section,.disclaimer-bar{display:none!important}.results-area{display:block!important}.res-card{opacity:1!important;transform:none!important;break-inside:avoid;border:1px solid #ddd}}
 @media(max-width:650px){.form-row{grid-template-columns:1fr}.page-title h1{font-size:24px}.tool-card{padding:20px}.mode-toggle{flex-direction:column}.mode-btn{min-width:unset}}
+.table-wrap{overflow-x:auto;margin:16px 0}.table-wrap table{width:100%}
 </style>
 </head>
 <body>
@@ -559,11 +560,11 @@ a{text-decoration:none;color:inherit}
 
     // Industry reference
     var rates = industryRates[country] || industryRates.us;
-    var iHtml = '<table>';
+    var iHtml = '<div class="table-wrap"><table>';
     rates.forEach(function(r){
       iHtml += '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td><td>' + r[2] + '</td></tr>';
     });
-    iHtml += '</table>';
+    iHtml += '</table></div>';
     iHtml += '<div class="helper" style="margin-top:8px;font-size:12px">Rates are market ranges — your rate depends on experience, location, and niche.</div>';
     indContent.innerHTML = iHtml;
 

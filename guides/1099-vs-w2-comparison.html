@@ -28,7 +28,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.8;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased}
+body{font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.8;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:#00C896;text-decoration:none}
 a:hover{text-decoration:underline}
 img{max-width:100%}
@@ -144,9 +144,12 @@ img{max-width:100%}
 @media(max-width:768px){.footer-inner{flex-direction:column;gap:24px}}
 
 
-@media print{body{font-size:12px;line-height:1.6;background:#fff}.site-header,.article-sidebar,.cta-box,.faq-section,.author-box{display:none}.article-layout{display:block;max-width:100%;padding:0}.article-main{max-width:100%}}
+@media print{body{font-size:12px;line-height:1.6;background:#fff;overflow-x:hidden}.site-header,.article-sidebar,.cta-box,.faq-section,.author-box{display:none}.article-layout{display:block;max-width:100%;padding:0}.article-main{max-width:100%}}
 @media(max-width:900px){.article-layout{grid-template-columns:1fr}.article-sidebar{display:none}}
 @media(max-width:600px){.article-header h1{font-size:26px}.article-body h2{font-size:22px}.related-grid{grid-template-columns:1fr}}
+
+.table-wrap{overflow-x:auto;margin:16px 0}
+.table-wrap table{width:100%}
 </style>
   <script type="application/ld+json">
   {
@@ -225,7 +228,7 @@ img{max-width:100%}
         <p>The fundamental difference is who pays employment taxes. As a W-2 employee, your employer pays half of your Social Security and Medicare taxes (7.65%) and you pay the other half (7.65%). As a 1099 contractor, you pay both halves&mdash;a total of 15.3% on net earnings up to $176,100 (for Social Security in 2026), plus 2.9% on all earnings for Medicare.</p>
         <p>But that&rsquo;s only part of the story. W-2 employees typically receive benefits like health insurance, retirement matching, paid time off, and unemployment protection. 1099 contractors can deduct business expenses, qualify for the QBI deduction, and have more flexibility in retirement planning.</p>
 
-        <table class="compare-table">
+        <div class="table-wrap"><table class="compare-table">
           <thead>
             <tr>
               <th>Factor</th>
@@ -280,7 +283,7 @@ img{max-width:100%}
               <td>Quarterly estimated payments required</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
 
         <h2 id="tax-comparison">Tax Comparison: Side by Side</h2>
         <p>Let&rsquo;s look at a real example. Suppose you earn $80,000 as a W-2 employee in 2026 (single filer, standard deduction). Your federal income tax would be roughly $8,440, and your FICA (Social Security + Medicare) would be $6,120&mdash;a total of about $14,560 in federal taxes, leaving you with $65,440 after-tax.</p>
@@ -310,7 +313,7 @@ img{max-width:100%}
         <h2 id="breakeven">1099 to W-2 Breakeven Rate</h2>
         <p>A common rule of thumb is that a 1099 contractor needs to earn <strong>25&ndash;30% more</strong> than a W-2 employee doing the same job to break even after taxes, benefits, and time off. Here&rsquo;s a rough guide:</p>
 
-        <table class="compare-table">
+        <div class="table-wrap"><table class="compare-table">
           <thead>
             <tr>
               <th>W-2 Salary</th>
@@ -325,7 +328,7 @@ img{max-width:100%}
             <tr><td>$150,000</td><td>$187,500</td><td>$195,000</td></tr>
             <tr><td>$200,000</td><td>$250,000</td><td>$260,000</td></tr>
           </tbody>
-        </table>
+        </table></div>
 
         <p>The exact breakeven depends on your specific situation: tax bracket, business deductions, QBI eligibility, benefits you need (health insurance, retirement), and how much paid time off you value. Use our calculator for a personalized analysis.</p>
 

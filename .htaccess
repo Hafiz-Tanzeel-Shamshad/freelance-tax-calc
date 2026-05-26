@@ -14,26 +14,34 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-# ── Clean URLs: remove .html extension ──
+# ── Redirect .html URLs to clean URLs (301) ──
+RewriteCond %{THE_REQUEST} \.html[/\s?] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+# ── Clean URLs: internally rewrite to .html file ──
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
+# ── Directory clean URLs: ensure trailing slash for dirs ──
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
+
 # ── Redirect old flat URLs to new /tools/ directory ──
-RewriteRule ^quarterly-tax-calculator\.html$ /tools/quarterly-tax-calculator.html [R=301,L]
-RewriteRule ^gig-deduction-finder\.html$ /tools/gig-deduction-finder.html [R=301,L]
-RewriteRule ^first-paycheck-calculator\.html$ /tools/first-paycheck-calculator.html [R=301,L]
-RewriteRule ^side-hustle-tax-estimator\.html$ /tools/side-hustle-tax-estimator.html [R=301,L]
-RewriteRule ^finance-app-recommender\.html$ /tools/finance-app-recommender.html [R=301,L]
-RewriteRule ^digital-nomad-tax-calculator\.html$ /tools/digital-nomad-tax-calculator.html [R=301,L]
-RewriteRule ^1099-vs-w2-calculator\.html$ /tools/1099-vs-w2-calculator.html [R=301,L]
-RewriteRule ^rate-calculator-debt-planner\.html$ /tools/rate-calculator-debt-planner.html [R=301,L]
-RewriteRule ^freelance-hourly-rate-calculator\.html$ /tools/freelance-hourly-rate-calculator.html [R=301,L]
-RewriteRule ^retirement-calculator\.html$ /tools/retirement-calculator.html [R=301,L]
-RewriteRule ^budget-invoice-calculators\.html$ /tools/budget-invoice-calculators.html [R=301,L]
-RewriteRule ^about\.html$ /legal/about.html [R=301,L]
-RewriteRule ^privacy-policy\.html$ /legal/privacy-policy.html [R=301,L]
-RewriteRule ^terms\.html$ /legal/terms.html [R=301,L]
+RewriteRule ^quarterly-tax-calculator\.html$ /tools/quarterly-tax-calculator [R=301,L]
+RewriteRule ^gig-deduction-finder\.html$ /tools/gig-deduction-finder [R=301,L]
+RewriteRule ^first-paycheck-calculator\.html$ /tools/first-paycheck-calculator [R=301,L]
+RewriteRule ^side-hustle-tax-estimator\.html$ /tools/side-hustle-tax-estimator [R=301,L]
+RewriteRule ^finance-app-recommender\.html$ /tools/finance-app-recommender [R=301,L]
+RewriteRule ^digital-nomad-tax-calculator\.html$ /tools/digital-nomad-tax-calculator [R=301,L]
+RewriteRule ^1099-vs-w2-calculator\.html$ /tools/1099-vs-w2-calculator [R=301,L]
+RewriteRule ^rate-calculator-debt-planner\.html$ /tools/rate-calculator-debt-planner [R=301,L]
+RewriteRule ^freelance-hourly-rate-calculator\.html$ /tools/freelance-hourly-rate-calculator [R=301,L]
+RewriteRule ^retirement-calculator\.html$ /tools/retirement-calculator [R=301,L]
+RewriteRule ^budget-invoice-calculators\.html$ /tools/budget-invoice-calculators [R=301,L]
+RewriteRule ^about\.html$ /legal/about [R=301,L]
+RewriteRule ^privacy-policy\.html$ /legal/privacy-policy [R=301,L]
+RewriteRule ^terms\.html$ /legal/terms [R=301,L]
 RewriteRule ^legal/contact\.html$ /contact [R=301,L]
 RewriteRule ^guides\.html$ /guides/ [R=301,L]
 RewriteRule ^deductions/doordash\.html$ /deductions/doordash [R=301,L]

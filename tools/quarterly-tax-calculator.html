@@ -912,7 +912,7 @@ body.country-uk .uk-only{display:block}
       // US calculation
       var seTaxBase = netIncome * 0.9235;
       // Social Security: 12.4% on first $176,100
-      var ssWageBase = 176100;
+      var ssWageBase = 184500;
       var ssTax = 0.124 * Math.min(seTaxBase, ssWageBase);
       // Medicare: 2.9% on all
       var medicareTax = 0.029 * seTaxBase;
@@ -922,26 +922,26 @@ body.country-uk .uk-only{display:block}
       seTax = ssTax + medicareTax + addMedicare;
 
       // SE deduction
-      var seDeduction = seTax * 0.5;
+      var seDeduction = (ssTax + medicareTax) * 0.5;
 
       // AGI
       var agi = income - expenses - seDeduction + other;
 
       // Standard deduction
-      var stdDed = 15250;
-      if(status === 'mfj') stdDed = 30500;
-      else if(status === 'hoh') stdDed = 23350;
+      var stdDed = 16400;
+      if(status === 'mfj') stdDed = 32800;
+      else if(status === 'hoh') stdDed = 24600;
 
       var taxableIncome = Math.max(0, agi - stdDed);
 
       // Federal brackets 2026
-      var brackets = [];
+      
       if(status === 'hoh'){
-        brackets = [[17000,0.1],[64850,0.12],[103350,0.22],[197300,0.24],[250525,0.32],[626350,0.35],[Infinity,0.37]];
+        brackets = [[17700,0.1],[67450,0.12],[107450,0.22],[205200,0.24],[260550,0.32],[651400,0.35],[Infinity,0.37]];
       } else {
         // Single, MFJ (doubled), MFS
         var mult = (status === 'mfj') ? 2 : 1;
-        brackets = [[11925*mult,0.1],[48475*mult,0.12],[103350*mult,0.22],[197300*mult,0.24],[250525*mult,0.32],[626350*mult,0.35],[Infinity,0.37]];
+        brackets = [[12400,0.1],[50400,0.12],[107450,0.22],[205200,0.24],[260550,0.32],[651400,0.35],[Infinity,0.37]];
       }
 
       fedTax = 0;

@@ -521,10 +521,10 @@ ul{list-style:none}
 
   function getBrackets(status){
     if(status === 'hoh'){
-      return [[17000,0.1],[64850,0.12],[103350,0.22],[197300,0.24],[250525,0.32],[626350,0.35],[Infinity,0.37]];
+      return [[17700,0.1],[67450,0.12],[107450,0.22],[205200,0.24],[260550,0.32],[651400,0.35],[Infinity,0.37]];
     }
     var mult = status === 'mfj' ? 2 : 1;
-    return [[11925*mult,0.1],[48475*mult,0.12],[103350*mult,0.22],[197300*mult,0.24],[250525*mult,0.32],[626350*mult,0.35],[Infinity,0.37]];
+    return [[12400*mult,0.1],[50400*mult,0.12],[107450*mult,0.22],[205200*mult,0.24],[260550*mult,0.32],[651400*mult,0.35],[Infinity,0.37]];
   }
 
   function calcFed(taxable, brackets){
@@ -568,9 +568,9 @@ ul{list-style:none}
 
   function compute(w2, pretax, revenue, expenses, status, state, stateRate){
     var netSide = Math.max(0, revenue - expenses);
-    var stdDed = 15250;
-    if(status === 'mfj') stdDed = 30500;
-    else if(status === 'hoh') stdDed = 23350;
+    var stdDed = 16400;
+    if(status === 'mfj') stdDed = 32800;
+    else if(status === 'hoh') stdDed = 24600;
 
     // WITHOUT
     var adjW2 = Math.max(0, w2 - pretax);
@@ -578,14 +578,14 @@ ul{list-style:none}
     var brackets = getBrackets(status);
     var fedWo = calcFed(taxableWo, brackets);
     var stateWo = taxableWo * stateRate;
-    var ficaWo = Math.min(adjW2, 176100) * 0.062 + adjW2 * 0.0145;
+    var ficaWo = Math.min(adjW2, ssCap) * 0.062 + adjW2 * 0.0145;
     var totalWo = fedWo + stateWo + ficaWo;
 
     // WITH
     var totalAdjW2 = adjW2 + netSide;
     // SE tax
     var seTaxBase = netSide * 0.9235;
-    var ssCap = 176100;
+    var ssCap = 184500;
     var w2SsBase = Math.min(adjW2, ssCap);
     var seSsBase = Math.min(seTaxBase, Math.max(0, ssCap - w2SsBase));
     var seSs = seSsBase * 0.124;
@@ -599,7 +599,7 @@ ul{list-style:none}
     var taxableWith = Math.max(0, agiWith - stdDed - qbi);
     var fedWith = calcFed(taxableWith, brackets);
     var stateWith = taxableWith * stateRate;
-    var ficaWith = Math.min(adjW2, 176100) * 0.062 + adjW2 * 0.0145;
+    var ficaWith = Math.min(adjW2, ssCap) * 0.062 + adjW2 * 0.0145;
     var totalWith = fedWith + stateWith + ficaWith + seTax;
 
     var additionalTax = totalWith - totalWo;

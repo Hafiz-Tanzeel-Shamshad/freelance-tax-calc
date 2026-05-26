@@ -642,12 +642,12 @@ body.mode-salary .mode-salary{display:block}
     var annualTaxable = annualPreK * (1 - kPct / 100);
 
     // Standard deduction 2026
-    var stdDed = status === 'married' ? 30500 : 15250;
+    var stdDed = status === 'married' ? 32800 : 16400;
     var taxableAnnual = Math.max(0, annualTaxable - stdDed);
 
     // Federal brackets 2026
     var mult = status === 'married' ? 2 : 1;
-    var brackets = [[11925*mult,0.1],[48475*mult,0.12],[103350*mult,0.22],[197300*mult,0.24],[250525*mult,0.32],[626350*mult,0.35],[Infinity,0.37]];
+    var brackets = [[12400*mult,0.1],[50400*mult,0.12],[107450*mult,0.22],[205200*mult,0.24],[260550*mult,0.32],[651400*mult,0.35],[Infinity,0.37]];
     var fedTaxAnnual = 0;
     var prev = 0;
     for(var b=0;b<brackets.length;b++){
@@ -666,14 +666,14 @@ body.mode-salary .mode-salary{display:block}
     var statePer = stateTaxAnnual / periods;
 
     // SS: 6.2% up to $176,100
-    var ssAnnual = Math.min(annualTaxable, 176100) * 0.062;
+    var ssAnnual = Math.min(annualPreK, 184500) * 0.062;
     var ssPer = ssAnnual / periods;
 
     // Medicare: 1.45% all
-    var mcAnnual = annualTaxable * 0.0145;
+    var mcAnnual = annualPreK * 0.0145;
     // Additional Medicare 0.9% over $200k single, $250k married
-    if(status === 'single' && annualTaxable > 200000) mcAnnual += (annualTaxable - 200000) * 0.009;
-    else if(status === 'married' && annualTaxable > 250000) mcAnnual += (annualTaxable - 250000) * 0.009;
+    if(status === 'single' && annualPreK > 200000) mcAnnual += (annualPreK - 200000) * 0.009;
+    else if(status === 'married' && annualPreK > 250000) mcAnnual += (annualPreK - 250000) * 0.009;
     var mcPer = mcAnnual / periods;
 
     // Total per check

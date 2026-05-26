@@ -532,9 +532,9 @@ ul{list-style:none}
   function fm(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
 
   function getBrackets(status){
-    if(status === 'hoh') return [[17000,0.1],[64850,0.12],[103350,0.22],[197300,0.24],[250525,0.32],[626350,0.35],[Infinity,0.37]];
+    if(status === 'hoh') return [[17700,0.1],[67450,0.12],[107450,0.22],[205200,0.24],[260550,0.32],[651400,0.35],[Infinity,0.37]];
     var m = status === 'mfj' ? 2 : 1;
-    return [[11925*m,0.1],[48475*m,0.12],[103350*m,0.22],[197300*m,0.24],[250525*m,0.32],[626350*m,0.35],[Infinity,0.37]];
+    return [[12400*m,0.1],[50400*m,0.12],[107450*m,0.22],[205200*m,0.24],[260550*m,0.32],[651400*m,0.35],[Infinity,0.37]];
   }
 
   function calcFed(taxable, brackets){
@@ -575,16 +575,16 @@ ul{list-style:none}
   }
 
   function compute(w2Sal,w2Ben,c1099,c1099Exp,status,state,stateRate,health,retire){
-    var stdDed = 15250;
-    if(status==='mfj') stdDed=30500;
-    else if(status==='hoh') stdDed=23350;
+    var stdDed = 16400;
+    if(status==='mfj') stdDed=32800;
+    else if(status==='hoh') stdDed=24600;
     var brackets = getBrackets(status);
 
     // W-2
     var taxableW2 = Math.max(0, w2Sal - stdDed);
     var fedW2 = calcFed(taxableW2, brackets);
     var stateW2 = taxableW2 * stateRate;
-    var ficaW2 = Math.min(w2Sal, 176100)*0.062 + w2Sal*0.0145;
+    var ficaW2 = Math.min(w2Sal, 184500)*0.062 + w2Sal*0.0145;
     if(status==='single' && w2Sal>200000) ficaW2 += (w2Sal-200000)*0.009;
     var takehomeW2 = w2Sal - fedW2 - stateW2 - ficaW2;
 
@@ -592,10 +592,10 @@ ul{list-style:none}
     var net1099 = Math.max(0, c1099 - c1099Exp);
     // SE tax
     var seBase = net1099 * 0.9235;
-    var ssCap = 176100;
+    var ssCap = 184500;
     var seSs = Math.min(seBase, ssCap) * 0.124;
     var seMc = seBase * 0.029;
-    if(status==='single' && (w2Sal+net1099)>200000) seMc += (w2Sal+net1099-200000)*0.009;
+    if(status==='single' && net1099>0) seMc += Math.max(0, (w2Sal+net1099-200000))*0.009 - Math.max(0, (w2Sal-200000))*0.009;
     var seTax = seSs + seMc;
     var seDed = seTax * 0.5;
 
@@ -650,7 +650,7 @@ ul{list-style:none}
       for(var iter=0;iter<50;iter++){
         var n = Math.max(0, guess - 0);
         var sb = n*0.9235;
-        var sst = Math.min(sb,176100)*0.124 + sb*0.029;
+        var sst = Math.min(sb,184500)*0.124 + sb*0.029;
         var sd = sst*0.5;
         var ag = n - sd;
         var tx = Math.max(0, ag - stdDed);

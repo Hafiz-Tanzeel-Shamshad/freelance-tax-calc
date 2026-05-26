@@ -498,7 +498,7 @@ ul{list-style:none}
     // Solo 401(k)
     if(isChecked('soloChk')){
       var empDeferral = catchUp ? 31000 : 23500;
-      var employer = Math.min(netComp * 0.25, 70000 - empDeferral);
+      var employer = Math.min(netComp * 0.20, 70000 - empDeferral);
       var soloTotal = Math.min(empDeferral + employer, catchUp ? 77500 : 70000);
       var soloTaxSav = soloTotal * marginalRate;
       results.solo = {max: soloTotal, taxSav: soloTaxSav, empDefer: empDeferral, employer: Math.max(0, soloTotal - empDeferral)};
@@ -506,7 +506,7 @@ ul{list-style:none}
 
     // SEP-IRA
     if(isChecked('sepChk')){
-      var sepMax = Math.min(netComp * 0.25, 70000);
+      var sepMax = Math.min(netComp * 0.20, 70000);
       var sepTaxSav = sepMax * marginalRate;
       results.sep = {max: sepMax, taxSav: sepTaxSav};
     }
@@ -514,7 +514,7 @@ ul{list-style:none}
     // SIMPLE IRA
     if(isChecked('simpleChk')){
       var simpleDefer = catchUp ? 20000 : 16500;
-      var simpleMatch = Math.min(inc * 0.03, simpleDefer); // 3% match
+      var simpleMatch = Math.min(netComp * 0.03, simpleDefer); // 3% match
       var simpleTotal = simpleDefer + simpleMatch;
       var simpleTaxSav = simpleTotal * marginalRate;
       results.simple = {max: simpleTotal, taxSav: simpleTaxSav, defer: simpleDefer, match: simpleMatch};

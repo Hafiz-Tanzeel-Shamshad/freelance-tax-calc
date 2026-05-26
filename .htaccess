@@ -1,83 +1,194 @@
-# ────────────────────────────────────────────
-# .htaccess — FreelanceTaxCalc
-# For Apache servers. If using Nginx, convert
-# these rules to your server block configuration.
-# ────────────────────────────────────────────
+# --- .htaccess --- FreelanceTaxCalc ---
 
 RewriteEngine On
 
-# ── Force HTTPS ──
+# --- Force HTTPS ---
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-# ── Redirect www to non-www ──
+# --- Redirect www to non-www ---
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-# ── Redirect .html URLs to clean URLs (301) ──
-RewriteCond %{THE_REQUEST} \.html[/\s?] [NC]
-RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
-
-# ── Clean URLs: internally rewrite to .html file ──
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-# ── Directory clean URLs: ensure trailing slash for dirs ──
+# --- Ensure trailing slash for directories ---
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
 
-# ── Redirect old flat URLs to new /tools/ directory ──
-RewriteRule ^quarterly-tax-calculator\.html$ /tools/quarterly-tax-calculator [R=301,L]
-RewriteRule ^gig-deduction-finder\.html$ /tools/gig-deduction-finder [R=301,L]
-RewriteRule ^first-paycheck-calculator\.html$ /tools/first-paycheck-calculator [R=301,L]
-RewriteRule ^side-hustle-tax-estimator\.html$ /tools/side-hustle-tax-estimator [R=301,L]
-RewriteRule ^finance-app-recommender\.html$ /tools/finance-app-recommender [R=301,L]
-RewriteRule ^digital-nomad-tax-calculator\.html$ /tools/digital-nomad-tax-calculator [R=301,L]
-RewriteRule ^1099-vs-w2-calculator\.html$ /tools/1099-vs-w2-calculator [R=301,L]
-RewriteRule ^rate-calculator-debt-planner\.html$ /tools/rate-calculator-debt-planner [R=301,L]
-RewriteRule ^freelance-hourly-rate-calculator\.html$ /tools/freelance-hourly-rate-calculator [R=301,L]
-RewriteRule ^retirement-calculator\.html$ /tools/retirement-calculator [R=301,L]
-RewriteRule ^budget-invoice-calculators\.html$ /tools/budget-invoice-calculators [R=301,L]
-RewriteRule ^about\.html$ /legal/about [R=301,L]
-RewriteRule ^privacy-policy\.html$ /legal/privacy-policy [R=301,L]
-RewriteRule ^terms\.html$ /legal/terms [R=301,L]
-RewriteRule ^legal/contact\.html$ /contact [R=301,L]
-RewriteRule ^guides\.html$ /guides/ [R=301,L]
-RewriteRule ^deductions/doordash\.html$ /deductions/doordash [R=301,L]
-RewriteRule ^deductions/uber\.html$ /deductions/uber [R=301,L]
-RewriteRule ^deductions/etsy\.html$ /deductions/etsy [R=301,L]
-RewriteRule ^deductions/airbnb\.html$ /deductions/airbnb [R=301,L]
-RewriteRule ^deductions/fiverr\.html$ /deductions/fiverr [R=301,L]
-RewriteRule ^deductions/instacart\.html$ /deductions/instacart [R=301,L]
-RewriteRule ^digital-nomad-tax/portugal\.html$ /digital-nomad-tax/portugal [R=301,L]
-RewriteRule ^digital-nomad-tax/spain\.html$ /digital-nomad-tax/spain [R=301,L]
-RewriteRule ^digital-nomad-tax/thailand\.html$ /digital-nomad-tax/thailand [R=301,L]
-RewriteRule ^digital-nomad-tax/estonia\.html$ /digital-nomad-tax/estonia [R=301,L]
-RewriteRule ^digital-nomad-tax/mexico\.html$ /digital-nomad-tax/mexico [R=301,L]
+# --- Redirect clean URLs to .html (server needs explicit .html extension) ---
+RewriteRule ^tools/quarterly\-tax\-calculator/north\-carolina$ /tools/quarterly-tax-calculator/north-carolina.html [R=301,L]
+RewriteRule ^north\-carolina\.html$ /tools/quarterly-tax-calculator/north-carolina.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/south\-carolina$ /tools/quarterly-tax-calculator/south-carolina.html [R=301,L]
+RewriteRule ^south\-carolina\.html$ /tools/quarterly-tax-calculator/south-carolina.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/massachusetts$ /tools/quarterly-tax-calculator/massachusetts.html [R=301,L]
+RewriteRule ^massachusetts\.html$ /tools/quarterly-tax-calculator/massachusetts.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/new\-hampshire$ /tools/quarterly-tax-calculator/new-hampshire.html [R=301,L]
+RewriteRule ^new\-hampshire\.html$ /tools/quarterly-tax-calculator/new-hampshire.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/west\-virginia$ /tools/quarterly-tax-calculator/west-virginia.html [R=301,L]
+RewriteRule ^west\-virginia\.html$ /tools/quarterly-tax-calculator/west-virginia.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/north\-dakota$ /tools/quarterly-tax-calculator/north-dakota.html [R=301,L]
+RewriteRule ^north\-dakota\.html$ /tools/quarterly-tax-calculator/north-dakota.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/pennsylvania$ /tools/quarterly-tax-calculator/pennsylvania.html [R=301,L]
+RewriteRule ^pennsylvania\.html$ /tools/quarterly-tax-calculator/pennsylvania.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/rhode\-island$ /tools/quarterly-tax-calculator/rhode-island.html [R=301,L]
+RewriteRule ^rhode\-island\.html$ /tools/quarterly-tax-calculator/rhode-island.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/south\-dakota$ /tools/quarterly-tax-calculator/south-dakota.html [R=301,L]
+RewriteRule ^south\-dakota\.html$ /tools/quarterly-tax-calculator/south-dakota.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/connecticut$ /tools/quarterly-tax-calculator/connecticut.html [R=301,L]
+RewriteRule ^connecticut\.html$ /tools/quarterly-tax-calculator/connecticut.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/mississippi$ /tools/quarterly-tax-calculator/mississippi.html [R=301,L]
+RewriteRule ^mississippi\.html$ /tools/quarterly-tax-calculator/mississippi.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/california$ /tools/quarterly-tax-calculator/california.html [R=301,L]
+RewriteRule ^california\.html$ /tools/quarterly-tax-calculator/california.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/new\-jersey$ /tools/quarterly-tax-calculator/new-jersey.html [R=301,L]
+RewriteRule ^new\-jersey\.html$ /tools/quarterly-tax-calculator/new-jersey.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/new\-mexico$ /tools/quarterly-tax-calculator/new-mexico.html [R=301,L]
+RewriteRule ^new\-mexico\.html$ /tools/quarterly-tax-calculator/new-mexico.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/washington$ /tools/quarterly-tax-calculator/washington.html [R=301,L]
+RewriteRule ^washington\.html$ /tools/quarterly-tax-calculator/washington.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/louisiana$ /tools/quarterly-tax-calculator/louisiana.html [R=301,L]
+RewriteRule ^louisiana\.html$ /tools/quarterly-tax-calculator/louisiana.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/minnesota$ /tools/quarterly-tax-calculator/minnesota.html [R=301,L]
+RewriteRule ^minnesota\.html$ /tools/quarterly-tax-calculator/minnesota.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/tennessee$ /tools/quarterly-tax-calculator/tennessee.html [R=301,L]
+RewriteRule ^tennessee\.html$ /tools/quarterly-tax-calculator/tennessee.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/wisconsin$ /tools/quarterly-tax-calculator/wisconsin.html [R=301,L]
+RewriteRule ^wisconsin\.html$ /tools/quarterly-tax-calculator/wisconsin.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/arkansas$ /tools/quarterly-tax-calculator/arkansas.html [R=301,L]
+RewriteRule ^arkansas\.html$ /tools/quarterly-tax-calculator/arkansas.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/colorado$ /tools/quarterly-tax-calculator/colorado.html [R=301,L]
+RewriteRule ^colorado\.html$ /tools/quarterly-tax-calculator/colorado.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/delaware$ /tools/quarterly-tax-calculator/delaware.html [R=301,L]
+RewriteRule ^delaware\.html$ /tools/quarterly-tax-calculator/delaware.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/illinois$ /tools/quarterly-tax-calculator/illinois.html [R=301,L]
+RewriteRule ^illinois\.html$ /tools/quarterly-tax-calculator/illinois.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/kentucky$ /tools/quarterly-tax-calculator/kentucky.html [R=301,L]
+RewriteRule ^kentucky\.html$ /tools/quarterly-tax-calculator/kentucky.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/maryland$ /tools/quarterly-tax-calculator/maryland.html [R=301,L]
+RewriteRule ^maryland\.html$ /tools/quarterly-tax-calculator/maryland.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/michigan$ /tools/quarterly-tax-calculator/michigan.html [R=301,L]
+RewriteRule ^michigan\.html$ /tools/quarterly-tax-calculator/michigan.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/missouri$ /tools/quarterly-tax-calculator/missouri.html [R=301,L]
+RewriteRule ^missouri\.html$ /tools/quarterly-tax-calculator/missouri.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/nebraska$ /tools/quarterly-tax-calculator/nebraska.html [R=301,L]
+RewriteRule ^nebraska\.html$ /tools/quarterly-tax-calculator/nebraska.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/new\-york$ /tools/quarterly-tax-calculator/new-york.html [R=301,L]
+RewriteRule ^new\-york\.html$ /tools/quarterly-tax-calculator/new-york.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/oklahoma$ /tools/quarterly-tax-calculator/oklahoma.html [R=301,L]
+RewriteRule ^oklahoma\.html$ /tools/quarterly-tax-calculator/oklahoma.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/virginia$ /tools/quarterly-tax-calculator/virginia.html [R=301,L]
+RewriteRule ^virginia\.html$ /tools/quarterly-tax-calculator/virginia.html [R=301,L]
+RewriteRule ^tools/freelance\-hourly\-rate\-calculator$ /tools/freelance-hourly-rate-calculator.html [R=301,L]
+RewriteRule ^freelance\-hourly\-rate\-calculator\.html$ /tools/freelance-hourly-rate-calculator.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/alabama$ /tools/quarterly-tax-calculator/alabama.html [R=301,L]
+RewriteRule ^alabama\.html$ /tools/quarterly-tax-calculator/alabama.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/arizona$ /tools/quarterly-tax-calculator/arizona.html [R=301,L]
+RewriteRule ^arizona\.html$ /tools/quarterly-tax-calculator/arizona.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/florida$ /tools/quarterly-tax-calculator/florida.html [R=301,L]
+RewriteRule ^florida\.html$ /tools/quarterly-tax-calculator/florida.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/georgia$ /tools/quarterly-tax-calculator/georgia.html [R=301,L]
+RewriteRule ^georgia\.html$ /tools/quarterly-tax-calculator/georgia.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/indiana$ /tools/quarterly-tax-calculator/indiana.html [R=301,L]
+RewriteRule ^indiana\.html$ /tools/quarterly-tax-calculator/indiana.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/montana$ /tools/quarterly-tax-calculator/montana.html [R=301,L]
+RewriteRule ^montana\.html$ /tools/quarterly-tax-calculator/montana.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/vermont$ /tools/quarterly-tax-calculator/vermont.html [R=301,L]
+RewriteRule ^vermont\.html$ /tools/quarterly-tax-calculator/vermont.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/wyoming$ /tools/quarterly-tax-calculator/wyoming.html [R=301,L]
+RewriteRule ^wyoming\.html$ /tools/quarterly-tax-calculator/wyoming.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/alaska$ /tools/quarterly-tax-calculator/alaska.html [R=301,L]
+RewriteRule ^alaska\.html$ /tools/quarterly-tax-calculator/alaska.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/hawaii$ /tools/quarterly-tax-calculator/hawaii.html [R=301,L]
+RewriteRule ^hawaii\.html$ /tools/quarterly-tax-calculator/hawaii.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/kansas$ /tools/quarterly-tax-calculator/kansas.html [R=301,L]
+RewriteRule ^kansas\.html$ /tools/quarterly-tax-calculator/kansas.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/nevada$ /tools/quarterly-tax-calculator/nevada.html [R=301,L]
+RewriteRule ^nevada\.html$ /tools/quarterly-tax-calculator/nevada.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/oregon$ /tools/quarterly-tax-calculator/oregon.html [R=301,L]
+RewriteRule ^oregon\.html$ /tools/quarterly-tax-calculator/oregon.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/idaho$ /tools/quarterly-tax-calculator/idaho.html [R=301,L]
+RewriteRule ^idaho\.html$ /tools/quarterly-tax-calculator/idaho.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/maine$ /tools/quarterly-tax-calculator/maine.html [R=301,L]
+RewriteRule ^maine\.html$ /tools/quarterly-tax-calculator/maine.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/texas$ /tools/quarterly-tax-calculator/texas.html [R=301,L]
+RewriteRule ^texas\.html$ /tools/quarterly-tax-calculator/texas.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/iowa$ /tools/quarterly-tax-calculator/iowa.html [R=301,L]
+RewriteRule ^iowa\.html$ /tools/quarterly-tax-calculator/iowa.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/ohio$ /tools/quarterly-tax-calculator/ohio.html [R=301,L]
+RewriteRule ^ohio\.html$ /tools/quarterly-tax-calculator/ohio.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/utah$ /tools/quarterly-tax-calculator/utah.html [R=301,L]
+RewriteRule ^utah\.html$ /tools/quarterly-tax-calculator/utah.html [R=301,L]
+RewriteRule ^tools/digital\-nomad\-tax\-calculator$ /tools/digital-nomad-tax-calculator.html [R=301,L]
+RewriteRule ^digital\-nomad\-tax\-calculator\.html$ /tools/digital-nomad-tax-calculator.html [R=301,L]
+RewriteRule ^tools/rate\-calculator\-debt\-planner$ /tools/rate-calculator-debt-planner.html [R=301,L]
+RewriteRule ^rate\-calculator\-debt\-planner\.html$ /tools/rate-calculator-debt-planner.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/dc$ /tools/quarterly-tax-calculator/dc.html [R=301,L]
+RewriteRule ^dc\.html$ /tools/quarterly-tax-calculator/dc.html [R=301,L]
+RewriteRule ^tools/budget\-invoice\-calculators$ /tools/budget-invoice-calculators.html [R=301,L]
+RewriteRule ^budget\-invoice\-calculators\.html$ /tools/budget-invoice-calculators.html [R=301,L]
+RewriteRule ^tools/first\-paycheck\-calculator$ /tools/first-paycheck-calculator.html [R=301,L]
+RewriteRule ^first\-paycheck\-calculator\.html$ /tools/first-paycheck-calculator.html [R=301,L]
+RewriteRule ^tools/side\-hustle\-tax\-estimator$ /tools/side-hustle-tax-estimator.html [R=301,L]
+RewriteRule ^side\-hustle\-tax\-estimator\.html$ /tools/side-hustle-tax-estimator.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator$ /tools/quarterly-tax-calculator.html [R=301,L]
+RewriteRule ^quarterly\-tax\-calculator\.html$ /tools/quarterly-tax-calculator.html [R=301,L]
+RewriteRule ^tools/finance\-app\-recommender$ /tools/finance-app-recommender.html [R=301,L]
+RewriteRule ^finance\-app\-recommender\.html$ /tools/finance-app-recommender.html [R=301,L]
+RewriteRule ^guides/1099\-vs\-w2\-comparison$ /guides/1099-vs-w2-comparison.html [R=301,L]
+RewriteRule ^1099\-vs\-w2\-comparison\.html$ /guides/1099-vs-w2-comparison.html [R=301,L]
+RewriteRule ^guides/gig\-worker\-deductions$ /guides/gig-worker-deductions.html [R=301,L]
+RewriteRule ^gig\-worker\-deductions\.html$ /guides/gig-worker-deductions.html [R=301,L]
+RewriteRule ^guides/quarterly\-taxes\-guide$ /guides/quarterly-taxes-guide.html [R=301,L]
+RewriteRule ^quarterly\-taxes\-guide\.html$ /guides/quarterly-taxes-guide.html [R=301,L]
+RewriteRule ^tools/1099\-vs\-w2\-calculator$ /tools/1099-vs-w2-calculator.html [R=301,L]
+RewriteRule ^1099\-vs\-w2\-calculator\.html$ /tools/1099-vs-w2-calculator.html [R=301,L]
+RewriteRule ^tools/retirement\-calculator$ /tools/retirement-calculator.html [R=301,L]
+RewriteRule ^retirement\-calculator\.html$ /tools/retirement-calculator.html [R=301,L]
+RewriteRule ^digital\-nomad\-tax/portugal$ /digital-nomad-tax/portugal.html [R=301,L]
+RewriteRule ^portugal\.html$ /digital-nomad-tax/portugal.html [R=301,L]
+RewriteRule ^digital\-nomad\-tax/thailand$ /digital-nomad-tax/thailand.html [R=301,L]
+RewriteRule ^thailand\.html$ /digital-nomad-tax/thailand.html [R=301,L]
+RewriteRule ^tools/gig\-deduction\-finder$ /tools/gig-deduction-finder.html [R=301,L]
+RewriteRule ^gig\-deduction\-finder\.html$ /tools/gig-deduction-finder.html [R=301,L]
+RewriteRule ^digital\-nomad\-tax/estonia$ /digital-nomad-tax/estonia.html [R=301,L]
+RewriteRule ^estonia\.html$ /digital-nomad-tax/estonia.html [R=301,L]
+RewriteRule ^digital\-nomad\-tax/mexico$ /digital-nomad-tax/mexico.html [R=301,L]
+RewriteRule ^mexico\.html$ /digital-nomad-tax/mexico.html [R=301,L]
+RewriteRule ^digital\-nomad\-tax/spain$ /digital-nomad-tax/spain.html [R=301,L]
+RewriteRule ^spain\.html$ /digital-nomad-tax/spain.html [R=301,L]
+RewriteRule ^deductions/instacart$ /deductions/instacart.html [R=301,L]
+RewriteRule ^instacart\.html$ /deductions/instacart.html [R=301,L]
+RewriteRule ^legal/privacy\-policy$ /legal/privacy-policy.html [R=301,L]
+RewriteRule ^privacy\-policy\.html$ /legal/privacy-policy.html [R=301,L]
+RewriteRule ^deductions/doordash$ /deductions/doordash.html [R=301,L]
+RewriteRule ^doordash\.html$ /deductions/doordash.html [R=301,L]
+RewriteRule ^deductions/airbnb$ /deductions/airbnb.html [R=301,L]
+RewriteRule ^airbnb\.html$ /deductions/airbnb.html [R=301,L]
+RewriteRule ^deductions/fiverr$ /deductions/fiverr.html [R=301,L]
+RewriteRule ^fiverr\.html$ /deductions/fiverr.html [R=301,L]
+RewriteRule ^legal/disclaimer$ /legal/disclaimer.html [R=301,L]
+RewriteRule ^disclaimer\.html$ /legal/disclaimer.html [R=301,L]
+RewriteRule ^deductions/etsy$ /deductions/etsy.html [R=301,L]
+RewriteRule ^etsy\.html$ /deductions/etsy.html [R=301,L]
+RewriteRule ^deductions/uber$ /deductions/uber.html [R=301,L]
+RewriteRule ^uber\.html$ /deductions/uber.html [R=301,L]
+RewriteRule ^legal/about$ /legal/about.html [R=301,L]
+RewriteRule ^about\.html$ /legal/about.html [R=301,L]
+RewriteRule ^legal/terms$ /legal/terms.html [R=301,L]
+RewriteRule ^terms\.html$ /legal/terms.html [R=301,L]
+RewriteRule ^404$ /404.html [R=301,L]
 
-# ── Custom 404 page ──
+# --- Custom 404 page ---
 ErrorDocument 404 /404.html
 
-# ── Security headers ──
+# --- Security headers ---
 <IfModule mod_headers.c>
-  # Prevent MIME type sniffing
   Header set X-Content-Type-Options "nosniff"
-
-  # Enable XSS filter in older browsers
   Header set X-XSS-Protection "1; mode=block"
-
-  # Prevent clickjacking
   Header set X-Frame-Options "SAMEORIGIN"
-
-  # Referrer policy
   Header set Referrer-Policy "strict-origin-when-cross-origin"
-
-  # HSTS (HTTPS Strict Transport Security) — enable after confirming SSL works
-  # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
 
-# ── Cache static assets ──
+# --- Cache static assets ---
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/html "access plus 0 seconds"
@@ -89,7 +200,7 @@ ErrorDocument 404 /404.html
   ExpiresByType application/font-woff2 "access plus 1 year"
 </IfModule>
 
-# ── Compress text files ──
+# --- Compress text files ---
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>

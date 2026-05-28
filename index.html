@@ -124,6 +124,18 @@ ul{list-style:none}
 .tool-link{color:#00C896;font-weight:600;font-size:14px;transition:gap 0.3s ease;display:inline-flex;align-items:center;gap:4px}
 .tool-link:hover{gap:8px}
 
+/* === COUNTRY TABS === */
+.country-tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.country-tab{display:flex;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;border:1px solid #E8ECF0;background:#fff;font-size:15px;font-weight:500;color:#666;cursor:pointer;transition:all 0.3s ease}
+.country-tab .tab-count{background:#F4F6F9;padding:2px 8px;border-radius:12px;font-size:12px;font-weight:600;color:#999}
+.country-tab:hover{border-color:#00C896;color:#1A1A2E}
+.country-tab.active{background:#0A1628;border-color:#0A1628;color:#fff}
+.country-tab.active .tab-count{background:rgba(255,255,255,0.15);color:#00C896}
+.country-panel{display:none}
+.country-panel.active{display:block;animation:fadeIn 0.4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){.country-tabs{gap:6px}.country-tab{font-size:13px;padding:8px 14px}}
+
 /* === HOW IT WORKS === */
 .how-section{padding:80px 0;background:#fff}
 .how-header{text-align:center;margin-bottom:48px}
@@ -241,8 +253,8 @@ ul{list-style:none}
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="/guides/" aria-label="Read guides">Guides</a>
+      <a href="/blog/" aria-label="Read our blog">Blog</a>
       <a href="/legal/about.html" aria-label="About us">About</a>
-      <a href="/contact/" aria-label="Contact us">Contact</a>
       <a href="#tools" class="nav-cta" aria-label="Try free tools">Try Free Tools &rarr;</a>
     </nav>
     <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -253,6 +265,7 @@ ul{list-style:none}
   </div>
   <nav class="mobile-nav" aria-label="Mobile navigation">
     <a href="/guides/">Guides</a>
+    <a href="/blog/">Blog</a>
     <a href="/legal/about.html">About</a>
     <a href="/contact/">Contact</a>
     <a href="#tools" class="nav-cta">Try Free Tools &rarr;</a>
@@ -284,7 +297,7 @@ ul{list-style:none}
     <p class="hero-sub">Free AI-powered tax calculators and finance tools built for the 70 million freelancers, gig workers, and self-employed people who don't get tax guidance from an employer.</p>
     <div class="hero-buttons">
       <a href="#tools" class="btn-primary" aria-label="Calculate my taxes free">Calculate My Taxes Free &rarr;</a>
-      <a href="#tools" class="btn-secondary" aria-label="Explore all 12 tools">Explore All 12 Tools</a>
+      <a href="/tools/" class="btn-secondary" aria-label="Explore all tools">Explore All 32 Tools</a>
     </div>
     <div class="trust-badges">
       <span class="trust-badge"><span class="check" aria-hidden="true">&#10003;</span> 100% Free</span>
@@ -304,7 +317,7 @@ ul{list-style:none}
         <div class="stat-label">Calculations Done</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">12</div>
+        <div class="stat-number">32</div>
         <div class="stat-label">Free Tools</div>
       </div>
       <div class="stat-item">
@@ -319,111 +332,87 @@ ul{list-style:none}
   </div>
 </section>
 
-<!-- === TOOLS GRID === -->
+<!-- === TOOLS SECTION (Country-Tabbed) === -->
 <section class="tools-section" id="tools" aria-label="Free tools">
   <div class="container">
     <div class="tools-header fade-in">
-      <h2>All Free Tools &mdash; No Account Needed</h2>
-      <p>Built for freelancers, gig workers, and self-employed people who need clear answers, fast.</p>
+      <h2>32 Free Tools &mdash; No Account Needed</h2>
+      <p>Built for freelancers, gig workers, and self-employed people around the world. Pick your country below.</p>
     </div>
 
-    <div class="tools-grid">
-      <!-- Tool 1 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(0,200,150,0.12)" aria-label="Quarterly Tax Estimator icon">&#128202;</div>
-        <h3>Quarterly Tax Estimator</h3>
-        <p class="tool-desc">Calculate exactly how much to pay the IRS each quarter.</p>
-        <span class="tool-tag">Most Popular</span>
-        <a href="/tools/quarterly-tax-calculator.html" class="tool-link" aria-label="Use Quarterly Tax Estimator tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 2 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(255,107,107,0.12)" aria-label="Gig Worker Deduction Finder icon">&#128695;</div>
-        <h3>Gig Worker Deduction Finder</h3>
-        <p class="tool-desc">Interactive checklist &mdash; find every deduction for Uber, DoorDash, Fiverr, Etsy and more.</p>
-        <span class="tool-tag">High Value Tool</span>
-        <a href="/tools/gig-deduction-finder.html" class="tool-link" aria-label="Use Gig Worker Deduction Finder tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 3 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(78,205,196,0.12)" aria-label="Digital Nomad Tax Calculator icon">&#127758;</div>
-        <h3>Digital Nomad Tax Calculator</h3>
-        <p class="tool-desc">Working abroad? See tax obligations and best countries for digital nomads.</p>
-        <span class="tool-tag">Unique Tool</span>
-        <a href="/tools/digital-nomad-tax-calculator.html" class="tool-link" aria-label="Use Digital Nomad Tax Calculator tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 4 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(255,217,61,0.15)" aria-label="First Paycheck Calculator icon">&#128184;</div>
-        <h3>First Paycheck Calculator</h3>
-        <p class="tool-desc">See exactly what your take-home pay will be after all taxes and deductions.</p>
-        <span class="tool-tag">Gen Z Favorite</span>
-        <a href="/tools/first-paycheck-calculator.html" class="tool-link" aria-label="Use First Paycheck Calculator tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 5 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(108,92,231,0.12)" aria-label="Freelance Hourly Rate Calculator icon">&#9200;</div>
-        <h3>Freelance Hourly Rate Calculator</h3>
-        <p class="tool-desc">Salary to hourly, day rate &amp; value-based pricing. Calculate your ideal freelance rate with taxes.</p>
-        <span class="tool-tag">New!</span>
-        <a href="/tools/freelance-hourly-rate-calculator.html" class="tool-link" aria-label="Use Freelance Hourly Rate Calculator tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 6 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(168,230,207,0.2)" aria-label="Retirement Calculator icon">&#127969;</div>
-        <h3>Self-Employed Retirement Calculator</h3>
-        <p class="tool-desc">Compare Solo 401k vs SEP-IRA. Find your max 2026 contribution.</p>
-        <span class="tool-tag">High CPC</span>
-        <a href="/tools/retirement-calculator.html" class="tool-link" aria-label="Use Self-Employed Retirement Calculator tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 7 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(255,138,92,0.12)" aria-label="Side Hustle Tax Estimator icon">&#128176;</div>
-        <h3>Side Hustle Tax Estimator</h3>
-        <p class="tool-desc">Regular job + side gig? See how much extra tax you'll owe.</p>
-        <span class="tool-tag">Popular</span>
-        <a href="/tools/side-hustle-tax-estimator.html" class="tool-link" aria-label="Use Side Hustle Tax Estimator tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 8 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(69,183,209,0.12)" aria-label="Student Budget Calculator icon">&#127891;</div>
-        <h3>Student Budget Calculator</h3>
-        <p class="tool-desc">Split income using the 50/30/20 rule automatically.</p>
-        <span class="tool-tag">Student Pick</span>
-        <a href="/tools/budget-invoice-calculators.html" class="tool-link" aria-label="Use Student Budget Calculator tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 9 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(247,220,111,0.2)" aria-label="Invoice Tax Calculator icon">&#128221;</div>
-        <h3>Freelance Invoice Tax Calculator</h3>
-        <p class="tool-desc">Know exactly what VAT, GST, or sales tax to add to invoices.</p>
-        <span class="tool-tag">Useful</span>
-        <a href="/tools/budget-invoice-calculators.html" class="tool-link" aria-label="Use Freelance Invoice Tax Calculator tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 10 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(187,143,206,0.12)" aria-label="Finance App Recommender icon">&#129302;</div>
-        <h3>Best Finance App Recommender</h3>
-        <p class="tool-desc">5-question quiz. Get your perfect budgeting app match.</p>
-        <span class="tool-tag">AI-Powered</span>
-        <a href="/tools/finance-app-recommender.html" class="tool-link" aria-label="Use Best Finance App Recommender tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 11 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(133,193,233,0.12)" aria-label="1099 vs W-2 Calculator icon">&#9878;</div>
-        <h3>1099 vs W-2 Tax Calculator</h3>
-        <p class="tool-desc">Compare contractor vs employee take-home pay side by side.</p>
-        <span class="tool-tag">Decision Maker</span>
-        <a href="/tools/1099-vs-w2-calculator.html" class="tool-link" aria-label="Use 1099 vs W-2 Tax Calculator tool">Use Tool &rarr;</a>
-      </article>
-      <!-- Tool 12 -->
-      <article class="tool-card fade-in">
-        <div class="tool-icon" style="background:rgba(248,196,113,0.2)" aria-label="Debt Payoff Planner icon">&#128179;</div>
-        <h3>Debt Payoff Planner</h3>
-        <p class="tool-desc">Avalanche vs Snowball method. Find your debt-free date.</p>
-        <span class="tool-tag">Motivational</span>
-        <a href="/tools/rate-calculator-debt-planner.html" class="tool-link" aria-label="Use Debt Payoff Planner tool">Use Tool &rarr;</a>
-      </article>
+    <!-- Country Tabs -->
+    <div class="country-tabs fade-in" role="tablist" aria-label="Country selector">
+      <button class="country-tab active" role="tab" aria-selected="true" data-country="usa" aria-controls="tools-usa">&#127482;&#127480; USA <span class="tab-count">21</span></button>
+      <button class="country-tab" role="tab" aria-selected="false" data-country="canada" aria-controls="tools-canada">&#127464;&#127462; Canada <span class="tab-count">5</span></button>
+      <button class="country-tab" role="tab" aria-selected="false" data-country="uk" aria-controls="tools-uk">&#127468;&#127463; UK <span class="tab-count">3</span></button>
+      <button class="country-tab" role="tab" aria-selected="false" data-country="australia" aria-controls="tools-australia">&#127462;&#127482; Australia <span class="tab-count">2</span></button>
+      <button class="country-tab" role="tab" aria-selected="false" data-country="global" aria-controls="tools-global">&#127758; Global <span class="tab-count">1</span></button>
+    </div>
+
+    <!-- USA Tools -->
+    <div class="country-panel active" id="tools-usa" role="tabpanel" aria-label="USA tools">
+      <div class="tools-grid">
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(0,200,150,0.12)">&#128202;</div><h3>Quarterly Tax Estimator</h3><p class="tool-desc">Calculate exactly how much to pay the IRS each quarter.</p><span class="tool-tag">Most Popular</span><a href="/tools/quarterly-tax-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,107,107,0.12)">&#128695;</div><h3>Gig Worker Deduction Finder</h3><p class="tool-desc">Find every deduction for Uber, DoorDash, Etsy and more.</p><span class="tool-tag">High Value</span><a href="/tools/gig-deduction-finder.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(78,205,196,0.12)">&#127758;</div><h3>Digital Nomad Tax Calculator</h3><p class="tool-desc">Working abroad? See your tax obligations.</p><span class="tool-tag">Unique Tool</span><a href="/tools/digital-nomad-tax-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,217,61,0.15)">&#128184;</div><h3>First Paycheck Calculator</h3><p class="tool-desc">See your take-home pay after taxes.</p><span class="tool-tag">Gen Z Favorite</span><a href="/tools/first-paycheck-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(108,92,231,0.12)">&#9200;</div><h3>Freelance Hourly Rate Calculator</h3><p class="tool-desc">Find your ideal freelance rate.</p><span class="tool-tag">New!</span><a href="/tools/freelance-hourly-rate-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(168,230,207,0.2)">&#127969;</div><h3>Self-Employed Retirement Calc</h3><p class="tool-desc">Compare Solo 401k vs SEP-IRA.</p><span class="tool-tag">High CPC</span><a href="/tools/retirement-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,138,92,0.12)">&#128176;</div><h3>Side Hustle Tax Estimator</h3><p class="tool-desc">Regular job + side gig? Estimate extra tax.</p><span class="tool-tag">Popular</span><a href="/tools/side-hustle-tax-estimator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(133,193,233,0.12)">&#9878;</div><h3>1099 vs W-2 Tax Calculator</h3><p class="tool-desc">Compare contractor vs employee pay.</p><span class="tool-tag">Decision Maker</span><a href="/tools/1099-vs-w2-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(0,200,150,0.12)">&#128200;</div><h3>Federal Tax Refund Calculator</h3><p class="tool-desc">Estimate your 2026 refund or amount owed.</p><span class="tool-tag">Tax Season</span><a href="/tools/federal-tax-refund-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(108,92,231,0.12)">&#128200;</div><h3>Tax Bracket Calculator</h3><p class="tool-desc">Find your marginal and effective tax rate.</p><span class="tool-tag">Essential</span><a href="/tools/tax-bracket-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,107,107,0.12)">&#128200;</div><h3>Capital Gains Tax Calculator</h3><p class="tool-desc">Estimate tax on investments & crypto.</p><span class="tool-tag">Investor</span><a href="/tools/capital-gains-tax-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(0,200,150,0.12)">&#128176;</div><h3>Solo 401(k) Calculator</h3><p class="tool-desc">Maximize self-employed retirement savings.</p><span class="tool-tag">Retirement</span><a href="/tools/solo-401k-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(78,205,196,0.12)">&#128176;</div><h3>SEP IRA Calculator</h3><p class="tool-desc">Calculate your max SEP contribution.</p><span class="tool-tag">Retirement</span><a href="/tools/sep-ira-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(168,230,207,0.2)">&#128200;</div><h3>Self-Employed Retirement Plan</h3><p class="tool-desc">Compare Solo 401k vs SEP IRA side-by-side.</p><span class="tool-tag">Comparison</span><a href="/tools/self-employed-retirement-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,217,61,0.15)">&#128179;</div><h3>Debt Payoff Planner</h3><p class="tool-desc">Avalanche vs Snowball. Find your debt-free date.</p><span class="tool-tag">Motivational</span><a href="/tools/rate-calculator-debt-planner.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(69,183,209,0.12)">&#127891;</div><h3>Budget & Invoice Calculators</h3><p class="tool-desc">50/30/20 budget, invoice tax & more.</p><span class="tool-tag">All-in-One</span><a href="/tools/budget-invoice-calculators.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(187,143,206,0.12)">&#129302;</div><h3>Finance App Recommender</h3><p class="tool-desc">AI quiz finds your perfect budgeting app.</p><span class="tool-tag">AI-Powered</span><a href="/tools/finance-app-recommender.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,138,92,0.12)">&#128188;</div><h3>Virginia Self-Employment Tax</h3><p class="tool-desc">SE tax + VA state income tax combined.</p><span class="tool-tag">Virginia</span><a href="/tools/virginia-self-employment-tax.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(0,200,150,0.12)">&#128202;</div><h3>WV Estimated State Taxes</h3><p class="tool-desc">Calculate quarterly WV tax payments.</p><span class="tool-tag">West Virginia</span><a href="/tools/west-virginia-estimated-taxes.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,217,61,0.15)">&#128176;</div><h3>WV Sales Tax Calculator</h3><p class="tool-desc">6% state + local sales tax calculator.</p><span class="tool-tag">West Virginia</span><a href="/tools/west-virginia-sales-tax-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(108,92,231,0.12)">&#128202;</div><h3>Wisconsin Estimated Taxes</h3><p class="tool-desc">Calculate quarterly WI estimated payments.</p><span class="tool-tag">Wisconsin</span><a href="/tools/wisconsin-estimated-taxes.html" class="tool-link">Use Tool &rarr;</a></article>
+      </div>
+    </div>
+
+    <!-- Canada Tools -->
+    <div class="country-panel" id="tools-canada" role="tabpanel" aria-label="Canada tools">
+      <div class="tools-grid">
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,61,61,0.12)">&#128200;</div><h3>Canada Income Tax Calculator</h3><p class="tool-desc">Federal + provincial income tax for all 13 provinces.</p><span class="tool-tag">Canada 2026</span><a href="/tools/canada-income-tax-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,61,61,0.12)">&#128176;</div><h3>RRSP Tax Savings Calculator</h3><p class="tool-desc">See your RRSP contribution refund instantly.</p><span class="tool-tag">Canada</span><a href="/tools/rrsp-tax-savings-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,61,61,0.12)">&#128188;</div><h3>Self-Employed Tax Calculator</h3><p class="tool-desc">Income tax + CPP for Canadian freelancers.</p><span class="tool-tag">Canada</span><a href="/tools/canada-self-employed-tax-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,61,61,0.12)">&#128200;</div><h3>Capital Gains Tax Calculator</h3><p class="tool-desc">50% inclusion rate for Canadian investors.</p><span class="tool-tag">Canada</span><a href="/tools/canada-capital-gains-tax-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(255,61,61,0.12)">&#128179;</div><h3>Payroll Deductions Calculator</h3><p class="tool-desc">Take-home with CPP, EI & income tax.</p><span class="tool-tag">Canada</span><a href="/tools/canada-payroll-deductions-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+      </div>
+    </div>
+
+    <!-- UK Tools -->
+    <div class="country-panel" id="tools-uk" role="tabpanel" aria-label="UK tools">
+      <div class="tools-grid">
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(0,102,204,0.12)">&#128200;</div><h3>UK Self Assessment Calculator</h3><p class="tool-desc">Income tax for sole traders & freelancers.</p><span class="tool-tag">UK 2025/26</span><a href="/tools/uk-self-assessment-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(0,102,204,0.12)">&#128176;</div><h3>UK VAT Calculator</h3><p class="tool-desc">Add or remove VAT at 20%/5%/0%.</p><span class="tool-tag">UK</span><a href="/tools/uk-vat-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(0,102,204,0.12)">&#128200;</div><h3>UK Capital Gains Tax Calculator</h3><p class="tool-desc">CGT on shares, crypto & property.</p><span class="tool-tag">UK</span><a href="/tools/uk-capital-gains-tax-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+      </div>
+    </div>
+
+    <!-- Australia Tools -->
+    <div class="country-panel" id="tools-australia" role="tabpanel" aria-label="Australia tools">
+      <div class="tools-grid">
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(0,153,204,0.12)">&#128200;</div><h3>Australia Tax Return Estimator</h3><p class="tool-desc">Income tax + Medicare levy 2025-26.</p><span class="tool-tag">Australia</span><a href="/tools/australia-tax-return-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(0,153,204,0.12)">&#127891;</div><h3>Superannuation Calculator</h3><p class="tool-desc">SG 12%, cap $30K, contributions tax.</p><span class="tool-tag">Australia</span><a href="/tools/australia-super-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+      </div>
+    </div>
+
+    <!-- Global / International Tools -->
+    <div class="country-panel" id="tools-global" role="tabpanel" aria-label="Global tools">
+      <div class="tools-grid">
+        <article class="tool-card fade-in"><div class="tool-icon" style="background:rgba(156,39,176,0.12)">&#128176;</div><h3>Crypto Tax Calculator (US/UK/AU)</h3><p class="tool-desc">Capital gains tax on crypto across 3 countries.</p><span class="tool-tag">Global</span><a href="/tools/crypto-tax-calculator.html" class="tool-link">Use Tool &rarr;</a></article>
+      </div>
+    </div>
+
+    <div class="tools-footer fade-in" style="text-align:center;margin-top:36px">
+      <a href="/tools/" class="btn-primary">View All Tools Directory &rarr;</a>
     </div>
   </div>
 </section>
@@ -438,7 +427,7 @@ ul{list-style:none}
       <article class="step-card fade-in">
         <span class="step-icon" aria-hidden="true">&#127919;</span>
         <h3>Pick Your Tool</h3>
-        <p>Choose from 12 free calculators designed for freelancers</p>
+        <p>Choose from 32 free calculators across 5 countries</p>
       </article>
       <article class="step-card fade-in">
         <span class="step-icon" aria-hidden="true">&#9998;</span>
@@ -548,6 +537,42 @@ ul{list-style:none}
 
 </main>
 
+<!-- === BLOG === -->
+<section class="guides-section" id="blog" aria-label="Blog posts" style="background:#F4F6F9">
+  <div class="container">
+    <div class="tools-header fade-in">
+      <h2>From the Blog</h2>
+      <p>Expert guides to help you navigate taxes, retirement, and financial planning.</p>
+    </div>
+    <div class="tools-grid">
+      <article class="tool-card fade-in">
+        <div class="tool-icon" style="background:rgba(0,200,150,0.12)">&#128202;</div>
+        <h3>Quarterly Taxes 2026 Guide</h3>
+        <p class="tool-desc">Due dates, rates, safe harbor, deductions & more for freelancers.</p>
+        <span class="tool-tag">Popular</span>
+        <a href="/blog/quarterly-taxes-guide-2026.html" class="tool-link">Read Guide &rarr;</a>
+      </article>
+      <article class="tool-card fade-in">
+        <div class="tool-icon" style="background:rgba(168,230,207,0.2)">&#127969;</div>
+        <h3>Solo 401(k) vs SEP IRA 2026</h3>
+        <p class="tool-desc">Which retirement plan is best for your freelance business?</p>
+        <span class="tool-tag">Comparison</span>
+        <a href="/blog/solo-401k-vs-sep-ira-2026.html" class="tool-link">Read Guide &rarr;</a>
+      </article>
+      <article class="tool-card fade-in">
+        <div class="tool-icon" style="background:rgba(255,61,61,0.12)">&#127464;&#127462;</div>
+        <h3>Canada Freelance Tax Guide</h3>
+        <p class="tool-desc">Income tax, CPP, HST, deductions & deadlines for Canadian freelancers.</p>
+        <span class="tool-tag">Canada</span>
+        <a href="/blog/canada-freelance-tax-guide-2026.html" class="tool-link">Read Guide &rarr;</a>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="/blog/" class="btn-secondary">View All Posts &rarr;</a>
+    </div>
+  </div>
+</section>
+
 <!-- === DISCLAIMER === -->
 <div class="disclaimer" role="note">
   <span class="disclaimer-icon" aria-hidden="true">&#9888;&#65039;</span>
@@ -581,12 +606,13 @@ ul{list-style:none}
           <h4>Resources</h4>
           <ul>
             <li><a href="/guides/">Guides</a></li>
+            <li><a href="/blog/">Blog</a></li>
             <li><a href="/legal/about.html">About Us</a></li>
             <li><a href="/contact/">Contact</a></li>
             <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="/legal/terms.html">Terms of Service</a></li>
             <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
-            <li><a href="#cookie-preferences">Cookie Settings</a></li>
+            <li><a href="#cookie-consent">Cookie Settings</a></li>
           </ul>
         </div>
       </div>
@@ -640,6 +666,17 @@ ul{list-style:none}
       mobileNav.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
     }
+  });
+
+  // Country tab switching
+  document.querySelectorAll('.country-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.country-tab').forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      tab.classList.add('active'); tab.setAttribute('aria-selected','true');
+      document.querySelectorAll('.country-panel').forEach(function(p){ p.classList.remove('active'); });
+      var panel = document.getElementById(tab.getAttribute('aria-controls'));
+      if(panel){ panel.classList.add('active'); }
+    });
   });
 
   // Smooth scroll to #tools — no hash in URL

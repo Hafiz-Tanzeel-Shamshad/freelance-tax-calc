@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Canada Payroll Deductions Calculator 2026 — Take-Home Pay Estimator | Free Tool</title>
+<meta name="description" content="Free Canada payroll deductions calculator for 2026. Estimate your take-home pay after income tax, CPP, and EI deductions. Works for employees and self-employed.">
+<link rel="canonical" href="https://freelancetaxcalc.online/tools/canada-payroll-deductions-calculator.html">
+<meta property="og:title" content="Canada Payroll Deductions Calculator 2026">
+<meta property="og:description" content="Free Canada payroll deductions calculator. Estimate your take-home pay after income tax, CPP, and EI.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/tools/canada-payroll-deductions-calculator.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Canada Payroll Deductions Calculator 2026">
+<meta name="twitter:description" content="Free Canada payroll deductions calculator. Estimate your take-home pay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"Canada Payroll Deductions Calculator 2026",
+  "url":"https://freelancetaxcalc.online/tools/canada-payroll-deductions-calculator.html",
+  "description":"Free Canada payroll deductions calculator. Estimate take-home pay after income tax, CPP, and EI for 2026.",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}
+},{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":3,"name":"Canada Payroll Deductions Calculator"}
+  ]
+},{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What deductions come off my Canadian paycheque?","acceptedAnswer":{"@type":"Answer","text":"Your Canadian paycheque typically has these deductions: federal and provincial income tax (calculated by your employer using CRA's payroll deduction tables), Canada Pension Plan (CPP) contributions (5.7% of earnings above $3,500, up to a max), Employment Insurance (EI) premiums (1.66% up to a max), and any voluntary deductions like union dues, RRSP contributions, or benefits premiums."}},
+    {"@type":"Question","name":"How is CPP calculated on my paycheque?","acceptedAnswer":{"@type":"Answer","text":"CPP contributions are 5.95% (2025 rate, approximately 5.7% for 2026 est.) of your gross pay above $3,500 annual basic exemption, up to the Year's Maximum Pensionable Earnings (YMPE) of approximately $73,200. For 2026, the maximum employee CPP contribution is approximately $3,740. Your employer matches this amount. Self-employed individuals pay both portions (11.4% total)."}},
+    {"@type":"Question","name":"How is EI calculated on my paycheque?","acceptedAnswer":{"@type":"Answer","text":"Employment Insurance (EI) premiums are 1.66% of your gross pay up to the maximum insurable earnings of approximately $65,700 for 2026. The maximum annual EI premium for employees is approximately $1,100. Self-employed individuals can opt into EI for access to special benefits (maternity, parental, sickness, compassionate care) at a lower rate."}},
+    {"@type":"Question","name":"What is the difference between an employee and self-employed for payroll deductions?","acceptedAnswer":{"@type":"Answer","text":"Employees have income tax, CPP (at 5.7%), and EI (at 1.66%) deducted automatically by their employer. The employer also pays a matching CPP and 1.4x the EI premium. Self-employed individuals pay both portions of CPP (11.4% total) and do not pay EI unless they opt in. Self-employed individuals must calculate and remit their own taxes quarterly."}},
+    {"@type":"Question","name":"How does RRSP contribution affect my paycheque?","acceptedAnswer":{"@type":"Answer","text":"If your employer deducts RRSP contributions directly from your paycheque (through a group RRSP or payroll deduction), those contributions reduce your taxable income for that pay period, meaning less income tax is withheld. This is called a 'pension adjustment' and reduces your RRSP contribution room for the following year."}},
+    {"@type":"Question","name":"What is the Quebec Pension Plan (QPP) difference?","acceptedAnswer":{"@type":"Answer","text":"Quebec operates its own pension plan (QPP) instead of CPP. QPP contribution rates are slightly higher than CPP (approximately 6.4% for employees in 2025 vs 5.95% for CPP). Quebec also administers its own parental insurance plan (QPIP) instead of EI for maternity and parental benefits. This calculator uses simplified CPP rates; Quebec residents should consult the CRA or Revenu Quebec for exact amounts."}}
+  ]
+}]
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:18px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;font-weight:700;color:#fff}
+.logo-icon{width:32px;height:32px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.header-back{color:#B0B8C4;font-size:14px;transition:color 0.3s ease}
+.header-back:hover{color:#00C896}
+.breadcrumb{background:#fff;padding:12px 0;border-bottom:1px solid #E8ECF0;font-size:14px;color:#6B7280}
+.breadcrumb a{color:#00C896}
+.breadcrumb a:hover{color:#00B085}
+.breadcrumb span{color:#6B7280}
+.page-title{background:#fff;padding:28px 0 0}
+.page-title h1{font-family:"DM Serif Display",serif;font-size:34px;color:#1A1A2E;margin-bottom:6px}
+.page-title p{color:#6B7280;font-size:16px;max-width:650px}
+.tool-section{padding:28px 0 60px}
+.calc-wrap{max-width:660px;margin:0 auto}
+.input-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:28px}
+.input-card h2{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;margin-bottom:20px;text-align:center}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-weight:600;font-size:15px;color:#1A1A2E;margin-bottom:6px}
+.input-wrapper{position:relative;display:flex;align-items:center}
+.input-prefix{position:absolute;left:16px;font-weight:600;color:#6B7280;font-size:18px;pointer-events:none;z-index:1}
+.form-group input[type="number"]{width:100%;padding:16px 16px 16px 52px;border:2px solid #E8ECF0;border-radius:12px;font-size:22px;font-weight:600;font-family:inherit;color:#1A1A2E;background:#fff;transition:all 0.3s ease;outline:none}
+.form-group input[type="number"]:focus{border-color:#00C896;box-shadow:0 0 0 4px rgba(0,200,150,0.1)}
+.form-group input[type="number"]::placeholder{color:#D1D5DB;font-weight:400;font-size:18px}
+.form-group .helper{font-size:14px;color:#9CA3AF;margin-top:4px;line-height:1.5}
+.form-group select{width:100%;padding:14px 16px;border:2px solid #E8ECF0;border-radius:12px;font-size:16px;font-family:inherit;color:#1A1A2E;background:#fff;transition:border-color 0.3s ease;outline:none;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' fill='%236B7280'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.form-group select:focus{border-color:#00C896;box-shadow:0 0 0 4px rgba(0,200,150,0.1)}
+.calc-action{text-align:center;margin-top:24px}
+.calc-btn{width:100%;padding:18px 32px;background:#00C896;color:#fff;border:none;border-radius:14px;font-size:20px;font-weight:700;cursor:pointer;transition:all 0.3s ease;font-family:inherit}
+.calc-btn:hover{transform:scale(1.02);background:#00B085;box-shadow:0 6px 20px rgba(0,200,150,0.3)}
+.calc-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none!important}
+.results-area{display:none}
+.results-area.visible{display:block;animation:fadeUp 0.6s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:24px;text-align:center}
+.result-card-title{font-family:"DM Serif Display",serif;font-size:18px;color:#6B7280;margin-bottom:20px}
+.result-card-numbers{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.result-number{flex:1;min-width:180px;padding:20px 16px;background:#F8FAFC;border-radius:12px;border:1px solid #E8ECF0}
+.result-number .result-label{display:block;font-size:13px;color:#6B7280;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px}
+.result-number .result-value{display:block;font-size:30px;font-weight:700;color:#1A1A2E}
+.result-number .result-value.result-takehome{color:#00C896}
+.summary-table{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:15px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.summary-table th{background:#0A1628;color:#fff;padding:14px 20px;text-align:left;font-weight:600;font-size:14px}
+.summary-table th:first-child{border-radius:12px 0 0 0}
+.summary-table th:last-child{border-radius:0 12px 0 0}
+.summary-table td{padding:14px 20px;border-bottom:1px solid #F3F4F6;color:#1A1A2E}
+.summary-table tr:last-child td{border-bottom:none}
+.summary-table tr:last-child td:first-child{border-radius:0 0 0 12px}
+.summary-table tr:last-child td:last-child{border-radius:0 0 12px 0}
+.summary-table .total-row td{font-weight:700;color:#00C896;background:#E8F8F5}
+.encourage-card{background:linear-gradient(135deg,#E8F8F5,#fff);border:1px solid #00C896;border-radius:16px;padding:24px;margin-bottom:24px}
+.encourage-card h3{font-family:"DM Serif Display",serif;font-size:20px;color:#00C896;margin-bottom:8px}
+.encourage-card p{font-size:15px;color:#374151;line-height:1.6;margin-bottom:6px}
+.encourage-card .tip{font-size:14px;color:#6B7280;padding-left:16px;margin-top:4px}
+.res-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.res-actions button{flex:1;min-width:140px;padding:14px 20px;border-radius:10px;font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;transition:all 0.3s ease;text-align:center}
+.btn-print{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-print:hover{border-color:#00C896;color:#00C896}
+.btn-copy{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-copy:hover{border-color:#00C896;color:#00C896}
+.btn-recalc{background:#fff;border:2px solid #00C896;color:#00C896}
+.btn-recalc:hover{background:#E8F8F5}
+.seo-section{padding:60px 0;background:#fff}
+.seo-section .container{max-width:800px}
+.seo-section h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:16px;margin-top:40px}
+.seo-section h2:first-child{margin-top:0}
+.seo-section p,.seo-section li{font-size:17px;color:#4B5563;line-height:1.8;margin-bottom:12px}
+.seo-section ul{padding-left:24px}
+.seo-section li{margin-bottom:4px}
+.faq-item{border:1px solid #E8ECF0;border-radius:10px;margin-bottom:8px;overflow:hidden}
+.faq-question{width:100%;padding:18px 20px;background:#fff;border:none;text-align:left;font-size:17px;font-weight:600;color:#1A1A2E;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
+.faq-question:hover{background:#F9FAFB}
+.faq-question .arrow{transition:transform 0.3s ease;font-size:12px;color:#6B7280}
+.faq-item.open .faq-question .arrow{transform:rotate(180deg)}
+.faq-answer{padding:0 20px;max-height:0;overflow:hidden;transition:all 0.3s ease;font-size:16px;color:#4B5563;line-height:1.7}
+.faq-item.open .faq-answer{padding:0 20px 18px;max-height:500px}
+.disclaimer-bar{background:#FFF8E1;border:1px solid #FFD700;padding:20px;margin:0 24px 24px;border-radius:10px;display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#5D4037;line-height:1.6}
+.disclaimer-bar .icon{font-size:18px;flex-shrink:0;margin-top:2px}
+.site-footer{background:#0A1628;color:#B0B8C4;padding:40px 0 24px;overflow:hidden;width:100%}
+.site-footer .container{max-width:1100px;margin:0 auto;padding:0 24px}
+.footer-inner{display:flex;flex-wrap:wrap;gap:32px;margin-bottom:28px}
+.footer-brand{flex:1;min-width:200px}
+.footer-logo{display:flex;align-items:center;gap:8px;font-family:"DM Serif Display",serif;font-size:18px;font-weight:700;color:#fff;text-decoration:none}
+.footer-logo-icon{width:28px;height:28px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700;flex-shrink:0}
+.footer-tagline{font-size:13px;color:#8892A0;margin-top:8px}
+.footer-copy{font-size:12px;color:#667080;margin-top:8px}
+.footer-links{display:flex;flex-wrap:wrap;gap:32px}
+.footer-col h4{font-family:"DM Serif Display",serif;font-size:14px;color:#fff;margin-bottom:10px}
+.footer-col ul{list-style:none;padding:0;margin:0}
+.footer-col ul li{margin-bottom:6px}
+.footer-col ul li a{font-size:13px;color:#8892A0;text-decoration:none;transition:color 0.3s ease}
+.footer-col ul li a:hover{color:#00C896}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;font-size:12px;color:#667080;text-align:center;line-height:1.6}
+.footer-bottom a{color:#00C896;text-decoration:none}
+.footer-bottom a:hover{text-decoration:underline}
+@media(max-width:768px){.footer-inner{flex-direction:column;gap:24px}}
+@media print{.site-header,.breadcrumb,.res-actions,.site-footer,.seo-section,.disclaimer-bar{display:none!important}.results-area{display:block!important}.result-card,.summary-table,.encourage-card{box-shadow:none;border:1px solid #ddd!important;break-inside:avoid}.calc-action,.input-card{display:none}body{background:#fff!important;font-size:12px;overflow-x:hidden}}
+@media(max-width:600px){.page-title h1{font-size:26px}.input-card{padding:20px}.form-group input[type='number']{font-size:18px}.summary-table{font-size:14px}.summary-table th,.summary-table td{padding:10px 14px}.res-actions{flex-direction:column}.res-actions button{width:100%}.result-card-numbers{flex-direction:column;gap:12px}.result-number{min-width:auto}}
+.table-wrap{overflow-x:auto;margin:16px 0}
+.table-wrap table{width:100%}
+</style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="header-logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <a href="/" class="header-back" aria-label="Back to homepage">&larr; Back to Home</a>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> <span aria-hidden="true"> &gt; </span>
+    <a href="/">Tools</a> <span aria-hidden="true"> &gt; </span>
+    <span>Canada Payroll Deductions Calculator</span>
+  </div>
+</nav>
+
+<div class="page-title">
+  <div class="container">
+    <h1>Canada Payroll Deductions Calculator 2026</h1>
+    <p>Estimate your take-home pay after income tax, CPP, and EI deductions. Switch between employee and self-employed mode to compare the difference.</p>
+  </div>
+</div>
+
+<section class="tool-section" aria-label="Canada Payroll Deductions Calculator">
+  <div class="container calc-wrap">
+    <div class="input-card">
+      <h2>Enter Your Pay Details &rarr;</h2>
+
+      <div class="form-group">
+        <label for="grossPay">Annual Gross Pay / Business Income</label>
+        <div class="input-wrapper">
+          <span class="input-prefix">CA$</span>
+          <input type="number" id="grossPay" min="0" step="100" placeholder="e.g. 75000" aria-describedby="payHelp">
+        </div>
+        <div class="helper" id="payHelp">Your total salary or self-employment income before any deductions</div>
+      </div>
+
+      <div class="form-group">
+        <label for="provinceSelect">Province / Territory</label>
+        <select id="provinceSelect" aria-describedby="provHelp">
+          <option value="ON">Ontario (ON)</option>
+          <option value="AB">Alberta (AB)</option>
+          <option value="BC">British Columbia (BC)</option>
+          <option value="MB">Manitoba (MB)</option>
+          <option value="NB">New Brunswick (NB)</option>
+          <option value="NL">Newfoundland and Labrador (NL)</option>
+          <option value="NS">Nova Scotia (NS)</option>
+          <option value="PE">Prince Edward Island (PE)</option>
+          <option value="QC">Quebec (QC)</option>
+          <option value="SK">Saskatchewan (SK)</option>
+          <option value="NT">Northwest Territories (NT)</option>
+          <option value="NU">Nunavut (NU)</option>
+          <option value="YT">Yukon (YT)</option>
+        </select>
+        <div class="helper" id="provHelp">Where you pay provincial tax</div>
+      </div>
+
+      <!-- Employee / Self-employed toggle -->
+      <div class="status-toggle" role="radiogroup" aria-label="Employment type">
+        <button class="status-btn active" data-se="false" role="radio" aria-checked="true">Employee</button>
+        <button class="status-btn" data-se="true" role="radio" aria-checked="false">Self-Employed</button>
+      </div>
+
+      <div class="calc-action">
+        <button class="calc-btn" id="calculateBtn">Calculate My Take-Home Pay &#128202;</button>
+      </div>
+    </div>
+
+    <div class="results-area" id="resultsArea">
+
+      <div class="result-card">
+        <div class="result-card-title">&#128200; Your Payroll Deductions Summary</div>
+        <div class="result-card-numbers">
+          <div class="result-number">
+            <span class="result-label">Total Deductions</span>
+            <span class="result-value" id="resultDeductions">CA$0</span>
+          </div>
+          <div class="result-number">
+            <span class="result-label">Take-Home Pay</span>
+            <span class="result-value result-takehome" id="resultTakeHome">CA$0</span>
+          </div>
+          <div class="result-number">
+            <span class="result-label">Deduction %</span>
+            <span class="result-value" id="resultPct">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrap"><table class="summary-table" id="summaryTable">
+        <thead><tr><th>Item</th><th>Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Gross Pay</td><td id="sumGross">CA$0</td></tr>
+          <tr><td>Income Tax (Federal + Provincial)</td><td id="sumIncomeTax">CA$0</td></tr>
+          <tr><td>CPP Contributions</td><td id="sumCPP">CA$0</td></tr>
+          <tr><td>EI Premiums</td><td id="sumEI">CA$0</td></tr>
+          <tr class="total-row"><td>Total Deductions</td><td id="sumTotalDed">CA$0</td></tr>
+          <tr class="total-row"><td>Take-Home Pay</td><td id="sumTakeHome">CA$0</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="encourage-card">
+        <h3>&#128188; Understanding Your Canadian Paycheque</h3>
+        <p>Every paycheque in Canada has mandatory deductions for income tax, CPP, and EI. Your employer withholds these and remits them to the CRA on your behalf. The <strong>Basic Personal Amount</strong> ($17,000 est. for 2026) means your first $17,000 of income is effectively tax-free.</p>
+        <div class="tip">&#8226; <strong>Income Tax</strong> — Withheld based on your TD1 form (federal + provincial claim codes)</div>
+        <div class="tip">&#8226; <strong>CPP</strong> — 5.7% employee portion on earnings above $3,500, up to ~$73,200 max</div>
+        <div class="tip">&#8226; <strong>EI</strong> — 1.66% on insurable earnings, up to a max annual premium of ~$1,100</div>
+        <div class="tip">&#8226; <strong>Self-employed?</strong> You pay both CPP portions (11.4%) but no EI unless you opt in</div>
+        <div class="tip">&#8226; <strong>RRSP payroll deduction</strong> — Reduces tax withheld at source, giving you more take-home</div>
+      </div>
+
+      <div class="res-actions">
+        <button class="btn-print" onclick="window.print()" aria-label="Print results">&#128424; Print Results</button>
+        <button class="btn-copy" id="copyBtn" aria-label="Copy summary">&#128203; Copy Summary</button>
+        <button class="btn-recalc" id="recalcBtn" aria-label="Recalculate">&#8635; Recalculate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="disclaimer-bar" style="max-width:1100px;margin:0 auto 32px">
+  <span class="icon" aria-hidden="true">&#9888;</span>
+  <div><strong>Tax Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual payroll deductions depend on your specific TD1 claim codes, pension adjustments, benefit premiums, and other factors. Consult a qualified Canadian tax professional for advice specific to your situation.</div>
+</div>
+
+<section class="faq-section" style="background:#fff;padding:60px 0;border-top:1px solid #E8ECF0" aria-label="Frequently Asked Questions">
+  <div class="container" style="max-width:800px">
+    <h2 style="font-family:'DM Serif Display',serif;font-size:26px;color:#1A1A2E;margin-bottom:8px;text-align:center">Frequently Asked Questions</h2>
+    <p style="font-size:15px;color:#6B7280;margin-bottom:28px;text-align:center">Answers to common questions about payroll deductions in Canada</p>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What deductions come off my Canadian paycheque? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Your Canadian paycheque typically has these mandatory deductions: federal and provincial income tax (calculated by your employer using the CRA's payroll deduction tables based on your TD1 claim code), Canada Pension Plan (CPP) contributions, and Employment Insurance (EI) premiums. Your employer may also deduct voluntary items like union dues, group RRSP contributions, health and dental benefits, parking, or charitable donations.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How is CPP calculated? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">For 2026 (estimated), CPP contributions are 5.7% of your gross earnings above a $3,500 annual basic exemption, up to the Year's Maximum Pensionable Earnings (YMPE) of approximately $73,200. The maximum annual employee CPP contribution is approximately $3,740. Your employer matches this dollar-for-dollar. If you earn $60,000, your CPP contribution is ($60,000 - $3,500) × 5.7% = $3,220.50.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How is EI calculated? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Employment Insurance (EI) premiums are 1.66% of your gross earnings, deducted from each paycheque up to the maximum insurable earnings amount (approximately $65,700 for 2026). The maximum annual EI premium for employees is about $1,100. Your employer pays 1.4 times your EI premium. Self-employed individuals can opt into the EI program for access to special benefits (maternity, parental, sickness, compassionate care).</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Employee vs self-employed — what's the difference? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Employees have income tax, CPP (5.7%), and EI (1.66%) deducted automatically. Employers match CPP and pay 1.4× EI. Self-employed individuals pay both portions of CPP (11.4% total) and don't pay EI unless they opt in. Self-employed individuals must also register for GST/HST if earning over $30,000 and make quarterly tax instalment payments if tax owing exceeds $3,000.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How do RRSP payroll deductions work? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">If your employer offers a group RRSP or payroll RRSP deduction program, contributions are deducted directly from your pay before income tax is calculated. This reduces your taxable income for that pay period, meaning less income tax is withheld by your employer. You get the RRSP tax benefit immediately — in each paycheque — rather than waiting for a refund at tax time.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What happens if I work in Quebec? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Quebec has separate programs: the Quebec Pension Plan (QPP) replaces CPP, with slightly higher rates (~6.4% for employees). The Quebec Parental Insurance Plan (QPIP) replaces EI maternity/parental benefits. Quebec also has its own provincial income tax system administered by Revenu Quebec. This calculator uses simplified CPP rates; Quebec residents should use Revenu Quebec's tools for exact amounts.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Can I change how much tax is deducted? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Yes, by submitting a new TD1 form (federal) and TD1-ON, TD1-BC, etc. (provincial) to your employer. You can increase claim amounts for tuition credits, disability amounts, or other tax credits to reduce withholding. If too much is being withheld, you'll get a refund when you file your taxes. If too little, you'll owe at tax time. The goal is to get as close to zero as possible.</div>
+    </div>
+  </div>
+</section>
+
+<section class="seo-section" aria-label="About Payroll Deductions in Canada">
+  <div class="container">
+    <h2>Understanding Your Canadian Paycheque Deductions</h2>
+    <p>Every paycheque in Canada includes mandatory deductions that fund important social programs. Understanding these deductions helps you accurately plan your budget, negotiate your salary, and avoid surprises at tax time. This calculator shows you exactly what to expect based on your income, province, and employment type.</p>
+    <h2>Income Tax Withholding</h2>
+    <p>Your employer withholds federal and provincial income tax based on the TD1 form you completed when you started your job. The more you claim on your TD1 (for tuition credits, disability, etc.), the less tax is withheld. The CRA's payroll deduction tables ensure that over the year, the right amount of tax is withheld so you neither owe nor get a large refund at tax time.</p>
+    <h2>CPP and EI: Your Social Safety Net</h2>
+    <p>CPP contributions fund your retirement, disability, and survivor benefits. EI premiums fund employment insurance benefits if you lose your job, as well as maternity, parental, sickness, and compassionate care benefits. Both CPP and EI contributions have annual maximums — once you reach them, contributions stop for the year, giving you a small boost in your later paycheques.</p>
+  </div>
+</section>
+
+<section class="related-tools" aria-label="Related Tools">
+  <div class="container">
+    <div class="related-header">
+      <h2>More Free Tools for Canadian Workers</h2>
+      <p>Compare take-home pay, taxes, and savings strategies</p>
+    </div>
+    <div class="related-grid">
+      <a href="/tools/canada-income-tax-calculator.html" class="tool-card">
+        <span class="tool-card-icon">&#128200;</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Canada Income Tax Calculator</span>
+          <span class="tool-card-desc">Federal + provincial tax</span>
+          <span class="tool-card-tag">2026</span>
+        </span>
+      </a>
+      <a href="/tools/rrsp-tax-savings-calculator.html" class="tool-card">
+        <span class="tool-card-icon">&#128176;</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">RRSP Tax Savings Calculator</span>
+          <span class="tool-card-desc">Reduce taxable income</span>
+          <span class="tool-card-tag">Savings</span>
+        </span>
+      </a>
+      <a href="/tools/canada-self-employed-tax-calculator.html" class="tool-card">
+        <span class="tool-card-icon">&#128188;</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Self-Employed Tax Calculator</span>
+          <span class="tool-card-desc">Income tax + CPP</span>
+          <span class="tool-card-tag">Canada</span>
+        </span>
+      </a>
+      <a href="/tools/canada-capital-gains-tax-calculator.html" class="tool-card">
+        <span class="tool-card-icon">&#128200;</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Capital Gains Tax Calculator</span>
+          <span class="tool-card-desc">Investment tax</span>
+          <span class="tool-card-tag">Canada</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.related-tools{background:#fff;padding:60px 0;border-top:1px solid #E8ECF0}
+.related-header{text-align:center;margin-bottom:36px}
+.related-header h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:8px}
+.related-header p{font-size:15px;color:#6B7280;max-width:500px;margin:0 auto}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:960px;margin:0 auto}
+.tool-card{display:flex;align-items:flex-start;gap:16px;background:#F8FAFC;border:1px solid #E8ECF0;border-radius:14px;padding:20px;transition:all 0.3s ease;text-decoration:none}
+.tool-card:hover{border-color:#00C896;background:#F0FDF9;transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,200,150,0.12)}
+.tool-card-icon{font-size:24px;flex-shrink:0;width:44px;height:44px;background:#E8F8F5;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.tool-card-content{flex:1;min-width:0}
+.tool-card-name{display:block;font-size:15px;font-weight:600;color:#1A1A2E;margin-bottom:3px}
+.tool-card-desc{display:block;font-size:13px;color:#6B7280;line-height:1.4}
+.tool-card-tag{display:inline-block;margin-top:8px;font-size:11px;font-weight:600;color:#00C896;background:#E8F8F5;padding:2px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px}
+</style>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="FreelanceTaxCalc Home">
+          <span class="footer-logo-icon" aria-hidden="true">$</span>
+          Freelance<span class="logo-dot">.</span>TaxCalc
+        </a>
+        <p class="footer-tagline">Free financial tools for independent workers.</p>
+        <p class="footer-copy">&copy; 2026 FreelanceTaxCalc. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="/tools/canada-income-tax-calculator.html">Canada Income Tax</a></li>
+            <li><a href="/tools/rrsp-tax-savings-calculator.html">RRSP Tax Savings</a></li>
+            <li><a href="/tools/canada-self-employed-tax-calculator.html">Self-Employed Tax</a></li>
+            <li><a href="/tools/canada-capital-gains-tax-calculator.html">Capital Gains Tax</a></li>
+            <li><a href="/tools/quarterly-tax-calculator.html">Quarterly Estimator (USA)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/guides/">Guides</a></li>
+<li><a href="/blog/">Blog</a></li>
+            <li><a href="/legal/about.html">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/legal/terms.html">Terms of Service</a></li>
+            <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
+            <li><a href="#cookie-consent">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      This website provides estimates for informational purposes only. Not financial or tax advice. | We use cookies and display ads. See <a href="/legal/privacy-policy.html">Privacy Policy</a> for details.
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/tax-calculator-core.js"></script>
+
+<script>
+(function(){
+  'use strict';
+
+  var grossPay = document.getElementById('grossPay');
+  var provinceSelect = document.getElementById('provinceSelect');
+  var seBtns = document.querySelectorAll('.status-btn');
+  var calculateBtn = document.getElementById('calculateBtn');
+  var recalcBtn = document.getElementById('recalcBtn');
+  var copyBtn = document.getElementById('copyBtn');
+  var resultsArea = document.getElementById('resultsArea');
+
+  function fmtMoney(n) {
+    return 'CA$' + Math.round(n).toLocaleString('en-CA');
+  }
+
+  function getIsSelfEmployed() {
+    var active = document.querySelector('.status-btn.active');
+    return active.getAttribute('data-se') === 'true';
+  }
+
+  function calculate() {
+    var gross = parseFloat(grossPay.value) || 0;
+    var province = provinceSelect.value;
+    var isSE = getIsSelfEmployed();
+
+    if (gross <= 0) {
+      grossPay.focus();
+      grossPay.style.borderColor = '#FF6B6B';
+      setTimeout(function(){ grossPay.style.borderColor = ''; }, 1500);
+      return;
+    }
+
+    var result = calculateCanadaTakeHome(gross, province, isSE);
+
+    resultsArea.classList.add('visible');
+    resultsArea.style.display = 'block';
+    calculateBtn.disabled = true;
+    calculateBtn.textContent = 'Calculating...';
+
+    setTimeout(function(){
+      document.getElementById('resultDeductions').textContent = fmtMoney(result.totalDeductions);
+      document.getElementById('resultTakeHome').textContent = fmtMoney(result.takeHomePay);
+      document.getElementById('resultPct').textContent = gross > 0 ? Math.round(result.totalDeductions / gross * 100) + '%' : '0%';
+
+      document.getElementById('sumGross').textContent = fmtMoney(result.grossPay);
+      document.getElementById('sumIncomeTax').textContent = fmtMoney(result.incomeTax);
+      document.getElementById('sumCPP').textContent = fmtMoney(result.cpp);
+      document.getElementById('sumEI').textContent = fmtMoney(result.ei);
+      document.getElementById('sumTotalDed').textContent = fmtMoney(result.totalDeductions);
+      document.getElementById('sumTakeHome').textContent = fmtMoney(result.takeHomePay);
+
+      calculateBtn.textContent = 'Calculate My Take-Home Pay \uD83D\uDCCA';
+      calculateBtn.disabled = false;
+
+      if (window.innerWidth < 768) {
+        resultsArea.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    }, 600);
+  }
+
+  calculateBtn.addEventListener('click', calculate);
+
+  recalcBtn.addEventListener('click', function(){
+    resultsArea.classList.remove('visible');
+    resultsArea.style.display = 'none';
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  copyBtn.addEventListener('click', function(){
+    var g = document.getElementById('sumGross').textContent;
+    var d = document.getElementById('resultDeductions').textContent;
+    var th = document.getElementById('resultTakeHome').textContent;
+    var text = 'Canada Payroll Deductions Calculator - FreelanceTaxCalc\n';
+    text += 'Gross Pay: ' + g + '\n';
+    text += 'Total Deductions: ' + d + '\n';
+    text += 'Take-Home Pay: ' + th + '\n';
+    text += '\nGenerated at FreelanceTaxCalc.online';
+
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text).then(function(){
+        copyBtn.textContent = '\u2713 Copied!';
+        setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy Summary'; }, 2000);
+      });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      copyBtn.textContent = '\u2713 Copied!';
+      setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy Summary'; }, 2000);
+    }
+  });
+
+  // Status toggle
+  seBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      seBtns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-checked','false'); });
+      this.classList.add('active');
+      this.setAttribute('aria-checked','true');
+    });
+  });
+
+  document.querySelectorAll('.faq-question').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = this.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  document.querySelectorAll('.input-card input, .input-card select').forEach(function(el){
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); calculateBtn.click(); }
+    });
+  });
+})();
+</script>
+
+<div id="cookie-consent" role="dialog" aria-label="Cookie Consent" aria-modal="true" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#0A1628;color:#fff;padding:16px 24px;z-index:99999;box-shadow:0 -4px 20px rgba(0,0,0,0.3);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.5">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between">
+    <p style="margin:0;flex:1;min-width:200px;color:#B0B8C4;font-size:13px">This site uses cookies for analytics and personalized ads. See our <a href="/legal/privacy-policy.html" style="color:#00C896;text-decoration:underline">Privacy Policy</a> for details.</p>
+    <div style="display:flex;gap:10px;flex-shrink:0">
+      <button id="cookie-decline" style="background:transparent;border:1px solid #667080;color:#B0B8C4;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13px;font-family:inherit">Decline</button>
+      <button id="cookie-accept" style="background:#00C896;border:none;color:#0A1628;padding:8px 24px;border-radius:6px;cursor:pointer;font-weight:600;font-size:13px;font-family:inherit">Accept All</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-consent');
+  var accept = document.getElementById('cookie-accept');
+  var decline = document.getElementById('cookie-decline');
+  if(!banner || !accept) return;
+  var consent = localStorage.getItem('cookie_consent');
+  if(consent !== 'accepted' && consent !== 'declined'){
+    banner.style.display = 'block';
+  }
+  accept.addEventListener('click', function(){
+    localStorage.setItem('cookie_consent', 'accepted');
+    banner.style.display = 'none';
+    if(typeof gtag !== 'undefined'){ gtag('consent', 'update', {'analytics_storage':'granted','ad_storage':'granted'}); }
+  });
+  decline.addEventListener('click', function(){
+    localStorage.setItem('cookie_consent', 'declined');
+    banner.style.display = 'none';
+    if(typeof gtag !== 'undefined'){ gtag('consent', 'update', {'analytics_storage':'denied','ad_storage':'denied'}); }
+  });
+})();
+</script>
+</body>
+</html>

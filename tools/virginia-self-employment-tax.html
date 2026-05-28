@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta http-equiv="Content-Language" content="en-US">
+<title>Virginia Self Employment Tax Calculator 2026 — SE Tax + VA State Income Tax</title>
+<meta name="description" content="Free Virginia self-employment tax calculator for 2026. Calculate federal self-employment tax (Social Security + Medicare) and Virginia state income tax for freelancers and sole proprietors.">
+<link rel="canonical" href="https://freelancetaxcalc.online/tools/virginia-self-employment-tax.html">
+<meta property="og:title" content="Virginia Self Employment Tax Calculator 2026 — SE Tax + VA State Income Tax">
+<meta property="og:description" content="Free Virginia self-employment tax calculator for 2026. Calculate federal self-employment tax (Social Security + Medicare) and Virginia state income tax for freelancers and sole proprietors.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/tools/virginia-self-employment-tax.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Virginia Self Employment Tax Calculator 2026 — SE Tax + VA State Income Tax">
+<meta name="twitter:description" content="Free Virginia self-employment tax calculator for 2026. Calculate federal SE tax and Virginia state income tax for freelancers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script src="/assets/tax-calculator-core.js"></script>
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"Virginia Self Employment Tax Calculator 2026",
+  "url":"https://freelancetaxcalc.online/tools/virginia-self-employment-tax.html",
+  "description":"Free Virginia self-employment tax calculator for 2026. Calculate federal self-employment tax (Social Security + Medicare) and Virginia state income tax for freelancers and sole proprietors.",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All",
+  "browserRequirements":"Requires JavaScript",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+},{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":3,"name":"Virginia Self Employment Tax Calculator"}
+  ]
+},{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What is the self-employment tax rate for 2026?","acceptedAnswer":{"@type":"Answer","text":"The federal self-employment tax rate for 2026 is 15.3%, consisting of 12.4% for Social Security (up to the wage base of $184,500) and 2.9% for Medicare (uncapped). High earners pay an additional 0.9% Medicare surtax on income over $200,000 ($250,000 married filing jointly). You can deduct half of your SE tax as an adjustment to income on your federal return."}},
+    {"@type":"Question","name":"How does Virginia tax self-employment income?","acceptedAnswer":{"@type":"Answer","text":"Virginia treats self-employment income as ordinary income and taxes it under the same progressive brackets as wages. Virginia's income tax rates for 2026 are 2% on the first $3,000 of taxable income, 3% on $3,001–$5,000, 5% on $5,001–$17,000, and 5.75% on income over $17,000. Unlike some states, Virginia does not have a separate self-employment tax — only the standard income tax applies."}},
+    {"@type":"Question","name":"What are the Virginia income tax brackets for 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, Virginia has four progressive income tax brackets: 2% on taxable income up to $3,000, 3% on income from $3,001 to $5,000, 5% on income from $5,001 to $17,000, and 5.75% on income over $17,000. Virginia uses the same brackets regardless of filing status. Your Virginia taxable income is based on your federal adjusted gross income with Virginia-specific modifications."}},
+    {"@type":"Question","name":"Can I deduct half of my self-employment tax on my federal return?","acceptedAnswer":{"@type":"Answer","text":"Yes. Self-employed individuals can deduct 50% of their self-employment tax as an adjustment to income on Schedule 1 of Form 1040. This deduction reduces your federal adjusted gross income (AGI) and therefore also lowers your Virginia taxable income, since Virginia starts with federal AGI. The deduction is taken above the line, meaning you can claim it even if you don't itemize deductions."}},
+    {"@type":"Question","name":"What is the Virginia filing threshold for self-employed individuals?","acceptedAnswer":{"@type":"Answer","text":"You must file a Virginia state tax return if your Virginia adjusted gross income exceeds $12,000 (single filer) or if you owe any Virginia income tax. Self-employed individuals with net earnings of $400 or more must also file a federal return and pay SE tax. If your Virginia AGI is below the standard deduction equivalent, you may still need to file if you had Virginia tax withheld."}},
+    {"@type":"Question","name":"Do I need to make quarterly estimated tax payments in Virginia?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you expect to owe at least $150 in Virginia income tax after withholding and credits, you must make quarterly estimated payments. Virginia quarterly due dates align with federal dates: April 15, June 15, September 15, and January 15. The Virginia Department of Taxation accepts payments online through their portal. Underpayment may result in penalties."}},
+    {"@type":"Question","name":"Do I need to register my business with Virginia?","acceptedAnswer":{"@type":"Answer","text":"Most self-employed individuals in Virginia operating under their own name using their Social Security number do not need to register with the state. However, if you use a trade name, form an LLC, or have employees, you must register with the Virginia State Corporation Commission (SCC). You may also need a Virginia business license depending on your city or county requirements."}},
+    {"@type":"Question","name":"What deductions can I claim as a self-employed person in Virginia?","acceptedAnswer":{"@type":"Answer","text":"Common deductions for self-employed Virginians include the home office deduction, vehicle mileage ($0.70 per mile in 2026), health insurance premiums, retirement plan contributions (SEP IRA or Solo 401k), business equipment and software, office supplies, professional development, marketing costs, and a portion of utilities and internet. Virginia generally follows federal deduction rules, so expenses deductible federally are also deductible on your Virginia return."}}
+  ]
+}]
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:18px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+.site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;font-weight:700;color:#fff}
+.logo-icon{width:32px;height:32px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.header-back{color:#B0B8C4;font-size:14px;transition:color 0.3s ease}
+.header-back:hover{color:#00C896}
+
+.breadcrumb{background:#fff;padding:12px 0;border-bottom:1px solid #E8ECF0;font-size:14px;color:#6B7280}
+.breadcrumb a{color:#00C896}
+.breadcrumb a:hover{color:#00B085}
+.breadcrumb span{color:#6B7280}
+
+.page-title{background:#fff;padding:28px 0 0}
+.page-title h1{font-family:"DM Serif Display",serif;font-size:34px;color:#1A1A2E;margin-bottom:6px}
+.page-title p{color:#6B7280;font-size:16px;max-width:650px}
+
+.tool-section{padding:28px 0 60px}
+.calc-wrap{max-width:660px;margin:0 auto}
+
+.input-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:28px}
+.input-card h2{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;margin-bottom:20px;text-align:center}
+
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-weight:600;font-size:15px;color:#1A1A2E;margin-bottom:6px}
+.input-wrapper{position:relative;display:flex;align-items:center}
+.input-prefix{position:absolute;left:16px;font-weight:600;color:#6B7280;font-size:18px;pointer-events:none;z-index:1}
+.form-group input[type="number"]{width:100%;padding:16px 16px 16px 52px;border:2px solid #E8ECF0;border-radius:12px;font-size:22px;font-weight:600;font-family:inherit;color:#1A1A2E;background:#fff;transition:all 0.3s ease;outline:none}
+.form-group input[type="number"]:focus{border-color:#00C896;box-shadow:0 0 0 4px rgba(0,200,150,0.1)}
+.form-group input[type="number"]::placeholder{color:#D1D5DB;font-weight:400;font-size:18px}
+.form-group .helper{font-size:14px;color:#9CA3AF;margin-top:4px;line-height:1.5}
+
+.calc-action{text-align:center;margin-top:24px}
+.calc-btn{width:100%;padding:18px 32px;background:#00C896;color:#fff;border:none;border-radius:14px;font-size:20px;font-weight:700;cursor:pointer;transition:all 0.3s ease;font-family:inherit}
+.calc-btn:hover{transform:scale(1.02);background:#00B085;box-shadow:0 6px 20px rgba(0,200,150,0.3)}
+.calc-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none!important}
+
+.results-area{display:none}
+.results-area.visible{display:block;animation:fadeUp 0.6s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+.result-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:24px;text-align:center}
+.result-card-title{font-family:"DM Serif Display",serif;font-size:18px;color:#6B7280;margin-bottom:20px}
+.result-card-numbers{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.result-number{flex:1;min-width:180px;padding:20px 16px;background:#F8FAFC;border-radius:12px;border:1px solid #E8ECF0}
+.result-number .result-label{display:block;font-size:13px;color:#6B7280;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px}
+.result-number .result-value{display:block;font-size:30px;font-weight:700;color:#1A1A2E}
+.result-number .result-value.result-savings{color:#00C896}
+.result-number .result-value.result-danger{color:#EF4444}
+
+.summary-table{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:15px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.summary-table th{background:#0A1628;color:#fff;padding:14px 20px;text-align:left;font-weight:600;font-size:14px}
+.summary-table th:first-child{border-radius:12px 0 0 0}
+.summary-table th:last-child{border-radius:0 12px 0 0}
+.summary-table td{padding:14px 20px;border-bottom:1px solid #F3F4F6;color:#1A1A2E}
+.summary-table tr:last-child td{border-bottom:none}
+.summary-table tr:last-child td:first-child{border-radius:0 0 0 12px}
+.summary-table tr:last-child td:last-child{border-radius:0 0 12px 0}
+.summary-table .total-row td{font-weight:700;color:#00C896;background:#E8F8F5}
+.summary-table .total-row td:last-child{color:#00C896}
+
+.encourage-card{background:linear-gradient(135deg,#E8F8F5,#fff);border:1px solid #00C896;border-radius:16px;padding:24px;margin-bottom:24px}
+.encourage-card h3{font-family:"DM Serif Display",serif;font-size:20px;color:#00C896;margin-bottom:8px}
+.encourage-card p{font-size:15px;color:#374151;line-height:1.6;margin-bottom:6px}
+.encourage-card .tip{font-size:14px;color:#6B7280;padding-left:16px;margin-top:4px}
+
+.res-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.res-actions button{flex:1;min-width:140px;padding:14px 20px;border-radius:10px;font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;transition:all 0.3s ease;text-align:center}
+.btn-print{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-print:hover{border-color:#00C896;color:#00C896}
+.btn-copy{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-copy:hover{border-color:#00C896;color:#00C896}
+.btn-recalc{background:#fff;border:2px solid #00C896;color:#00C896}
+.btn-recalc:hover{background:#E8F8F5}
+
+.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#1A1A2E;color:#fff;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:500;z-index:99999;opacity:0;transition:opacity 0.3s ease;pointer-events:none;font-family:"DM Sans",sans-serif}
+.toast.show{opacity:1}
+
+.seo-section{padding:60px 0;background:#fff}
+.seo-section .container{max-width:800px}
+.seo-section h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:16px;margin-top:40px}
+.seo-section h2:first-child{margin-top:0}
+.seo-section p,.seo-section li{font-size:17px;color:#4B5563;line-height:1.8;margin-bottom:12px}
+.seo-section ul{padding-left:24px}
+.seo-section li{margin-bottom:4px}
+
+.faq-item{border:1px solid #E8ECF0;border-radius:10px;margin-bottom:8px;overflow:hidden}
+.faq-question{width:100%;padding:18px 20px;background:#fff;border:none;text-align:left;font-size:17px;font-weight:600;color:#1A1A2E;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
+.faq-question:hover{background:#F9FAFB}
+.faq-question .arrow{transition:transform 0.3s ease;font-size:12px;color:#6B7280}
+.faq-item.open .faq-question .arrow{transform:rotate(180deg)}
+.faq-answer{padding:0 20px;max-height:0;overflow:hidden;transition:all 0.3s ease;font-size:16px;color:#4B5563;line-height:1.7}
+.faq-item.open .faq-answer{padding:0 20px 18px;max-height:500px}
+
+.disclaimer-bar{background:#FFF8E1;border:1px solid #FFD700;padding:20px;margin:0 24px 24px;border-radius:10px;display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#5D4037;line-height:1.6}
+.disclaimer-bar .icon{font-size:18px;flex-shrink:0;margin-top:2px}
+
+.site-footer{background:#0A1628;color:#B0B8C4;padding:40px 0 24px;overflow:hidden;width:100%}
+.site-footer .container{max-width:1100px;margin:0 auto;padding:0 24px}
+.footer-inner{display:flex;flex-wrap:wrap;gap:32px;margin-bottom:28px}
+.footer-brand{flex:1;min-width:200px}
+.footer-logo{display:flex;align-items:center;gap:8px;font-family:"DM Serif Display",serif;font-size:18px;font-weight:700;color:#fff;text-decoration:none}
+.footer-logo-icon{width:28px;height:28px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700;flex-shrink:0}
+.footer-tagline{font-size:13px;color:#8892A0;margin-top:8px}
+.footer-copy{font-size:12px;color:#667080;margin-top:8px}
+.footer-links{display:flex;flex-wrap:wrap;gap:32px}
+.footer-col h4{font-family:"DM Serif Display",serif;font-size:14px;color:#fff;margin-bottom:10px}
+.footer-col ul{list-style:none;padding:0;margin:0}
+.footer-col ul li{margin-bottom:6px}
+.footer-col ul li a{font-size:13px;color:#8892A0;text-decoration:none;transition:color 0.3s ease}
+.footer-col ul li a:hover{color:#00C896}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;font-size:12px;color:#667080;text-align:center;line-height:1.6}
+.footer-bottom a{color:#00C896;text-decoration:none}
+.footer-bottom a:hover{text-decoration:underline}
+@media(max-width:768px){.footer-inner{flex-direction:column;gap:24px}}
+
+@media print{
+  .site-header,.breadcrumb,.res-actions,.site-footer,.seo-section,.disclaimer-bar{display:none!important}
+  .results-area{display:block!important}
+  .result-card,.summary-table,.encourage-card{box-shadow:none;border:1px solid #ddd!important;break-inside:avoid}
+  .calc-action,.input-card{display:none}
+  body{background:#fff!important;font-size:12px;overflow-x:hidden}
+}
+
+@media(max-width:600px){
+  .page-title h1{font-size:26px}
+  .input-card,.paystub{padding:20px}
+  .form-group input[type="number"]{font-size:18px}
+  .summary-table{font-size:14px}
+  .summary-table th,.summary-table td{padding:10px 14px}
+  .res-actions{flex-direction:column}
+  .res-actions button{width:100%}
+  .result-card-numbers{flex-direction:column;gap:12px}
+  .result-number{min-width:auto}
+}
+
+.table-wrap{overflow-x:auto;margin:16px 0}
+.table-wrap table{width:100%}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="header-logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <a href="/" class="header-back" aria-label="Back to homepage">&larr; Back to Home</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> <span aria-hidden="true"> &gt; </span>
+    <a href="/">Tools</a> <span aria-hidden="true"> &gt; </span>
+    <span>Virginia Self Employment Tax Calculator</span>
+  </div>
+</nav>
+
+<!-- PAGE TITLE -->
+<div class="page-title">
+  <div class="container">
+    <h1>Virginia Self Employment Tax Calculator 2026</h1>
+    <p>Calculate your federal self-employment tax (Social Security + Medicare) and Virginia state income tax as a freelancer or sole proprietor. Enter your gross income and expenses below.</p>
+  </div>
+</div>
+
+<!-- TOOL -->
+<section class="tool-section" aria-label="Virginia Self Employment Tax Calculator">
+  <div class="container calc-wrap">
+    <div class="input-card">
+      <h2>Enter Your Income &amp; Expenses &rarr;</h2>
+
+      <div class="form-group">
+        <label for="grossIncome">Gross Self-Employment Income</label>
+        <div class="input-wrapper">
+          <span class="input-prefix">$</span>
+          <input type="number" id="grossIncome" min="0" step="100" placeholder="e.g. 80000" aria-describedby="grossHelp">
+        </div>
+        <div class="helper" id="grossHelp">Total 1099 or self-employment income before expenses</div>
+      </div>
+
+      <div class="form-group">
+        <label for="businessExpenses">Business Expenses</label>
+        <div class="input-wrapper">
+          <span class="input-prefix">$</span>
+          <input type="number" id="businessExpenses" min="0" step="100" placeholder="e.g. 15000" aria-describedby="expHelp">
+        </div>
+        <div class="helper" id="expHelp">Deductible expenses such as supplies, equipment, mileage, home office</div>
+      </div>
+
+      <div class="calc-action">
+        <button class="calc-btn" id="calculateBtn">Calculate My Taxes &#128176;</button>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-area" id="resultsArea">
+
+      <div class="result-card">
+        <div class="result-card-title">&#128200; Your Virginia Self-Employment Tax Summary</div>
+        <div class="result-card-numbers">
+          <div class="result-number">
+            <span class="result-label">Net Profit</span>
+            <span class="result-value" id="resultNetProfit">$0</span>
+          </div>
+          <div class="result-number">
+            <span class="result-label">Total Tax Estimate</span>
+            <span class="result-value result-danger" id="resultTotalTax">$0</span>
+          </div>
+          <div class="result-number">
+            <span class="result-label">Take Home</span>
+            <span class="result-value result-savings" id="resultTakeHome">$0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrap"><table class="summary-table" id="summaryTable">
+        <thead><tr><th>Item</th><th>Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Gross Self-Employment Income</td><td id="sumGross">$0</td></tr>
+          <tr><td>Business Expenses</td><td id="sumExpenses">$0</td></tr>
+          <tr><td>Net Profit</td><td id="sumNetProfit">$0</td></tr>
+          <tr><td>Federal Self-Employment Tax (15.3%)</td><td id="sumFederalSETax">$0</td></tr>
+          <tr><td>Virginia State Income Tax</td><td id="sumVirginiaStateTax">$0</td></tr>
+          <tr class="total-row"><td>Total Tax Estimate</td><td id="sumTotalTax">$0</td></tr>
+          <tr class="total-row"><td>Estimated Take Home</td><td id="sumTakeHome">$0</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="encourage-card">
+        <h3>&#128184; Understanding Self-Employment Tax in Virginia</h3>
+        <p>Your <strong>federal self-employment tax</strong> covers Social Security (12.4%) and Medicare (2.9%) — the same taxes W-2 employees pay, but as a self-employed person you cover both the employee and employer portions. You can deduct half of this on your federal return.</p>
+        <p>Your <strong>Virginia state income tax</strong> is calculated on your net profit using VA's progressive rate structure (2%–5.75%). Virginia does not have a separate self-employment tax.</p>
+        <div class="tip">&#8226; <strong>Track quarterly payments</strong> — You may need to pay estimated taxes quarterly if you expect to owe $150+ to Virginia</div>
+        <div class="tip">&#8226; <strong>Maximize deductions</strong> — Every dollar of business expenses reduces both your federal SE tax and Virginia income tax</div>
+        <div class="tip">&#8226; <strong>Save for taxes</strong> — A good rule is to set aside 25–30% of your net income for federal SE tax and Virginia state tax</div>
+      </div>
+
+      <div class="res-actions">
+        <button class="btn-print" onclick="window.print()" aria-label="Print results">&#128424; Print Results</button>
+        <button class="btn-copy" id="copyBtn" aria-label="Copy summary">&#128203; Copy Summary</button>
+        <button class="btn-recalc" id="recalcBtn" aria-label="Recalculate">&#8635; Recalculate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER BAR -->
+<div class="disclaimer-bar" style="max-width:1100px;margin:0 auto 32px">
+  <span class="icon" aria-hidden="true">&#9888;</span>
+  <div><strong>Tax Disclaimer:</strong> This calculator provides estimates for informational purposes only. Actual tax liability depends on your specific financial situation, deductions, credits, and filing status. Consult a qualified CPA or tax professional for advice specific to your situation.</div>
+</div>
+
+<!-- FAQ SECTION -->
+<section class="faq-section" style="background:#fff;padding:60px 0;border-top:1px solid #E8ECF0" aria-label="Frequently Asked Questions">
+  <div class="container" style="max-width:800px">
+    <h2 style="font-family:'DM Serif Display',serif;font-size:26px;color:#1A1A2E;margin-bottom:8px;text-align:center">Frequently Asked Questions</h2>
+    <p style="font-size:15px;color:#6B7280;margin-bottom:28px;text-align:center">Answers to common questions about self-employment tax in Virginia</p>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is the self-employment tax rate for 2026? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">The federal self-employment tax rate for 2026 is 15.3%, which breaks down to 12.4% for Social Security (up to the wage base of $184,500) and 2.9% for Medicare (with no cap). If your net earnings exceed $200,000 ($250,000 for married couples filing jointly), you'll also pay an additional 0.9% Medicare surtax. The key difference from W-2 employees is that self-employed individuals pay both the employee and employer portions. However, you can deduct half of your self-employment tax as an adjustment to income on your federal return, which lowers your adjusted gross income.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How does Virginia tax self-employment income? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Virginia treats self-employment income as ordinary income and taxes it under the same progressive state income tax brackets as wages and salaries. Unlike some states (such as neighboring West Virginia), Virginia does not impose a separate self-employment or business gross receipts tax. Your net self-employment income is added to your other income and taxed at Virginia's standard rates: 2% on the first $3,000, 3% on $3,001–$5,000, 5% on $5,001–$17,000, and 5.75% on income over $17,000. Virginia's tax return starts with your federal adjusted gross income, so deductions that lower your federal AGI also lower your Virginia taxable income.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What are the Virginia income tax brackets for 2026? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">For 2026, Virginia has four progressive income tax brackets that apply to all filers regardless of filing status: 2% on taxable income up to $3,000, 3% on income from $3,001 to $5,000, 5% on income from $5,001 to $17,000, and 5.75% on income over $17,000. Virginia does not index its brackets for inflation, so these thresholds have remained static for years. For self-employed individuals, Virginia taxable income is calculated by starting with federal adjusted gross income, making Virginia-specific additions and subtractions, then applying the standard or itemized deductions available on the Virginia return.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Can I deduct half of my self-employment tax on my federal return? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Yes, this is one of the most important deductions for self-employed individuals. You can deduct 50% of your self-employment tax as an adjustment to income on Schedule 1 of Form 1040. This is an "above-the-line" deduction, meaning you can take it regardless of whether you itemize your deductions. For example, if your self-employment tax is $6,000, you can deduct $3,000 directly from your gross income. This lowers your federal adjusted gross income, which in turn reduces your Virginia taxable income (since Virginia starts with federal AGI) and may also affect your eligibility for other income-based benefits and credits.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is the Virginia filing threshold for self-employed individuals? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">You must file a Virginia state income tax return if your Virginia adjusted gross income exceeds $12,000 (for single filers and married persons filing separately) or if you owe any Virginia income tax, regardless of your income level. On the federal side, self-employed individuals with net earnings of $400 or more must file a federal tax return and pay self-employment tax. Even if your net profit is below the Virginia filing threshold, you should still file a federal return to document your self-employment income and pay SE tax, as this contributes to your Social Security and Medicare coverage.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do I need to make quarterly estimated tax payments in Virginia? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Yes, if you expect to owe at least $150 in Virginia income tax after subtracting withholding and refundable credits, you are required to make quarterly estimated payments. Virginia's quarterly due dates are the same as the federal IRS deadlines: April 15, June 15, September 15, and January 15 of the following year. You can pay online through the Virginia Department of Taxation's website using their eForms or iFile system. If you underpay your quarterly estimates, Virginia charges interest on the underpayment amount. Using this calculator regularly can help you stay on track with your estimated payments.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do I need to register my business with Virginia? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">If you operate as a sole proprietor under your own legal name using your Social Security number, you generally do not need to register with the Virginia State Corporation Commission (SCC). However, if you operate under a trade name (doing business as / DBA), form a limited liability company (LLC), corporation, or partnership, or hire employees, you must register with the SCC. Additionally, many cities and counties in Virginia require a business license or business tax certificate — for example, the City of Richmond, Virginia Beach, and Arlington County all have their own licensing requirements. Check with your local city or county government for specific requirements.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What deductions can I claim as a self-employed person in Virginia? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Common deductions for self-employed Virginians include: home office deduction (using the simplified method at $5 per square foot up to 300 sq ft, or the regular method based on actual expenses); vehicle mileage at the IRS standard rate of $0.70 per mile for 2026; health insurance premiums for you and your dependents; retirement plan contributions to a SEP IRA or Solo 401(k); business equipment, software, and subscriptions; office supplies and marketing costs; professional development and continuing education; and a portion of your internet and phone bills. Virginia generally conforms to federal deduction rules, so expenses that are deductible federally will also reduce your Virginia taxable income.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO CONTENT -->
+<section class="seo-section" aria-label="About Virginia Self-Employment Tax">
+  <div class="container">
+    <h2>What Is Self-Employment Tax in Virginia?</h2>
+    <p>Self-employment tax is the combination of Social Security and Medicare taxes that self-employed individuals must pay on their net business income. Unlike traditional W-2 employees who split this cost with their employer (each paying 7.65%), freelancers, independent contractors, and sole proprietors in Virginia must pay the full 15.3% themselves — 12.4% for Social Security on earnings up to $184,500 and 2.9% for Medicare on all net earnings. The good news is that you can deduct half of this amount on your federal tax return, reducing your overall tax burden. This calculator helps Virginia freelancers understand exactly what they owe in federal SE tax and Virginia state income tax combined.</p>
+
+    <h2>Federal Self-Employment Tax vs. Virginia State Income Tax</h2>
+    <p>It's important to understand that your tax liability as a self-employed person in Virginia has two distinct components. The first is the federal self-employment tax (15.3% on net earnings), which funds Social Security and Medicare. The second is the Virginia state income tax, which is calculated based on your net profit using Virginia's progressive tax brackets (2%–5.75%). Unlike some states, Virginia does not have a separate self-employment or franchise tax — your business income is simply treated as ordinary income on your Virginia tax return. Additionally, Virginia does not allow a deduction for federal self-employment tax on your state return, but because Virginia starts with federal adjusted gross income (which already includes the SE tax deduction), you still benefit indirectly.</p>
+
+    <h2>How Virginia Taxes Self-Employed Individuals</h2>
+    <p>Virginia's tax system for self-employed individuals is relatively straightforward compared to other states. Your net self-employment income (gross income minus allowable business expenses) flows to your Virginia individual income tax return (Form 760) through your federal adjusted gross income. Virginia applies its standard four-bracket progressive rate structure to all income. One significant advantage for Virginia freelancers is that the state does not apply the federal self-employment tax, meaning your Virginia tax liability is limited to income tax only — no additional payroll-style taxes at the state level. Virginia also offers a standard deduction ($8,000 for single filers and married filing separately, $16,000 for married filing jointly) and personal exemptions that further reduce your taxable income.</p>
+
+    <h2>Key Considerations for Virginia Freelancers</h2>
+    <ul>
+      <li><strong>Quarterly estimated taxes</strong> — If you expect to owe $150 or more in Virginia income tax, you must make quarterly estimated payments to avoid penalties</li>
+      <li><strong>SE tax deduction</strong> — Deducting 50% of your self-employment tax lowers your federal AGI, which also reduces your Virginia taxable income</li>
+      <li><strong>Business expenses</strong> — Track all deductible expenses throughout the year; every dollar reduces both your federal SE tax and Virginia income tax</li>
+      <li><strong>Retirement planning</strong> — Contributions to SEP IRAs or Solo 401(k) plans reduce your current taxable income and are especially valuable for Virginia freelancers</li>
+      <li><strong>Health insurance</strong> — Self-employed individuals can deduct health insurance premiums for themselves and their dependents, reducing both federal and Virginia tax</li>
+    </ul>
+  </div>
+</section>
+
+<!-- RELATED TOOLS -->
+<section class="related-tools" aria-label="Related Tools">
+  <div class="container">
+    <div class="related-header">
+      <h2>More Small Business Tools</h2>
+      <p>Plan your taxes, savings, and retirement with these calculators</p>
+    </div>
+    <div class="related-grid">
+      <a href="/tools/quarterly-tax-calculator.html" class="tool-card">
+        <span class="tool-card-icon">📊</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Quarterly Tax Estimator</span>
+          <span class="tool-card-desc">Estimate your quarterly self-employment tax payments</span>
+          <span class="tool-card-tag">Taxes</span>
+        </span>
+      </a>
+      <a href="/tools/gig-deduction-finder.html" class="tool-card">
+        <span class="tool-card-icon">🔍</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Gig Worker Deduction Finder</span>
+          <span class="tool-card-desc">Find tax deductions to lower your bill</span>
+          <span class="tool-card-tag">Deductions</span>
+        </span>
+      </a>
+      <a href="/tools/west-virginia-estimated-taxes.html" class="tool-card">
+        <span class="tool-card-icon">📊</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">West Virginia Estimated Taxes</span>
+          <span class="tool-card-desc">Estimate quarterly WV state income tax payments</span>
+          <span class="tool-card-tag">State Tax</span>
+        </span>
+      </a>
+      <a href="/tools/wisconsin-estimated-taxes.html" class="tool-card">
+        <span class="tool-card-icon">📊</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Wisconsin Estimated Taxes</span>
+          <span class="tool-card-desc">Estimate WI state tax for freelancers</span>
+          <span class="tool-card-tag">State Tax</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.related-tools{background:#fff;padding:60px 0;border-top:1px solid #E8ECF0}
+.related-header{text-align:center;margin-bottom:36px}
+.related-header h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:8px}
+.related-header p{font-size:15px;color:#6B7280;max-width:500px;margin:0 auto}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:960px;margin:0 auto}
+.tool-card{display:flex;align-items:flex-start;gap:16px;background:#F8FAFC;border:1px solid #E8ECF0;border-radius:14px;padding:20px;transition:all 0.3s ease;text-decoration:none}
+.tool-card:hover{border-color:#00C896;background:#F0FDF9;transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,200,150,0.12)}
+.tool-card-icon{font-size:24px;flex-shrink:0;width:44px;height:44px;background:#E8F8F5;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.tool-card-content{flex:1;min-width:0}
+.tool-card-name{display:block;font-size:15px;font-weight:600;color:#1A1A2E;margin-bottom:3px}
+.tool-card-desc{display:block;font-size:13px;color:#6B7280;line-height:1.4}
+.tool-card-tag{display:inline-block;margin-top:8px;font-size:11px;font-weight:600;color:#00C896;background:#E8F8F5;padding:2px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px}
+</style>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="FreelanceTaxCalc Home">
+          <span class="footer-logo-icon" aria-hidden="true">$</span>
+          Freelance<span class="logo-dot">.</span>TaxCalc
+        </a>
+        <p class="footer-tagline">Free financial tools for independent workers.</p>
+        <p class="footer-copy">&copy; 2026 FreelanceTaxCalc. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="/tools/quarterly-tax-calculator.html">Quarterly Tax Estimator</a></li>
+            <li><a href="/tools/side-hustle-tax-estimator.html">Side Hustle Tax Estimator</a></li>
+            <li><a href="/tools/virginia-self-employment-tax.html">Virginia Self Employment Tax</a></li>
+            <li><a href="/tools/freelance-hourly-rate-calculator.html">Hourly Rate Calculator</a></li>
+            <li><a href="/tools/retirement-calculator.html">Retirement Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/guides/">Guides</a></li>
+<li><a href="/blog/">Blog</a></li>
+            <li><a href="/legal/about.html">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/legal/terms.html">Terms of Service</a></li>
+            <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
+            <li><a href="#cookie-consent">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      This website provides estimates for informational purposes only. Not financial or tax advice. | We use cookies and display ads. See <a href="/legal/privacy-policy.html">Privacy Policy</a> for details.
+    </div>
+  </div>
+</footer>
+
+<script>
+var SS_WAGE_BASE_2026 = 184500;
+
+(function(){
+  'use strict';
+
+  var grossInput = document.getElementById('grossIncome');
+  var expenseInput = document.getElementById('businessExpenses');
+  var calculateBtn = document.getElementById('calculateBtn');
+  var recalcBtn = document.getElementById('recalcBtn');
+  var copyBtn = document.getElementById('copyBtn');
+  var resultsArea = document.getElementById('resultsArea');
+
+  function fmtMoney(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function calculate() {
+    var gross = parseFloat(grossInput.value) || 0;
+    var expenses = parseFloat(expenseInput.value) || 0;
+
+    if (gross <= 0) {
+      grossInput.focus();
+      grossInput.style.borderColor = '#FF6B6B';
+      setTimeout(function(){ grossInput.style.borderColor = ''; }, 1500);
+      return;
+    }
+
+    calculateBtn.disabled = true;
+    calculateBtn.textContent = 'Calculating...';
+
+    setTimeout(function(){
+      var result = calculateVirginiaSelfEmploymentTax(gross, expenses);
+
+      resultsArea.classList.add('visible');
+      resultsArea.style.display = 'block';
+
+      document.getElementById('resultNetProfit').textContent = fmtMoney(result.netProfit);
+      document.getElementById('resultTotalTax').textContent = fmtMoney(result.totalTaxEstimate);
+      document.getElementById('resultTakeHome').textContent = fmtMoney(result.takeHome);
+
+      document.getElementById('sumGross').textContent = fmtMoney(gross);
+      document.getElementById('sumExpenses').textContent = fmtMoney(expenses);
+      document.getElementById('sumNetProfit').textContent = fmtMoney(result.netProfit);
+      document.getElementById('sumFederalSETax').textContent = fmtMoney(result.federalSETax);
+      document.getElementById('sumVirginiaStateTax').textContent = fmtMoney(result.virginiaStateTax);
+      document.getElementById('sumTotalTax').textContent = fmtMoney(result.totalTaxEstimate);
+      document.getElementById('sumTakeHome').textContent = fmtMoney(result.takeHome);
+
+      calculateBtn.textContent = 'Calculate My Taxes \uD83D\uDCB0';
+      calculateBtn.disabled = false;
+
+      if (window.innerWidth < 768) {
+        resultsArea.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    }, 600);
+  }
+
+  calculateBtn.addEventListener('click', calculate);
+
+  recalcBtn.addEventListener('click', function(){
+    resultsArea.classList.remove('visible');
+    resultsArea.style.display = 'none';
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  copyBtn.addEventListener('click', function(){
+    var gross = document.getElementById('sumGross').textContent;
+    var expenses = document.getElementById('sumExpenses').textContent;
+    var net = document.getElementById('sumNetProfit').textContent;
+    var se = document.getElementById('sumFederalSETax').textContent;
+    var va = document.getElementById('sumVirginiaStateTax').textContent;
+    var total = document.getElementById('sumTotalTax').textContent;
+    var take = document.getElementById('sumTakeHome').textContent;
+    var text = 'Virginia Self-Employment Tax Calculator - FreelanceTaxCalc\n';
+    text += 'Gross Income: ' + gross + '\n';
+    text += 'Expenses: ' + expenses + '\n';
+    text += 'Net Profit: ' + net + '\n';
+    text += 'Federal SE Tax: ' + se + '\n';
+    text += 'Virginia State Tax: ' + va + '\n';
+    text += 'Total Tax: ' + total + '\n';
+    text += 'Take Home: ' + take + '\n';
+    text += '\nGenerated at FreelanceTaxCalc.online';
+
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text).then(function(){
+        copyBtn.textContent = '\u2713 Copied!';
+        setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy Summary'; }, 2000);
+      });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      copyBtn.textContent = '\u2713 Copied!';
+      setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy Summary'; }, 2000);
+    }
+  });
+
+  document.querySelectorAll('.faq-question').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = this.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  document.querySelectorAll('.input-card input').forEach(function(el){
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); calculateBtn.click(); }
+    });
+  });
+})();
+</script>
+
+<!-- Cookie Consent -->
+<div id="cookie-consent" role="dialog" aria-label="Cookie Consent" aria-modal="true" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#0A1628;color:#fff;padding:16px 24px;z-index:99999;box-shadow:0 -4px 20px rgba(0,0,0,0.3);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.5">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between">
+    <p style="margin:0;flex:1;min-width:200px;color:#B0B8C4;font-size:13px">This site uses cookies for analytics and personalized ads. See our <a href="/legal/privacy-policy.html" style="color:#00C896;text-decoration:underline">Privacy Policy</a> for details.</p>
+    <div style="display:flex;gap:10px;flex-shrink:0">
+      <button id="cookie-decline" style="background:transparent;border:1px solid #667080;color:#B0B8C4;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13px;font-family:inherit">Decline</button>
+      <button id="cookie-accept" style="background:#00C896;border:none;color:#0A1628;padding:8px 24px;border-radius:6px;cursor:pointer;font-weight:600;font-size:13px;font-family:inherit">Accept All</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-consent');
+  var accept = document.getElementById('cookie-accept');
+  var decline = document.getElementById('cookie-decline');
+  if(!banner || !accept) return;
+  var consent = localStorage.getItem('cookie_consent');
+  if(consent !== 'accepted' && consent !== 'declined'){
+    banner.style.display = 'block';
+  }
+  accept.addEventListener('click', function(){
+    localStorage.setItem('cookie_consent', 'accepted');
+    banner.style.display = 'none';
+    if(typeof gtag !== 'undefined'){ gtag('consent', 'update', {'analytics_storage':'granted','ad_storage':'granted'}); }
+  });
+  decline.addEventListener('click', function(){
+    localStorage.setItem('cookie_consent', 'declined');
+    banner.style.display = 'none';
+    if(typeof gtag !== 'undefined'){ gtag('consent', 'update', {'analytics_storage':'denied','ad_storage':'denied'}); }
+  });
+})();
+</script>
+</body>
+</html>

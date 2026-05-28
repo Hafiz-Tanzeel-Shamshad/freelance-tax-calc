@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script src="/assets/tax-calculator-core.js"></script>
 <script type="application/ld+json">
 [{
   "@context":"https://schema.org","@type":"WebApplication",
@@ -448,16 +449,8 @@ ul{list-style:none}
       <p>Free tools purpose-built for freelancers, gig workers, and the self-employed</p>
     </div>
     <div class="related-grid">
-      <a href="/tools/gig-deduction-finder.html" class="tool-card">
-        <span class="tool-card-icon">🔍</span>
-        <span class="tool-card-content">
-          <span class="tool-card-name">Gig Worker Deduction Finder</span>
-          <span class="tool-card-desc">Reduce your side hustle tax bill</span>
-          <span class="tool-card-tag">Deductions</span>
-        </span>
-      </a>
       <a href="/tools/quarterly-tax-calculator.html" class="tool-card">
-        <span class="tool-card-icon">💰</span>
+        <span class="tool-card-icon">📊</span>
         <span class="tool-card-content">
           <span class="tool-card-name">Quarterly Tax Estimator</span>
           <span class="tool-card-desc">Calculate quarterly payments on side income</span>
@@ -472,8 +465,16 @@ ul{list-style:none}
           <span class="tool-card-tag">Comparison</span>
         </span>
       </a>
+      <a href="/tools/gig-deduction-finder.html" class="tool-card">
+        <span class="tool-card-icon">🔍</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Gig Worker Deduction Finder</span>
+          <span class="tool-card-desc">Reduce your side hustle tax bill</span>
+          <span class="tool-card-tag">Deductions</span>
+        </span>
+      </a>
       <a href="/tools/first-paycheck-calculator.html" class="tool-card">
-        <span class="tool-card-icon">📋</span>
+        <span class="tool-card-icon">💰</span>
         <span class="tool-card-content">
           <span class="tool-card-name">First Paycheck Calculator</span>
           <span class="tool-card-desc">See how side income affects take-home pay</span>
@@ -525,12 +526,13 @@ ul{list-style:none}
           <h4>Resources</h4>
           <ul>
             <li><a href="/guides/">Guides</a></li>
+<li><a href="/blog/">Blog</a></li>
             <li><a href="/legal/about.html">About Us</a></li>
             <li><a href="/contact/">Contact</a></li>
             <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="/legal/terms.html">Terms of Service</a></li>
             <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
-            <li><a href="#cookie-preferences">Cookie Settings</a></li>
+            <li><a href="#cookie-consent">Cookie Settings</a></li>
           </ul>
         </div>
       </div>
@@ -581,27 +583,6 @@ ul{list-style:none}
 
   function fm(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
 
-  function getBrackets(status){
-    if(status === 'hoh'){
-      return [[17700,0.1],[67450,0.12],[107450,0.22],[205200,0.24],[260550,0.32],[651400,0.35],[Infinity,0.37]];
-    }
-    var mult = status === 'mfj' ? 2 : 1;
-    return [[12400*mult,0.1],[50400*mult,0.12],[107450*mult,0.22],[205200*mult,0.24],[260550*mult,0.32],[651400*mult,0.35],[Infinity,0.37]];
-  }
-
-  function calcFed(taxable, brackets){
-    var tax = 0, prev = 0;
-    for(var i=0;i<brackets.length;i++){
-      var limit = brackets[i][0], rate = brackets[i][1];
-      if(taxable > prev){
-        var chunk = Math.min(taxable, limit) - prev;
-        if(chunk > 0) tax += chunk * rate;
-      }
-      prev = limit;
-    }
-    return tax;
-  }
-
   function calculate(){
     var w2 = parseFloat(w2Salary.value) || 0;
     var pretax = parseFloat(preTaxDed.value) || 0;
@@ -630,62 +611,42 @@ ul{list-style:none}
 
   function compute(w2, pretax, revenue, expenses, status, state, stateRate){
     var netSide = Math.max(0, revenue - expenses);
-    var stdDed = 16400;
-    if(status === 'mfj') stdDed = 32800;
-    else if(status === 'hoh') stdDed = 24600;
-
-    // WITHOUT
+    var stdDed = getStandardDeduction(status);
     var adjW2 = Math.max(0, w2 - pretax);
-    var taxableWo = Math.max(0, adjW2 - stdDed);
-    var brackets = getBrackets(status);
-    var fedWo = calcFed(taxableWo, brackets);
-    var stateWo = taxableWo * stateRate;
-    var ficaWo = Math.min(adjW2, ssCap) * 0.062 + adjW2 * 0.0145;
-    var totalWo = fedWo + stateWo + ficaWo;
 
-    // WITH
-    var totalAdjW2 = adjW2 + netSide;
-    // SE tax
-    var seTaxBase = netSide * 0.9235;
-    var ssCap = 184500;
-    var w2SsBase = Math.min(adjW2, ssCap);
-    var seSsBase = Math.min(seTaxBase, Math.max(0, ssCap - w2SsBase));
-    var seSs = seSsBase * 0.124;
-    var seMc = seTaxBase * 0.029;
-    var seTax = seSs + seMc;
-    var seDeduction = seTax * 0.5;
+    // Use shared core for gig worker calculation
+    var gigResult = calculateGigWorkerTax(w2, pretax, revenue, expenses, status, stateRate);
 
-    var agiWith = adjW2 + netSide - seDeduction;
-    // QBI deduction: 20% of netSide
-    var qbi = Math.min(netSide * 0.20, taxableWo + netSide); // simplified
-    var taxableWith = Math.max(0, agiWith - stdDed - qbi);
-    var fedWith = calcFed(taxableWith, brackets);
-    var stateWith = taxableWith * stateRate;
-    var ficaWith = Math.min(adjW2, ssCap) * 0.062 + adjW2 * 0.0145;
-    var totalWith = fedWith + stateWith + ficaWith + seTax;
-
-    var additionalTax = totalWith - totalWo;
+    var totalWo = gigResult.totalWithout;
+    var totalWith = gigResult.totalWith;
+    var additionalTax = gigResult.additionalTax;
     var monthly = additionalTax / 12;
     var perHundred = revenue > 0 ? (additionalTax / revenue) * 100 : 0;
-    var netFromSide = netSide - (additionalTax);
+    var netFromSide = gigResult.netFromSide;
     var effRate = netSide > 0 ? (additionalTax / netSide) * 100 : 0;
+    var seTax = gigResult.seTax;
+    var fedWo = gigResult.fedWithout;
+    var fedWith = gigResult.fedWith;
+
+    // WITHOUT (approximate for display)
+    var ficaWo = Math.min(adjW2, TAX_PARAMS_2026.SS_WAGE_BASE) * TAX_PARAMS_2026.SS_RATE + adjW2 * TAX_PARAMS_2026.MEDICARE_RATE + calculateAdditionalMedicare(adjW2, status);
 
     // UPDATE UI
     document.getElementById('woReg').textContent = fm(w2);
     document.getElementById('woStdDed').textContent = fm(stdDed);
-    document.getElementById('woTaxable').textContent = fm(taxableWo);
+    document.getElementById('woTaxable').textContent = fm(gigResult.taxableWithout);
     document.getElementById('woFed').textContent = fm(fedWo);
-    document.getElementById('woState').textContent = fm(stateWo);
+    document.getElementById('woState').textContent = fm(gigResult.stateWithout);
     document.getElementById('woFica').textContent = fm(ficaWo);
     document.getElementById('woTotal').textContent = fm(totalWo);
 
     document.getElementById('wReg').textContent = fm(w2);
     document.getElementById('wSide').textContent = fm(revenue);
     document.getElementById('wStdDed').textContent = fm(stdDed);
-    document.getElementById('wTaxable').innerHTML = fm(taxableWith) + ' <span class="arrow-up">&#8593;</span>';
+    document.getElementById('wTaxable').innerHTML = fm(gigResult.taxableWith) + ' <span class="arrow-up">&#8593;</span>';
     document.getElementById('wFed').innerHTML = fm(fedWith) + ' <span class="arrow-up">&#8593;</span>';
-    document.getElementById('wState').innerHTML = fm(stateWith) + ' <span class="arrow-up">&#8593;</span>';
-    document.getElementById('wFica').textContent = fm(ficaWith);
+    document.getElementById('wState').innerHTML = fm(gigResult.stateWith) + ' <span class="arrow-up">&#8593;</span>';
+    document.getElementById('wFica').textContent = fm(ficaWo);
     document.getElementById('wSeTax').innerHTML = fm(seTax) + ' <span class="new-badge">NEW</span>';
     document.getElementById('wTotal').textContent = fm(totalWith);
 

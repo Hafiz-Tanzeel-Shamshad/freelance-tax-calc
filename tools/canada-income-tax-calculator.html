@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Canada Income Tax Calculator 2026 — Federal & Provincial Tax Estimator | Free Tool</title>
+<meta name="description" content="Free Canada income tax calculator for 2026. Estimate your federal and provincial income tax, and take-home pay for any province or territory. Accurate progressive brackets for all 13 provinces.">
+<link rel="canonical" href="https://freelancetaxcalc.online/tools/canada-income-tax-calculator.html">
+<meta property="og:title" content="Canada Income Tax Calculator 2026 — Federal & Provincial Tax Estimator">
+<meta property="og:description" content="Free Canada income tax calculator for 2026. Estimate your federal and provincial income tax and take-home pay for any province or territory.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreelanceTaxCalc">
+<meta property="og:url" content="https://freelancetaxcalc.online/tools/canada-income-tax-calculator.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Canada Income Tax Calculator 2026 — Federal & Provincial Tax Estimator">
+<meta name="twitter:description" content="Free Canada income tax calculator for 2026. Estimate your federal and provincial income tax and take-home pay for any province or territory.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"Canada Income Tax Calculator",
+  "url":"https://freelancetaxcalc.online/tools/canada-income-tax-calculator.html",
+  "description":"Free Canada income tax calculator for 2026. Estimate federal and provincial income tax and take-home pay for any province or territory. Full progressive brackets for all 13 provinces.",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}
+},{
+  "@context":"https://schema.org","@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
+    {"@type":"ListItem","position":3,"name":"Canada Income Tax Calculator"}
+  ]
+},{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How does Canada's income tax system work?","acceptedAnswer":{"@type":"Answer","text":"Canada uses a progressive income tax system with both federal and provincial/territorial components. You file one tax return that calculates both levels of tax. The federal government applies graduated tax brackets (15% to 33%), and your province or territory applies its own bracket rates. CPP contributions and other credits are also calculated on the same return."}},
+    {"@type":"Question","name":"What are the federal tax brackets for 2025-2026 in Canada?","acceptedAnswer":{"@type":"Answer","text":"For 2025, the federal tax brackets are: 15% on the first $57,375 of taxable income, 20.5% on $57,375 to $114,750, 26% on $114,750 to $177,882, 29% on $177,882 to $253,414, and 33% on income over $253,414. These brackets are indexed annually for inflation."}},
+    {"@type":"Question","name":"How do provincial tax rates differ across Canada?","acceptedAnswer":{"@type":"Answer","text":"Each province and territory sets its own tax rates and brackets. For example, Ontario has a 5.05% lowest bracket while Alberta uses a flat 10% rate. Quebec, British Columbia, Manitoba, and the Atlantic provinces all have their own progressive systems. Territories like Nunavut and Yukon have lower rates to reflect higher living costs. Our calculator uses simplified blended provincial rates for estimation."}},
+    {"@type":"Question","name":"What are CPP contributions for 2025?","acceptedAnswer":{"@type":"Answer","text":"For 2025, the Canada Pension Plan (CPP) contribution rate is 5.95% each for employees and employers (11.9% total for self-employed). The basic exemption is $3,500 and the maximum pensionable earnings are $73,200. That means the maximum employee contribution is approximately $4,109. Your actual contribution depends on your employment income."}},
+    {"@type":"Question","name":"What is the basic personal amount (BPA) in Canada?","acceptedAnswer":{"@type":"Answer","text":"The basic personal amount (BPA) is a non-refundable tax credit that reduces your federal income tax. For 2025, the BPA is $16,375. This means you can earn up to this amount without paying federal income tax. The credit is calculated as 15% of the BPA, giving a federal tax reduction of about $2,456. Some provinces also have their own provincial BPA."}},
+    {"@type":"Question","name":"What is the difference between RRSP and TFSA?","acceptedAnswer":{"@type":"Answer","text":"An RRSP (Registered Retirement Savings Plan) provides a tax deduction on contributions — you get a tax refund now, but withdrawals are taxed as income in retirement. A TFSA (Tax-Free Savings Account) offers no upfront deduction, but all investment growth and withdrawals are completely tax-free. For most Canadians, RRSPs are better if you earn more now than in retirement; TFSAs are more flexible for any savings goal."}},
+    {"@type":"Question","name":"How do GST/HST credits work in Canada?","acceptedAnswer":{"@type":"Answer","text":"The GST/HST credit is a tax-free quarterly payment from the Government of Canada to help low- and modest-income individuals and families offset the sales tax they pay. For the 2025-2026 benefit year, a single individual can receive up to roughly $519, and a couple with two children can receive up to around $1,069. The amount is based on your net income from the previous year's tax return."}},
+    {"@type":"Question","name":"How do Quebec taxes compare to Ontario taxes?","acceptedAnswer":{"@type":"Answer","text":"Quebec has higher provincial income tax rates than Ontario (up to 25.75% vs 13.16% top rates), but Quebec residents benefit from lower daycare costs, cheaper tuition, and a separate provincial pension plan (QPP) with different rates. Ontario's tax burden is generally lower for middle-income earners, but factors like housing costs and the Ontario Health Premium also affect the comparison."}},
+    {"@type":"Question","name":"How does self-employment tax work in Canada?","acceptedAnswer":{"@type":"Answer","text":"Self-employed individuals in Canada pay both the employee and employer portions of CPP (11.9% total) on net business income above $3,500, up to the maximum pensionable earnings. However, you can deduct half of your CPP contributions as a business expense. Unlike the US, Canada does not have a separate self-employment tax — income tax is paid as part of your regular T1 return with the same brackets."}},
+    {"@type":"Question","name":"How are non-residents taxed in Canada?","acceptedAnswer":{"@type":"Answer","text":"Non-residents of Canada are generally taxed only on Canadian-source income. This includes employment income earned in Canada, business income from a Canadian business, and rental income from Canadian property. Non-residents pay Part I tax on employment/business income at regular rates, and Part XIII tax (usually 25%) on passive income like dividends, interest, and royalties. Tax treaties may reduce these rates."}}
+  ]
+}]
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:18px;line-height:1.7;color:#1A1A2E;background:#F4F6F9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* HEADER */
+.site-header{background:#0A1628;border-bottom:1px solid rgba(255,255,255,0.05);position:sticky;top:0;z-index:100}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-logo{display:flex;align-items:center;gap:10px;font-family:"DM Serif Display",serif;font-size:20px;font-weight:700;color:#fff}
+.logo-icon{width:32px;height:32px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;flex-shrink:0}
+.logo-dot{color:#00C896}
+.header-back{color:#B0B8C4;font-size:14px;transition:color 0.3s ease}
+.header-back:hover{color:#00C896}
+
+/* BREADCRUMB */
+.breadcrumb{background:#fff;padding:12px 0;border-bottom:1px solid #E8ECF0;font-size:14px;color:#6B7280}
+.breadcrumb a{color:#00C896}
+.breadcrumb a:hover{color:#00B085}
+.breadcrumb span{color:#6B7280}
+
+/* PAGE TITLE */
+.page-title{background:#fff;padding:28px 0 0}
+.page-title h1{font-family:"DM Serif Display",serif;font-size:34px;color:#1A1A2E;margin-bottom:6px}
+.page-title p{color:#6B7280;font-size:16px;max-width:650px}
+
+/* TOOL SECTION */
+.tool-section{padding:28px 0 60px}
+.calc-wrap{max-width:660px;margin:0 auto}
+
+/* INPUT CARD */
+.input-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:28px}
+.input-card h2{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;margin-bottom:20px;text-align:center}
+
+/* Mode toggle */
+.mode-toggle{display:flex;background:#F3F4F6;border-radius:12px;padding:4px;margin-bottom:24px}
+.mode-btn{flex:1;padding:12px;text-align:center;border:none;border-radius:10px;font-weight:600;font-size:16px;cursor:pointer;transition:all 0.3s ease;background:transparent;color:#6B7280;font-family:inherit}
+.mode-btn.active{background:#fff;color:#1A1A2E;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+
+/* Form fields */
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-weight:600;font-size:15px;color:#1A1A2E;margin-bottom:6px}
+.input-wrapper{position:relative;display:flex;align-items:center}
+.input-prefix{position:absolute;left:16px;font-weight:600;color:#6B7280;font-size:18px;pointer-events:none;z-index:1}
+.form-group input[type="number"]{width:100%;padding:16px 16px 16px 52px;border:2px solid #E8ECF0;border-radius:12px;font-size:22px;font-weight:600;font-family:inherit;color:#1A1A2E;background:#fff;transition:all 0.3s ease;outline:none}
+.form-group input[type="number"]:focus{border-color:#00C896;box-shadow:0 0 0 4px rgba(0,200,150,0.1)}
+.form-group input[type="number"]::placeholder{color:#D1D5DB;font-weight:400;font-size:18px}
+.form-group .helper{font-size:14px;color:#9CA3AF;margin-top:4px;line-height:1.5}
+
+/* Range slider */
+.range-group{margin-bottom:20px}
+.range-group label{display:flex;justify-content:space-between;font-weight:600;font-size:15px;color:#1A1A2E;margin-bottom:6px}
+.range-group label span{color:#00C896}
+.range-slider{width:100%;height:8px;border-radius:4px;background:#E8ECF0;outline:none;-webkit-appearance:none;appearance:none}
+.range-slider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#00C896;cursor:pointer;box-shadow:0 2px 6px rgba(0,200,150,0.3)}
+.range-slider::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#00C896;cursor:pointer;border:none}
+.range-value{text-align:center;font-size:22px;font-weight:700;color:#00C896;margin-top:4px}
+
+/* Pay frequency */
+.freq-group{margin-bottom:20px}
+.freq-group label{display:block;font-weight:600;font-size:15px;color:#1A1A2E;margin-bottom:8px}
+.freq-pills{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.freq-pill{padding:12px;border:2px solid #E8ECF0;border-radius:10px;background:#fff;cursor:pointer;text-align:center;font-size:14px;font-weight:500;transition:all 0.25s ease;font-family:inherit}
+.freq-pill:hover{border-color:#00C896}
+.freq-pill.selected{border-color:#00C896;background:#E8F8F5;color:#00C896;font-weight:600}
+
+/* State select */
+.form-group select{width:100%;padding:14px 16px;border:2px solid #E8ECF0;border-radius:12px;font-size:16px;font-family:inherit;color:#1A1A2E;background:#fff;transition:border-color 0.3s ease;outline:none;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' fill='%236B7280'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.form-group select:focus{border-color:#00C896;box-shadow:0 0 0 4px rgba(0,200,150,0.1)}
+
+/* Status toggle */
+.status-toggle{display:flex;background:#F3F4F6;border-radius:10px;padding:3px;margin-bottom:20px}
+.status-btn{flex:1;padding:10px;text-align:center;border:none;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;transition:all 0.3s ease;background:transparent;color:#6B7280;font-family:inherit}
+.status-btn.active{background:#fff;color:#1A1A2E;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+
+/* Calc button */
+.calc-action{text-align:center;margin-top:24px}
+.calc-btn{width:100%;padding:18px 32px;background:#00C896;color:#fff;border:none;border-radius:14px;font-size:20px;font-weight:700;cursor:pointer;transition:all 0.3s ease;font-family:inherit}
+.calc-btn:hover{transform:scale(1.02);background:#00B085;box-shadow:0 6px 20px rgba(0,200,150,0.3)}
+.calc-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none!important}
+
+/* RESULTS */
+.results-area{display:none}
+.results-area.visible{display:block;animation:fadeUp 0.6s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* Result card */
+.result-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:24px;text-align:center}
+.result-card-title{font-family:"DM Serif Display",serif;font-size:18px;color:#6B7280;margin-bottom:20px}
+.result-card-numbers{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.result-number{flex:1;min-width:180px;padding:20px 16px;background:#F8FAFC;border-radius:12px;border:1px solid #E8ECF0}
+.result-number .result-label{display:block;font-size:13px;color:#6B7280;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px}
+.result-number .result-value{display:block;font-size:30px;font-weight:700;color:#1A1A2E}
+.result-number .result-value.result-takehome{color:#00C896}
+.result-number .result-value.result-rate{color:#1A1A2E}
+
+/* Summary table */
+.summary-table{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:15px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.summary-table th{background:#0A1628;color:#fff;padding:14px 20px;text-align:left;font-weight:600;font-size:14px}
+.summary-table th:first-child{border-radius:12px 0 0 0}
+.summary-table th:last-child{border-radius:0 12px 0 0}
+.summary-table td{padding:14px 20px;border-bottom:1px solid #F3F4F6;color:#1A1A2E}
+.summary-table tr:last-child td{border-bottom:none}
+.summary-table tr:last-child td:first-child{border-radius:0 0 0 12px}
+.summary-table tr:last-child td:last-child{border-radius:0 0 12px 0}
+.summary-table .total-row td{font-weight:700;color:#00C896;background:#E8F8F5}
+
+/* Encouragement card */
+.encourage-card{background:linear-gradient(135deg,#E8F8F5,#fff);border:1px solid #00C896;border-radius:16px;padding:24px;margin-bottom:24px}
+.encourage-card h3{font-family:"DM Serif Display",serif;font-size:20px;color:#00C896;margin-bottom:8px}
+.encourage-card p{font-size:15px;color:#374151;line-height:1.6;margin-bottom:6px}
+.encourage-card .tip{font-size:14px;color:#6B7280;padding-left:16px;margin-top:4px}
+
+/* Result buttons */
+.res-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.res-actions button{flex:1;min-width:140px;padding:14px 20px;border-radius:10px;font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;transition:all 0.3s ease;text-align:center}
+.btn-print{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-print:hover{border-color:#00C896;color:#00C896}
+.btn-copy{background:#fff;border:2px solid #DDE1E7;color:#1A1A2E}
+.btn-copy:hover{border-color:#00C896;color:#00C896}
+.btn-recalc{background:#fff;border:2px solid #00C896;color:#00C896}
+.btn-recalc:hover{background:#E8F8F5}
+
+/* Toast */
+.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#1A1A2E;color:#fff;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:500;z-index:99999;opacity:0;transition:opacity 0.3s ease;pointer-events:none;font-family:"DM Sans",sans-serif}
+.toast.show{opacity:1}
+
+/* SEO CONTENT */
+.seo-section{padding:60px 0;background:#fff}
+.seo-section .container{max-width:800px}
+.seo-section h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:16px;margin-top:40px}
+.seo-section h2:first-child{margin-top:0}
+.seo-section p,.seo-section li{font-size:17px;color:#4B5563;line-height:1.8;margin-bottom:12px}
+.seo-section ul{padding-left:24px}
+.seo-section li{margin-bottom:4px}
+
+/* FAQ */
+.faq-item{border:1px solid #E8ECF0;border-radius:10px;margin-bottom:8px;overflow:hidden}
+.faq-question{width:100%;padding:18px 20px;background:#fff;border:none;text-align:left;font-size:17px;font-weight:600;color:#1A1A2E;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
+.faq-question:hover{background:#F9FAFB}
+.faq-question .arrow{transition:transform 0.3s ease;font-size:12px;color:#6B7280}
+.faq-item.open .faq-question .arrow{transform:rotate(180deg)}
+.faq-answer{padding:0 20px;max-height:0;overflow:hidden;transition:all 0.3s ease;font-size:16px;color:#4B5563;line-height:1.7}
+.faq-item.open .faq-answer{padding:0 20px 18px;max-height:500px}
+
+/* DISCLAIMER */
+.disclaimer-bar{background:#FFF8E1;border:1px solid #FFD700;padding:20px;margin:0 24px 24px;border-radius:10px;display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#5D4037;line-height:1.6}
+.disclaimer-bar .icon{font-size:18px;flex-shrink:0;margin-top:2px}
+
+/* FOOTER */
+.site-footer{background:#0A1628;color:#B0B8C4;padding:40px 0 24px;overflow:hidden;width:100%}
+.site-footer .container{max-width:1100px;margin:0 auto;padding:0 24px}
+.footer-inner{display:flex;flex-wrap:wrap;gap:32px;margin-bottom:28px}
+.footer-brand{flex:1;min-width:200px}
+.footer-logo{display:flex;align-items:center;gap:8px;font-family:"DM Serif Display",serif;font-size:18px;font-weight:700;color:#fff;text-decoration:none}
+.footer-logo-icon{width:28px;height:28px;background:#00C896;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700;flex-shrink:0}
+.footer-tagline{font-size:13px;color:#8892A0;margin-top:8px}
+.footer-copy{font-size:12px;color:#667080;margin-top:8px}
+.footer-links{display:flex;flex-wrap:wrap;gap:32px}
+.footer-col h4{font-family:"DM Serif Display",serif;font-size:14px;color:#fff;margin-bottom:10px}
+.footer-col ul{list-style:none;padding:0;margin:0}
+.footer-col ul li{margin-bottom:6px}
+.footer-col ul li a{font-size:13px;color:#8892A0;text-decoration:none;transition:color 0.3s ease}
+.footer-col ul li a:hover{color:#00C896}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;font-size:12px;color:#667080;text-align:center;line-height:1.6}
+.footer-bottom a{color:#00C896;text-decoration:none}
+.footer-bottom a:hover{text-decoration:underline}
+@media(max-width:768px){.footer-inner{flex-direction:column;gap:24px}}
+
+/* PRINT */
+@media print{
+  .site-header,.breadcrumb,.res-actions,.site-footer,.seo-section,.disclaimer-bar{display:none!important}
+  .results-area{display:block!important}
+  .result-card,.summary-table,.encourage-card{box-shadow:none;border:1px solid #ddd!important;break-inside:avoid}
+  .calc-action,.input-card{display:none}
+  body{background:#fff!important;font-size:12px;overflow-x:hidden}
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .page-title h1{font-size:26px}
+  .input-card,.paystub{padding:20px}
+  .form-group input[type="number"]{font-size:18px}
+  .summary-table{font-size:14px}
+  .summary-table th,.summary-table td{padding:10px 14px}
+  .res-actions{flex-direction:column}
+  .res-actions button{width:100%}
+  .result-card-numbers{flex-direction:column;gap:12px}
+  .result-number{min-width:auto}
+}
+
+.table-wrap{overflow-x:auto;margin:16px 0}
+.table-wrap table{width:100%}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/" class="header-logo" aria-label="FreelanceTaxCalc Home">
+      <span class="logo-icon" aria-hidden="true">$</span>
+      Freelance<span class="logo-dot">.</span>TaxCalc
+    </a>
+    <a href="/" class="header-back" aria-label="Back to homepage">&larr; Back to Home</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> <span aria-hidden="true"> &gt; </span>
+    <a href="/">Tools</a> <span aria-hidden="true"> &gt; </span>
+    <span>Canada Income Tax Calculator</span>
+  </div>
+</nav>
+
+<!-- PAGE TITLE -->
+<div class="page-title">
+  <div class="container">
+    <h1>Canada Income Tax Calculator 2026</h1>
+    <p>Estimate your federal and provincial income tax for any province or territory in Canada. Uses real 2026 progressive brackets for all 13 provinces. Free, no login required.</p>
+  </div>
+</div>
+
+<!-- TOOL -->
+<section class="tool-section" aria-label="Canada Income Tax Calculator">
+  <div class="container calc-wrap">
+    <div class="input-card">
+      <h2>Enter Your Income Details &rarr;</h2>
+
+      <!-- Annual Employment Income -->
+      <div class="form-group">
+        <label for="annualIncome">Annual Employment Income</label>
+        <div class="input-wrapper">
+          <span class="input-prefix">CA$</span>
+          <input type="number" id="annualIncome" min="0" step="100" placeholder="e.g. 65000" aria-describedby="incHelp">
+        </div>
+        <div class="helper" id="incHelp">Your total annual employment income before taxes</div>
+      </div>
+
+      <!-- Province / Territory -->
+      <div class="form-group">
+        <label for="provinceSelect">Province / Territory</label>
+        <select id="provinceSelect" aria-describedby="provHelp">
+          <option value="ON">Ontario (ON)</option>
+          <option value="AB">Alberta (AB)</option>
+          <option value="BC">British Columbia (BC)</option>
+          <option value="MB">Manitoba (MB)</option>
+          <option value="NB">New Brunswick (NB)</option>
+          <option value="NL">Newfoundland and Labrador (NL)</option>
+          <option value="NS">Nova Scotia (NS)</option>
+          <option value="PE">Prince Edward Island (PE)</option>
+          <option value="QC">Quebec (QC)</option>
+          <option value="SK">Saskatchewan (SK)</option>
+          <option value="NT">Northwest Territories (NT)</option>
+          <option value="NU">Nunavut (NU)</option>
+          <option value="YT">Yukon (YT)</option>
+        </select>
+        <div class="helper" id="provHelp">Choose the province or territory where you live and pay taxes</div>
+      </div>
+
+      <!-- Deductions (RRSP, etc.) -->
+      <div class="form-group">
+        <label for="deductions">Deductions (RRSP, Union Dues, etc.)</label>
+        <div class="input-wrapper">
+          <span class="input-prefix">CA$</span>
+          <input type="number" id="deductions" min="0" step="100" placeholder="e.g. 5000" aria-describedby="dedHelp">
+        </div>
+        <div class="helper" id="dedHelp">RRSP contributions, union dues, or other deductions reduce taxable income</div>
+      </div>
+
+      <!-- Filing Status -->
+      <div class="status-toggle" role="radiogroup" aria-label="Filing status">
+        <button class="status-btn active" data-status="single" role="radio" aria-checked="true">Single</button>
+        <button class="status-btn" data-status="married" role="radio" aria-checked="false">Married</button>
+      </div>
+
+      <div class="calc-action">
+        <button class="calc-btn" id="calculateBtn">Calculate Canadian Tax &#128202;</button>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-area" id="resultsArea">
+
+      <!-- Result Card -->
+      <div class="result-card">
+        <div class="result-card-title">&#128200; Your Estimated Tax Summary</div>
+        <div class="result-card-numbers">
+          <div class="result-number">
+            <span class="result-label">Total Tax</span>
+            <span class="result-value" id="resultTotalTax">CA$0</span>
+          </div>
+          <div class="result-number">
+            <span class="result-label">Take-Home Pay</span>
+            <span class="result-value result-takehome" id="resultTakeHome">CA$0</span>
+          </div>
+          <div class="result-number">
+            <span class="result-label">Effective Tax Rate</span>
+            <span class="result-value result-rate" id="resultRate">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Breakdown Table -->
+      <div class="table-wrap"><table class="summary-table" id="summaryTable">
+        <thead><tr><th>Item</th><th>Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Employment Income</td><td id="sumIncome">CA$0</td></tr>
+          <tr><td>Taxable Income (after BPA + deductions)</td><td id="sumFedTaxable">CA$0</td></tr>
+          <tr><td>Federal Income Tax</td><td id="sumFederal">CA$0</td></tr>
+          <tr><td>Provincial / Territorial Tax</td><td id="sumProvincial">CA$0</td></tr>
+          <tr><td>Total Tax (Federal + Provincial)</td><td id="sumTotalTax">CA$0</td></tr>
+          <tr class="total-row"><td>Take-Home Pay</td><td id="sumTakeHome">CA$0</td></tr>
+        </tbody>
+      </table></div>
+
+      <!-- Explanation Card -->
+      <div class="encourage-card">
+        <h3>&#127891; How Canada Income Tax Works</h3>
+        <p>Canada uses a <strong>progressive tax system</strong>. You pay federal tax through graduated brackets (14% to 33% for 2026) and your province or territory applies its own progressive rates. The <strong>Basic Personal Amount</strong> ($17,000 estimated for 2026) is automatically deducted from your income before tax is calculated.</p>
+        <p>This calculator estimates <strong>income tax only</strong> (federal + provincial). CPP/EI premiums, GST/HST credits, and other benefits are not included. Use the Deductions field to enter RRSP contributions to see how much tax they save you.</p>
+        <div class="tip">&#8226; <strong>Federal brackets 2026:</strong> 14% up to $58,523, 20.5% to $117,045, 26% to $181,440, 29% to $258,482, 33% over $258,482</div>
+        <div class="tip">&#8226; <strong>Provincial/territorial brackets</strong> — all 13 provinces & territories have their own progressive rates, fully included in our calculator</div>
+        <div class="tip">&#8226; <strong>RRSP contributions</strong> reduce your taxable income dollar-for-dollar — enter them in the Deductions field to see the savings</div>
+        <div class="tip">&#8226; <strong>Married?</strong> Each spouse gets their own Basic Personal Amount, roughly doubling the tax-free portion for a couple</div>
+        <div class="tip">&#8226; <strong>This is an estimate only.</strong> Actual taxes depend on all credits, deductions, and your full situation. Consult a Canadian tax professional.</div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="res-actions">
+        <button class="btn-print" onclick="window.print()" aria-label="Print results">&#128424; Print Results</button>
+        <button class="btn-copy" id="copyBtn" aria-label="Copy summary">&#128203; Copy Summary</button>
+        <button class="btn-recalc" id="recalcBtn" aria-label="Recalculate">&#8635; Recalculate</button>
+      </div>
+
+      <!-- Related Tools in Results -->
+      <div style="background:#E8F8F5;border:1px solid #00C896;border-radius:12px;padding:24px;margin-top:32px">
+        <h2 style="font-family:'DM Serif Display',serif;font-size:20px;color:#1A1A2E;margin:0 0 12px">&#128279; More Free Tools for Canadians</h2>
+        <p style="font-size:15px;color:#4B5563;margin-bottom:12px">Use these free calculators to plan your income and taxes:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <a href="/tools/quarterly-tax-calculator.html" style="display:inline-block;padding:10px 18px;background:#00C896;color:#fff;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none">Quarterly Tax Calculator</a>
+          <a href="/tools/retirement-calculator.html" style="display:inline-block;padding:10px 18px;background:#fff;color:#1A1A2E;border:2px solid #00C896;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none">Retirement Savings Calculator</a>
+          <a href="/tools/side-hustle-tax-estimator.html" style="display:inline-block;padding:10px 18px;background:#fff;color:#1A1A2E;border:2px solid #00C896;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none">Side Hustle Tax Estimator</a>
+          <a href="/tools/freelance-hourly-rate-calculator.html" style="display:inline-block;padding:10px 18px;background:#fff;color:#1A1A2E;border:2px solid #00C896;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none">Hourly Rate Calculator</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER BAR -->
+<div class="disclaimer-bar" style="max-width:1100px;margin:0 auto 32px">
+  <span class="icon" aria-hidden="true">&#9888;</span>
+  <div><strong>Tax Disclaimer:</strong> This calculator provides estimates for informational purposes only. Tax results are based on 2026 federal and provincial rates. Actual tax liability depends on personal deductions, credits, and other factors. Consult a qualified Canadian tax professional for advice specific to your situation.</div>
+</div>
+
+<!-- FAQ SECTION -->
+<section class="faq-section" style="background:#fff;padding:60px 0;border-top:1px solid #E8ECF0" aria-label="Frequently Asked Questions">
+  <div class="container" style="max-width:800px">
+    <h2 style="font-family:'DM Serif Display',serif;font-size:26px;color:#1A1A2E;margin-bottom:8px;text-align:center">Frequently Asked Questions</h2>
+    <p style="font-size:15px;color:#6B7280;margin-bottom:28px;text-align:center">Answers to common questions about Canadian income taxes</p>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How does Canada's income tax system work? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Canada uses a progressive income tax system with both federal and provincial/territorial components. You file one tax return that calculates both levels of tax. The federal government applies graduated tax brackets (15% to 33%), and your province or territory applies its own bracket rates. CPP contributions and various tax credits are also calculated on the same return. The Canada Revenue Agency (CRA) administers the system for all provinces except Quebec, which administers its own provincial income tax.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What are the federal tax brackets for 2026? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">For 2026, the federal tax brackets are estimated at: 14% on the first $58,523 of taxable income, 20.5% on income between $58,523 and $117,045, 26% on income between $117,045 and $181,440, 29% on income between $181,440 and $258,482, and 33% on income over $258,482. These brackets are indexed annually for inflation. The Basic Personal Amount of approximately $17,000 (also indexed) is automatically deducted from your income before tax is calculated, effectively making the first $17,000 tax-free.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How do provincial tax rates differ across Canada? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Each province and territory sets its own progressive tax rates and brackets. Ontario has a graduated system starting at 5.05%, Alberta uses a flat-rate-like structure starting at 8% up to 15%, and Quebec has the highest top rate at 25.75%. British Columbia has 7 brackets going up to 20.5%, while Manitoba and the Atlantic provinces have their own multi-bracket systems. The territories (Yukon, Northwest Territories, Nunavut) generally have lower rates to offset higher living costs. This calculator includes full progressive brackets for all 13 provinces and territories, not just flat estimates.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is the Basic Personal Amount (BPA)? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">The Basic Personal Amount (BPA) is a federal tax credit available to all Canadian residents. For 2026, the BPA is estimated at approximately $17,000 (indexed annually). Unlike a deduction that reduces your income, the BPA is a non-refundable credit calculated at the lowest federal bracket rate (14% for 2026), reducing your federal tax by up to ~$2,380. This calculator simplifies this by automatically subtracting the BPA from your income before applying tax brackets — which gives the same net effect for most taxpayers. Married couples each get their own BPA, so our calculator adds an extra deduction for married filers.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How do RRSP contributions affect my taxes in 2026? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">RRSP contributions reduce your taxable income dollar-for-dollar, meaning they save you tax at your highest marginal rate. For example, if you're in the 33% federal bracket and contribute $5,000 to an RRSP, you save approximately $1,650 in federal tax plus additional provincial tax savings. The maximum RRSP contribution for 2026 is 18% of your earned income from the previous year, up to a dollar limit (approximately $33,810 for 2026). Enter your RRSP contributions in the "Deductions" field to see exactly how much tax they save you with this calculator.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">RRSP vs TFSA — what's the difference? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">An RRSP (Registered Retirement Savings Plan) offers a tax deduction on contributions — you get a tax refund now based on your marginal rate, but withdrawals in retirement are taxed as income. A TFSA (Tax-Free Savings Account) provides no upfront deduction, but all investment growth and withdrawals are completely tax-free forever. In general, RRSPs are better if you expect to be in a lower tax bracket in retirement than you are now. TFSAs are more flexible for any goal (retirement, house, emergency fund) and are especially beneficial if you expect higher income later.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How do GST/HST credits work? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">The GST/HST credit is a non-taxable quarterly payment that helps low- and modest-income individuals and families offset the sales tax they pay. For the 2025-2026 benefit year, an eligible single individual can receive up to approximately $519 per year, while a couple with two children can receive up to around $1,069. Payments are issued in July, October, January, and April. The amount is based on your net income from the previous year's tax return and phases out as income increases. You are automatically considered for this credit when you file your taxes.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Quebec vs Ontario — which has higher taxes? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Quebec generally has higher provincial income taxes than Ontario. Quebec's top marginal rate is 25.75% compared to Ontario's top rate of 13.16% (plus the Ontario Health Premium). For a $70,000 salary, a Quebec resident typically pays about $2,000-$3,000 more in provincial tax than an Ontario resident. However, Quebec offers lower daycare costs ($8.70/day subsidized), lower university tuition, and a separate provincial pension plan (QPP) with different benefits. When comparing overall cost of living, housing costs in Toronto often offset the tax difference.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How is self-employment taxed in Canada? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Self-employed individuals in Canada pay both the employee and employer portions of CPP (11.9% total) on net business income above $3,500, up to the maximum pensionable earnings of $73,200. You can deduct half of your CPP contributions as a business expense. Unlike the US, Canada does not have a separate self-employment tax — your business income is simply included on your T1 personal tax return and taxed at the same progressive federal and provincial rates as employment income. You can deduct legitimate business expenses to reduce your taxable income.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How are non-residents taxed in Canada? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">Non-residents of Canada are generally taxed only on Canadian-source income. This includes employment income earned while physically working in Canada, business income from carrying on a business in Canada, and rental income from Canadian real estate. Non-residents pay Part I tax on employment and business income at the same graduated rates as residents, and Part XIII tax (typically 25%) on passive income such as dividends, interest, and royalties. Canada's tax treaties with other countries may reduce these rates. Non-residents do not pay CPP on most types of income.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO CONTENT SECTION -->
+<section class="seo-section" aria-label="About Canada Income Tax">
+  <div class="container">
+    <h2>Canada Income Tax Calculator 2025-2026 — Free Online Tool</h2>
+    <p>Use our <strong>free Canada income tax calculator</strong> to estimate how much tax you'll pay in the 2025-2026 tax year. This tool provides a quick estimate of your <strong>federal income tax, provincial or territorial tax, CPP contributions, and take-home pay</strong> based on your annual employment income and province of residence.</p>
+
+    <p>Simply enter your annual income, select your province or territory, choose your filing status, and click "Calculate Canadian Tax." Our calculator uses the latest <strong>2025 federal tax brackets</strong> and simplified provincial tax rates to give you an accurate estimate in seconds.</p>
+
+    <h2>2025 Federal Tax Brackets (Canada)</h2>
+    <p>The federal government taxes your income at graduated rates. For the 2025 tax year, the federal brackets are:</p>
+    <ul>
+      <li><strong>15%</strong> on the first $57,375 of taxable income</li>
+      <li><strong>20.5%</strong> on taxable income between $57,375 and $114,750</li>
+      <li><strong>26%</strong> on taxable income between $114,750 and $177,882</li>
+      <li><strong>29%</strong> on taxable income between $177,882 and $253,414</li>
+      <li><strong>33%</strong> on taxable income over $253,414</li>
+    </ul>
+    <p>Your <strong>marginal tax rate</strong> is the rate applied to your next dollar of income. Your <strong>effective tax rate</strong> is the average rate you actually pay — typically much lower than your marginal rate due to the progressive bracket system and the basic personal amount.</p>
+
+    <h2>Provincial and Territorial Income Tax</h2>
+    <p>Each province and territory in Canada sets its own income tax rates and brackets. This means your total tax bill depends significantly on where you live. For example:</p>
+    <ul>
+      <li><strong>Ontario</strong> has five brackets ranging from 5.05% to 13.16% (plus a surtax and health premium at higher incomes)</li>
+      <li><strong>Alberta</strong> uses a flat 10% rate on all taxable income — the simplest system in Canada</li>
+      <li><strong>British Columbia</strong> has five brackets from 5.06% to 20.5%</li>
+      <li><strong>Quebec</strong> has the highest top rate at 25.75%, with five brackets</li>
+      <li><strong>Nunavut</strong> uses a flat 4% rate — the lowest in Canada</li>
+    </ul>
+    <p>Our calculator uses simplified blended provincial/territorial rates to estimate your provincial tax. For a more precise calculation, consult your provincial tax brackets or a licensed tax professional.</p>
+
+    <h2>CPP Contributions 2025</h2>
+    <p>The Canada Pension Plan (CPP) is a mandatory contributory plan for most employed Canadians aged 18 to 70. For 2025:</p>
+    <ul>
+      <li><strong>Contribution rate:</strong> 5.95% for employees (matched by employers)</li>
+      <li><strong>Basic exemption:</strong> $3,500 (no CPP on first $3,500 of earnings)</li>
+      <li><strong>Maximum pensionable earnings:</strong> $73,200</li>
+      <li><strong>Maximum employee contribution:</strong> approximately $4,109</li>
+      <li><strong>Self-employed:</strong> 11.9% total (both portions), with half deductible</li>
+    </ul>
+    <p>CPP contributions are automatically deducted from your employment income by your employer. If you are self-employed, you must calculate and remit both portions when filing your taxes.</p>
+
+    <h2>How to Reduce Your Canadian Income Tax</h2>
+    <p>Here are some of the most effective ways to lower your tax bill in Canada:</p>
+    <ul>
+      <li><strong>RRSP contributions:</strong> Deduct up to 18% of your earned income (to a maximum of $32,490 for 2025) from your taxable income</li>
+      <li><strong>Tax-Free Savings Account (TFSA):</strong> While contributions are not tax-deductible, all growth and withdrawals are tax-free</li>
+      <li><strong>Claim all eligible credits:</strong> Medical expenses, charitable donations, tuition, disability, and the Canada Workers Benefit</li>
+      <li><strong>Split income with a spouse:</strong> Certain income-splitting strategies can reduce your family's overall tax burden</li>
+      <li><strong>Home office expenses:</strong> If you work from home, you may be able to claim a portion of your housing costs</li>
+    </ul>
+
+    <h2>About This Canada Tax Calculator</h2>
+    <p>This <strong>free Canada income tax calculator</strong> provides estimates for the 2025-2026 tax year. It uses the official federal tax brackets, the basic personal amount credit, simplified provincial tax rates, and the CPP contribution formula. Please note that this is a simplified estimator — actual taxes depend on numerous factors including specific deductions, non-refundable tax credits, spousal income, capital gains, and other personal circumstances. For accurate tax planning, consult the Canada Revenue Agency (CRA) website or a qualified tax professional.</p>
+  </div>
+</section>
+
+<!-- RELATED TOOLS -->
+<section class="related-tools" aria-label="Related Tools">
+  <div class="container">
+    <div class="related-header">
+      <h2>More Free Tools for Canadians</h2>
+      <p>Estimate your taxes, savings, and take-home pay across Canada</p>
+    </div>
+    <div class="related-grid">
+      <a href="/tools/rrsp-tax-savings-calculator.html" class="tool-card">
+        <span class="tool-card-icon">&#128176;</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">RRSP Tax Savings Calculator</span>
+          <span class="tool-card-desc">Reduce your taxable income</span>
+          <span class="tool-card-tag">Savings</span>
+        </span>
+      </a>
+      <a href="/tools/canada-self-employed-tax-calculator.html" class="tool-card">
+        <span class="tool-card-icon">&#128188;</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Self-Employed Tax Calculator</span>
+          <span class="tool-card-desc">CPP + income tax</span>
+          <span class="tool-card-tag">Canada</span>
+        </span>
+      </a>
+      <a href="/tools/canada-capital-gains-tax-calculator.html" class="tool-card">
+        <span class="tool-card-icon">&#128200;</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Capital Gains Tax Calculator</span>
+          <span class="tool-card-desc">50% inclusion rate</span>
+          <span class="tool-card-tag">Canada</span>
+        </span>
+      </a>
+      <a href="/tools/canada-payroll-deductions-calculator.html" class="tool-card">
+        <span class="tool-card-icon">&#128179;</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Payroll Deductions Calculator</span>
+          <span class="tool-card-desc">CPP, EI & income tax</span>
+          <span class="tool-card-tag">Canada</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.related-tools{background:#fff;padding:60px 0;border-top:1px solid #E8ECF0}
+.related-header{text-align:center;margin-bottom:36px}
+.related-header h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:8px}
+.related-header p{font-size:15px;color:#6B7280;max-width:500px;margin:0 auto}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:960px;margin:0 auto}
+.tool-card{display:flex;align-items:flex-start;gap:16px;background:#F8FAFC;border:1px solid #E8ECF0;border-radius:14px;padding:20px;transition:all 0.3s ease;text-decoration:none}
+.tool-card:hover{border-color:#00C896;background:#F0FDF9;transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,200,150,0.12)}
+.tool-card-icon{font-size:24px;flex-shrink:0;width:44px;height:44px;background:#E8F8F5;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.tool-card-content{flex:1;min-width:0}
+.tool-card-name{display:block;font-size:15px;font-weight:600;color:#1A1A2E;margin-bottom:3px}
+.tool-card-desc{display:block;font-size:13px;color:#6B7280;line-height:1.4}
+.tool-card-tag{display:inline-block;margin-top:8px;font-size:11px;font-weight:600;color:#00C896;background:#E8F8F5;padding:2px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px}
+</style>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="FreelanceTaxCalc Home">
+          <span class="footer-logo-icon" aria-hidden="true">$</span>
+          Freelance<span class="logo-dot">.</span>TaxCalc
+        </a>
+        <p class="footer-tagline">Free financial tools for independent workers.</p>
+        <p class="footer-copy">&copy; 2026 FreelanceTaxCalc. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="/tools/quarterly-tax-calculator.html">Quarterly Tax Estimator</a></li>
+            <li><a href="/tools/side-hustle-tax-estimator.html">Side Hustle Tax Estimator</a></li>
+            <li><a href="/tools/freelance-hourly-rate-calculator.html">Hourly Rate Calculator</a></li>
+            <li><a href="/tools/retirement-calculator.html">Retirement Calculator</a></li>
+            <li><a href="/tools/first-paycheck-calculator.html">First Paycheck Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/guides/">Guides</a></li>
+<li><a href="/blog/">Blog</a></li>
+            <li><a href="/legal/about.html">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/legal/terms.html">Terms of Service</a></li>
+            <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
+            <li><a href="#cookie-consent">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      This website provides estimates for informational purposes only. Not financial or tax advice. | We use cookies and display ads. See <a href="/legal/privacy-policy.html">Privacy Policy</a> for details.
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/tax-calculator-core.js"></script>
+
+<script>
+(function(){
+  'use strict';
+
+  // DOM refs
+  var annualIncome = document.getElementById('annualIncome');
+  var deductions = document.getElementById('deductions');
+  var provinceSelect = document.getElementById('provinceSelect');
+  var statusBtns = document.querySelectorAll('.status-btn');
+  var calculateBtn = document.getElementById('calculateBtn');
+  var recalcBtn = document.getElementById('recalcBtn');
+  var copyBtn = document.getElementById('copyBtn');
+  var resultsArea = document.getElementById('resultsArea');
+
+  // Format money as CA$
+  function fmtMoney(n) {
+    return 'CA$' + Math.round(n).toLocaleString('en-CA');
+  }
+
+  // ─── CALCULATE ───
+  function calculate() {
+    var income = parseFloat(annualIncome.value) || 0;
+    if (income <= 0) {
+      annualIncome.focus();
+      annualIncome.style.borderColor = '#FF6B6B';
+      setTimeout(function(){ annualIncome.style.borderColor = ''; }, 1500);
+      return;
+    }
+
+    var province = provinceSelect.value;
+    var ded = parseFloat(deductions.value) || 0;
+    var status = document.querySelector('.status-btn.active').getAttribute('data-status');
+
+    // Married couples each get their own BPA — double the effective deduction
+    if (status === 'married') {
+      ded += 16000; // approximate second BPA
+    }
+
+    var result = calculateCanadaIncomeTax(income, province, ded);
+
+    resultsArea.classList.add('visible');
+    resultsArea.style.display = 'block';
+    calculateBtn.disabled = true;
+    calculateBtn.textContent = 'Calculating...';
+
+    setTimeout(function(){
+      // Result card
+      document.getElementById('resultTotalTax').textContent = fmtMoney(result.totalTax);
+      document.getElementById('resultTakeHome').textContent = fmtMoney(result.takeHome);
+      document.getElementById('resultRate').textContent = result.effectiveRate;
+
+      // Summary table
+      document.getElementById('sumIncome').textContent = fmtMoney(income);
+      document.getElementById('sumFedTaxable').textContent = fmtMoney(result.taxableIncome);
+      document.getElementById('sumFederal').textContent = fmtMoney(result.federalTax);
+      document.getElementById('sumProvincial').textContent = fmtMoney(result.provincialTax) + ' (avg ' + result.provRate + ')';
+      document.getElementById('sumTotalTax').textContent = fmtMoney(result.totalTax);
+      document.getElementById('sumTakeHome').textContent = fmtMoney(result.takeHome);
+
+      calculateBtn.textContent = 'Calculate Canadian Tax \uD83D\uDCCA';
+      calculateBtn.disabled = false;
+
+      // Scroll to results
+      if (window.innerWidth < 768) {
+        resultsArea.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    }, 600);
+  }
+
+  calculateBtn.addEventListener('click', calculate);
+
+  recalcBtn.addEventListener('click', function(){
+    resultsArea.classList.remove('visible');
+    resultsArea.style.display = 'none';
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // Copy
+  copyBtn.addEventListener('click', function(){
+    var income = document.getElementById('sumIncome').textContent;
+    var fed = document.getElementById('sumFederal').textContent;
+    var prov = document.getElementById('sumProvincial').textContent;
+    var total = document.getElementById('sumTotalTax').textContent;
+    var takehome = document.getElementById('sumTakeHome').textContent;
+    var rate = document.getElementById('resultRate').textContent;
+
+    var text = 'Canada Income Tax Calculator - FreelanceTaxCalc\n';
+    text += 'Employment Income: ' + income + '\n';
+    text += 'Federal Tax: ' + fed + '\n';
+    text += 'Provincial Tax: ' + prov + '\n';
+    text += 'Total Tax: ' + total + '\n';
+    text += 'Take-Home Pay: ' + takehome + ' (' + rate + ')\n';
+    text += '\nGenerated at FreelanceTaxCalc.online';
+
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text).then(function(){
+        copyBtn.textContent = '\u2713 Copied!';
+        setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy Summary'; }, 2000);
+      });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      copyBtn.textContent = '\u2713 Copied!';
+      setTimeout(function(){ copyBtn.textContent = '\uD83D\uDCC3 Copy Summary'; }, 2000);
+    }
+  });
+
+  // Status toggle
+  statusBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      statusBtns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-checked','false'); });
+      this.classList.add('active');
+      this.setAttribute('aria-checked','true');
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = this.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  // Enter triggers
+  document.querySelectorAll('.input-card input, .input-card select').forEach(function(el){
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); calculateBtn.click(); }
+    });
+  });
+})();
+</script>
+
+<!-- Cookie Consent -->
+<div id="cookie-consent" role="dialog" aria-label="Cookie Consent" aria-modal="true" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#0A1628;color:#fff;padding:16px 24px;z-index:99999;box-shadow:0 -4px 20px rgba(0,0,0,0.3);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.5">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between">
+    <p style="margin:0;flex:1;min-width:200px;color:#B0B8C4;font-size:13px">This site uses cookies for analytics and personalized ads. See our <a href="/legal/privacy-policy.html" style="color:#00C896;text-decoration:underline">Privacy Policy</a> for details.</p>
+    <div style="display:flex;gap:10px;flex-shrink:0">
+      <button id="cookie-decline" style="background:transparent;border:1px solid #667080;color:#B0B8C4;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13px;font-family:inherit">Decline</button>
+      <button id="cookie-accept" style="background:#00C896;border:none;color:#0A1628;padding:8px 24px;border-radius:6px;cursor:pointer;font-weight:600;font-size:13px;font-family:inherit">Accept All</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-consent');
+  var accept = document.getElementById('cookie-accept');
+  var decline = document.getElementById('cookie-decline');
+  if(!banner || !accept) return;
+  var consent = localStorage.getItem('cookie_consent');
+  if(consent !== 'accepted' && consent !== 'declined'){
+    banner.style.display = 'block';
+  }
+  accept.addEventListener('click', function(){
+    localStorage.setItem('cookie_consent', 'accepted');
+    banner.style.display = 'none';
+    if(typeof gtag !== 'undefined'){ gtag('consent', 'update', {'analytics_storage':'granted','ad_storage':'granted'}); }
+  });
+  decline.addEventListener('click', function(){
+    localStorage.setItem('cookie_consent', 'declined');
+    banner.style.display = 'none';
+    if(typeof gtag !== 'undefined'){ gtag('consent', 'update', {'analytics_storage':'denied','ad_storage':'denied'}); }
+  });
+})();
+</script>
+</body>
+</html>

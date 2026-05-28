@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script src="/assets/tax-calculator-core.js"></script>
 <script type="application/ld+json">
 [{
   "@context": "https://schema.org",
@@ -436,6 +437,11 @@ body.country-uk .uk-only{display:block}
             <span class="tip-icon" aria-hidden="true">&#128161;</span>
             <strong>Tip:</strong> Set aside 25–30% of every payment you receive into a separate savings account for taxes. Your next quarterly payment is due <span id="rNextDueTip">[date]</span>.
           </div>
+          <!-- Card 5: Safe Harbor -->
+          <div class="result-card safeharbor-card" style="display:none;background:#132a45;border-left:3px solid #FFD700;padding:12px 16px;margin-top:12px;border-radius:8px;font-size:13px;color:#d0d8e4" id="rSafeHarborCard">
+            <span style="color:#FFD700;font-weight:600">&#128737; Safe Harbor Rule:</span>
+            <span id="rSafeHarborText">To avoid penalties, pay at least 90% of this year's tax or 100% of last year's tax (110% if AGI > $150,000).</span>
+          </div>
 
           <!-- Result action buttons -->
           <div class="result-actions">
@@ -625,16 +631,8 @@ body.country-uk .uk-only{display:block}
       <p>Free tools purpose-built for freelancers, gig workers, and the self-employed</p>
     </div>
     <div class="related-grid">
-      <a href="/tools/gig-deduction-finder.html" class="tool-card">
-        <span class="tool-card-icon">🔍</span>
-        <span class="tool-card-content">
-          <span class="tool-card-name">Gig Worker Deduction Finder</span>
-          <span class="tool-card-desc">Find deductions to lower your quarterly tax bill</span>
-          <span class="tool-card-tag">Deductions</span>
-        </span>
-      </a>
       <a href="/tools/side-hustle-tax-estimator.html" class="tool-card">
-        <span class="tool-card-icon">🚀</span>
+        <span class="tool-card-icon">💵</span>
         <span class="tool-card-content">
           <span class="tool-card-name">Side Hustle Tax Estimator</span>
           <span class="tool-card-desc">See if you owe taxes on side income</span>
@@ -649,12 +647,20 @@ body.country-uk .uk-only{display:block}
           <span class="tool-card-tag">Comparison</span>
         </span>
       </a>
-      <a href="/tools/retirement-calculator.html" class="tool-card">
-        <span class="tool-card-icon">🏦</span>
+      <a href="/tools/gig-deduction-finder.html" class="tool-card">
+        <span class="tool-card-icon">🔍</span>
         <span class="tool-card-content">
-          <span class="tool-card-name">Retirement Calculator</span>
-          <span class="tool-card-desc">Save for retirement while reducing taxable income</span>
-          <span class="tool-card-tag">Retirement</span>
+          <span class="tool-card-name">Gig Worker Deduction Finder</span>
+          <span class="tool-card-desc">Find deductions to lower your tax bill</span>
+          <span class="tool-card-tag">Deductions</span>
+        </span>
+      </a>
+      <a href="/tools/federal-tax-refund-calculator.html" class="tool-card">
+        <span class="tool-card-icon">📈</span>
+        <span class="tool-card-content">
+          <span class="tool-card-name">Federal Tax Refund Calculator</span>
+          <span class="tool-card-desc">Estimate your 2026 tax refund or amount owed</span>
+          <span class="tool-card-tag">Taxes</span>
         </span>
       </a>
     </div>
@@ -702,12 +708,13 @@ body.country-uk .uk-only{display:block}
           <h4>Resources</h4>
           <ul>
             <li><a href="/guides/">Guides</a></li>
+<li><a href="/blog/">Blog</a></li>
             <li><a href="/legal/about.html">About Us</a></li>
             <li><a href="/contact/">Contact</a></li>
             <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="/legal/terms.html">Terms of Service</a></li>
             <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
-            <li><a href="#cookie-preferences">Cookie Settings</a></li>
+            <li><a href="#cookie-consent">Cookie Settings</a></li>
           </ul>
         </div>
       </div>
@@ -796,6 +803,8 @@ body.country-uk .uk-only{display:block}
   var chFederal = document.getElementById('chFederal');
   var chSelfemp = document.getElementById('chSelfemp');
   var chState = document.getElementById('chState');
+  var rSafeHarborCard = document.getElementById('rSafeHarborCard');
+  var rSafeHarborText = document.getElementById('rSafeHarborText');
 
   // ─── HELPERS ───
   function fmt(n, cur){
@@ -971,59 +980,22 @@ body.country-uk .uk-only{display:block}
     var nextDueText = '';
 
     if(country === 'us'){
-      // US calculation
-      var seTaxBase = netIncome * 0.9235;
-      // Social Security: 12.4% on first $176,100
-      var ssWageBase = 184500;
-      var ssTax = 0.124 * Math.min(seTaxBase, ssWageBase);
-      // Medicare: 2.9% on all
-      var medicareTax = 0.029 * seTaxBase;
-      // Additional Medicare: 0.9% if total > threshold
-      var addMedicareThreshold = (status === 'mfj') ? 250000 : 200000;
-      var addMedicare = (totalIncome > addMedicareThreshold) ? 0.009 * (totalIncome - addMedicareThreshold) : 0;
-      seTax = ssTax + medicareTax + addMedicare;
+      // US calculation using shared core (tax-calculator-core.js)
+      var core = calculateSelfEmploymentTax(income, expenses, status, other);
+      seTax = core.selfEmploymentTax;
+      fedTax = core.federalIncomeTax;
+      var stdDed = core.stdDed;
+      var taxableIncome = core.taxableIncome;
 
-      // SE deduction
-      var seDeduction = (ssTax + medicareTax) * 0.5;
-
-      // AGI
-      var agi = income - expenses - seDeduction + other;
-
-      // Standard deduction
-      var stdDed = 16400;
-      if(status === 'mfj') stdDed = 32800;
-      else if(status === 'hoh') stdDed = 24600;
-
-      var taxableIncome = Math.max(0, agi - stdDed);
-
-      // Federal brackets 2026
-      
-      if(status === 'hoh'){
-        brackets = [[17700,0.1],[67450,0.12],[107450,0.22],[205200,0.24],[260550,0.32],[651400,0.35],[Infinity,0.37]];
-      } else {
-        // Single, MFJ (doubled), MFS
-        var mult = (status === 'mfj') ? 2 : 1;
-        brackets = [[12400,0.1],[50400,0.12],[107450,0.22],[205200,0.24],[260550,0.32],[651400,0.35],[Infinity,0.37]];
-      }
-
-      fedTax = 0;
-      var prev = 0;
-      for(var b=0;b<brackets.length;b++){
-        var limit = brackets[b][0];
-        var rate = brackets[b][1];
-        if(taxableIncome > prev){
-          var chunk = Math.min(taxableIncome, limit) - prev;
-          if(chunk > 0) fedTax += chunk * rate;
-        }
-        prev = limit;
-      }
+      // SE deduction includes all components (SS + Medicare + Additional Medicare)
+      var seDeduction = core.seTaxDeduction;
 
       // State tax
       var stateRate = usStateRates[stateVal] || 0;
       stateTax = taxableIncome * stateRate;
 
-      totalTax = seTax + fedTax + stateTax;
-      quarterlyPayment = totalTax / 4;
+      totalTax = core.totalTax + stateTax;
+      quarterlyPayment = Math.ceil(totalTax / 4);
 
       // Due dates
       var year = 2026;
@@ -1037,6 +1009,9 @@ body.country-uk .uk-only{display:block}
       rSeTaxLabel.textContent = 'Self-Employment Tax';
       rFedTaxLabel.textContent = 'Federal Income Tax';
       rStateTaxLabel.textContent = 'State Income Tax';
+      rSafeHarborCard.style.display = 'block';
+    } else {
+      rSafeHarborCard.style.display = 'none';
     }
     else if(country === 'ca'){
       // Canada calculation

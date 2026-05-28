@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<script src="/assets/tax-calculator-core.js"></script>
 <script type="application/ld+json">
 [{
   "@context":"https://schema.org","@type":"WebApplication",
@@ -459,35 +460,35 @@ ul{list-style:none}
     </div>
     <div class="related-grid">
       <a href="/tools/quarterly-tax-calculator.html" class="tool-card">
-        <span class="tool-card-icon">💰</span>
+        <span class="tool-card-icon">📊</span>
         <span class="tool-card-content">
           <span class="tool-card-name">Quarterly Tax Estimator</span>
           <span class="tool-card-desc">Calculate quarterly taxes if you go 1099</span>
           <span class="tool-card-tag">Taxes</span>
         </span>
       </a>
-      <a href="/tools/gig-deduction-finder.html" class="tool-card">
-        <span class="tool-card-icon">🔍</span>
+      <a href="/tools/side-hustle-tax-estimator.html" class="tool-card">
+        <span class="tool-card-icon">💵</span>
         <span class="tool-card-content">
-          <span class="tool-card-name">Gig Worker Deduction Finder</span>
-          <span class="tool-card-desc">Find deductions as a 1099 worker</span>
-          <span class="tool-card-tag">Deductions</span>
+          <span class="tool-card-name">Side Hustle Tax Estimator</span>
+          <span class="tool-card-desc">Estimate taxes on your 1099 income</span>
+          <span class="tool-card-tag">Taxes</span>
         </span>
       </a>
       <a href="/tools/freelance-hourly-rate-calculator.html" class="tool-card">
-        <span class="tool-card-icon">💵</span>
+        <span class="tool-card-icon">⏰</span>
         <span class="tool-card-content">
           <span class="tool-card-name">Freelance Hourly Rate Calculator</span>
           <span class="tool-card-desc">Set your 1099 hourly rate</span>
           <span class="tool-card-tag">Pricing</span>
         </span>
       </a>
-      <a href="/tools/retirement-calculator.html" class="tool-card">
-        <span class="tool-card-icon">🏦</span>
+      <a href="/tools/first-paycheck-calculator.html" class="tool-card">
+        <span class="tool-card-icon">💰</span>
         <span class="tool-card-content">
-          <span class="tool-card-name">Retirement Calculator</span>
-          <span class="tool-card-desc">Choose retirement plan for contractors</span>
-          <span class="tool-card-tag">Retirement</span>
+          <span class="tool-card-name">First Paycheck Calculator</span>
+          <span class="tool-card-desc">Compare take-home as W-2 vs 1099</span>
+          <span class="tool-card-tag">Paycheck</span>
         </span>
       </a>
     </div>
@@ -535,12 +536,13 @@ ul{list-style:none}
           <h4>Resources</h4>
           <ul>
             <li><a href="/guides/">Guides</a></li>
+<li><a href="/blog/">Blog</a></li>
             <li><a href="/legal/about.html">About Us</a></li>
             <li><a href="/contact/">Contact</a></li>
             <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="/legal/terms.html">Terms of Service</a></li>
             <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
-            <li><a href="#cookie-preferences">Cookie Settings</a></li>
+            <li><a href="#cookie-consent">Cookie Settings</a></li>
           </ul>
         </div>
       </div>
@@ -593,22 +595,6 @@ ul{list-style:none}
 
   function fm(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
 
-  function getBrackets(status){
-    if(status === 'hoh') return [[17700,0.1],[67450,0.12],[107450,0.22],[205200,0.24],[260550,0.32],[651400,0.35],[Infinity,0.37]];
-    var m = status === 'mfj' ? 2 : 1;
-    return [[12400*m,0.1],[50400*m,0.12],[107450*m,0.22],[205200*m,0.24],[260550*m,0.32],[651400*m,0.35],[Infinity,0.37]];
-  }
-
-  function calcFed(taxable, brackets){
-    var tax = 0, prev = 0;
-    for(var i=0;i<brackets.length;i++){
-      var limit = brackets[i][0], rate = brackets[i][1];
-      if(taxable > prev){ var chunk = Math.min(taxable, limit) - prev; if(chunk>0) tax += chunk*rate; }
-      prev = limit;
-    }
-    return tax;
-  }
-
   function calculate(){
     var w2Sal = parseFloat(w2Salary.value) || 0;
     var w2Ben = parseFloat(w2Benefits.value) || 0;
@@ -637,39 +623,20 @@ ul{list-style:none}
   }
 
   function compute(w2Sal,w2Ben,c1099,c1099Exp,status,state,stateRate,health,retire){
-    var stdDed = 16400;
-    if(status==='mfj') stdDed=32800;
-    else if(status==='hoh') stdDed=24600;
-    var brackets = getBrackets(status);
+    var stdDed = getStandardDeduction(status);
+    var result = compare1099vsW2(w2Sal, w2Ben, c1099, c1099Exp, status, stateRate, health, retire);
 
-    // W-2
-    var taxableW2 = Math.max(0, w2Sal - stdDed);
-    var fedW2 = calcFed(taxableW2, brackets);
-    var stateW2 = taxableW2 * stateRate;
-    var ficaW2 = Math.min(w2Sal, 184500)*0.062 + w2Sal*0.0145;
-    if(status==='single' && w2Sal>200000) ficaW2 += (w2Sal-200000)*0.009;
-    var takehomeW2 = w2Sal - fedW2 - stateW2 - ficaW2;
+    var fedW2 = result.fedW2;
+    var stateW2 = result.stateW2;
+    var ficaW2 = result.ficaW2;
+    var takehomeW2 = result.w2TakeHome;
 
-    // 1099
+    var seTax = result.seTax;
+    var fed1099 = result.fed1099;
+    var state1099 = result.state1099;
+    var qbi = result.qbi;
+    var takehome1099 = result.c1099TakeHome;
     var net1099 = Math.max(0, c1099 - c1099Exp);
-    // SE tax
-    var seBase = net1099 * 0.9235;
-    var ssCap = 184500;
-    var seSs = Math.min(seBase, ssCap) * 0.124;
-    var seMc = seBase * 0.029;
-    if(status==='single' && net1099>0) seMc += Math.max(0, (w2Sal+net1099-200000))*0.009 - Math.max(0, (w2Sal-200000))*0.009;
-    var seTax = seSs + seMc;
-    var seDed = seTax * 0.5;
-
-    var agi1099 = net1099 - seDed - health - retire;
-    var taxable1099 = Math.max(0, agi1099 - stdDed);
-    // QBI: 20% of net1099
-    var qbi = Math.min(net1099*0.20, taxable1099);
-    taxable1099 = Math.max(0, taxable1099 - qbi);
-
-    var fed1099 = calcFed(taxable1099, brackets);
-    var state1099 = taxable1099 * stateRate;
-    var takehome1099 = c1099 - c1099Exp - seTax - fed1099 - state1099 - health - retire;
 
     // Update cards
     document.getElementById('w2Gross').textContent = fm(w2Sal);
@@ -704,21 +671,14 @@ ul{list-style:none}
       winnerSub.textContent = '1099 comes out ahead by ' + (c1099>0 ? Math.round(absDiff/c1099*100) : 0) + '% of contract rate';
     }
 
-    // Breakeven
+    // Breakeven using shared core
     var breakeven = 0;
     if(c1099 <= 0 && w2Sal > 0){
-      // Estimate required 1099 rate to match W-2 takehome
       var guess = w2Sal * 1.25;
       for(var iter=0;iter<50;iter++){
-        var n = Math.max(0, guess - 0);
-        var sb = n*0.9235;
-        var sst = Math.min(sb,184500)*0.124 + sb*0.029;
-        var sd = sst*0.5;
-        var ag = n - sd;
-        var tx = Math.max(0, ag - stdDed);
-        var f = calcFed(tx, brackets);
-        var st = tx * stateRate;
-        var th = guess - sst - f - st;
+        var b = calculateSelfEmploymentTax(guess, 0, status);
+        var bState = b.taxableIncome * stateRate;
+        var th = guess - b.selfEmploymentTax - b.federalIncomeTax - bState;
         if(Math.abs(th - takehomeW2) < 100) break;
         guess += (takehomeW2 - th) * 0.5;
       }

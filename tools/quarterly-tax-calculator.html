@@ -234,6 +234,19 @@ ul{list-style:none}
 @media(max-width:768px){.footer-inner{flex-direction:column;gap:24px}}
 
 
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:32px;right:32px;width:48px;height:48px;background:#00C896;color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,200,150,0.3);transition:all 0.3s ease;z-index:999;opacity:0;transform:translateY(20px);pointer-events:none}
+.back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.back-to-top:hover{background:#00B085;transform:translateY(-3px)}
+
+/* RESULT ACTIONS */
+.result-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.result-actions button{flex:1;padding:10px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.3s ease;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.btn-copy{background:#F0FDF9;color:#00C896;border:1px solid #00C896}
+.btn-copy:hover{background:#E8F8F5}
+.btn-print{background:#fff;color:#1A1A2E;border:1px solid #DDE1E7}
+.btn-print:hover{border-color:#00C896}
+
 /* === PRINT === */
 @media print{
   .site-header,.breadcrumb,.page-title,.result-actions,.seo-content,.site-footer,.disclaimer-bar{display:none!important}
@@ -1296,6 +1309,21 @@ body.country-uk .uk-only{display:block}
     this.classList.remove('error');
     stateError.style.display = 'none';
   });
+})();
+</script>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+<script>
+(function(){
+  var backBtn = document.getElementById('backToTop');
+  if(backBtn){
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 500){ backBtn.classList.add('visible'); }
+      else { backBtn.classList.remove('visible'); }
+    });
+    backBtn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
 })();
 </script>
 

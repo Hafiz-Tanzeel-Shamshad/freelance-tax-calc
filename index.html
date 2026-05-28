@@ -67,25 +67,36 @@ ul{list-style:none}
 .mobile-nav .nav-cta{text-align:center;margin-top:12px;color:#fff!important}
 
 /* HERO */
-.hero{min-height:92vh;background:#0A1628;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 60px}
+.hero{min-height:92vh;background:#0A1628;display:grid;grid-template-columns:1fr 440px;align-items:center;position:relative;overflow:hidden;padding:120px 5% 60px;gap:60px}
 .hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .hero-bg .grad{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.12}
 .hero-bg .grad:nth-child(1){width:600px;height:600px;top:-20%;right:-10%;background:#00C896}
 .hero-bg .grad:nth-child(2){width:400px;height:400px;bottom:-10%;left:-5%;background:#00C896}
 .hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,200,150,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,150,0.04) 1px,transparent 1px);background-size:60px 60px}
-.hero-content{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+.hero-content{position:relative;z-index:2;text-align:left;max-width:600px}
 .hero-badge{display:inline-block;background:rgba(0,200,150,0.12);color:#00C896;padding:6px 18px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:24px;letter-spacing:0.3px}
-.hero h1{font-family:"DM Serif Display",serif;font-size:58px;line-height:1.12;color:#fff;margin-bottom:20px}
+.hero h1{font-family:"DM Serif Display",serif;font-size:54px;line-height:1.12;color:#fff;margin-bottom:20px}
 .hero h1 span{color:#00C896}
-.hero-sub{font-size:18px;color:#B0B8C4;max-width:620px;margin:0 auto 32px;line-height:1.7}
-.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero-sub{font-size:18px;color:#B0B8C4;max-width:520px;margin:0 0 32px;line-height:1.7}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px}
 .btn-primary{display:inline-flex;align-items:center;background:#00C896;color:#fff;padding:18px 40px;border-radius:10px;font-weight:700;font-size:17px;transition:all 0.3s ease;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,200,150,0.3)}
 .btn-primary:hover{background:#00B085;transform:translateY(-2px);box-shadow:0 6px 28px rgba(0,200,150,0.4)}
 .btn-secondary{display:inline-flex;align-items:center;background:transparent;color:#fff;padding:16px 36px;border-radius:10px;font-weight:600;font-size:16px;border:2px solid rgba(255,255,255,0.25);transition:all 0.3s ease;cursor:pointer}
 .btn-secondary:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.5)}
-.trust-row{display:flex;gap:32px;justify-content:center;flex-wrap:wrap}
+.trust-row{display:flex;gap:32px;flex-wrap:wrap}
 .trust-item{display:flex;align-items:center;gap:8px;color:#8892A0;font-size:14px}
 .trust-item .icon{color:#00C896;font-weight:700;font-size:16px;width:20px;height:20px;background:rgba(0,200,150,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+/* HERO CALCULATOR */
+.hero-calc{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px;backdrop-filter:blur(4px);position:relative;z-index:2;max-width:440px}
+.hero-calc-label{font-size:13px;color:#8892A0;margin-bottom:8px;font-weight:500}
+.hero-calc-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.hero-calc-input{flex:1;min-width:120px;padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:18px;font-weight:600;font-family:"DM Sans",sans-serif;outline:none;transition:border 0.3s ease}
+.hero-calc-input::placeholder{color:#667080}
+.hero-calc-input:focus{border-color:#00C896}
+.hero-calc-result{font-size:14px;color:#B0B8C4;padding:8px 0}
+.hero-calc-result strong{color:#00C896;font-size:20px;font-weight:700}
+.hero-calc-note{font-size:11px;color:#667080;margin-top:6px}
 
 /* STATS */
 .stats-bar{background:#0D1F35;padding:36px 0}
@@ -111,15 +122,22 @@ ul{list-style:none}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
 /* HERO MINI CALC */
-.hero-calc{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:20px 24px;margin:0 auto 36px;max-width:520px;backdrop-filter:blur(4px)}
-.hero-calc-label{font-size:13px;color:#8892A0;margin-bottom:8px;font-weight:500}
-.hero-calc-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.hero-calc-input{flex:1;min-width:120px;padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:18px;font-weight:600;font-family:"DM Sans",sans-serif;outline:none;transition:border 0.3s ease}
-.hero-calc-input::placeholder{color:#667080}
-.hero-calc-input:focus{border-color:#00C896}
-.hero-calc-result{font-size:14px;color:#B0B8C4;padding:8px 0}
-.hero-calc-result strong{color:#00C896;font-size:20px;font-weight:700}
-.hero-calc-note{font-size:11px;color:#667080;margin-top:6px}
+.hero-calc{background:#fff;border-radius:16px;padding:28px;position:relative;z-index:2;max-width:440px;box-shadow:0 8px 32px rgba(0,0,0,0.2)}
+.hero-calc-badge{position:absolute;top:-10px;left:20px;background:#00C896;color:#0A1628;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px}
+.hero-calc-title{font-family:"DM Serif Display",serif;font-size:18px;color:#1A1A2E;margin:8px 0 20px}
+.hero-calc-field{margin-bottom:14px}
+.hero-calc-field label{display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.3px}
+.hero-calc-field input,.hero-calc-field select{width:100%;padding:11px 14px;border-radius:8px;border:1.5px solid #E8ECF0;font-size:15px;font-family:"DM Sans",sans-serif;background:#F9FAFB;color:#1A1A2E;outline:none;transition:border-color 0.2s}
+.hero-calc-field input:focus,.hero-calc-field select:focus{border-color:#00C896}
+.hero-calc-btn{width:100%;padding:13px;background:linear-gradient(135deg,#00C896,#00B085);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:15px;font-family:"DM Sans",sans-serif;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-top:4px}
+.hero-calc-btn:hover{opacity:0.9;transform:translateY(-1px)}
+.hero-calc-result-box{background:#0A1628;border-radius:10px;padding:16px 20px;margin-top:16px;display:flex;justify-content:space-between;align-items:center}
+.hero-calc-result-label{font-size:11px;color:rgba(255,255,255,0.5);font-weight:500;text-transform:uppercase;letter-spacing:0.3px}
+.hero-calc-result-value{font-family:"DM Serif Display",serif;font-size:28px;color:#00C896;font-weight:700;line-height:1.2}
+.hero-calc-result-sub{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
+.hero-calc-result-right{text-align:right}
+.hero-calc-rate{font-family:"DM Serif Display",serif;font-size:22px;color:#00C896;font-weight:700}
+.hero-calc-note{font-size:11px;color:#9CA3AF;margin-top:12px;line-height:1.5}
 
 .tool-card{background:#fff;border-radius:14px;padding:28px 24px;box-shadow:0 1px 4px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.02);transition:all 0.3s ease;display:flex;flex-direction:column;border:1px solid #E8ECF0;position:relative}
 .tool-card:hover{transform:translateY(-5px);border-color:#00C896;box-shadow:0 8px 28px rgba(0,200,150,0.12)}
@@ -155,16 +173,32 @@ ul{list-style:none}
 .step-card h3{font-family:"DM Serif Display",serif;font-size:20px;color:#1A1A2E;margin-bottom:8px}
 .step-card p{font-size:15px;color:#6B7280;line-height:1.6}
 
-/* PERSONAS */
+/* PERSONAS SLIDER */
 .target-section{padding:80px 0;background:#F4F6F9}
 .target-header{text-align:center;margin-bottom:48px}
 .target-header h2{font-family:"DM Serif Display",serif;font-size:36px;color:#1A1A2E}
-.persona-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.persona-card{display:flex;align-items:flex-start;gap:16px;background:#fff;border-radius:12px;padding:24px;box-shadow:0 1px 3px rgba(0,0,0,0.04);border:1px solid #E8ECF0;transition:all 0.3s ease}
-.persona-card:hover{transform:translateY(-2px);border-color:#00C896;box-shadow:0 4px 16px rgba(0,200,150,0.08)}
-.persona-icon{width:48px;height:48px;border-radius:50%;background:rgba(0,200,150,0.1);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.persona-info h3{font-size:15px;font-weight:600;color:#1A1A2E;margin-bottom:3px}
-.persona-info p{font-size:13px;color:#6B7280;line-height:1.5}
+.persona-slider{position:relative;max-width:900px;margin:0 auto;padding:0 8px}
+.persona-slider::before,.persona-slider::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:1;pointer-events:none}
+.persona-slider::before{left:0;background:linear-gradient(to right,#F4F6F9,transparent)}
+.persona-slider::after{right:0;background:linear-gradient(to left,#F4F6F9,transparent)}
+.persona-track{display:flex;gap:20px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 0}
+.persona-track::-webkit-scrollbar{display:none}
+.persona-card{flex:0 0 calc(50% - 10px);min-width:280px;display:flex;align-items:flex-start;gap:18px;background:#fff;border-radius:16px;padding:28px;box-shadow:0 2px 8px rgba(0,0,0,0.04);border:1px solid #EBEEF2;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);scroll-snap-align:start}
+.persona-card:hover{transform:translateY(-4px);border-color:#00C896;box-shadow:0 12px 32px rgba(0,200,150,0.12)}
+.persona-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(0,200,150,0.12),rgba(0,200,150,0.04));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;transition:transform 0.3s ease}
+.persona-card:hover .persona-icon{transform:scale(1.08) rotate(-4deg)}
+.persona-info h3{font-size:16px;font-weight:600;color:#1A1A2E;margin-bottom:4px}
+.persona-info p{font-size:14px;color:#6B7280;line-height:1.55}
+
+.persona-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.85);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,0.06);color:#1A1A2E;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.08);transition:all 0.25s;z-index:3}
+.persona-arrow:hover{background:#00C896;color:#fff;border-color:#00C896;box-shadow:0 6px 20px rgba(0,200,150,0.25);transform:translateY(-50%) scale(1.06)}
+.persona-arrow-prev{left:0}
+.persona-arrow-next{right:0}
+
+.persona-dots{display:flex;justify-content:center;gap:6px;margin-top:28px}
+.persona-dot{width:8px;height:8px;border-radius:4px;background:#D5DBE1;border:none;cursor:pointer;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);padding:0}
+.persona-dot:hover{background:#B0B8C4}
+.persona-dot.active{background:#00C896;width:28px}
 
 /* TESTIMONIALS */
 .testimonial-section{padding:80px 0;background:#fff}
@@ -233,20 +267,24 @@ ul{list-style:none}
   .testimonial-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px){
+  .hero{grid-template-columns:1fr;gap:32px;padding:100px 5% 50px;min-height:auto}
   .hero h1{font-size:34px}
-  .hero-sub{font-size:16px}
-  .hero-calc{padding:16px}
-  .hero-calc-row{flex-direction:column}
+  .hero-content{text-align:center;max-width:100%}
+  .hero-sub{margin:0 auto 28px}
+  .hero-buttons{justify-content:center}
+  .trust-row{justify-content:center}
+  .hero-calc{max-width:100%}
   .hero-calc-input{width:100%}
-  .hero-buttons{flex-direction:column;align-items:center}
   .btn-primary,.btn-secondary{width:100%;justify-content:center}
-  .trust-row{flex-direction:column;align-items:center;gap:10px}
+  .trust-row{flex-wrap:wrap;gap:10px}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .stat-item:nth-child(2)::after{display:none}
   .tools-grid{grid-template-columns:1fr}
   .tools-header h2,.how-header h2,.target-header h2,.testimonial-header h2,.guides-header h2{font-size:28px}
   .steps-row{grid-template-columns:1fr}
-  .persona-grid{grid-template-columns:1fr}
+  .persona-card{flex:0 0 100%;min-width:0}
+  .persona-slider::before,.persona-slider::after{display:none}
+  .persona-arrow{display:none}
   .testimonial-grid{grid-template-columns:1fr}
   .guides-grid{grid-template-columns:1fr}
   .tool-search-row{flex-direction:column}
@@ -299,19 +337,9 @@ ul{list-style:none}
     <div class="grad"></div>
     <div class="grid"></div>
   </div>
-  <div class="container hero-content">
+  <div class="hero-content">
     <h1>Free 2026 <span>Freelance Tax</span> Calculators</h1>
     <p class="hero-sub">Built for self-employed, gig workers &amp; 1099 contractors. Get instant answers — no signup, no cost, no jargon.</p>
-
-    <div class="hero-calc">
-      <div class="hero-calc-label">&#128200; Try it now — enter your freelance income:</div>
-      <div class="hero-calc-row">
-        <input type="text" class="hero-calc-input" id="heroIncomeInput" placeholder="$50,000" inputmode="numeric" aria-label="Enter your annual freelance income">
-        <div class="hero-calc-result">Quarterly tax: <strong id="heroCalcResult">$0</strong></div>
-      </div>
-      <div class="hero-calc-note">Estimate based on 2026 SE tax + federal income tax. Your actual amount may vary.</div>
-    </div>
-
     <div class="hero-buttons">
       <a href="#tools" class="btn-primary" aria-label="Browse all free tools">Try Tools Now &rarr;</a>
       <a href="/tools/" class="btn-secondary" aria-label="View all 32 tools">Browse All 32 Tools</a>
@@ -323,6 +351,36 @@ ul{list-style:none}
       <span class="trust-item"><span class="icon" aria-hidden="true">&#10003;</span> 2026 Tax Year</span>
       <span class="trust-item"><span class="icon" aria-hidden="true">&#10003;</span> 5 Countries</span>
     </div>
+  </div>
+  <div class="hero-calc">
+    <span class="hero-calc-badge">Quick Estimate</span>
+    <div class="hero-calc-title">Quarterly Tax Calculator</div>
+    <div class="hero-calc-field">
+      <label>Annual Freelance Income</label>
+      <input type="number" id="heroIncomeInput" placeholder="e.g. 60000">
+    </div>
+    <div class="hero-calc-field">
+      <label>Filing Status</label>
+      <select id="heroFiling">
+        <option value="single">Single</option>
+        <option value="married">Married Filing Jointly</option>
+        <option value="hoh">Head of Household</option>
+      </select>
+    </div>
+    <button class="hero-calc-btn" onclick="calcHeroTax()">Calculate My Quarterly Tax</button>
+    <div class="hero-calc-result-box">
+      <div>
+        <div class="hero-calc-result-label">Quarterly Payment</div>
+        <div class="hero-calc-result-value" id="heroCalcResult">$0</div>
+        <div class="hero-calc-result-sub">Due Apr 15, Jun 16, Sep 15, Jan 15</div>
+      </div>
+      <div class="hero-calc-result-right">
+        <div class="hero-calc-result-label">Effective Rate</div>
+        <div class="hero-calc-rate" id="heroCalcRate">0%</div>
+        <div class="hero-calc-result-sub" id="heroCalcAnnual">$0 / yr</div>
+      </div>
+    </div>
+    <div class="hero-calc-note">Based on 2026 SE tax + federal income tax. Your actual amount may vary. Not tax advice.</div>
   </div>
 </section>
 
@@ -464,13 +522,18 @@ ul{list-style:none}
     <div class="target-header fade-in">
       <h2>Built for People Like You</h2>
     </div>
-    <div class="persona-grid">
-      <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#128663;</span><div class="persona-info"><h3>Rideshare Driver</h3><p>Track Uber and Lyft income. Find every possible deduction.</p></div></article>
-      <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#128722;</span><div class="persona-info"><h3>Marketplace Seller</h3><p>Etsy, eBay, Amazon FBA — tax calculations made simple.</p></div></article>
-      <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#128187;</span><div class="persona-info"><h3>Remote Freelancer</h3><p>Upwork, Fiverr, direct clients — we handle the math.</p></div></article>
-      <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#9992;</span><div class="persona-info"><h3>Digital Nomad</h3><p>Working from Bali or Lisbon? Know your tax obligations.</p></div></article>
-      <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#127891;</span><div class="persona-info"><h3>First-Time Earner</h3><p>First paycheck demystified. Learn to keep more money.</p></div></article>
-      <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#128241;</span><div class="persona-info"><h3>Side Hustler</h3><p>Regular job + side income. Avoid a surprise tax bill.</p></div></article>
+    <div class="persona-slider">
+      <button class="persona-arrow persona-arrow-prev" onclick="slidePersona(-1)" aria-label="Previous">&#8249;</button>
+      <button class="persona-arrow persona-arrow-next" onclick="slidePersona(1)" aria-label="Next">&#8250;</button>
+      <div class="persona-track" id="personaTrack">
+        <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#128663;</span><div class="persona-info"><h3>Rideshare Driver</h3><p>Track Uber and Lyft income. Find every possible deduction.</p></div></article>
+        <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#128722;</span><div class="persona-info"><h3>Marketplace Seller</h3><p>Etsy, eBay, Amazon FBA — tax calculations made simple.</p></div></article>
+        <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#128187;</span><div class="persona-info"><h3>Remote Freelancer</h3><p>Upwork, Fiverr, direct clients — we handle the math.</p></div></article>
+        <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#9992;</span><div class="persona-info"><h3>Digital Nomad</h3><p>Working from Bali or Lisbon? Know your tax obligations.</p></div></article>
+        <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#127891;</span><div class="persona-info"><h3>First-Time Earner</h3><p>First paycheck demystified. Learn to keep more money.</p></div></article>
+        <article class="persona-card fade-in"><span class="persona-icon" aria-hidden="true">&#128241;</span><div class="persona-info"><h3>Side Hustler</h3><p>Regular job + side income. Avoid a surprise tax bill.</p></div></article>
+      </div>
+      <div class="persona-dots" id="personaDots"></div>
     </div>
   </div>
 </section>
@@ -697,36 +760,44 @@ ul{list-style:none}
     });
   }
 
-  // Hero mini calculator
-  var heroInput = document.getElementById('heroIncomeInput');
-  var heroResult = document.getElementById('heroCalcResult');
-  if(heroInput && heroResult){
-    function calcQuarterly(val){
-      var income = parseFloat(val.replace(/[,]/g,'')) || 0;
-      var seTax = income * 0.9235 * 0.153;
-      var deduction = seTax * 0.5;
-      var taxable = Math.max(0, income - deduction);
-      var incomeTax = 0;
-      if(taxable > 0){
-        var brackets = [[11600,0.10],[47150,0.12],[100525,0.22],[191950,0.24],[243725,0.32],[609350,0.35],[Infinity,0.37]];
-        var prev = 0;
-        for(var i=0;i<brackets.length;i++){
-          var limit = brackets[i][0], rate = brackets[i][1];
-          if(taxable > prev){
-            var chunk = Math.min(taxable, limit) - prev;
-            if(chunk > 0) incomeTax += chunk * rate;
-          }
-          prev = limit;
-        }
-      }
-      var totalTax = seTax + incomeTax;
-      var quarterly = totalTax / 4;
-      return quarterly;
+  // Hero mini calculator — global for inline onclick
+  window.calcHeroTax = function(){
+    var income = parseFloat(document.getElementById('heroIncomeInput').value) || 0;
+    var filing = document.getElementById('heroFiling').value;
+    if(income <= 0){
+      document.getElementById('heroCalcResult').textContent = '$0';
+      document.getElementById('heroCalcRate').textContent = '0%';
+      document.getElementById('heroCalcAnnual').textContent = '$0 / yr';
+      return;
     }
-    heroInput.addEventListener('input', function(){
-      var q = calcQuarterly(this.value);
-      heroResult.textContent = '$' + q.toLocaleString('en-US', {minimumFractionDigits:0,maximumFractionDigits:0});
-    });
+    var seTax = income * 0.9235 * 0.153;
+    var seDeduction = seTax * 0.5;
+    var agi = income - seDeduction;
+    var stdDed = filing === 'married' ? 30000 : filing === 'hoh' ? 22500 : 15000;
+    var taxable = Math.max(0, agi - stdDed);
+    var brackets;
+    if(filing === 'married'){
+      brackets = [[23200,0.10],[94300,0.12],[201050,0.22],[383900,0.24],[487450,0.32],[731200,0.35],[Infinity,0.37]];
+    } else if(filing === 'hoh'){
+      brackets = [[16550,0.10],[63100,0.12],[100500,0.22],[191950,0.24],[243700,0.32],[609350,0.35],[Infinity,0.37]];
+    } else {
+      brackets = [[11600,0.10],[47150,0.12],[100525,0.22],[191950,0.24],[243725,0.32],[609350,0.35],[Infinity,0.37]];
+    }
+    var incomeTax = 0, prev = 0;
+    for(var i=0;i<brackets.length;i++){
+      var limit = brackets[i][0], rate = brackets[i][1];
+      if(taxable > prev){
+        var chunk = Math.min(taxable, limit) - prev;
+        if(chunk > 0) incomeTax += chunk * rate;
+      }
+      prev = limit;
+    }
+    var totalTax = seTax + incomeTax;
+    var quarterly = totalTax / 4;
+    var effRate = (totalTax / income * 100);
+    document.getElementById('heroCalcResult').textContent = '$' + Math.round(quarterly).toLocaleString();
+    document.getElementById('heroCalcRate').textContent = effRate.toFixed(1) + '%';
+    document.getElementById('heroCalcAnnual').textContent = '$' + Math.round(totalTax).toLocaleString() + ' / yr';
   }
 
   // Tool search + filter
@@ -844,6 +915,75 @@ ul{list-style:none}
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+
+  // Persona slider
+  window.slidePersona = function(dir){
+    var track = document.getElementById('personaTrack');
+    if(!track) return;
+    var card = track.querySelector('.persona-card');
+    if(!card) return;
+    var gap = 16, cardW = card.offsetWidth;
+    var scrollAmt = cardW + gap;
+    track.scrollBy({ left: dir * scrollAmt, behavior: 'smooth' });
+  };
+  setTimeout(function(){
+    var track = document.getElementById('personaTrack');
+    var dots = document.getElementById('personaDots');
+    if(!track || !dots) return;
+    var cards = track.querySelectorAll('.persona-card');
+    if(cards.length < 2) return;
+    var numPages = cards.length - 1;
+    for(var i=0;i<=numPages;i++){
+      var dot = document.createElement('button');
+      dot.className = 'persona-dot';
+      if(i===0) dot.classList.add('active');
+      dot.setAttribute('data-index', i);
+      dot.addEventListener('click', function(){
+        var idx = parseInt(this.getAttribute('data-index'));
+        var card = track.querySelector('.persona-card');
+        if(!card) return;
+        var gap = 16, cardW = card.offsetWidth;
+        track.scrollTo({ left: idx * (cardW + gap), behavior: 'smooth' });
+        dots.querySelectorAll('.persona-dot').forEach(function(d){ d.classList.remove('active'); });
+        this.classList.add('active');
+      });
+      dots.appendChild(dot);
+    }
+    track.addEventListener('scroll', function(){
+      var card = track.querySelector('.persona-card');
+      if(!card) return;
+      var gap = 16, cardW = card.offsetWidth;
+      var step = cardW + gap;
+      var idx = Math.round(track.scrollLeft / step);
+      dots.querySelectorAll('.persona-dot').forEach(function(d){ d.classList.remove('active'); });
+      var activeDot = dots.querySelector('.persona-dot[data-index="'+idx+'"]');
+      if(activeDot) activeDot.classList.add('active');
+    });
+    // Autoplay
+    var autoplayTimer;
+    function startAutoplay(){
+      stopAutoplay();
+      autoplayTimer = setInterval(function(){
+        var maxScroll = track.scrollWidth - track.clientWidth;
+        var card = track.querySelector('.persona-card');
+        if(!card) return;
+        var gap = 16, cardW = card.offsetWidth;
+        var step = cardW + gap;
+        var next = track.scrollLeft + step;
+        if(next >= maxScroll) next = 0;
+        track.scrollTo({ left: next, behavior: 'smooth' });
+      }, 3500);
+    }
+    function stopAutoplay(){
+      if(autoplayTimer){ clearInterval(autoplayTimer); autoplayTimer = null; }
+    }
+    var slider = track.closest('.persona-slider');
+    if(slider){
+      slider.addEventListener('mouseenter', stopAutoplay);
+      slider.addEventListener('mouseleave', startAutoplay);
+    }
+    startAutoplay();
+  }, 100);
 })();
 </script>
 <script>

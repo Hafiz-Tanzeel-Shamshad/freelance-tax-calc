@@ -85,15 +85,34 @@ ul{list-style:none}
 .platform-banner-links a:hover{background:#00C896;color:#fff;border-color:#00C896}
 
 /* TOOL SECTION */
-.tool-section{padding:28px 0 60px}
+.tool-section{padding:28px 0 60px;background:linear-gradient(180deg,#F4F6F9 0%,#FFFFFF 100%)}
 
 /* TOOL CARD */
-.tool-card{background:#fff;border-radius:12px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.tool-card{background:#fff;border-radius:16px;padding:36px;box-shadow:0 8px 28px rgba(10,22,40,0.08);border:1px solid #E8ECF0}
 .tool-card h2{font-family:"DM Serif Display",serif;font-size:22px;color:#1A1A2E;margin-bottom:4px}
 .tool-card .subtitle{font-size:15px;color:#6B7280;margin-bottom:24px}
 
+/* TOOL LAYOUT */
+.tool-layout{display:grid;grid-template-columns:minmax(240px,300px) minmax(0,1fr);gap:28px;align-items:start}
+.tool-sidebar{position:sticky;top:96px;align-self:start;display:flex;flex-direction:column;gap:18px}
+.tool-main{min-width:0}
+.side-card{border:1px solid #E8ECF0;border-radius:12px;padding:18px;background:#F9FAFB}
+.side-card h3{font-size:16px;color:#1A1A2E;margin-bottom:8px;font-weight:700;letter-spacing:0.1px}
+.side-card p{font-size:14px;color:#6B7280;line-height:1.65}
+.side-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:0.6px;color:#00B085;font-weight:700;margin-bottom:6px}
+.side-steps{padding-left:18px;color:#1A1A2E;font-size:14px;line-height:1.65;margin-bottom:12px}
+.side-steps li{margin-bottom:6px}
+.side-meta{font-size:12px;color:#6B7280}
+.side-list{padding-left:18px;font-size:14px;color:#4B5563;line-height:1.65}
+.side-list li{margin-bottom:6px}
+.side-card.accent{background:#0A1628;border-color:#0A1628;color:#fff}
+.side-card.accent h3{color:#fff}
+.side-card.accent p{color:#B0B8C4}
+.side-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.side-pills span{font-size:11px;text-transform:uppercase;letter-spacing:0.4px;background:rgba(0,200,150,0.15);color:#00C896;border:1px solid rgba(0,200,150,0.4);padding:4px 8px;border-radius:999px}
+
 /* PROGRESS BAR */
-.progress-bar{display:flex;align-items:center;justify-content:center;margin-bottom:32px;gap:0;width:100%}
+.progress-bar{display:flex;align-items:center;justify-content:center;margin-bottom:28px;gap:0;width:100%}
 .prog-step{display:flex;align-items:center;flex:1;position:relative}
 .prog-step:last-child{flex:0 0 auto}
 .prog-circle{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;transition:all 0.4s ease;z-index:1;border:3px solid #DDE1E7;background:#fff;color:#9CA3AF}
@@ -108,18 +127,20 @@ ul{list-style:none}
 /* WIZARD STEPS */
 .wizard-step{display:none;animation:slideIn 0.4s ease}
 .wizard-step.active{display:block}
+.wizard-step h2{font-size:24px;letter-spacing:0.1px}
+.wizard-step .subtitle{font-size:16px;line-height:1.6}
 @keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
 
 /* PLATFORM GRID */
-.platform-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
-.platform-card{border:2px solid #DDE1E7;border-radius:10px;padding:16px 12px;text-align:center;cursor:pointer;transition:all 0.25s ease;position:relative;user-select:none;min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:26px}
+.platform-card{border:2px solid #DDE1E7;border-radius:12px;padding:16px 12px;text-align:center;cursor:pointer;transition:all 0.25s ease;position:relative;user-select:none;min-height:118px;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .platform-card:hover{border-color:#00C896;transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,200,150,0.1)}
 .platform-card.selected{background:#E8F8F5;border-color:#00C896;box-shadow:0 2px 8px rgba(0,200,150,0.15)}
 .platform-card .check{position:absolute;top:6px;right:6px;width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid #DDE1E7;display:flex;align-items:center;justify-content:center;font-size:11px;color:transparent;transition:all 0.25s ease}
 .platform-card.selected .check{background:#00C896;border-color:#00C896;color:#fff}
 .platform-icon{font-size:28px;margin-bottom:6px;line-height:1.2}
-.platform-name{font-weight:600;font-size:13px;color:#1A1A2E;line-height:1.2}
-.platform-desc{font-size:11px;color:#9CA3AF;margin-top:2px;line-height:1.2}
+.platform-name{font-weight:600;font-size:13px;color:#1A1A2E;line-height:1.25}
+.platform-desc{font-size:11px;color:#9CA3AF;margin-top:4px;line-height:1.25}
 
 /* SELECT ALL / CLEAR */
 .select-links{display:flex;gap:16px;margin-bottom:20px;font-size:14px}
@@ -128,7 +149,7 @@ ul{list-style:none}
 
 /* TOGGLES */
 .toggle-group{margin-bottom:4px}
-.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border:1px solid #E8ECF0;border-radius:8px;margin-bottom:6px;transition:border-color 0.3s ease}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border:1px solid #E8ECF0;border-radius:10px;margin-bottom:8px;transition:border-color 0.3s ease}
 .toggle-row:hover{border-color:#00C896}
 .toggle-question{display:flex;align-items:center;gap:10px;font-weight:500;font-size:15px;color:#1A1A2E}
 .toggle-question .q-icon{font-size:18px}
@@ -142,7 +163,7 @@ ul{list-style:none}
 /* STEP 3 FIELDS */
 .detail-field{margin-bottom:16px;display:none}
 .detail-field.visible{display:block}
-.detail-field label{display:block;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:6px}
+.detail-field label{display:block;font-weight:600;font-size:14px;color:#1A1A2E;margin-bottom:6px;letter-spacing:0.1px}
 .detail-field label span{font-weight:400;color:#6B7280;font-size:13px}
 .input-wrapper{position:relative;display:flex;align-items:center}
 .input-prefix{position:absolute;left:14px;font-weight:600;color:#6B7280;font-size:16px;pointer-events:none;z-index:1}
@@ -240,7 +261,7 @@ ul{list-style:none}
 
 /* PRINT */
 @media print{
-  .site-header,.breadcrumb,.page-title,.wiz-buttons,.site-footer,.seo-section,.disclaimer-bar,.progress-bar,.select-links{display:none!important}
+  .site-header,.breadcrumb,.page-title,.wiz-buttons,.site-footer,.seo-section,.disclaimer-bar,.progress-bar,.select-links,.tool-sidebar{display:none!important}
   .wizard-step{display:block!important}
   .results-area{display:block!important}
   .tool-card{box-shadow:none;border:1px solid #ddd}
@@ -253,6 +274,9 @@ ul{list-style:none}
 
 /* RESPONSIVE */
 @media(max-width:900px){
+  .tool-layout{grid-template-columns:1fr}
+  .tool-sidebar{position:static;order:2}
+  .tool-main{order:1}
   .platform-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:600px){
@@ -324,7 +348,39 @@ ul{list-style:none}
 <section class="tool-section" aria-label="Gig Worker Deduction Finder tool">
   <div class="container">
     <div class="tool-card">
-      <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" aria-label="Step 1 of 3">
+      <div class="tool-layout">
+        <aside class="tool-sidebar" aria-label="Tool summary">
+          <div class="side-card">
+            <div class="side-eyebrow">Quick guide</div>
+            <h3>Finish in 3 steps</h3>
+            <ol class="side-steps">
+              <li>Pick the platforms you use</li>
+              <li>Tell us how you work</li>
+              <li>Add a few numbers</li>
+            </ol>
+            <div class="side-meta">Typical time: 2-3 minutes</div>
+          </div>
+          <div class="side-card">
+            <h3>What you will need</h3>
+            <ul class="side-list">
+              <li>Estimated annual income</li>
+              <li>Mileage or delivery miles</li>
+              <li>Monthly phone and internet bills</li>
+              <li>Supplies or software costs</li>
+            </ul>
+          </div>
+          <div class="side-card accent">
+            <h3>Why this helps</h3>
+            <p>Most gig workers miss platform fees, mileage, and home office deductions. This tool groups them by IRS form line so you can copy them into your records.</p>
+            <div class="side-pills">
+              <span>Privacy-first</span>
+              <span>No signup</span>
+              <span>Instant results</span>
+            </div>
+          </div>
+        </aside>
+        <div class="tool-main">
+          <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" aria-label="Step 1 of 3">
         <div class="prog-step active" data-step="1">
           <div class="prog-circle">1</div>
           <div class="prog-label">Platforms</div>
@@ -612,8 +668,8 @@ ul{list-style:none}
         </div>
       </div>
 
-      <!-- RESULTS -->
-      <div class="results-area" id="resultsArea">
+          <!-- RESULTS -->
+          <div class="results-area" id="resultsArea">
         <div class="result-header">
           <div class="big-icon" aria-hidden="true">&#127881;</div>
           <h3>Great News!</h3>
@@ -630,6 +686,8 @@ ul{list-style:none}
             <button class="btn-print-res" onclick="window.print()" aria-label="Print report">&#128424; Print This Report</button>
             <button class="btn-copy-res" id="copyResBtn" aria-label="Copy summary">&#128203; Copy Summary</button>
             <button class="btn-start-res" id="startOverResBtn" aria-label="Start over">&#8635; Start Over</button>
+          </div>
+        </div>
           </div>
         </div>
       </div>
@@ -784,13 +842,13 @@ ul{list-style:none}
 .related-header h2{font-family:"DM Serif Display",serif;font-size:26px;color:#1A1A2E;margin-bottom:8px}
 .related-header p{font-size:15px;color:#6B7280;max-width:500px;margin:0 auto}
 .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:960px;margin:0 auto}
-.tool-card{display:flex;align-items:flex-start;gap:16px;background:#F8FAFC;border:1px solid #E8ECF0;border-radius:14px;padding:20px;transition:all 0.3s ease;text-decoration:none}
-.tool-card:hover{border-color:#00C896;background:#F0FDF9;transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,200,150,0.12)}
-.tool-card-icon{font-size:24px;flex-shrink:0;width:44px;height:44px;background:#E8F8F5;border-radius:12px;display:flex;align-items:center;justify-content:center}
-.tool-card-content{flex:1;min-width:0}
-.tool-card-name{display:block;font-size:15px;font-weight:600;color:#1A1A2E;margin-bottom:3px}
-.tool-card-desc{display:block;font-size:13px;color:#6B7280;line-height:1.4}
-.tool-card-tag{display:inline-block;margin-top:8px;font-size:11px;font-weight:600;color:#00C896;background:#E8F8F5;padding:2px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px}
+.related-tools .tool-card{display:flex;align-items:flex-start;gap:16px;background:#F8FAFC;border:1px solid #E8ECF0;border-radius:14px;padding:20px;transition:all 0.3s ease;text-decoration:none}
+.related-tools .tool-card:hover{border-color:#00C896;background:#F0FDF9;transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,200,150,0.12)}
+.related-tools .tool-card-icon{font-size:24px;flex-shrink:0;width:44px;height:44px;background:#E8F8F5;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.related-tools .tool-card-content{flex:1;min-width:0}
+.related-tools .tool-card-name{display:block;font-size:15px;font-weight:600;color:#1A1A2E;margin-bottom:3px}
+.related-tools .tool-card-desc{display:block;font-size:13px;color:#6B7280;line-height:1.4}
+.related-tools .tool-card-tag{display:inline-block;margin-top:8px;font-size:11px;font-weight:600;color:#00C896;background:#E8F8F5;padding:2px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px}
 </style>
 
 <footer class="site-footer" role="contentinfo">

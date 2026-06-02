@@ -1,0 +1,40 @@
+/* Calculator UI — shared styles based on index hero calculator */
+.calc-ui{background:#fff;border-radius:16px;padding:28px;position:relative;z-index:2;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.calc-ui-badge{position:absolute;top:-10px;left:20px;background:#00C896;color:#0A1628;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px}
+.calc-ui-title{font-family:"DM Serif Display",serif;font-size:18px;color:#1A1A2E;margin:8px 0 20px}
+.calc-ui-field{margin-bottom:14px}
+.calc-ui-field label{display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.3px}
+.calc-ui-field input,.calc-ui-field select{width:100%;padding:11px 14px;border-radius:8px;border:1.5px solid #E8ECF0;font-size:15px;font-family:"DM Sans",sans-serif;background:#F9FAFB;color:#1A1A2E;outline:none;transition:border-color 0.2s}
+.calc-ui-field input:focus,.calc-ui-field select:focus{border-color:#00C896;box-shadow:0 0 0 3px rgba(0,200,150,0.1)}
+.calc-ui-field .input-prefix{position:absolute;left:14px;font-weight:600;color:#6B7280;font-size:16px;pointer-events:none;z-index:1}
+.calc-ui-field .input-wrapper{position:relative;display:flex;align-items:center}
+.calc-ui-field input[type=number]{padding-left:32px}
+.calc-ui-field .helper{font-size:13px;color:#9CA3AF;margin-top:4px;line-height:1.4}
+.calc-ui-btn{width:100%;padding:13px 24px;background:linear-gradient(135deg,#00C896,#00B085);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:15px;font-family:"DM Sans",sans-serif;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-top:4px}
+.calc-ui-btn:hover{opacity:0.9;transform:translateY(-1px)}
+.calc-ui-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.calc-ui-result-box{background:#0A1628;border-radius:10px;padding:16px 20px;margin-top:16px;display:flex;justify-content:space-between;align-items:center}
+.calc-ui-result-box .result-left{text-align:left}
+.calc-ui-result-box .result-right{text-align:right}
+.calc-ui-result-label{font-size:11px;color:rgba(255,255,255,0.5);font-weight:500;text-transform:uppercase;letter-spacing:0.3px;margin-bottom:2px}
+.calc-ui-result-value{font-family:"DM Serif Display",serif;font-size:28px;color:#00C896;font-weight:700;line-height:1.2}
+.calc-ui-result-sub{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
+.calc-ui-result-rate{font-family:"DM Serif Display",serif;font-size:22px;color:#00C896;font-weight:700}
+.calc-ui-note{font-size:11px;color:#9CA3AF;margin-top:12px;line-height:1.5}
+
+/* Form group overrides for calc-ui context */
+.calc-ui .form-group label{display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.3px}
+.calc-ui .form-group input,.calc-ui .form-group select{width:100%;padding:11px 14px;border-radius:8px;border:1.5px solid #E8ECF0;font-size:15px;font-family:"DM Sans",sans-serif;background:#F9FAFB;color:#1A1A2E;outline:none;transition:border-color 0.2s}
+.calc-ui .form-group input:focus,.calc-ui .form-group select:focus{border-color:#00C896;box-shadow:0 0 0 3px rgba(0,200,150,0.1)}
+.calc-ui .form-group input[type=number]{padding-left:32px}
+.calc-ui .form-group .input-wrapper{position:relative;display:flex;align-items:center}
+
+/* Gradient buttons — global override for all tool pages */
+.calc-btn{width:100%;padding:13px 24px;background:linear-gradient(135deg,#00C896,#00B085);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:15px;font-family:"DM Sans",sans-serif;cursor:pointer;transition:opacity 0.2s,transform 0.2s;margin-top:4px}
+.calc-btn:hover:not(:disabled){opacity:0.9;transform:translateY(-1px)}
+.calc-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+
+/* Result cards dark theme */
+.result-card.dark-card{background:#0A1628;color:#fff;border:none}
+.result-card.dark-card .calc-ui-result-label{font-size:11px;color:rgba(255,255,255,0.5);font-weight:500;text-transform:uppercase;letter-spacing:0.3px}
+.result-card.dark-card .calc-ui-result-value{font-family:"DM Serif Display",serif;font-size:28px;color:#00C896;font-weight:700;line-height:1.2}

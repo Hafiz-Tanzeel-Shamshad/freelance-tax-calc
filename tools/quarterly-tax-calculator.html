@@ -1023,10 +1023,7 @@ body.country-uk .uk-only{display:block}
       rFedTaxLabel.textContent = 'Federal Income Tax';
       rStateTaxLabel.textContent = 'State Income Tax';
       rSafeHarborCard.style.display = 'block';
-    } else {
-      rSafeHarborCard.style.display = 'none';
-    }
-    else if(country === 'ca'){
+    } else if(country === 'ca'){
       // Canada calculation
       var cppRate = 0.119;
       var basicExemption = 3500;
@@ -1069,6 +1066,7 @@ body.country-uk .uk-only{display:block}
       rSeTaxLabel.textContent = 'CPP Contributions';
       rFedTaxLabel.textContent = 'Federal Income Tax';
       rStateTaxLabel.textContent = 'Provincial Tax';
+      rSafeHarborCard.style.display = 'none';
     }
     else if(country === 'uk'){
       // UK calculation
@@ -1127,6 +1125,7 @@ body.country-uk .uk-only{display:block}
       rSeTaxLabel.textContent = 'National Insurance';
       rFedTaxLabel.textContent = 'Income Tax';
       rStateTaxLabel.textContent = 'N/A';
+      rSafeHarborCard.style.display = 'none';
     }
 
     // ─── DISPLAY RESULTS ───

@@ -71,7 +71,7 @@ function extractDate(html, filePath) {
 /** Convert YYYY-MM-DD to RFC 822 */
 function toRfc822(dateStr) {
   const d = new Date(dateStr + 'T10:00:00Z');
-  return d.toUTCString().replace('GMT', '+0000');
+  return d.toUTCString();
 }
 
 /** Recursively find all .html files, excluding assets/ and node_modules/ */

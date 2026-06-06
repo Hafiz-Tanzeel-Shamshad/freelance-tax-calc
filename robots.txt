@@ -9,5 +9,6 @@ Allow: /
 Disallow: /assets/
 Disallow: /pre-launch-checklist.html
 
-# Sitemap location
+# Sitemap & RSS feed
 Sitemap: https://freelancetaxcalc.online/sitemap.xml
+Sitemap: https://freelancetaxcalc.online/rss.xml

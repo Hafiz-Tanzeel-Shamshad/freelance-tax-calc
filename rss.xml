@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FreelanceTaxCalc - Blog &amp; Guides</title>
+    <link>https://freelancetaxcalc.online</link>
+    <description>Expert tax guides, tips, and resources for freelancers and self-employed professionals</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Jun 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://freelancetaxcalc.online/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Solo 401(k) vs SEP IRA 2026: Which Retirement Plan is Best?</title>
+      <link>https://freelancetaxcalc.online/blog/solo-401k-vs-sep-ira-2026.html</link>
+      <description>Compare Solo 401(k) vs SEP IRA side-by-side with contribution limits, tax savings, and which plan fits your freelance business.</description>
+      <pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://freelancetaxcalc.online/blog/solo-401k-vs-sep-ira-2026.html</guid>
+    </item>
+
+    <item>
+      <title>1099 vs W-2: Which Is Better After Taxes? 2026 Comparison</title>
+      <link>https://freelancetaxcalc.online/guides/1099-vs-w2-comparison.html</link>
+      <description>Side-by-side comparison of 1099 contractor and W-2 employee income, taxes, and deductions. See the real difference in take-home pay.</description>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://freelancetaxcalc.online/guides/1099-vs-w2-comparison.html</guid>
+    </item>
+
+    <item>
+      <title>Top 10 Tax Deductions for DoorDash and Gig Workers 2026</title>
+      <link>https://freelancetaxcalc.online/guides/gig-worker-deductions.html</link>
+      <description>Complete deduction checklist for gig workers covering mileage, vehicle expenses, equipment, and more. Maximize your refund with these little-known deductions.</description>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
+      <guid>https://freelancetaxcalc.online/guides/gig-worker-deductions.html</guid>
+    </item>
+
+    <item>
+      <title>How to Pay Quarterly Taxes as a Freelancer in 2026</title>
+      <link>https://freelancetaxcalc.online/guides/quarterly-taxes-guide.html</link>
+      <description>Complete guide to IRS estimated quarterly tax payments for freelancers. Due dates, rates, safe harbor rules, deductions, and how to pay.</description>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>https://freelancetaxcalc.online/guides/quarterly-taxes-guide.html</guid>
+    </item>
+
+    <item>
+      <title>Canada Freelance Tax Guide 2026: Income Tax, CPP &amp; Deductions</title>
+      <link>https://freelancetaxcalc.online/blog/canada-freelance-tax-guide-2026.html</link>
+      <description>Complete guide to Canadian taxes for freelancers and self-employed in 2026. Federal &amp; provincial rates, CPP contributions, HST/GST, and deductions.</description>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>https://freelancetaxcalc.online/blog/canada-freelance-tax-guide-2026.html</guid>
+    </item>
+
+    <item>
+      <title>Quarterly Taxes 2026: Complete Freelancer Guide</title>
+      <link>https://freelancetaxcalc.online/blog/quarterly-taxes-guide-2026.html</link>
+      <description>Learn everything about quarterly estimated taxes including due dates, rates, safe harbor rules, deductions, and how to pay the IRS. Essential guide for freelancers.</description>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>https://freelancetaxcalc.online/blog/quarterly-taxes-guide-2026.html</guid>
+    </item>
+
+  </channel>
+</rss>

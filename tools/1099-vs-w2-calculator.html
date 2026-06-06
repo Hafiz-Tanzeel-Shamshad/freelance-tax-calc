@@ -22,28 +22,165 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script src="/assets/tax-calculator-core.js"></script>
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"1099 vs W-2 Calculator USA",
-  "url":"https://freelancetaxcalc.online/tools/1099-vs-w2-calculator.html",
-  "description":"Free USA calculator comparing 1099 contractor vs W-2 employee take-home pay with SE tax, QBI deduction, and breakeven analysis.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"1099 vs W-2 Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How much more should a 1099 rate be vs W-2 salary?","acceptedAnswer":{"@type":"Answer","text":"A general rule of thumb is that a 1099 contractor rate should be 20-30% higher than an equivalent W-2 salary. This accounts for the employer portion of FICA (7.65%), health insurance, retirement benefits, paid time off, and the self-employment tax burden. Use our calculator above for your exact numbers."}},
-    {"@type":"Question","name":"Can I negotiate a higher 1099 rate to cover taxes?","acceptedAnswer":{"@type":"Answer","text":"Yes, absolutely. When evaluating a 1099 contract offer, you should factor in the additional costs you'll bear: the employer half of FICA (7.65%), health insurance premiums, retirement contributions, paid time off, and the risk of gaps between contracts. A good starting point is asking for 25-35% more than the W-2 equivalent."}},
-    {"@type":"Question","name":"What deductions do 1099 contractors get that W-2 employees don't?","acceptedAnswer":{"@type":"Answer","text":"1099 contractors can deduct a wide range of business expenses including home office costs, vehicle mileage, equipment and software, health insurance premiums, retirement contributions, professional development, and half of their self-employment tax. They also qualify for the QBI deduction (20% of qualified business income). These deductions can significantly reduce taxable income."}},
-    {"@type":"Question","name":"Is it better to be W-2 or 1099 for taxes?","acceptedAnswer":{"@type":"Answer","text":"From a pure tax perspective, W-2 is generally simpler and has lower built-in taxes since your employer pays half of FICA. However, 1099 contractors can deduct business expenses and may end up with a lower effective tax rate if they have significant deductions. The choice often comes down to your specific situation, income level, and how much you value benefits and stability."}},{"@type":"Question","name":"What is the QBI deduction and how does it affect 1099 vs W-2 decisions?","acceptedAnswer":{"@type":"Answer","text":"The QBI (Qualified Business Income) deduction allows 1099 contractors to deduct up to 20% of their qualified business income from their taxable income. This can significantly lower the effective tax rate for contractors compared to W-2 employees. For 2026, the QBI deduction phases in above $197,300 (married filing jointly) and $98,650 (single). This deduction can make 1099 contracting more tax-efficient than many people assume."}},{"@type":"Question","name":"How do I calculate my breakeven 1099 rate vs W-2 salary in the USA?","acceptedAnswer":{"@type":"Answer","text":"Your breakeven 1099 rate is the amount you need to earn as a contractor to match your W-2 take-home pay plus benefits. A general formula: multiply your W-2 salary by 1.25 to 1.35. For example, a $75,000 W-2 position requires roughly $93,750 to $101,250 as a 1099 contractor. This accounts for the employer FICA (7.65%), health insurance (5-10%), retirement match (3-5%), paid time off (5-8%), and self-employment risk."}},{"@type":"Question","name":"What FICA taxes do 1099 contractors pay vs W-2 employees?","acceptedAnswer":{"@type":"Answer","text":"W-2 employees pay 7.65% FICA (6.2% Social Security + 1.45% Medicare) and their employer pays the other 7.65%. 1099 contractors pay the full 15.3% themselves (both employee and employer portions). However, 1099 contractors can deduct half of their self-employment tax (7.65%) as an adjustment to income. For 2026, Social Security tax applies up to $176,100 of earnings, while Medicare has no wage cap."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "1099 vs W-2 Calculator USA",
+    "url": "https://freelancetaxcalc.online/tools/1099-vs-w2-calculator.html",
+    "description": "Free USA calculator comparing 1099 contractor vs W-2 employee take-home pay with SE tax, QBI deduction, and breakeven analysis.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "1099 vs W-2 Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much more should a 1099 rate be vs W-2 salary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A general rule of thumb is that a 1099 contractor rate should be 20-30% higher than an equivalent W-2 salary. This accounts for the employer portion of FICA (7.65%), health insurance, retirement benefits, paid time off, and the self-employment tax burden. Use our calculator above for your exact numbers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I negotiate a higher 1099 rate to cover taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. When evaluating a 1099 contract offer, you should factor in the additional costs you'll bear: the employer half of FICA (7.65%), health insurance premiums, retirement contributions, paid time off, and the risk of gaps between contracts. A good starting point is asking for 25-35% more than the W-2 equivalent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What deductions do 1099 contractors get that W-2 employees don't?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1099 contractors can deduct a wide range of business expenses including home office costs, vehicle mileage, equipment and software, health insurance premiums, retirement contributions, professional development, and half of their self-employment tax. They also qualify for the QBI deduction (20% of qualified business income). These deductions can significantly reduce taxable income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it better to be W-2 or 1099 for taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "From a pure tax perspective, W-2 is generally simpler and has lower built-in taxes since your employer pays half of FICA. However, 1099 contractors can deduct business expenses and may end up with a lower effective tax rate if they have significant deductions. The choice often comes down to your specific situation, income level, and how much you value benefits and stability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the QBI deduction and how does it affect 1099 vs W-2 decisions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The QBI (Qualified Business Income) deduction allows 1099 contractors to deduct up to 20% of their qualified business income from their taxable income. This can significantly lower the effective tax rate for contractors compared to W-2 employees. For 2026, the QBI deduction phases in above $197,300 (married filing jointly) and $98,650 (single). This deduction can make 1099 contracting more tax-efficient than many people assume."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my breakeven 1099 rate vs W-2 salary in the USA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your breakeven 1099 rate is the amount you need to earn as a contractor to match your W-2 take-home pay plus benefits. A general formula: multiply your W-2 salary by 1.25 to 1.35. For example, a $75,000 W-2 position requires roughly $93,750 to $101,250 as a 1099 contractor. This accounts for the employer FICA (7.65%), health insurance (5-10%), retirement match (3-5%), paid time off (5-8%), and self-employment risk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What FICA taxes do 1099 contractors pay vs W-2 employees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "W-2 employees pay 7.65% FICA (6.2% Social Security + 1.45% Medicare) and their employer pays the other 7.65%. 1099 contractors pay the full 15.3% themselves (both employee and employer portions). However, 1099 contractors can deduct half of their self-employment tax (7.65%) as an adjustment to income. For 2026, Social Security tax applies up to $176,100 of earnings, while Medicare has no wage cap."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "1099 vs W-2 Calculator 2026 (USA Contractor Comparison) | Free Tool",
+    "description": "Compare 1099 contractor vs W-2 employee take-home pay in the USA. Free calculator with self-employment tax, QBI deduction, and breakeven analysis for 2026."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

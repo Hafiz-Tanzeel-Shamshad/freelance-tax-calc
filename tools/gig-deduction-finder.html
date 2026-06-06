@@ -21,34 +21,184 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Gig Worker Tax Deduction Finder",
-  "url":"https://freelancetaxcalc.online/tools/gig-deduction-finder.html",
-  "description":"Find every tax deduction you qualify for as a gig worker.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All"
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Gig Worker Deduction Finder"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Can I deduct my car if I do DoorDash?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can deduct vehicle expenses for DoorDash deliveries using either the standard mileage rate ($0.70 per mile in 2026) or actual expenses. The standard mileage method is usually simpler and more beneficial for gig workers who drive for deliveries."}},
-    {"@type":"Question","name":"What percentage of my phone bill can I deduct?","acceptedAnswer":{"@type":"Answer","text":"You can deduct the business-use percentage of your cell phone bill. If you use your phone 60% for work, you deduct 60% of the annual cost. Keep a log of work vs personal use to justify your percentage if audited."}},
-    {"@type":"Question","name":"Do I need receipts for all deductions?","acceptedAnswer":{"@type":"Answer","text":"For deductions under $75, receipts aren't required but are recommended. For individual expenses of $75 or more, you should keep receipts. For vehicle mileage, a contemporaneous log is your best documentation. Digital records and bank statements also work."}},
-    {"@type":"Question","name":"What is the simplified home office deduction?","acceptedAnswer":{"@type":"Answer","text":"The simplified method allows you to deduct $5 per square foot of dedicated home office space, up to 300 square feet (maximum $1,500). It requires less paperwork than the regular method and is a good option if your home office is straightforward."}},
-    {"@type":"Question","name":"Can I deduct platform fees from Uber or Fiverr?","acceptedAnswer":{"@type":"Answer","text":"Yes. Platform fees — including Uber's 25% commission, Fiverr's 20% service fee, Etsy listing and transaction fees, and similar charges — are 100% deductible as business expenses on Schedule C. These are some of the largest deductions gig workers often overlook."}},
-    {"@type":"Question","name":"What deductions can DoorDash drivers claim in 2026?","acceptedAnswer":{"@type":"Answer","text":"DoorDash drivers can claim mileage ($0.70/mile), insulated delivery bags, hot/cold packs, phone plan (business portion), parking fees, tolls, car washes, and a portion of insurance. Platform fees and Dasher Direct card fees are also deductible. DoorDash provides a yearly tax summary in your account."}},
-    {"@type":"Question","name":"Instacart shopper tax write-offs list — what can I claim?","acceptedAnswer":{"@type":"Answer","text":"Instacart shoppers can deduct mileage driving to stores and deliveries, insulated bags, phone plan, parking fees, car maintenance, and Instacart's service fees. If you shop at multiple stores, each trip's mileage is deductible. Shoppers should track all miles driven from store to customer."}},
-    {"@type":"Question","name":"Can I deduct my phone bill as an Uber driver?","acceptedAnswer":{"@type":"Answer","text":"Yes. If you use your phone for Uber — accepting rides, navigating, communicating with riders — the business-use portion of your phone bill is deductible. Most Uber drivers can deduct 60-80% of their phone bill. If you have a dedicated phone for Uber, deduct 100%."}},
-    {"@type":"Question","name":"Tax deductions for content creators on TikTok 2026?","acceptedAnswer":{"@type":"Answer","text":"TikTok content creators can deduct camera equipment, ring lights, tripods, microphones, backdrops, props, editing software, royalty-free music subscriptions, and a portion of their home office. If you earn from the TikTok Creativity Program, those earnings are taxable and your content creation costs are deductible."}},
-    {"@type":"Question","name":"What can Amazon Flex drivers deduct?","acceptedAnswer":{"@type":"Answer","text":"Amazon Flex drivers can deduct mileage ($0.70/mile from warehouse to delivery locations), insulated bags, phone mount, phone plan, parking fees, tolls, car maintenance, and Amazon-provided vest/uniform cleaning. Unlike Uber, Amazon Flex miles from home to warehouse are commuting and not deductible."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Gig Worker Tax Deduction Finder",
+    "url": "https://freelancetaxcalc.online/tools/gig-deduction-finder.html",
+    "description": "Find every tax deduction you qualify for as a gig worker.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Gig Worker Deduction Finder"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I deduct my car if I do DoorDash?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can deduct vehicle expenses for DoorDash deliveries using either the standard mileage rate ($0.70 per mile in 2026) or actual expenses. The standard mileage method is usually simpler and more beneficial for gig workers who drive for deliveries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What percentage of my phone bill can I deduct?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can deduct the business-use percentage of your cell phone bill. If you use your phone 60% for work, you deduct 60% of the annual cost. Keep a log of work vs personal use to justify your percentage if audited."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need receipts for all deductions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For deductions under $75, receipts aren't required but are recommended. For individual expenses of $75 or more, you should keep receipts. For vehicle mileage, a contemporaneous log is your best documentation. Digital records and bank statements also work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the simplified home office deduction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The simplified method allows you to deduct $5 per square foot of dedicated home office space, up to 300 square feet (maximum $1,500). It requires less paperwork than the regular method and is a good option if your home office is straightforward."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I deduct platform fees from Uber or Fiverr?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Platform fees — including Uber's 25% commission, Fiverr's 20% service fee, Etsy listing and transaction fees, and similar charges — are 100% deductible as business expenses on Schedule C. These are some of the largest deductions gig workers often overlook."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What deductions can DoorDash drivers claim in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DoorDash drivers can claim mileage ($0.70/mile), insulated delivery bags, hot/cold packs, phone plan (business portion), parking fees, tolls, car washes, and a portion of insurance. Platform fees and Dasher Direct card fees are also deductible. DoorDash provides a yearly tax summary in your account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Instacart shopper tax write-offs list — what can I claim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Instacart shoppers can deduct mileage driving to stores and deliveries, insulated bags, phone plan, parking fees, car maintenance, and Instacart's service fees. If you shop at multiple stores, each trip's mileage is deductible. Shoppers should track all miles driven from store to customer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I deduct my phone bill as an Uber driver?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If you use your phone for Uber — accepting rides, navigating, communicating with riders — the business-use portion of your phone bill is deductible. Most Uber drivers can deduct 60-80% of their phone bill. If you have a dedicated phone for Uber, deduct 100%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tax deductions for content creators on TikTok 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TikTok content creators can deduct camera equipment, ring lights, tripods, microphones, backdrops, props, editing software, royalty-free music subscriptions, and a portion of their home office. If you earn from the TikTok Creativity Program, those earnings are taxable and your content creation costs are deductible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What can Amazon Flex drivers deduct?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amazon Flex drivers can deduct mileage ($0.70/mile from warehouse to delivery locations), insulated bags, phone mount, phone plan, parking fees, tolls, car maintenance, and Amazon-provided vest/uniform cleaning. Unlike Uber, Amazon Flex miles from home to warehouse are commuting and not deductible."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "Gig Worker Tax Deduction Finder — Free Tool",
+    "description": "Find every tax deduction you qualify for as a gig worker. Free tool for DoorDash, Uber, Etsy, and freelance workers."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

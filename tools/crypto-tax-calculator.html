@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Crypto Tax Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/crypto-tax-calculator.html",
-  "description":"Free crypto tax calculator for 2026. Estimate capital gains tax on Bitcoin, Ethereum, and other cryptocurrency trades. Supports US, UK, and Australia tax rules.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Crypto Tax Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How is cryptocurrency taxed in the US in 2026?","acceptedAnswer":{"@type":"Answer","text":"In the US, the IRS treats cryptocurrency as property, not currency. This means crypto transactions are subject to capital gains tax. If you hold crypto for 1 year or less and sell at a profit, it's a short-term capital gain taxed at your ordinary income rate (10–37%). If you hold for more than 1 year, it's a long-term capital gain taxed at 0%, 15%, or 20% depending on your income. Mining income, staking rewards, and payments received in crypto are taxed as ordinary income at their fair market value when received."}},
-    {"@type":"Question","name":"What are the UK crypto tax rules for 2025/26?","acceptedAnswer":{"@type":"Answer","text":"In the UK, HMRC treats cryptocurrency as property for tax purposes. You pay Capital Gains Tax on crypto gains above the annual exempt amount of £3,000 for 2025/26. Gains within your allowance are tax-free. Basic rate taxpayers pay 10% on gains above the allowance, while higher and additional rate taxpayers pay 20%. Crypto-to-crypto trades are taxable events — every disposal triggers a gain or loss calculation. Staking and mining income are subject to Income Tax."}},
-    {"@type":"Question","name":"How does Australia tax cryptocurrency in 2025/26?","acceptedAnswer":{"@type":"Answer","text":"The ATO treats cryptocurrency as property for capital gains tax purposes. If you hold crypto for 12 months or more before selling, you qualify for the 50% CGT discount — meaning only half the gain is included in your taxable income. Short-term gains (held less than 12 months) are taxed at your full marginal rate. Crypto-to-crypto trades are taxable events. Personal use assets (acquired for under $10,000) used to buy goods or services may be exempt from CGT."}},
-    {"@type":"Question","name":"What is the difference between short-term and long-term crypto gains for US taxpayers?","acceptedAnswer":{"@type":"Answer","text":"For US taxpayers, the holding period determines your tax rate. Short-term gains (crypto held 12 months or less) are taxed as ordinary income at rates from 10% to 37% depending on your total taxable income. Long-term gains (crypto held more than 12 months) are taxed at preferential rates of 0%, 15%, or 20%. The 12-month mark is critical — holding just one extra day can significantly reduce your tax bill."}},
-    {"@type":"Question","name":"Are crypto-to-crypto trades taxable?","acceptedAnswer":{"@type":"Answer","text":"Yes, in all three countries (US, UK, Australia), trading one cryptocurrency for another is a taxable event. The IRS, HMRC, and ATO all treat crypto-to-crypto trades as a disposal of the original asset, triggering a capital gain or loss calculation based on the fair market value at the time of the trade. You must calculate the gain or loss in your local fiat currency for each trade. Using crypto to purchase goods or services is also a taxable disposal."}},
-    {"@type":"Question","name":"How are staking rewards and crypto interest taxed?","acceptedAnswer":{"@type":"Answer","text":"In the US, staking rewards are generally taxed as ordinary income at their fair market value when received. The IRS has been developing guidance on this. In the UK, HMRC treats staking income as miscellaneous income subject to Income Tax. In Australia, the ATO treats staking and lending rewards as ordinary income at the time of receipt. When you later sell or trade staked assets, any additional gain or loss is subject to capital gains tax based on the price at the time of receipt vs. disposal."}},
-    {"@type":"Question","name":"What records do I need to keep for crypto taxes?","acceptedAnswer":{"@type":"Answer","text":"You should keep detailed records of every crypto transaction including: date and time of each trade or transfer, fair market value in your local fiat currency at the time of the transaction, cost basis (what you paid, including fees), proceeds from each sale or trade, wallet addresses involved in transfers, and records of any mining, staking, or airdrop income. Most tax authorities recommend keeping records for at least 5–7 years. Using crypto tax software or a portfolio tracker can simplify this process significantly."}},
-    {"@type":"Question","name":"Can I use tax-loss harvesting with cryptocurrency?","acceptedAnswer":{"@type":"Answer","text":"Yes, tax-loss harvesting works with crypto in all three countries. If you sell crypto at a loss, you can use that loss to offset capital gains from other crypto or investment sales. In the US, if losses exceed gains, you can deduct up to $3,000 per year against ordinary income. In the UK, losses can be carried forward to offset future gains. In Australia, capital losses must first be applied against current year gains and any excess is carried forward. Be aware of wash sale rules — in the US, the wash sale rule traditionally only applies to securities, but the IRS may extend similar rules to crypto in the future."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Crypto Tax Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/crypto-tax-calculator.html",
+    "description": "Free crypto tax calculator for 2026. Estimate capital gains tax on Bitcoin, Ethereum, and other cryptocurrency trades. Supports US, UK, and Australia tax rules.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Crypto Tax Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is cryptocurrency taxed in the US in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the US, the IRS treats cryptocurrency as property, not currency. This means crypto transactions are subject to capital gains tax. If you hold crypto for 1 year or less and sell at a profit, it's a short-term capital gain taxed at your ordinary income rate (10–37%). If you hold for more than 1 year, it's a long-term capital gain taxed at 0%, 15%, or 20% depending on your income. Mining income, staking rewards, and payments received in crypto are taxed as ordinary income at their fair market value when received."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the UK crypto tax rules for 2025/26?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the UK, HMRC treats cryptocurrency as property for tax purposes. You pay Capital Gains Tax on crypto gains above the annual exempt amount of £3,000 for 2025/26. Gains within your allowance are tax-free. Basic rate taxpayers pay 10% on gains above the allowance, while higher and additional rate taxpayers pay 20%. Crypto-to-crypto trades are taxable events — every disposal triggers a gain or loss calculation. Staking and mining income are subject to Income Tax."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Australia tax cryptocurrency in 2025/26?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The ATO treats cryptocurrency as property for capital gains tax purposes. If you hold crypto for 12 months or more before selling, you qualify for the 50% CGT discount — meaning only half the gain is included in your taxable income. Short-term gains (held less than 12 months) are taxed at your full marginal rate. Crypto-to-crypto trades are taxable events. Personal use assets (acquired for under $10,000) used to buy goods or services may be exempt from CGT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between short-term and long-term crypto gains for US taxpayers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For US taxpayers, the holding period determines your tax rate. Short-term gains (crypto held 12 months or less) are taxed as ordinary income at rates from 10% to 37% depending on your total taxable income. Long-term gains (crypto held more than 12 months) are taxed at preferential rates of 0%, 15%, or 20%. The 12-month mark is critical — holding just one extra day can significantly reduce your tax bill."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are crypto-to-crypto trades taxable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, in all three countries (US, UK, Australia), trading one cryptocurrency for another is a taxable event. The IRS, HMRC, and ATO all treat crypto-to-crypto trades as a disposal of the original asset, triggering a capital gain or loss calculation based on the fair market value at the time of the trade. You must calculate the gain or loss in your local fiat currency for each trade. Using crypto to purchase goods or services is also a taxable disposal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are staking rewards and crypto interest taxed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the US, staking rewards are generally taxed as ordinary income at their fair market value when received. The IRS has been developing guidance on this. In the UK, HMRC treats staking income as miscellaneous income subject to Income Tax. In Australia, the ATO treats staking and lending rewards as ordinary income at the time of receipt. When you later sell or trade staked assets, any additional gain or loss is subject to capital gains tax based on the price at the time of receipt vs. disposal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What records do I need to keep for crypto taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You should keep detailed records of every crypto transaction including: date and time of each trade or transfer, fair market value in your local fiat currency at the time of the transaction, cost basis (what you paid, including fees), proceeds from each sale or trade, wallet addresses involved in transfers, and records of any mining, staking, or airdrop income. Most tax authorities recommend keeping records for at least 5–7 years. Using crypto tax software or a portfolio tracker can simplify this process significantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use tax-loss harvesting with cryptocurrency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, tax-loss harvesting works with crypto in all three countries. If you sell crypto at a loss, you can use that loss to offset capital gains from other crypto or investment sales. In the US, if losses exceed gains, you can deduct up to $3,000 per year against ordinary income. In the UK, losses can be carried forward to offset future gains. In Australia, capital losses must first be applied against current year gains and any excess is carried forward. Be aware of wash sale rules — in the US, the wash sale rule traditionally only applies to securities, but the IRS may extend similar rules to crypto in the future."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ],
+    "name": "Crypto Tax Calculator 2026 — Bitcoin, Crypto Capital Gains Estimator | Free Tool",
+    "description": "Free crypto tax calculator for 2026. Estimate capital gains tax on Bitcoin, Ethereum, and other cryptocurrency trades. Supports US, UK, and Australia tax rules."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

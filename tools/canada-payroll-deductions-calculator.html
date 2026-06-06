@@ -21,31 +21,157 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Canada Payroll Deductions Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/canada-payroll-deductions-calculator.html",
-  "description":"Free Canada payroll deductions calculator. Estimate take-home pay after income tax, CPP, and EI for 2026.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Canada Payroll Deductions Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What deductions come off my Canadian paycheque?","acceptedAnswer":{"@type":"Answer","text":"Your Canadian paycheque typically has these deductions: federal and provincial income tax (calculated by your employer using CRA's payroll deduction tables), Canada Pension Plan (CPP) contributions (5.7% of earnings above $3,500, up to a max), Employment Insurance (EI) premiums (1.66% up to a max), and any voluntary deductions like union dues, RRSP contributions, or benefits premiums."}},
-    {"@type":"Question","name":"How is CPP calculated on my paycheque?","acceptedAnswer":{"@type":"Answer","text":"CPP contributions are 5.95% (2025 rate, approximately 5.7% for 2026 est.) of your gross pay above $3,500 annual basic exemption, up to the Year's Maximum Pensionable Earnings (YMPE) of approximately $73,200. For 2026, the maximum employee CPP contribution is approximately $3,740. Your employer matches this amount. Self-employed individuals pay both portions (11.4% total)."}},
-    {"@type":"Question","name":"How is EI calculated on my paycheque?","acceptedAnswer":{"@type":"Answer","text":"Employment Insurance (EI) premiums are 1.66% of your gross pay up to the maximum insurable earnings of approximately $65,700 for 2026. The maximum annual EI premium for employees is approximately $1,100. Self-employed individuals can opt into EI for access to special benefits (maternity, parental, sickness, compassionate care) at a lower rate."}},
-    {"@type":"Question","name":"What is the difference between an employee and self-employed for payroll deductions?","acceptedAnswer":{"@type":"Answer","text":"Employees have income tax, CPP (at 5.7%), and EI (at 1.66%) deducted automatically by their employer. The employer also pays a matching CPP and 1.4x the EI premium. Self-employed individuals pay both portions of CPP (11.4% total) and do not pay EI unless they opt in. Self-employed individuals must calculate and remit their own taxes quarterly."}},
-    {"@type":"Question","name":"How does RRSP contribution affect my paycheque?","acceptedAnswer":{"@type":"Answer","text":"If your employer deducts RRSP contributions directly from your paycheque (through a group RRSP or payroll deduction), those contributions reduce your taxable income for that pay period, meaning less income tax is withheld. This is called a 'pension adjustment' and reduces your RRSP contribution room for the following year."}},
-    {"@type":"Question","name":"What is the Quebec Pension Plan (QPP) difference?","acceptedAnswer":{"@type":"Answer","text":"Quebec operates its own pension plan (QPP) instead of CPP. QPP contribution rates are slightly higher than CPP (approximately 6.4% for employees in 2025 vs 5.95% for CPP). Quebec also administers its own parental insurance plan (QPIP) instead of EI for maternity and parental benefits. This calculator uses simplified CPP rates; Quebec residents should consult the CRA or Revenu Quebec for exact amounts."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Canada Payroll Deductions Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/canada-payroll-deductions-calculator.html",
+    "description": "Free Canada payroll deductions calculator. Estimate take-home pay after income tax, CPP, and EI for 2026.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Canada Payroll Deductions Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What deductions come off my Canadian paycheque?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your Canadian paycheque typically has these deductions: federal and provincial income tax (calculated by your employer using CRA's payroll deduction tables), Canada Pension Plan (CPP) contributions (5.7% of earnings above $3,500, up to a max), Employment Insurance (EI) premiums (1.66% up to a max), and any voluntary deductions like union dues, RRSP contributions, or benefits premiums."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is CPP calculated on my paycheque?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CPP contributions are 5.95% (2025 rate, approximately 5.7% for 2026 est.) of your gross pay above $3,500 annual basic exemption, up to the Year's Maximum Pensionable Earnings (YMPE) of approximately $73,200. For 2026, the maximum employee CPP contribution is approximately $3,740. Your employer matches this amount. Self-employed individuals pay both portions (11.4% total)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is EI calculated on my paycheque?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Employment Insurance (EI) premiums are 1.66% of your gross pay up to the maximum insurable earnings of approximately $65,700 for 2026. The maximum annual EI premium for employees is approximately $1,100. Self-employed individuals can opt into EI for access to special benefits (maternity, parental, sickness, compassionate care) at a lower rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between an employee and self-employed for payroll deductions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Employees have income tax, CPP (at 5.7%), and EI (at 1.66%) deducted automatically by their employer. The employer also pays a matching CPP and 1.4x the EI premium. Self-employed individuals pay both portions of CPP (11.4% total) and do not pay EI unless they opt in. Self-employed individuals must calculate and remit their own taxes quarterly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does RRSP contribution affect my paycheque?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your employer deducts RRSP contributions directly from your paycheque (through a group RRSP or payroll deduction), those contributions reduce your taxable income for that pay period, meaning less income tax is withheld. This is called a 'pension adjustment' and reduces your RRSP contribution room for the following year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Quebec Pension Plan (QPP) difference?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Quebec operates its own pension plan (QPP) instead of CPP. QPP contribution rates are slightly higher than CPP (approximately 6.4% for employees in 2025 vs 5.95% for CPP). Quebec also administers its own parental insurance plan (QPIP) instead of EI for maternity and parental benefits. This calculator uses simplified CPP rates; Quebec residents should consult the CRA or Revenu Quebec for exact amounts."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "Canada Payroll Deductions Calculator 2026 — Take-Home Pay Estimator | Free Tool",
+    "description": "Free Canada payroll deductions calculator for 2026. Estimate your take-home pay after income tax, CPP, and EI deductions. Works for employees and self-employed."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

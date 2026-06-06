@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"UK Capital Gains Tax Calculator 2025/26",
-  "url":"https://freelancetaxcalc.online/tools/uk-capital-gains-tax-calculator.html",
-  "description":"Free UK Capital Gains Tax calculator 2025/26. Estimate CGT on shares, crypto, and property sales. Includes £3,000 annual exemption and 10%/20% rates.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"UK Capital Gains Tax Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is Capital Gains Tax (CGT) in the UK?","acceptedAnswer":{"@type":"Answer","text":"Capital Gains Tax is a tax on the profit you make when you sell or dispose of an asset that has increased in value. In the UK, you pay CGT on gains from selling shares, crypto assets, second homes, business assets, and most personal possessions worth over £6,000. Your main home is usually exempt under Private Residence Relief."}},
-    {"@type":"Question","name":"What is the CGT annual exemption for 2025/26?","acceptedAnswer":{"@type":"Answer","text":"For the 2025/26 tax year, the annual exempt amount is £3,000. This means you can realise up to £3,000 of capital gains in a tax year without paying any CGT. The exemption was reduced from £6,000 in 2024/25 and from £12,300 in 2023/24. Any gain above £3,000 is taxable in that year."}},
-    {"@type":"Question","name":"What are the CGT rates for 2025/26 — 10% vs 20%?","acceptedAnswer":{"@type":"Answer","text":"For most assets (shares, crypto, personal possessions), the CGT rate is 10% if your total taxable income and gains are below the basic rate band (£50,270), and 20% if above. For residential property (not your main home), rates are 18% (basic rate) and 24% (higher rate). This calculator focuses on the standard 10%/20% rates for shares and crypto."}},
-    {"@type":"Question","name":"Which assets trigger UK Capital Gains Tax?","acceptedAnswer":{"@type":"Answer","text":"CGT applies when you sell or dispose of: shares and investments (not in ISAs), crypto assets like Bitcoin and Ethereum, second homes and buy-to-let properties, business assets, and personal possessions worth over £6,000 (e.g. art, jewellery, antiques). Assets held in ISAs, your main home (with some exceptions), and UK gilts are generally exempt from CGT."}},
-    {"@type":"Question","name":"Do I pay Capital Gains Tax on my main home?","acceptedAnswer":{"@type":"Answer","text":"Generally no. Private Residence Relief means you do not pay CGT when you sell your main or only home. However, you may need to pay CGT if the property was used as a business premises, is very large (over 5,000 sq metres), was bought with the sole intention of making a profit, or if you have let out part of it. There is also a final period exemption of 9 months."}},
-    {"@type":"Question","name":"How is CGT calculated on crypto assets?","acceptedAnswer":{"@type":"Answer","text":"Crypto assets are treated as capital assets by HMRC. Each sale, trade, or disposal of crypto is a chargeable event. You calculate the gain as the difference between the sale proceeds and the allowable cost (usually what you paid). The same £3,000 annual exemption applies, and gains are taxed at 10% or 20% depending on your total income. Crypto-to-crypto trades also trigger CGT."}},
-    {"@type":"Question","name":"Can I carry forward capital losses to reduce future CGT?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can carry forward unused capital losses to offset against future capital gains. Losses must be reported to HMRC within 4 years of the end of the tax year they arose in. You must deduct losses from gains in the same year before using the annual exemption. Once losses are carried forward, they can be used against any future gains with no time limit."}},
-    {"@type":"Question","name":"When is the deadline to pay CGT in the UK?","acceptedAnswer":{"@type":"Answer","text":"For disposals of UK residential property, you must report and pay CGT within 60 days of completion. For other assets (shares, crypto, personal possessions), CGT is reported on your annual Self Assessment tax return and paid by 31 January following the end of the tax year. For 2025/26 gains, the deadline is 31 January 2027. Late payments incur interest and penalties."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "UK Capital Gains Tax Calculator 2025/26",
+    "url": "https://freelancetaxcalc.online/tools/uk-capital-gains-tax-calculator.html",
+    "description": "Free UK Capital Gains Tax calculator 2025/26. Estimate CGT on shares, crypto, and property sales. Includes £3,000 annual exemption and 10%/20% rates.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      },
+      {
+        "@type": "Thing",
+        "name": "crypto"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "UK Capital Gains Tax Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Capital Gains Tax (CGT) in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Capital Gains Tax is a tax on the profit you make when you sell or dispose of an asset that has increased in value. In the UK, you pay CGT on gains from selling shares, crypto assets, second homes, business assets, and most personal possessions worth over £6,000. Your main home is usually exempt under Private Residence Relief."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the CGT annual exemption for 2025/26?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For the 2025/26 tax year, the annual exempt amount is £3,000. This means you can realise up to £3,000 of capital gains in a tax year without paying any CGT. The exemption was reduced from £6,000 in 2024/25 and from £12,300 in 2023/24. Any gain above £3,000 is taxable in that year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the CGT rates for 2025/26 — 10% vs 20%?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most assets (shares, crypto, personal possessions), the CGT rate is 10% if your total taxable income and gains are below the basic rate band (£50,270), and 20% if above. For residential property (not your main home), rates are 18% (basic rate) and 24% (higher rate). This calculator focuses on the standard 10%/20% rates for shares and crypto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which assets trigger UK Capital Gains Tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CGT applies when you sell or dispose of: shares and investments (not in ISAs), crypto assets like Bitcoin and Ethereum, second homes and buy-to-let properties, business assets, and personal possessions worth over £6,000 (e.g. art, jewellery, antiques). Assets held in ISAs, your main home (with some exceptions), and UK gilts are generally exempt from CGT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I pay Capital Gains Tax on my main home?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generally no. Private Residence Relief means you do not pay CGT when you sell your main or only home. However, you may need to pay CGT if the property was used as a business premises, is very large (over 5,000 sq metres), was bought with the sole intention of making a profit, or if you have let out part of it. There is also a final period exemption of 9 months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is CGT calculated on crypto assets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Crypto assets are treated as capital assets by HMRC. Each sale, trade, or disposal of crypto is a chargeable event. You calculate the gain as the difference between the sale proceeds and the allowable cost (usually what you paid). The same £3,000 annual exemption applies, and gains are taxed at 10% or 20% depending on your total income. Crypto-to-crypto trades also trigger CGT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I carry forward capital losses to reduce future CGT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can carry forward unused capital losses to offset against future capital gains. Losses must be reported to HMRC within 4 years of the end of the tax year they arose in. You must deduct losses from gains in the same year before using the annual exemption. Once losses are carried forward, they can be used against any future gains with no time limit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is the deadline to pay CGT in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For disposals of UK residential property, you must report and pay CGT within 60 days of completion. For other assets (shares, crypto, personal possessions), CGT is reported on your annual Self Assessment tax return and paid by 31 January following the end of the tax year. For 2025/26 gains, the deadline is 31 January 2027. Late payments incur interest and penalties."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      },
+      {
+        "@type": "Thing",
+        "name": "crypto"
+      }
+    ],
+    "name": "UK Capital Gains Tax Calculator 2025/26 — CGT on Shares, Crypto & Property",
+    "description": "Free UK Capital Gains Tax calculator 2025/26. Estimate CGT on shares, crypto, and property sales. Includes £3,000 annual exemption and 10%/20% rates."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

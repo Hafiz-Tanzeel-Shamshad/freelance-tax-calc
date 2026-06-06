@@ -21,36 +21,197 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"First Paycheck Calculator USA",
-  "url":"https://freelancetaxcalc.online/tools/first-paycheck-calculator.html",
-  "description":"Free USA take-home pay calculator. Enter salary or hourly rate to see net pay after federal, state, FICA, and 401k deductions.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"First Paycheck Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How much will I take home on a $50,000 salary?","acceptedAnswer":{"@type":"Answer","text":"Typically $38,000-$42,000 depending on your state. Use our calculator above for your exact number based on your specific state, filing status, and 401(k) contributions."}},
-    {"@type":"Question","name":"What is FICA tax?","acceptedAnswer":{"@type":"Answer","text":"FICA stands for Federal Insurance Contributions Act. It includes Social Security (6.2% of your wages up to $176,100) and Medicare (1.45% of all wages). These taxes fund retirement benefits and healthcare for seniors."}},
-    {"@type":"Question","name":"Why was my first paycheck smaller than expected?","acceptedAnswer":{"@type":"Answer","text":"Several factors can make your first paycheck smaller: you may have started mid-pay-period (partial pay), your employer may deduct a prorated amount for benefits, or you might see one-time deductions like uniform costs or background check fees. Check with HR for a breakdown."}},
-    {"@type":"Question","name":"Can I change how much tax is taken out?","acceptedAnswer":{"@type":"Answer","text":"Yes! Submit a new W-4 form to your employer to adjust your federal income tax withholding. The IRS has a Tax Withholding Estimator to help you get it just right — aiming for a small refund or owing a small amount is ideal."}},
-    {"@type":"Question","name":"Do I get this money back?","acceptedAnswer":{"@type":"Answer","text":"If too much tax was withheld from your paychecks, you'll get a refund after filing your annual tax return. If too little was withheld, you'll owe money when you file. The goal is to get as close to zero as possible — that means more money in each paycheck."}},
-    {"@type":"Question","name":"What actually gets taken out of my paycheck?","acceptedAnswer":{"@type":"Answer","text":"Your paycheck has federal income tax, state income tax (unless you're in a no-tax state), Social Security (6.2%), Medicare (1.45%), and any voluntary deductions like 401(k), health insurance, HSA, or FSA. Your employer may also deduct things like parking, gym membership, or commuting benefits if you signed up."}},
-    {"@type":"Question","name":"How do I estimate my new job paycheck?","acceptedAnswer":{"@type":"Answer","text":"Use our new job paycheck estimator above. Enter your offer salary or hourly rate, select your state and filing status, and add any 401(k) contribution. The calculator shows your gross to net breakdown per paycheck and annually. Most first paychecks are smaller due to mid-period start dates or prorated benefits."}},
-    {"@type":"Question","name":"How much will I take home on $50,000?","acceptedAnswer":{"@type":"Answer","text":"On a $50,000 salary as a single filer, your take-home pay ranges from ~$36,000 in high-tax states (California, New York, Oregon) to ~$40,000 in no-tax states (Texas, Florida, Nevada). The exact amount depends on your state, filing status, and 401(k) contributions. Use our salary calculator after taxes above for your exact number."}},
-    {"@type":"Question","name":"Is it better to be paid salary or hourly?","acceptedAnswer":{"@type":"Answer","text":"Salary gives you predictable paychecks and typically includes benefits (PTO, health insurance, 401(k)). Hourly means you get paid for every hour worked, including overtime (1.5x after 40 hours). For first-time workers, hourly can be better if your job offers overtime. Salary is better if you value stability and benefits. Both get the same taxes taken out."}},
-    {"@type":"Question","name":"What is the difference between gross pay and net pay in the USA?","acceptedAnswer":{"@type":"Answer","text":"Gross pay is your total earnings before any deductions. Net pay (take-home pay) is what you actually receive after subtracting federal income tax, state income tax, Social Security (6.2%), Medicare (1.45%), and any voluntary deductions like 401(k), health insurance, or HSA contributions. In the USA, the average worker sees 20-30% of their gross pay deducted for taxes and benefits."}},
-    {"@type":"Question","name":"How does the US federal income tax brackets work for paychecks?","acceptedAnswer":{"@type":"Answer","text":"The US uses a progressive tax system with seven brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37% for 2026. Your employer withholds based on your W-4 form and each bracket applies only to income within that range — not your entire salary. For a single filer in 2026, the first $11,925 is taxed at 10%, income from $11,925 to $48,475 at 12%, and so on."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "First Paycheck Calculator USA",
+    "url": "https://freelancetaxcalc.online/tools/first-paycheck-calculator.html",
+    "description": "Free USA take-home pay calculator. Enter salary or hourly rate to see net pay after federal, state, FICA, and 401k deductions.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "First Paycheck Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much will I take home on a $50,000 salary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typically $38,000-$42,000 depending on your state. Use our calculator above for your exact number based on your specific state, filing status, and 401(k) contributions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is FICA tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FICA stands for Federal Insurance Contributions Act. It includes Social Security (6.2% of your wages up to $176,100) and Medicare (1.45% of all wages). These taxes fund retirement benefits and healthcare for seniors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why was my first paycheck smaller than expected?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Several factors can make your first paycheck smaller: you may have started mid-pay-period (partial pay), your employer may deduct a prorated amount for benefits, or you might see one-time deductions like uniform costs or background check fees. Check with HR for a breakdown."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change how much tax is taken out?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Submit a new W-4 form to your employer to adjust your federal income tax withholding. The IRS has a Tax Withholding Estimator to help you get it just right — aiming for a small refund or owing a small amount is ideal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I get this money back?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If too much tax was withheld from your paychecks, you'll get a refund after filing your annual tax return. If too little was withheld, you'll owe money when you file. The goal is to get as close to zero as possible — that means more money in each paycheck."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What actually gets taken out of my paycheck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your paycheck has federal income tax, state income tax (unless you're in a no-tax state), Social Security (6.2%), Medicare (1.45%), and any voluntary deductions like 401(k), health insurance, HSA, or FSA. Your employer may also deduct things like parking, gym membership, or commuting benefits if you signed up."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I estimate my new job paycheck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use our new job paycheck estimator above. Enter your offer salary or hourly rate, select your state and filing status, and add any 401(k) contribution. The calculator shows your gross to net breakdown per paycheck and annually. Most first paychecks are smaller due to mid-period start dates or prorated benefits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much will I take home on $50,000?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On a $50,000 salary as a single filer, your take-home pay ranges from ~$36,000 in high-tax states (California, New York, Oregon) to ~$40,000 in no-tax states (Texas, Florida, Nevada). The exact amount depends on your state, filing status, and 401(k) contributions. Use our salary calculator after taxes above for your exact number."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it better to be paid salary or hourly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Salary gives you predictable paychecks and typically includes benefits (PTO, health insurance, 401(k)). Hourly means you get paid for every hour worked, including overtime (1.5x after 40 hours). For first-time workers, hourly can be better if your job offers overtime. Salary is better if you value stability and benefits. Both get the same taxes taken out."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between gross pay and net pay in the USA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gross pay is your total earnings before any deductions. Net pay (take-home pay) is what you actually receive after subtracting federal income tax, state income tax, Social Security (6.2%), Medicare (1.45%), and any voluntary deductions like 401(k), health insurance, or HSA contributions. In the USA, the average worker sees 20-30% of their gross pay deducted for taxes and benefits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the US federal income tax brackets work for paychecks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The US uses a progressive tax system with seven brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37% for 2026. Your employer withholds based on your W-4 form and each bracket applies only to income within that range — not your entire salary. For a single filer in 2026, the first $11,925 is taxed at 10%, income from $11,925 to $48,475 at 12%, and so on."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "First Paycheck Calculator USA (Take-Home Pay Estimator 2026) | Free Tool",
+    "description": "Calculate your first paycheck take-home pay after taxes in the USA. Free salary calculator with federal &amp; state income tax, FICA, and 401(k) deductions for 2026."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

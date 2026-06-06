@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"UK VAT Calculator 2025/26",
-  "url":"https://freelancetaxcalc.online/tools/uk-vat-calculator.html",
-  "description":"Free UK VAT calculator. Add or remove VAT at standard (20%) and reduced (5%) rates. Calculate net, VAT, and gross amounts instantly.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"UK VAT Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is VAT (Value Added Tax)?","acceptedAnswer":{"@type":"Answer","text":"VAT (Value Added Tax) is a consumption tax charged on most goods and services in the UK. It is collected by VAT-registered businesses at each stage of the supply chain and ultimately paid by the end consumer. The standard rate is 20%, with reduced rates of 5% and 0% for specific items."}},
-    {"@type":"Question","name":"What is the difference between standard and reduced VAT rates?","acceptedAnswer":{"@type":"Answer","text":"The standard VAT rate of 20% applies to most goods and services. The reduced rate of 5% applies to specific items such as domestic fuel, children's car seats, and home renovations for qualifying persons. The zero rate (0%) applies to essential items like most food, children's clothing, books, and public transport."}},
-    {"@type":"Question","name":"What is the UK VAT registration threshold?","acceptedAnswer":{"@type":"Answer","text":"For 2025/26, the VAT registration threshold is £90,000 of taxable turnover over a rolling 12-month period. If your total VAT-taxable turnover exceeds this threshold, you must register for VAT with HMRC. You can also voluntarily register if your turnover is below the threshold, which may be beneficial if you want to reclaim VAT on your business purchases."}},
-    {"@type":"Question","name":"When should I charge VAT to my customers?","acceptedAnswer":{"@type":"Answer","text":"If you are VAT-registered, you must charge VAT on all taxable supplies (goods and services) you make. You charge the appropriate VAT rate based on the type of supply. VAT-registered businesses can reclaim the VAT they pay on business purchases, so it is common for B2B customers to prefer dealing with VAT-registered suppliers."}},
-    {"@type":"Question","name":"What information must a VAT invoice include?","acceptedAnswer":{"@type":"Answer","text":"A valid VAT invoice must include: your VAT registration number, invoice date, a unique invoice number, your business name and address, the customer's name and address, a description of goods/services, the supply date (tax point), the net amount before VAT, the VAT rate charged, the total VAT amount, and the gross total including VAT. Simplified invoices are allowed for sales under £250."}},
-    {"@type":"Question","name":"What is the Flat Rate Scheme for VAT?","acceptedAnswer":{"@type":"Answer","text":"The Flat Rate Scheme is a simplified VAT accounting scheme for small businesses with taxable turnover up to £150,000 (excluding VAT). Instead of calculating VAT on each sale and purchase, you pay a fixed percentage of your gross turnover to HMRC. The percentage depends on your business sector. You cannot reclaim VAT on most purchases under this scheme, except for certain capital assets over £2,000."}},
-    {"@type":"Question","name":"How often do I need to submit VAT returns?","acceptedAnswer":{"@type":"Answer","text":"Most VAT-registered businesses submit VAT returns quarterly (every 3 months) to HMRC. You must file your return and pay any VAT due within one calendar month and 7 days after the end of the accounting period. Some businesses may qualify for annual accounting, allowing one return per year with advance payments."}},
-    {"@type":"Question","name":"Do I need to keep digital records for VAT under Making Tax Digital?","acceptedAnswer":{"@type":"Answer","text":"Yes, under HMRC's Making Tax Digital (MTD) for VAT initiative, all VAT-registered businesses must maintain digital records and submit VAT returns using MTD-compatible software. This applies to all businesses, regardless of turnover, since November 2022. You must keep digital records of all supplies made and received, as well as any adjustments or corrections."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "UK VAT Calculator 2025/26",
+    "url": "https://freelancetaxcalc.online/tools/uk-vat-calculator.html",
+    "description": "Free UK VAT calculator. Add or remove VAT at standard (20%) and reduced (5%) rates. Calculate net, VAT, and gross amounts instantly.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "UK VAT Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is VAT (Value Added Tax)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VAT (Value Added Tax) is a consumption tax charged on most goods and services in the UK. It is collected by VAT-registered businesses at each stage of the supply chain and ultimately paid by the end consumer. The standard rate is 20%, with reduced rates of 5% and 0% for specific items."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between standard and reduced VAT rates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The standard VAT rate of 20% applies to most goods and services. The reduced rate of 5% applies to specific items such as domestic fuel, children's car seats, and home renovations for qualifying persons. The zero rate (0%) applies to essential items like most food, children's clothing, books, and public transport."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the UK VAT registration threshold?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2025/26, the VAT registration threshold is £90,000 of taxable turnover over a rolling 12-month period. If your total VAT-taxable turnover exceeds this threshold, you must register for VAT with HMRC. You can also voluntarily register if your turnover is below the threshold, which may be beneficial if you want to reclaim VAT on your business purchases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I charge VAT to my customers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you are VAT-registered, you must charge VAT on all taxable supplies (goods and services) you make. You charge the appropriate VAT rate based on the type of supply. VAT-registered businesses can reclaim the VAT they pay on business purchases, so it is common for B2B customers to prefer dealing with VAT-registered suppliers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What information must a VAT invoice include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A valid VAT invoice must include: your VAT registration number, invoice date, a unique invoice number, your business name and address, the customer's name and address, a description of goods/services, the supply date (tax point), the net amount before VAT, the VAT rate charged, the total VAT amount, and the gross total including VAT. Simplified invoices are allowed for sales under £250."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Flat Rate Scheme for VAT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Flat Rate Scheme is a simplified VAT accounting scheme for small businesses with taxable turnover up to £150,000 (excluding VAT). Instead of calculating VAT on each sale and purchase, you pay a fixed percentage of your gross turnover to HMRC. The percentage depends on your business sector. You cannot reclaim VAT on most purchases under this scheme, except for certain capital assets over £2,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often do I need to submit VAT returns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most VAT-registered businesses submit VAT returns quarterly (every 3 months) to HMRC. You must file your return and pay any VAT due within one calendar month and 7 days after the end of the accounting period. Some businesses may qualify for annual accounting, allowing one return per year with advance payments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to keep digital records for VAT under Making Tax Digital?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, under HMRC's Making Tax Digital (MTD) for VAT initiative, all VAT-registered businesses must maintain digital records and submit VAT returns using MTD-compatible software. This applies to all businesses, regardless of turnover, since November 2022. You must keep digital records of all supplies made and received, as well as any adjustments or corrections."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ],
+    "name": "UK VAT Calculator 2025/26 — Add or Remove VAT | Free Online Tool",
+    "description": "Free UK VAT calculator for 2025/26. Add VAT to a net amount or remove VAT from a gross amount. Supports 20% standard rate and 5% reduced rate."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

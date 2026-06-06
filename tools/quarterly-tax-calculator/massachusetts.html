@@ -22,48 +22,177 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Freelancer Tax Calculator Massachusetts",
-  "url": "https://freelancetaxcalc.online/tools/quarterly-tax-calculator.html",
-  "description": "Free self-employment tax calculator for freelancers, gig workers, and small businesses in Massachusetts.",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "All",
-  "browserRequirements": "Requires JavaScript"
-},{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Home",
-    "item": "https://freelancetaxcalc.online/"
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "name": "Tools",
-    "item": "https://freelancetaxcalc.online/"
-  },{
-    "@type": "ListItem",
-    "position": 3,
-    "name": "Quarterly Tax Calculator Massachusetts"
-  }]
-},{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"What is self-employment tax?","acceptedAnswer":{"@type":"Answer","text":"Self-employment tax is the Medicare and Social Security tax that self-employed individuals pay. Unlike W-2 employees who split this cost with their employer, freelancers and independent contractors pay both the employee and employer portions — totaling 15.3% on net earnings up to the Social Security wage base, plus Medicare on all net earnings."}},
-    {"@type":"Question","name":"When are quarterly taxes due in 2026?","acceptedAnswer":{"@type":"Answer","text":"United States: April 15, June 16, September 15, 2026 and January 15, 2027. Canada: March 15, June 15, September 15, December 15. United Kingdom: Payments on account are due January 31 and July 31, with a balancing payment due the following January 31."}},
-    {"@type":"Question","name":"How much should Uber drivers save for quarterly taxes?","acceptedAnswer":{"@type":"Answer","text":"Uber drivers should save 25–30% of their net earnings (after Uber's commission and expenses) for taxes. This covers self-employment tax (15.3%), federal income tax, and state income tax. Use this quarterly tax calculator for Uber drivers to get exact amounts."}},
-    {"@type":"Question","name":"What deductions can DoorDash drivers claim on quarterly taxes?","acceptedAnswer":{"@type":"Answer","text":"DoorDash drivers can deduct vehicle mileage at $0.70 per mile in 2026, hot bags, phone plan, car maintenance, tolls, parking, and a portion of their insurance. These deductions reduce your taxable income and lower your quarterly payments."}},
-    {"@type":"Question","name":"Do Etsy sellers have to pay quarterly taxes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Etsy sellers must make estimated quarterly tax payments if they expect to owe at least $1,000 in taxes. Your taxable income is gross sales minus Etsy fees, materials, shipping, and other business expenses. Use this estimated quarterly taxes calculator for Etsy sellers to find your exact payment amounts."}},
-    {"@type":"Question","name":"How do I pay quarterly taxes as a new freelancer?","acceptedAnswer":{"@type":"Answer","text":"Step 1: Estimate your annual net self-employment income. Step 2: Use this calculator to find your quarterly amounts. Step 3: Pay via IRS Direct Pay or the IRS2Go app. Due dates for 2026: April 15, June 15, September 15, and January 15, 2027."}},
-    {"@type":"Question","name":"What is the penalty for missing a quarterly tax payment?","acceptedAnswer":{"@type":"Answer","text":"The IRS charges a failure-to-pay penalty of 0.5% per month on the unpaid amount, plus interest on the underpayment. The Canada Revenue Agency and HMRC have similar penalty and interest structures."}},
-    {"@type":"Question","name":"Can I deduct business expenses before calculating quarterly taxes?","acceptedAnswer":{"@type":"Answer","text":"Yes. You calculate quarterly taxes on your net self-employment income, which is your gross income minus allowable business expenses. This includes deductions for home office, equipment, software, mileage, health insurance premiums, and retirement contributions."}},
-    {"@type":"Question","name":"Is this calculator accurate?","acceptedAnswer":{"@type":"Answer","text":"This calculator provides estimates based on 2026 tax rates and your inputs. For exact amounts, consult a CPA or tax professional."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Freelancer Tax Calculator Massachusetts",
+    "url": "https://freelancetaxcalc.online/tools/quarterly-tax-calculator.html",
+    "description": "Free self-employment tax calculator for freelancers, gig workers, and small businesses in Massachusetts.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Quarterly Tax Calculator Massachusetts"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is self-employment tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Self-employment tax is the Medicare and Social Security tax that self-employed individuals pay. Unlike W-2 employees who split this cost with their employer, freelancers and independent contractors pay both the employee and employer portions — totaling 15.3% on net earnings up to the Social Security wage base, plus Medicare on all net earnings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When are quarterly taxes due in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "United States: April 15, June 16, September 15, 2026 and January 15, 2027. Canada: March 15, June 15, September 15, December 15. United Kingdom: Payments on account are due January 31 and July 31, with a balancing payment due the following January 31."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should Uber drivers save for quarterly taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Uber drivers should save 25–30% of their net earnings (after Uber's commission and expenses) for taxes. This covers self-employment tax (15.3%), federal income tax, and state income tax. Use this quarterly tax calculator for Uber drivers to get exact amounts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What deductions can DoorDash drivers claim on quarterly taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DoorDash drivers can deduct vehicle mileage at $0.70 per mile in 2026, hot bags, phone plan, car maintenance, tolls, parking, and a portion of their insurance. These deductions reduce your taxable income and lower your quarterly payments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do Etsy sellers have to pay quarterly taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Etsy sellers must make estimated quarterly tax payments if they expect to owe at least $1,000 in taxes. Your taxable income is gross sales minus Etsy fees, materials, shipping, and other business expenses. Use this estimated quarterly taxes calculator for Etsy sellers to find your exact payment amounts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I pay quarterly taxes as a new freelancer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Step 1: Estimate your annual net self-employment income. Step 2: Use this calculator to find your quarterly amounts. Step 3: Pay via IRS Direct Pay or the IRS2Go app. Due dates for 2026: April 15, June 15, September 15, and January 15, 2027."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the penalty for missing a quarterly tax payment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The IRS charges a failure-to-pay penalty of 0.5% per month on the unpaid amount, plus interest on the underpayment. The Canada Revenue Agency and HMRC have similar penalty and interest structures."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I deduct business expenses before calculating quarterly taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You calculate quarterly taxes on your net self-employment income, which is your gross income minus allowable business expenses. This includes deductions for home office, equipment, software, mileage, health insurance premiums, and retirement contributions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this calculator accurate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This calculator provides estimates based on 2026 tax rates and your inputs. For exact amounts, consult a CPA or tax professional."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "Massachusetts Tax Calculator 2026 — Free Tool",
+    "description": "Free freelancer tax calculator for Massachusetts. Self-employed quarterly tax estimator with Massachusetts state rates, due dates, and payment amounts for 2026."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"SEP IRA Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/sep-ira-calculator.html",
-  "description":"Free SEP IRA calculator for 2026. Calculate your maximum SEP contribution as a self-employed individual or small business owner. Up to $72,000 or 25% of compensation.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"SEP IRA Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is a SEP IRA?","acceptedAnswer":{"@type":"Answer","text":"A Simplified Employee Pension (SEP) IRA is a retirement plan for self-employed individuals and small business owners. It allows employers to make tax-deductible contributions to traditional IRAs set up for themselves and their employees. Contributions are tax-deductible, grow tax-deferred, and are taxed as ordinary income upon withdrawal in retirement."}},
-    {"@type":"Question","name":"What is the SEP IRA contribution limit for 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, the maximum SEP IRA contribution is the lesser of 25% of compensation (after self-employment tax adjustment) or $72,000. For self-employed individuals, compensation is calculated as net profit from self-employment minus the deductible portion of self-employment tax, multiplied by 92.35%."}},
-    {"@type":"Question","name":"How is the 25% contribution rate calculated for self-employed individuals?","acceptedAnswer":{"@type":"Answer","text":"For self-employed individuals, the contribution rate is effectively 20% of net profit due to the deduction of self-employment tax. First, net profit is reduced by 50% of self-employment tax, then multiplied by 92.35% to account for the employer-equivalent portion. The contribution is 25% of this adjusted amount, capped at $72,000 for 2026."}},
-    {"@type":"Question","name":"When is the SEP IRA contribution deadline?","acceptedAnswer":{"@type":"Answer","text":"The deadline for SEP IRA contributions is generally April 15 of the following year (e.g., April 15, 2027 for the 2026 tax year). If you file a tax extension, you can contribute by the extended deadline. This gives you up to 15 months after the calendar year ends to make contributions and still deduct them for that tax year."}},
-    {"@type":"Question","name":"What are the eligibility requirements for a SEP IRA?","acceptedAnswer":{"@type":"Answer","text":"To establish a SEP IRA, you must be a self-employed individual, independent contractor, or small business owner. You must be at least 21 years old, have worked for the employer in at least 3 of the last 5 years, and have received at least $750 in compensation (2026). The employer must cover all eligible employees with the same contribution percentage."}},
-    {"@type":"Question","name":"SEP IRA vs Solo 401(k) — which is better?","acceptedAnswer":{"@type":"Answer","text":"A SEP IRA is simpler to set up and requires less paperwork than a Solo 401(k). However, a Solo 401(k) allows higher total contributions because you can contribute both as an employee (up to $24,500 in 2026) and as an employer (up to 25% of compensation), with total limits capped at $72,000. Solo 401(k)s also allow Roth contributions and loans, while SEP IRAs do not."}},
-    {"@type":"Question","name":"How does a SEP IRA differ from a Traditional IRA?","acceptedAnswer":{"@type":"Answer","text":"A SEP IRA has significantly higher contribution limits than a Traditional IRA ($72,000 vs $7,000 in 2026). SEP IRAs are employer-funded (including self-employed individuals), while Traditional IRAs are individually funded. SEP IRA contributions must come from the employer/business, while Traditional IRA contributions come from the individual. Both offer tax-deferred growth and tax-deductible contributions."}},
-    {"@type":"Question","name":"How do I open a SEP IRA?","acceptedAnswer":{"@type":"Answer","text":"Opening a SEP IRA is straightforward. Choose a financial institution (Vanguard, Fidelity, Schwab, or any bank/brokerage), complete IRS Form 5305-SEP to formalize the plan, open a SEP IRA account for yourself and each eligible employee, then fund the accounts by the tax deadline. No annual filing is required with the IRS for basic SEP IRA plans, making it one of the easiest retirement plans for small businesses."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SEP IRA Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/sep-ira-calculator.html",
+    "description": "Free SEP IRA calculator for 2026. Calculate your maximum SEP contribution as a self-employed individual or small business owner. Up to $72,000 or 25% of compensation.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SEP IRA Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a SEP IRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Simplified Employee Pension (SEP) IRA is a retirement plan for self-employed individuals and small business owners. It allows employers to make tax-deductible contributions to traditional IRAs set up for themselves and their employees. Contributions are tax-deductible, grow tax-deferred, and are taxed as ordinary income upon withdrawal in retirement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the SEP IRA contribution limit for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the maximum SEP IRA contribution is the lesser of 25% of compensation (after self-employment tax adjustment) or $72,000. For self-employed individuals, compensation is calculated as net profit from self-employment minus the deductible portion of self-employment tax, multiplied by 92.35%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the 25% contribution rate calculated for self-employed individuals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For self-employed individuals, the contribution rate is effectively 20% of net profit due to the deduction of self-employment tax. First, net profit is reduced by 50% of self-employment tax, then multiplied by 92.35% to account for the employer-equivalent portion. The contribution is 25% of this adjusted amount, capped at $72,000 for 2026."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is the SEP IRA contribution deadline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The deadline for SEP IRA contributions is generally April 15 of the following year (e.g., April 15, 2027 for the 2026 tax year). If you file a tax extension, you can contribute by the extended deadline. This gives you up to 15 months after the calendar year ends to make contributions and still deduct them for that tax year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the eligibility requirements for a SEP IRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To establish a SEP IRA, you must be a self-employed individual, independent contractor, or small business owner. You must be at least 21 years old, have worked for the employer in at least 3 of the last 5 years, and have received at least $750 in compensation (2026). The employer must cover all eligible employees with the same contribution percentage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "SEP IRA vs Solo 401(k) — which is better?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A SEP IRA is simpler to set up and requires less paperwork than a Solo 401(k). However, a Solo 401(k) allows higher total contributions because you can contribute both as an employee (up to $24,500 in 2026) and as an employer (up to 25% of compensation), with total limits capped at $72,000. Solo 401(k)s also allow Roth contributions and loans, while SEP IRAs do not."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a SEP IRA differ from a Traditional IRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A SEP IRA has significantly higher contribution limits than a Traditional IRA ($72,000 vs $7,000 in 2026). SEP IRAs are employer-funded (including self-employed individuals), while Traditional IRAs are individually funded. SEP IRA contributions must come from the employer/business, while Traditional IRA contributions come from the individual. Both offer tax-deferred growth and tax-deductible contributions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I open a SEP IRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Opening a SEP IRA is straightforward. Choose a financial institution (Vanguard, Fidelity, Schwab, or any bank/brokerage), complete IRS Form 5305-SEP to formalize the plan, open a SEP IRA account for yourself and each eligible employee, then fund the accounts by the tax deadline. No annual filing is required with the IRS for basic SEP IRA plans, making it one of the easiest retirement plans for small businesses."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "SEP IRA Calculator 2026 — Simplified Employee Pension Contribution Calculator",
+    "description": "Free SEP IRA calculator for 2026. Calculate your maximum SEP contribution as a self-employed individual or small business owner. Up to $72,000 or 25% of compensation."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

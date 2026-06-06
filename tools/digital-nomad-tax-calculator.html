@@ -21,29 +21,144 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Digital Nomad Tax Calculator & Country Guide",
-  "url":"https://freelancetaxcalc.online/tools/digital-nomad-tax-calculator.html",
-  "description":"Calculate tax obligations as a digital nomad and compare 25+ countries.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All"
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Digital Nomad Tax Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Do I need to pay taxes in two countries?","acceptedAnswer":{"@type":"Answer","text":"It depends. If you're a US citizen, you must file US taxes regardless of where you live, but the FEIE and foreign tax credits can reduce or eliminate double taxation. Many other countries are territorial — they only tax income earned within their borders. Tax treaties between countries also help prevent double taxation."}},
-    {"@type":"Question","name":"What is a tax treaty?","acceptedAnswer":{"@type":"Answer","text":"A tax treaty is an agreement between two countries that determines which country has the right to tax certain types of income. Treaties can reduce withholding tax rates, eliminate double taxation, and clarify tax residency rules. The US has tax treaties with over 65 countries."}},
-    {"@type":"Question","name":"How does the 183-day rule work?","acceptedAnswer":{"@type":"Answer","text":"The 183-day rule is a common test used by countries to determine tax residency. If you spend 183 days or more in a country in a 12-month period, you're generally considered a tax resident there and may owe taxes on your worldwide income. Each country counts days slightly differently."}},
-    {"@type":"Question","name":"Do digital nomads need a special visa?","acceptedAnswer":{"@type":"Answer","text":"Many countries now offer dedicated digital nomad visas allowing remote workers to stay legally for 6-24 months. Popular options include Portugal's D8 visa, Spain's digital nomad visa, Croatia's digital nomad visa, and Estonia's e-Residency program. Requirements vary by country."}},
-    {"@type":"Question","name":"Can I avoid taxes by moving countries frequently?","acceptedAnswer":{"@type":"Answer","text":"Moving frequently can help avoid establishing tax residency in any single country, but it doesn't eliminate your home country obligations. US citizens must still file US taxes. You typically need to spend less than 183 days in any one country and avoid having a permanent home there. This strategy requires careful planning."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Digital Nomad Tax Calculator & Country Guide",
+    "url": "https://freelancetaxcalc.online/tools/digital-nomad-tax-calculator.html",
+    "description": "Calculate tax obligations as a digital nomad and compare 25+ countries.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Digital Nomad Tax Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need to pay taxes in two countries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends. If you're a US citizen, you must file US taxes regardless of where you live, but the FEIE and foreign tax credits can reduce or eliminate double taxation. Many other countries are territorial — they only tax income earned within their borders. Tax treaties between countries also help prevent double taxation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a tax treaty?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A tax treaty is an agreement between two countries that determines which country has the right to tax certain types of income. Treaties can reduce withholding tax rates, eliminate double taxation, and clarify tax residency rules. The US has tax treaties with over 65 countries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the 183-day rule work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 183-day rule is a common test used by countries to determine tax residency. If you spend 183 days or more in a country in a 12-month period, you're generally considered a tax resident there and may owe taxes on your worldwide income. Each country counts days slightly differently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do digital nomads need a special visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many countries now offer dedicated digital nomad visas allowing remote workers to stay legally for 6-24 months. Popular options include Portugal's D8 visa, Spain's digital nomad visa, Croatia's digital nomad visa, and Estonia's e-Residency program. Requirements vary by country."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I avoid taxes by moving countries frequently?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Moving frequently can help avoid establishing tax residency in any single country, but it doesn't eliminate your home country obligations. US citizens must still file US taxes. You typically need to spend less than 183 days in any one country and avoid having a permanent home there. This strategy requires careful planning."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "Digital Nomad Tax Calculator — 26 Countries",
+    "description": "Calculate tax obligations as a digital nomad. Free tool covering FEIE, 183-day rule, and tax treaties across 26 countries."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

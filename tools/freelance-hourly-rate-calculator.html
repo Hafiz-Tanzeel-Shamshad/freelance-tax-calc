@@ -22,29 +22,144 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script src="/assets/tax-calculator-core.js"></script>
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Freelance Hourly Rate Calculator",
-  "url":"https://freelancetaxcalc.online/tools/freelance-hourly-rate-calculator.html",
-  "description":"Find your ideal freelance rate — hourly, day, project, and value-based pricing with tax calculations.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All"
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Freelance Hourly Rate Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How much should I charge as a freelancer?","acceptedAnswer":{"@type":"Answer","text":"Your freelance rate = (Target annual income + Business expenses + Tax burden) / Billable hours per year. A common formula: take your desired salary, add 30% for taxes and expenses, divide by 1,000 billable hours (50 weeks x 20 billable hours/week). If you want $60K take-home: ($60K x 1.3) / 1,000 = $78/hour."}},
-    {"@type":"Question","name":"What is the minimum freelance rate formula?","acceptedAnswer":{"@type":"Answer","text":"The minimum freelance rate formula is: (Personal living expenses + Business expenses + Tax reserve) / Billable hours. Estimate your annual living costs, add business costs (software, insurance, equipment), add 25-35% for taxes, then divide by the number of hours you can realistically bill (1,000-1,500 per year)."}},
-    {"@type":"Question","name":"How do I convert salary to freelance hourly rate?","acceptedAnswer":{"@type":"Answer","text":"To convert a salary to a freelance hourly rate: take your salary, divide by 1,000 billable hours (not 2,080), then multiply by 1.3 to account for taxes, benefits, and overhead. A $60K salary ÷ 1,000 hours × 1.3 = $78/hour. If you want to match the total compensation including employer-paid taxes and benefits, multiply by 1.4-1.5 instead."}},
-    {"@type":"Question","name":"How many hours can a freelancer realistically bill?","acceptedAnswer":{"@type":"Answer","text":"Most freelancers bill 20-25 hours per week out of 40 worked. The rest goes to admin, marketing, proposals, bookkeeping, and professional development. That's 1,000-1,300 billable hours per year (50 weeks). Never calculate your hourly rate based on 40 hours/week × 52 weeks = 2,080 hours — you won't bill anywhere near that."}},
-    {"@type":"Question","name":"What is value-based pricing for freelancers?","acceptedAnswer":{"@type":"Answer","text":"Value-based pricing means charging based on the value you deliver to the client, not your time. If a project saves a client $50,000, charging $5,000-$15,000 is reasonable even if it only takes 20 hours. Use the value-based pricing mode in our calculator to find your price-to-value ratio. This approach typically earns 2-5× more than hourly billing for experienced freelancers."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Freelance Hourly Rate Calculator",
+    "url": "https://freelancetaxcalc.online/tools/freelance-hourly-rate-calculator.html",
+    "description": "Find your ideal freelance rate — hourly, day, project, and value-based pricing with tax calculations.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Freelance Hourly Rate Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much should I charge as a freelancer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your freelance rate = (Target annual income + Business expenses + Tax burden) / Billable hours per year. A common formula: take your desired salary, add 30% for taxes and expenses, divide by 1,000 billable hours (50 weeks x 20 billable hours/week). If you want $60K take-home: ($60K x 1.3) / 1,000 = $78/hour."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum freelance rate formula?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The minimum freelance rate formula is: (Personal living expenses + Business expenses + Tax reserve) / Billable hours. Estimate your annual living costs, add business costs (software, insurance, equipment), add 25-35% for taxes, then divide by the number of hours you can realistically bill (1,000-1,500 per year)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert salary to freelance hourly rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To convert a salary to a freelance hourly rate: take your salary, divide by 1,000 billable hours (not 2,080), then multiply by 1.3 to account for taxes, benefits, and overhead. A $60K salary ÷ 1,000 hours × 1.3 = $78/hour. If you want to match the total compensation including employer-paid taxes and benefits, multiply by 1.4-1.5 instead."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many hours can a freelancer realistically bill?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most freelancers bill 20-25 hours per week out of 40 worked. The rest goes to admin, marketing, proposals, bookkeeping, and professional development. That's 1,000-1,300 billable hours per year (50 weeks). Never calculate your hourly rate based on 40 hours/week × 52 weeks = 2,080 hours — you won't bill anywhere near that."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is value-based pricing for freelancers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Value-based pricing means charging based on the value you deliver to the client, not your time. If a project saves a client $50,000, charging $5,000-$15,000 is reasonable even if it only takes 20 hours. Use the value-based pricing mode in our calculator to find your price-to-value ratio. This approach typically earns 2-5× more than hourly billing for experienced freelancers."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ],
+    "name": "Freelance Hourly Rate Calculator — Free Tool",
+    "description": "Calculate your ideal freelance hourly rate based on desired salary, expenses, and billable hours. Free interactive tool."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

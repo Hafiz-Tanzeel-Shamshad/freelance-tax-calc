@@ -23,34 +23,174 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script src="/assets/tax-calculator-core.js"></script>
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Virginia Self Employment Tax Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/virginia-self-employment-tax.html",
-  "description":"Free Virginia self-employment tax calculator for 2026. Calculate federal self-employment tax (Social Security + Medicare) and Virginia state income tax for freelancers and sole proprietors.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "browserRequirements":"Requires JavaScript",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Virginia Self Employment Tax Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is the self-employment tax rate for 2026?","acceptedAnswer":{"@type":"Answer","text":"The federal self-employment tax rate for 2026 is 15.3%, consisting of 12.4% for Social Security (up to the wage base of $184,500) and 2.9% for Medicare (uncapped). High earners pay an additional 0.9% Medicare surtax on income over $200,000 ($250,000 married filing jointly). You can deduct half of your SE tax as an adjustment to income on your federal return."}},
-    {"@type":"Question","name":"How does Virginia tax self-employment income?","acceptedAnswer":{"@type":"Answer","text":"Virginia treats self-employment income as ordinary income and taxes it under the same progressive brackets as wages. Virginia's income tax rates for 2026 are 2% on the first $3,000 of taxable income, 3% on $3,001–$5,000, 5% on $5,001–$17,000, and 5.75% on income over $17,000. Unlike some states, Virginia does not have a separate self-employment tax — only the standard income tax applies."}},
-    {"@type":"Question","name":"What are the Virginia income tax brackets for 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, Virginia has four progressive income tax brackets: 2% on taxable income up to $3,000, 3% on income from $3,001 to $5,000, 5% on income from $5,001 to $17,000, and 5.75% on income over $17,000. Virginia uses the same brackets regardless of filing status. Your Virginia taxable income is based on your federal adjusted gross income with Virginia-specific modifications."}},
-    {"@type":"Question","name":"Can I deduct half of my self-employment tax on my federal return?","acceptedAnswer":{"@type":"Answer","text":"Yes. Self-employed individuals can deduct 50% of their self-employment tax as an adjustment to income on Schedule 1 of Form 1040. This deduction reduces your federal adjusted gross income (AGI) and therefore also lowers your Virginia taxable income, since Virginia starts with federal AGI. The deduction is taken above the line, meaning you can claim it even if you don't itemize deductions."}},
-    {"@type":"Question","name":"What is the Virginia filing threshold for self-employed individuals?","acceptedAnswer":{"@type":"Answer","text":"You must file a Virginia state tax return if your Virginia adjusted gross income exceeds $12,000 (single filer) or if you owe any Virginia income tax. Self-employed individuals with net earnings of $400 or more must also file a federal return and pay SE tax. If your Virginia AGI is below the standard deduction equivalent, you may still need to file if you had Virginia tax withheld."}},
-    {"@type":"Question","name":"Do I need to make quarterly estimated tax payments in Virginia?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you expect to owe at least $150 in Virginia income tax after withholding and credits, you must make quarterly estimated payments. Virginia quarterly due dates align with federal dates: April 15, June 15, September 15, and January 15. The Virginia Department of Taxation accepts payments online through their portal. Underpayment may result in penalties."}},
-    {"@type":"Question","name":"Do I need to register my business with Virginia?","acceptedAnswer":{"@type":"Answer","text":"Most self-employed individuals in Virginia operating under their own name using their Social Security number do not need to register with the state. However, if you use a trade name, form an LLC, or have employees, you must register with the Virginia State Corporation Commission (SCC). You may also need a Virginia business license depending on your city or county requirements."}},
-    {"@type":"Question","name":"What deductions can I claim as a self-employed person in Virginia?","acceptedAnswer":{"@type":"Answer","text":"Common deductions for self-employed Virginians include the home office deduction, vehicle mileage ($0.70 per mile in 2026), health insurance premiums, retirement plan contributions (SEP IRA or Solo 401k), business equipment and software, office supplies, professional development, marketing costs, and a portion of utilities and internet. Virginia generally follows federal deduction rules, so expenses deductible federally are also deductible on your Virginia return."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Virginia Self Employment Tax Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/virginia-self-employment-tax.html",
+    "description": "Free Virginia self-employment tax calculator for 2026. Calculate federal self-employment tax (Social Security + Medicare) and Virginia state income tax for freelancers and sole proprietors.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Virginia Self Employment Tax Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the self-employment tax rate for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The federal self-employment tax rate for 2026 is 15.3%, consisting of 12.4% for Social Security (up to the wage base of $184,500) and 2.9% for Medicare (uncapped). High earners pay an additional 0.9% Medicare surtax on income over $200,000 ($250,000 married filing jointly). You can deduct half of your SE tax as an adjustment to income on your federal return."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Virginia tax self-employment income?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Virginia treats self-employment income as ordinary income and taxes it under the same progressive brackets as wages. Virginia's income tax rates for 2026 are 2% on the first $3,000 of taxable income, 3% on $3,001–$5,000, 5% on $5,001–$17,000, and 5.75% on income over $17,000. Unlike some states, Virginia does not have a separate self-employment tax — only the standard income tax applies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the Virginia income tax brackets for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, Virginia has four progressive income tax brackets: 2% on taxable income up to $3,000, 3% on income from $3,001 to $5,000, 5% on income from $5,001 to $17,000, and 5.75% on income over $17,000. Virginia uses the same brackets regardless of filing status. Your Virginia taxable income is based on your federal adjusted gross income with Virginia-specific modifications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I deduct half of my self-employment tax on my federal return?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Self-employed individuals can deduct 50% of their self-employment tax as an adjustment to income on Schedule 1 of Form 1040. This deduction reduces your federal adjusted gross income (AGI) and therefore also lowers your Virginia taxable income, since Virginia starts with federal AGI. The deduction is taken above the line, meaning you can claim it even if you don't itemize deductions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Virginia filing threshold for self-employed individuals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You must file a Virginia state tax return if your Virginia adjusted gross income exceeds $12,000 (single filer) or if you owe any Virginia income tax. Self-employed individuals with net earnings of $400 or more must also file a federal return and pay SE tax. If your Virginia AGI is below the standard deduction equivalent, you may still need to file if you had Virginia tax withheld."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to make quarterly estimated tax payments in Virginia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if you expect to owe at least $150 in Virginia income tax after withholding and credits, you must make quarterly estimated payments. Virginia quarterly due dates align with federal dates: April 15, June 15, September 15, and January 15. The Virginia Department of Taxation accepts payments online through their portal. Underpayment may result in penalties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to register my business with Virginia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most self-employed individuals in Virginia operating under their own name using their Social Security number do not need to register with the state. However, if you use a trade name, form an LLC, or have employees, you must register with the Virginia State Corporation Commission (SCC). You may also need a Virginia business license depending on your city or county requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What deductions can I claim as a self-employed person in Virginia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common deductions for self-employed Virginians include the home office deduction, vehicle mileage ($0.70 per mile in 2026), health insurance premiums, retirement plan contributions (SEP IRA or Solo 401k), business equipment and software, office supplies, professional development, marketing costs, and a portion of utilities and internet. Virginia generally follows federal deduction rules, so expenses deductible federally are also deductible on your Virginia return."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "Virginia Self Employment Tax Calculator 2026 — SE Tax + VA State Income Tax",
+    "description": "Free Virginia self-employment tax calculator for 2026. Calculate federal self-employment tax (Social Security + Medicare) and Virginia state income tax for freelancers and sole proprietors."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

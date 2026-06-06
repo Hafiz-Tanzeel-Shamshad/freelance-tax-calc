@@ -21,35 +21,189 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"2026 Tax Bracket Calculator",
-  "url":"https://freelancetaxcalc.online/tools/tax-bracket-calculator.html",
-  "description":"Free 2026 US tax bracket calculator. Enter your income and filing status to find your marginal tax rate, bracket range, and how much tax you pay in each bracket.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Tax Bracket Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How do US federal income tax brackets work in 2026?","acceptedAnswer":{"@type":"Answer","text":"The US uses a progressive tax system with seven brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37% for 2026. Only the income within each bracket range is taxed at that bracket rate, not your entire income. For a single filer, the first $12,400 is taxed at 10%, income from $12,401 to $50,400 at 12%, and so on up to 37% for income over $640,600."}},
-    {"@type":"Question","name":"What is the difference between marginal tax rate and effective tax rate?","acceptedAnswer":{"@type":"Answer","text":"Your marginal tax rate is the rate you pay on the last dollar you earn — it determines your tax bracket. Your effective tax rate is the average rate you pay on your total income, calculated as total tax divided by total income. For example, a single filer earning $60,000 in 2026 has a marginal rate of 22% but an effective rate of roughly 11-13% after the standard deduction and progressive rates."}},
-    {"@type":"Question","name":"If I get a raise into a higher bracket, will I make less money?","acceptedAnswer":{"@type":"Answer","text":"No — this is a common myth. Only the income above the bracket threshold is taxed at the higher rate, not your entire income. For example, if a single filer earns $51,000 in 2026, only the portion above $50,400 is taxed at 22%. The first $50,400 is still taxed at 10% and 12%. A raise always increases your after-tax income."}},
-    {"@type":"Question","name":"How do 2026 tax brackets differ by filing status?","acceptedAnswer":{"@type":"Answer","text":"Each filing status has different bracket thresholds. Married Filing Jointly brackets are roughly double the single brackets (e.g., 10% up to $24,800 vs $12,400). Head of Household brackets fall between single and married (e.g., 10% up to $17,700). Choosing the right filing status can significantly affect your tax liability."}},
-    {"@type":"Question","name":"What is the standard deduction for 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, the standard deduction is $16,100 for Single filers, $32,200 for Married Filing Jointly, and $24,150 for Head of Household. This amount is subtracted from your gross income before tax brackets are applied, meaning the first $16,100 of income for a single filer is effectively taxed at 0%."}},
-    {"@type":"Question","name":"How does the progressive tax system actually calculate my tax?","acceptedAnswer":{"@type":"Answer","text":"Your tax is calculated by applying each bracket rate to only the portion of your taxable income that falls within that bracket. For a single filer with $60,000 taxable income: 10% on the first $12,400 ($1,240), 12% on $12,401-$50,400 ($4,560), and 22% on $50,401-$60,000 ($2,112). Total tax = $7,912. Each bracket fills up sequentially before moving to the next."}},
-    {"@type":"Question","name":"Do I pay my marginal tax rate on all my income?","acceptedAnswer":{"@type":"Answer","text":"No. Your marginal rate only applies to income within that bracket range. All income below that is taxed at lower rates. This is why a raise that pushes you into the 37% bracket doesn't mean 37% of your entire income goes to tax — only the portion above the 35% threshold is taxed at the new rate."}},
-    {"@type":"Question","name":"What changed in the 2026 tax brackets?","acceptedAnswer":{"@type":"Answer","text":"Federal tax brackets are indexed for inflation annually, so bracket thresholds typically increase each year to prevent bracket creep. The 2026 brackets include inflation adjustments to the income ranges for each rate. The rates themselves (10%, 12%, 22%, 24%, 32%, 35%, 37%) remain the same as prior years."}},
-    {"@type":"Question","name":"Can I lower my tax bracket?","acceptedAnswer":{"@type":"Answer","text":"Yes. Contributing to a traditional 401(k), HSA, or FSA reduces your taxable income and can keep you in a lower bracket. Self-employed individuals can deduct business expenses and half of self-employment tax. Itemizing deductions on Schedule A (mortgage interest, charity, state taxes) may also lower taxable income if it exceeds the standard deduction."}},
-    {"@type":"Question","name":"How do I know which tax bracket I'm in for 2026?","acceptedAnswer":{"@type":"Answer","text":"Use this tax bracket calculator above. Enter your total income and filing status, then click Find My Tax Bracket. The calculator will show your marginal tax rate, which brackets your income spans, how much tax you pay in each bracket, and your effective tax rate. You can also see the full 2026 bracket table for your filing status."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "2026 Tax Bracket Calculator",
+    "url": "https://freelancetaxcalc.online/tools/tax-bracket-calculator.html",
+    "description": "Free 2026 US tax bracket calculator. Enter your income and filing status to find your marginal tax rate, bracket range, and how much tax you pay in each bracket.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Tax Bracket Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do US federal income tax brackets work in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The US uses a progressive tax system with seven brackets: 10%, 12%, 22%, 24%, 32%, 35%, and 37% for 2026. Only the income within each bracket range is taxed at that bracket rate, not your entire income. For a single filer, the first $12,400 is taxed at 10%, income from $12,401 to $50,400 at 12%, and so on up to 37% for income over $640,600."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between marginal tax rate and effective tax rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your marginal tax rate is the rate you pay on the last dollar you earn — it determines your tax bracket. Your effective tax rate is the average rate you pay on your total income, calculated as total tax divided by total income. For example, a single filer earning $60,000 in 2026 has a marginal rate of 22% but an effective rate of roughly 11-13% after the standard deduction and progressive rates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "If I get a raise into a higher bracket, will I make less money?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — this is a common myth. Only the income above the bracket threshold is taxed at the higher rate, not your entire income. For example, if a single filer earns $51,000 in 2026, only the portion above $50,400 is taxed at 22%. The first $50,400 is still taxed at 10% and 12%. A raise always increases your after-tax income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do 2026 tax brackets differ by filing status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each filing status has different bracket thresholds. Married Filing Jointly brackets are roughly double the single brackets (e.g., 10% up to $24,800 vs $12,400). Head of Household brackets fall between single and married (e.g., 10% up to $17,700). Choosing the right filing status can significantly affect your tax liability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the standard deduction for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the standard deduction is $16,100 for Single filers, $32,200 for Married Filing Jointly, and $24,150 for Head of Household. This amount is subtracted from your gross income before tax brackets are applied, meaning the first $16,100 of income for a single filer is effectively taxed at 0%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the progressive tax system actually calculate my tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your tax is calculated by applying each bracket rate to only the portion of your taxable income that falls within that bracket. For a single filer with $60,000 taxable income: 10% on the first $12,400 ($1,240), 12% on $12,401-$50,400 ($4,560), and 22% on $50,401-$60,000 ($2,112). Total tax = $7,912. Each bracket fills up sequentially before moving to the next."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I pay my marginal tax rate on all my income?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Your marginal rate only applies to income within that bracket range. All income below that is taxed at lower rates. This is why a raise that pushes you into the 37% bracket doesn't mean 37% of your entire income goes to tax — only the portion above the 35% threshold is taxed at the new rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What changed in the 2026 tax brackets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Federal tax brackets are indexed for inflation annually, so bracket thresholds typically increase each year to prevent bracket creep. The 2026 brackets include inflation adjustments to the income ranges for each rate. The rates themselves (10%, 12%, 22%, 24%, 32%, 35%, 37%) remain the same as prior years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I lower my tax bracket?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Contributing to a traditional 401(k), HSA, or FSA reduces your taxable income and can keep you in a lower bracket. Self-employed individuals can deduct business expenses and half of self-employment tax. Itemizing deductions on Schedule A (mortgage interest, charity, state taxes) may also lower taxable income if it exceeds the standard deduction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know which tax bracket I'm in for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use this tax bracket calculator above. Enter your total income and filing status, then click Find My Tax Bracket. The calculator will show your marginal tax rate, which brackets your income spans, how much tax you pay in each bracket, and your effective tax rate. You can also see the full 2026 bracket table for your filing status."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "2026 Tax Bracket Calculator — Find Your Marginal Tax Rate | Free Tool",
+    "description": "Free tax bracket calculator for 2026. Enter your income and filing status to find your marginal tax rate, bracket range, and how much tax you'll pay in each bracket."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

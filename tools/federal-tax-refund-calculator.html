@@ -21,35 +21,189 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Federal Tax Refund Calculator",
-  "url":"https://freelancetaxcalc.online/tools/federal-tax-refund-calculator.html",
-  "description":"Free federal tax refund estimator for 2026. Calculate whether you'll get a refund or owe money based on your income, deductions, credits, and tax withheld in the USA.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Federal Tax Refund Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How is my federal tax refund calculated?","acceptedAnswer":{"@type":"Answer","text":"Your refund is calculated as: total tax withheld minus your actual tax liability. If you had more withheld than you owe, you get the difference back as a refund. Your tax liability depends on your taxable income (gross income minus pre-tax deductions and the standard deduction), the tax brackets you fall into, and any tax credits you qualify for."}},
-    {"@type":"Question","name":"When will I get my federal tax refund?","acceptedAnswer":{"@type":"Answer","text":"The IRS issues most refunds within 21 days of accepting your electronically filed return. Direct deposit is fastest. If you file a paper return, expect 6-8 weeks. You can check your refund status using the IRS 'Where's My Refund?' tool."}},
-    {"@type":"Question","name":"What if I owe money instead of getting a refund?","acceptedAnswer":{"@type":"Answer","text":"If your tax liability is greater than what was withheld, you owe the difference. You must pay by the tax filing deadline (typically April 15). The IRS offers payment plans (installment agreements) if you can't pay in full. Late payments accrue interest and penalties, so file on time even if you can't pay."}},
-    {"@type":"Question","name":"How can I reduce the amount of tax I owe?","acceptedAnswer":{"@type":"Answer","text":"You can reduce your tax owed by increasing pre-tax retirement contributions (401k, traditional IRA), contributing to an HSA, claiming all eligible tax credits (Child Tax Credit, Education Credits, Saver's Credit), itemizing deductions if they exceed the standard deduction, and harvesting investment losses to offset gains."}},
-    {"@type":"Question","name":"What is the standard deduction for 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, the federal standard deduction is $16,100 for single filers and $32,200 for married couples filing jointly. It increases slightly each year due to inflation adjustments. The standard deduction reduces your taxable income before tax brackets are applied."}},
-    {"@type":"Question","name":"What is the difference between a tax refund and amount owed?","acceptedAnswer":{"@type":"Answer","text":"A tax refund occurs when you had more tax withheld from your paychecks during the year than your actual tax liability. You get the overpayment back. Amount owed is when too little was withheld — you must pay the remaining balance to the IRS. Ideally, you want to break even or get a small refund."}},
-    {"@type":"Question","name":"Do I get all my withheld tax back as a refund?","acceptedAnswer":{"@type":"Answer","text":"No. You only get back the amount that was over-withheld. The tax withheld from your paychecks goes toward your actual tax liability. If your total tax bill is $8,000 and $10,000 was withheld, you get $2,000 back. If your tax bill is $12,000 and only $10,000 was withheld, you owe $2,000."}},
-    {"@type":"Question","name":"How do tax credits affect my refund?","acceptedAnswer":{"@type":"Answer","text":"Tax credits reduce your tax liability dollar-for-dollar, which is much better than deductions (which only reduce taxable income). If you owe $5,000 in tax and qualify for a $2,000 tax credit, your tax drops to $3,000. Some credits like the Child Tax Credit are partially refundable — meaning you could get money back even if you owe no tax."}},
-    {"@type":"Question","name":"What are the 2026 federal income tax brackets?","acceptedAnswer":{"@type":"Answer","text":"For 2026, single filers: 10% on income up to $12,400, 12% on $12,401-$50,400, 22% on $50,401-$105,700, 24% on $105,701-$201,775, 32% on $201,776-$256,225, 35% on $256,226-$640,600, and 37% over $640,600. Married brackets are double the single amounts. These are marginal brackets — each rate only applies to income within that range."}},
-    {"@type":"Question","name":"Should I adjust my W-4 to get a bigger refund or smaller?","acceptedAnswer":{"@type":"Answer","text":"A big refund means you gave the IRS an interest-free loan. A smaller refund (or small amount owed) means more money in each paycheck. Use the IRS Tax Withholding Estimator or our calculator to dial in your W-4. The sweet spot is getting as close to zero as possible — no big refund, no big tax bill."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Federal Tax Refund Calculator",
+    "url": "https://freelancetaxcalc.online/tools/federal-tax-refund-calculator.html",
+    "description": "Free federal tax refund estimator for 2026. Calculate whether you'll get a refund or owe money based on your income, deductions, credits, and tax withheld in the USA.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Federal Tax Refund Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is my federal tax refund calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your refund is calculated as: total tax withheld minus your actual tax liability. If you had more withheld than you owe, you get the difference back as a refund. Your tax liability depends on your taxable income (gross income minus pre-tax deductions and the standard deduction), the tax brackets you fall into, and any tax credits you qualify for."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will I get my federal tax refund?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The IRS issues most refunds within 21 days of accepting your electronically filed return. Direct deposit is fastest. If you file a paper return, expect 6-8 weeks. You can check your refund status using the IRS 'Where's My Refund?' tool."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I owe money instead of getting a refund?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your tax liability is greater than what was withheld, you owe the difference. You must pay by the tax filing deadline (typically April 15). The IRS offers payment plans (installment agreements) if you can't pay in full. Late payments accrue interest and penalties, so file on time even if you can't pay."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce the amount of tax I owe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reduce your tax owed by increasing pre-tax retirement contributions (401k, traditional IRA), contributing to an HSA, claiming all eligible tax credits (Child Tax Credit, Education Credits, Saver's Credit), itemizing deductions if they exceed the standard deduction, and harvesting investment losses to offset gains."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the standard deduction for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the federal standard deduction is $16,100 for single filers and $32,200 for married couples filing jointly. It increases slightly each year due to inflation adjustments. The standard deduction reduces your taxable income before tax brackets are applied."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a tax refund and amount owed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A tax refund occurs when you had more tax withheld from your paychecks during the year than your actual tax liability. You get the overpayment back. Amount owed is when too little was withheld — you must pay the remaining balance to the IRS. Ideally, you want to break even or get a small refund."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I get all my withheld tax back as a refund?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You only get back the amount that was over-withheld. The tax withheld from your paychecks goes toward your actual tax liability. If your total tax bill is $8,000 and $10,000 was withheld, you get $2,000 back. If your tax bill is $12,000 and only $10,000 was withheld, you owe $2,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do tax credits affect my refund?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tax credits reduce your tax liability dollar-for-dollar, which is much better than deductions (which only reduce taxable income). If you owe $5,000 in tax and qualify for a $2,000 tax credit, your tax drops to $3,000. Some credits like the Child Tax Credit are partially refundable — meaning you could get money back even if you owe no tax."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the 2026 federal income tax brackets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, single filers: 10% on income up to $12,400, 12% on $12,401-$50,400, 22% on $50,401-$105,700, 24% on $105,701-$201,775, 32% on $201,776-$256,225, 35% on $256,226-$640,600, and 37% over $640,600. Married brackets are double the single amounts. These are marginal brackets — each rate only applies to income within that range."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I adjust my W-4 to get a bigger refund or smaller?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A big refund means you gave the IRS an interest-free loan. A smaller refund (or small amount owed) means more money in each paycheck. Use the IRS Tax Withholding Estimator or our calculator to dial in your W-4. The sweet spot is getting as close to zero as possible — no big refund, no big tax bill."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "Federal Tax Refund Calculator 2026 — Estimate Your Tax Refund or Amount Owed | Free Tool",
+    "description": "Free federal tax refund estimator for 2026. Calculate whether you'll get a refund or owe money based on your income, deductions, credits, and tax withheld in the USA."
+  }
+]
 </script>
 <script src="/assets/tax-calculator-core.js"></script>
 <style>

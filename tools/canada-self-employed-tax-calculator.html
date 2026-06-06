@@ -21,31 +21,157 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Self-Employed Tax Calculator Canada 2026",
-  "url":"https://freelancetaxcalc.online/tools/canada-self-employed-tax-calculator.html",
-  "description":"Free Canada self-employed tax calculator. Estimate income tax and CPP on freelance or business income.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Self-Employed Tax Calculator Canada"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How do taxes work for self-employed people in Canada?","acceptedAnswer":{"@type":"Answer","text":"Self-employed individuals in Canada report business income on their T1 personal tax return using form T2125. You pay federal and provincial income tax on your net business income using the same progressive brackets as employees. The key difference is you must pay both the employee and employer portions of CPP (11.9% total instead of 5.95%). You can deduct half of your CPP contributions as a business expense."}},
-    {"@type":"Question","name":"What deductions can I claim as self-employed in Canada?","acceptedAnswer":{"@type":"Answer","text":"Common self-employed deductions include: home office expenses (a percentage of rent, utilities, internet), vehicle expenses (gas, insurance, maintenance for business use), equipment and supplies, professional fees and memberships, advertising and marketing, website hosting, software subscriptions, meals and entertainment (50%), business insurance, and capital cost allowance (depreciation) on assets."}},
-    {"@type":"Question","name":"How is CPP different for self-employed Canadians?","acceptedAnswer":{"@type":"Answer","text":"For 2025-2026, employees pay 5.95% of their salary toward CPP (matched by their employer). Self-employed individuals pay both portions, totaling 11.9% of net business income. However, you can deduct half of the CPP contributions as a business expense on your tax return. The maximum total CPP for self-employed is approximately $8,218 for 2025, based on maximum pensionable earnings of $73,200."}},
-    {"@type":"Question","name":"Do I need to charge GST/HST as a self-employed Canadian?","acceptedAnswer":{"@type":"Answer","text":"You must register for GST/HST once your gross business revenue exceeds $30,000 in any consecutive four-quarter period. Once registered, you charge GST/HST on your invoices and remit it to the CRA. You can also claim input tax credits (ITCs) to recover the GST/HST you paid on business expenses. If you earn under $30,000, registration is voluntary but can be beneficial if you have significant expenses."}},
-    {"@type":"Question","name":"When are quarterly tax payments due for self-employed Canadians?","acceptedAnswer":{"@type":"Answer","text":"The CRA requires quarterly instalment payments if your net tax owing exceeds $3,000 in the current year and in either of the two previous years. Payment due dates are March 15, June 15, September 15, and December 15. Unlike the US system, Canada's quarterly payments are based on estimated total tax, not a separate self-employment tax."}},
-    {"@type":"Question","name":"How does the home office deduction work in Canada?","acceptedAnswer":{"@type":"Answer","text":"You can deduct home office expenses if your workspace is where you primarily do your work (over 50% of your time) or is used exclusively to meet clients. The simplified method allows a flat rate of $5 per day (up to $300 per year) per person. The detailed method requires calculating the percentage of your home used for business and applying it to rent, utilities, insurance, and maintenance costs. If you own your home, you can also claim a portion of property taxes and mortgage interest."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Self-Employed Tax Calculator Canada 2026",
+    "url": "https://freelancetaxcalc.online/tools/canada-self-employed-tax-calculator.html",
+    "description": "Free Canada self-employed tax calculator. Estimate income tax and CPP on freelance or business income.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Self-Employed Tax Calculator Canada"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do taxes work for self-employed people in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Self-employed individuals in Canada report business income on their T1 personal tax return using form T2125. You pay federal and provincial income tax on your net business income using the same progressive brackets as employees. The key difference is you must pay both the employee and employer portions of CPP (11.9% total instead of 5.95%). You can deduct half of your CPP contributions as a business expense."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What deductions can I claim as self-employed in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common self-employed deductions include: home office expenses (a percentage of rent, utilities, internet), vehicle expenses (gas, insurance, maintenance for business use), equipment and supplies, professional fees and memberships, advertising and marketing, website hosting, software subscriptions, meals and entertainment (50%), business insurance, and capital cost allowance (depreciation) on assets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is CPP different for self-employed Canadians?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2025-2026, employees pay 5.95% of their salary toward CPP (matched by their employer). Self-employed individuals pay both portions, totaling 11.9% of net business income. However, you can deduct half of the CPP contributions as a business expense on your tax return. The maximum total CPP for self-employed is approximately $8,218 for 2025, based on maximum pensionable earnings of $73,200."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to charge GST/HST as a self-employed Canadian?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You must register for GST/HST once your gross business revenue exceeds $30,000 in any consecutive four-quarter period. Once registered, you charge GST/HST on your invoices and remit it to the CRA. You can also claim input tax credits (ITCs) to recover the GST/HST you paid on business expenses. If you earn under $30,000, registration is voluntary but can be beneficial if you have significant expenses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When are quarterly tax payments due for self-employed Canadians?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The CRA requires quarterly instalment payments if your net tax owing exceeds $3,000 in the current year and in either of the two previous years. Payment due dates are March 15, June 15, September 15, and December 15. Unlike the US system, Canada's quarterly payments are based on estimated total tax, not a separate self-employment tax."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the home office deduction work in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can deduct home office expenses if your workspace is where you primarily do your work (over 50% of your time) or is used exclusively to meet clients. The simplified method allows a flat rate of $5 per day (up to $300 per year) per person. The detailed method requires calculating the percentage of your home used for business and applying it to rent, utilities, insurance, and maintenance costs. If you own your home, you can also claim a portion of property taxes and mortgage interest."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "Self-Employed Tax Calculator Canada 2026 — Business Income & CPP Estimator | Free Tool",
+    "description": "Free self-employed tax calculator for Canada 2026. Estimate federal and provincial income tax, CPP contributions, and take-home pay for your business income after expenses."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

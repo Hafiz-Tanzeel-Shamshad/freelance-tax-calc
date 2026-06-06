@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"RRSP Tax Savings Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/rrsp-tax-savings-calculator.html",
-  "description":"Free Canada RRSP calculator. Estimate how much tax you save by contributing to your Registered Retirement Savings Plan in 2026.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"RRSP Tax Savings Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How does an RRSP save me tax?","acceptedAnswer":{"@type":"Answer","text":"RRSP contributions reduce your taxable income dollar-for-dollar. If you contribute $5,000 and your marginal tax rate is 30%, you save $1,500 in taxes immediately. You defer tax on that money until you withdraw it in retirement, ideally at a lower rate."}},
-    {"@type":"Question","name":"What is my marginal tax rate?","acceptedAnswer":{"@type":"Answer","text":"Your marginal tax rate is the rate you pay on your next dollar of income. In Canada, it depends on your income and province. For 2026, rates range from about 20% (low income) to over 50% (high income in Quebec). Use the dropdown to select your estimated combined federal + provincial rate."}},
-    {"@type":"Question","name":"What is the RRSP contribution limit for 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, the RRSP contribution limit is 18% of your earned income from the previous year, up to a maximum of approximately $33,810. Any unused contribution room carries forward indefinitely. Your notice of assessment from the CRA shows your exact limit."}},
-    {"@type":"Question","name":"Should I contribute to an RRSP or TFSA?","acceptedAnswer":{"@type":"Answer","text":"RRSPs are better if you expect lower income in retirement than now (you save at today's high rate, withdraw at a lower rate). TFSAs are better if you expect higher income later or want tax-free withdrawals for any goal. In general, if your marginal rate is 30% or higher, an RRSP is likely the better choice."}},
-    {"@type":"Question","name":"Can I use my RRSP to buy a house?","acceptedAnswer":{"@type":"Answer","text":"Yes, through the Home Buyers' Plan (HBP), you can withdraw up to $60,000 from your RRSP tax-free to buy a first home. You must repay it over 15 years starting the second year after withdrawal. This makes RRSPs a powerful tool for both retirement and home buying."}},
-    {"@type":"Question","name":"What happens if I over-contribute to my RRSP?","acceptedAnswer":{"@type":"Answer","text":"You can over-contribute up to $2,000 without penalty. Beyond that, the CRA charges 1% per month on the excess amount. Always check your contribution room on your notice of assessment before making large contributions."}},
-    {"@type":"Question","name":"Does RRSP contribution affect my other benefits?","acceptedAnswer":{"@type":"Answer","text":"Yes, RRSP contributions reduce your net income, which can increase benefits like the Canada Child Benefit (CCB), GST/HST credit, and OAS clawback threshold. At the same time, lower net income means less room for future RRSP contributions (since room is based on earned income, not net income)."}},
-    {"@type":"Question","name":"When is the RRSP contribution deadline for 2025 taxes?","acceptedAnswer":{"@type":"Answer","text":"For the 2025 tax year, the RRSP contribution deadline is typically March 1, 2026 (60 days after year-end). Contributions made in the first 60 days of 2026 can be deducted on your 2025 return, giving you a tax refund sooner."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "RRSP Tax Savings Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/rrsp-tax-savings-calculator.html",
+    "description": "Free Canada RRSP calculator. Estimate how much tax you save by contributing to your Registered Retirement Savings Plan in 2026.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "RRSP Tax Savings Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does an RRSP save me tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RRSP contributions reduce your taxable income dollar-for-dollar. If you contribute $5,000 and your marginal tax rate is 30%, you save $1,500 in taxes immediately. You defer tax on that money until you withdraw it in retirement, ideally at a lower rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is my marginal tax rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your marginal tax rate is the rate you pay on your next dollar of income. In Canada, it depends on your income and province. For 2026, rates range from about 20% (low income) to over 50% (high income in Quebec). Use the dropdown to select your estimated combined federal + provincial rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the RRSP contribution limit for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the RRSP contribution limit is 18% of your earned income from the previous year, up to a maximum of approximately $33,810. Any unused contribution room carries forward indefinitely. Your notice of assessment from the CRA shows your exact limit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I contribute to an RRSP or TFSA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RRSPs are better if you expect lower income in retirement than now (you save at today's high rate, withdraw at a lower rate). TFSAs are better if you expect higher income later or want tax-free withdrawals for any goal. In general, if your marginal rate is 30% or higher, an RRSP is likely the better choice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use my RRSP to buy a house?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, through the Home Buyers' Plan (HBP), you can withdraw up to $60,000 from your RRSP tax-free to buy a first home. You must repay it over 15 years starting the second year after withdrawal. This makes RRSPs a powerful tool for both retirement and home buying."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I over-contribute to my RRSP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can over-contribute up to $2,000 without penalty. Beyond that, the CRA charges 1% per month on the excess amount. Always check your contribution room on your notice of assessment before making large contributions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does RRSP contribution affect my other benefits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, RRSP contributions reduce your net income, which can increase benefits like the Canada Child Benefit (CCB), GST/HST credit, and OAS clawback threshold. At the same time, lower net income means less room for future RRSP contributions (since room is based on earned income, not net income)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is the RRSP contribution deadline for 2025 taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For the 2025 tax year, the RRSP contribution deadline is typically March 1, 2026 (60 days after year-end). Contributions made in the first 60 days of 2026 can be deducted on your 2025 return, giving you a tax refund sooner."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ],
+    "name": "RRSP Tax Savings Calculator 2026 — Estimate Your RRSP Refund | Free Tool",
+    "description": "Free RRSP tax savings calculator for 2026 Canada. See how much tax your RRSP contribution saves based on your income, marginal tax rate, and contribution amount."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

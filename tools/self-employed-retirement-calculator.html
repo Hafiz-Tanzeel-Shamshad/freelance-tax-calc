@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Self-Employed Retirement Plan Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/self-employed-retirement-calculator.html",
-  "description":"Free tool to compare Solo 401(k) vs SEP IRA contribution limits and find the best retirement plan for self-employed individuals in 2026.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Self-Employed Retirement Plan Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is the difference between a Solo 401(k) and a SEP IRA?","acceptedAnswer":{"@type":"Answer","text":"A Solo 401(k) allows both employee deferrals (up to $24,500 for 2026, plus $8,000 catch-up if 50+) and employer profit-sharing contributions (up to 25% of compensation) for a total of up to $72,000. A SEP IRA only allows employer contributions of up to 25% of compensation (capped at $72,000). Solo 401(k)s also offer Roth options and loan provisions, while SEP IRAs are simpler to set up and maintain."}},
-    {"@type":"Question","name":"Which is better for a self-employed person: Solo 401(k) or SEP IRA?","acceptedAnswer":{"@type":"Answer","text":"A Solo 401(k) is generally better if you want to contribute the maximum amount, especially at lower profit levels, because you can make both employee and employer contributions. A SEP IRA is simpler and may be preferable if you want a straightforward plan with minimal paperwork, or if you have employees since SEP IRAs require equal contributions for all eligible employees."}},
-    {"@type":"Question","name":"What are the Solo 401(k) contribution limits for 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, the Solo 401(k) employee deferral limit is $24,500 (age 49 and under). The total combined employee + employer contribution limit is $72,000. If you are age 50 or older, you can make an additional catch-up contribution of $8,000, bringing the total to $80,000. Participants aged 60-63 have a higher catch-up limit of $11,250 under the SECURE 2.0 Act."}},
-    {"@type":"Question","name":"What are the SEP IRA contribution limits for 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, the SEP IRA maximum contribution is the lesser of 25% of compensation (after adjustment for self-employment) or $72,000. The compensation used for the calculation is your net profit from self-employment multiplied by 0.9235. Unlike Solo 401(k)s, SEP IRAs do not allow employee deferrals or catch-up contributions."}},
-    {"@type":"Question","name":"Can I have both a Solo 401(k) and a SEP IRA?","acceptedAnswer":{"@type":"Answer","text":"You cannot combine a Solo 401(k) and a SEP IRA in a way that exceeds the overall 415(c) annual addition limit of $72,000 (or $80,000 with catch-up). However, you could have a SEP IRA and a separate Roth IRA. The most common strategy is to choose one plan and maximize it rather than splitting contributions between two plans."}},
-    {"@type":"Question","name":"What is the deadline to set up a Solo 401(k) or SEP IRA for 2026?","acceptedAnswer":{"@type":"Answer","text":"A Solo 401(k) must be established by December 31, 2026 (the last day of the tax year) to make contributions for 2026. Employee deferrals must be made by December 31. Employer profit-sharing contributions can be made up to the tax filing deadline (including extensions). A SEP IRA can be set up and funded as late as the tax filing deadline, including extensions (typically April 15, 2027 for most filers, or October 15 with extension)."}},
-    {"@type":"Question","name":"Does a Solo 401(k) require filing Form 5500?","acceptedAnswer":{"@type":"Answer","text":"Yes, once your Solo 401(k) plan assets exceed $250,000 at the end of the plan year, you must file Form 5500-EZ annually with the IRS. The filing deadline is the last day of the seventh month after the plan year ends (July 31 for calendar-year plans). Failure to file can result in significant penalties of up to $250 per day."}},
-    {"@type":"Question","name":"Can I make Roth contributions to a Solo 401(k) or SEP IRA?","acceptedAnswer":{"@type":"Answer","text":"A Solo 401(k) can include a Roth option for employee deferral contributions, allowing you to contribute after-tax dollars that grow tax-free and are withdrawn tax-free in retirement. SEP IRAs do not offer Roth options. If you want Roth treatment with a SEP, you would need a separate Roth IRA. Solo 401(k) Roth contributions are subject to the same limits as traditional deferrals."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Self-Employed Retirement Plan Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/self-employed-retirement-calculator.html",
+    "description": "Free tool to compare Solo 401(k) vs SEP IRA contribution limits and find the best retirement plan for self-employed individuals in 2026.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Self-Employed Retirement Plan Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between a Solo 401(k) and a SEP IRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Solo 401(k) allows both employee deferrals (up to $24,500 for 2026, plus $8,000 catch-up if 50+) and employer profit-sharing contributions (up to 25% of compensation) for a total of up to $72,000. A SEP IRA only allows employer contributions of up to 25% of compensation (capped at $72,000). Solo 401(k)s also offer Roth options and loan provisions, while SEP IRAs are simpler to set up and maintain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which is better for a self-employed person: Solo 401(k) or SEP IRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Solo 401(k) is generally better if you want to contribute the maximum amount, especially at lower profit levels, because you can make both employee and employer contributions. A SEP IRA is simpler and may be preferable if you want a straightforward plan with minimal paperwork, or if you have employees since SEP IRAs require equal contributions for all eligible employees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the Solo 401(k) contribution limits for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the Solo 401(k) employee deferral limit is $24,500 (age 49 and under). The total combined employee + employer contribution limit is $72,000. If you are age 50 or older, you can make an additional catch-up contribution of $8,000, bringing the total to $80,000. Participants aged 60-63 have a higher catch-up limit of $11,250 under the SECURE 2.0 Act."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the SEP IRA contribution limits for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the SEP IRA maximum contribution is the lesser of 25% of compensation (after adjustment for self-employment) or $72,000. The compensation used for the calculation is your net profit from self-employment multiplied by 0.9235. Unlike Solo 401(k)s, SEP IRAs do not allow employee deferrals or catch-up contributions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I have both a Solo 401(k) and a SEP IRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You cannot combine a Solo 401(k) and a SEP IRA in a way that exceeds the overall 415(c) annual addition limit of $72,000 (or $80,000 with catch-up). However, you could have a SEP IRA and a separate Roth IRA. The most common strategy is to choose one plan and maximize it rather than splitting contributions between two plans."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the deadline to set up a Solo 401(k) or SEP IRA for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Solo 401(k) must be established by December 31, 2026 (the last day of the tax year) to make contributions for 2026. Employee deferrals must be made by December 31. Employer profit-sharing contributions can be made up to the tax filing deadline (including extensions). A SEP IRA can be set up and funded as late as the tax filing deadline, including extensions (typically April 15, 2027 for most filers, or October 15 with extension)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a Solo 401(k) require filing Form 5500?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, once your Solo 401(k) plan assets exceed $250,000 at the end of the plan year, you must file Form 5500-EZ annually with the IRS. The filing deadline is the last day of the seventh month after the plan year ends (July 31 for calendar-year plans). Failure to file can result in significant penalties of up to $250 per day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I make Roth contributions to a Solo 401(k) or SEP IRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Solo 401(k) can include a Roth option for employee deferral contributions, allowing you to contribute after-tax dollars that grow tax-free and are withdrawn tax-free in retirement. SEP IRAs do not offer Roth options. If you want Roth treatment with a SEP, you would need a separate Roth IRA. Solo 401(k) Roth contributions are subject to the same limits as traditional deferrals."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ],
+    "name": "Self-Employed Retirement Plan Calculator 2026 — Solo 401k vs SEP IRA",
+    "description": "Free self-employed retirement plan calculator for 2026. Compare Solo 401(k) vs SEP IRA contribution limits and find the best retirement plan for your business."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

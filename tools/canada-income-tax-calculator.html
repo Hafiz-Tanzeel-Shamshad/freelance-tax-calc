@@ -21,35 +21,189 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Canada Income Tax Calculator",
-  "url":"https://freelancetaxcalc.online/tools/canada-income-tax-calculator.html",
-  "description":"Free Canada income tax calculator for 2026. Estimate federal and provincial income tax and take-home pay for any province or territory. Full progressive brackets for all 13 provinces.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Canada Income Tax Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How does Canada's income tax system work?","acceptedAnswer":{"@type":"Answer","text":"Canada uses a progressive income tax system with both federal and provincial/territorial components. You file one tax return that calculates both levels of tax. The federal government applies graduated tax brackets (15% to 33%), and your province or territory applies its own bracket rates. CPP contributions and other credits are also calculated on the same return."}},
-    {"@type":"Question","name":"What are the federal tax brackets for 2025-2026 in Canada?","acceptedAnswer":{"@type":"Answer","text":"For 2025, the federal tax brackets are: 15% on the first $57,375 of taxable income, 20.5% on $57,375 to $114,750, 26% on $114,750 to $177,882, 29% on $177,882 to $253,414, and 33% on income over $253,414. These brackets are indexed annually for inflation."}},
-    {"@type":"Question","name":"How do provincial tax rates differ across Canada?","acceptedAnswer":{"@type":"Answer","text":"Each province and territory sets its own tax rates and brackets. For example, Ontario has a 5.05% lowest bracket while Alberta uses a flat 10% rate. Quebec, British Columbia, Manitoba, and the Atlantic provinces all have their own progressive systems. Territories like Nunavut and Yukon have lower rates to reflect higher living costs. Our calculator uses simplified blended provincial rates for estimation."}},
-    {"@type":"Question","name":"What are CPP contributions for 2025?","acceptedAnswer":{"@type":"Answer","text":"For 2025, the Canada Pension Plan (CPP) contribution rate is 5.95% each for employees and employers (11.9% total for self-employed). The basic exemption is $3,500 and the maximum pensionable earnings are $73,200. That means the maximum employee contribution is approximately $4,109. Your actual contribution depends on your employment income."}},
-    {"@type":"Question","name":"What is the basic personal amount (BPA) in Canada?","acceptedAnswer":{"@type":"Answer","text":"The basic personal amount (BPA) is a non-refundable tax credit that reduces your federal income tax. For 2025, the BPA is $16,375. This means you can earn up to this amount without paying federal income tax. The credit is calculated as 15% of the BPA, giving a federal tax reduction of about $2,456. Some provinces also have their own provincial BPA."}},
-    {"@type":"Question","name":"What is the difference between RRSP and TFSA?","acceptedAnswer":{"@type":"Answer","text":"An RRSP (Registered Retirement Savings Plan) provides a tax deduction on contributions — you get a tax refund now, but withdrawals are taxed as income in retirement. A TFSA (Tax-Free Savings Account) offers no upfront deduction, but all investment growth and withdrawals are completely tax-free. For most Canadians, RRSPs are better if you earn more now than in retirement; TFSAs are more flexible for any savings goal."}},
-    {"@type":"Question","name":"How do GST/HST credits work in Canada?","acceptedAnswer":{"@type":"Answer","text":"The GST/HST credit is a tax-free quarterly payment from the Government of Canada to help low- and modest-income individuals and families offset the sales tax they pay. For the 2025-2026 benefit year, a single individual can receive up to roughly $519, and a couple with two children can receive up to around $1,069. The amount is based on your net income from the previous year's tax return."}},
-    {"@type":"Question","name":"How do Quebec taxes compare to Ontario taxes?","acceptedAnswer":{"@type":"Answer","text":"Quebec has higher provincial income tax rates than Ontario (up to 25.75% vs 13.16% top rates), but Quebec residents benefit from lower daycare costs, cheaper tuition, and a separate provincial pension plan (QPP) with different rates. Ontario's tax burden is generally lower for middle-income earners, but factors like housing costs and the Ontario Health Premium also affect the comparison."}},
-    {"@type":"Question","name":"How does self-employment tax work in Canada?","acceptedAnswer":{"@type":"Answer","text":"Self-employed individuals in Canada pay both the employee and employer portions of CPP (11.9% total) on net business income above $3,500, up to the maximum pensionable earnings. However, you can deduct half of your CPP contributions as a business expense. Unlike the US, Canada does not have a separate self-employment tax — income tax is paid as part of your regular T1 return with the same brackets."}},
-    {"@type":"Question","name":"How are non-residents taxed in Canada?","acceptedAnswer":{"@type":"Answer","text":"Non-residents of Canada are generally taxed only on Canadian-source income. This includes employment income earned in Canada, business income from a Canadian business, and rental income from Canadian property. Non-residents pay Part I tax on employment/business income at regular rates, and Part XIII tax (usually 25%) on passive income like dividends, interest, and royalties. Tax treaties may reduce these rates."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Canada Income Tax Calculator",
+    "url": "https://freelancetaxcalc.online/tools/canada-income-tax-calculator.html",
+    "description": "Free Canada income tax calculator for 2026. Estimate federal and provincial income tax and take-home pay for any province or territory. Full progressive brackets for all 13 provinces.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Canada Income Tax Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does Canada's income tax system work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Canada uses a progressive income tax system with both federal and provincial/territorial components. You file one tax return that calculates both levels of tax. The federal government applies graduated tax brackets (15% to 33%), and your province or territory applies its own bracket rates. CPP contributions and other credits are also calculated on the same return."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the federal tax brackets for 2025-2026 in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2025, the federal tax brackets are: 15% on the first $57,375 of taxable income, 20.5% on $57,375 to $114,750, 26% on $114,750 to $177,882, 29% on $177,882 to $253,414, and 33% on income over $253,414. These brackets are indexed annually for inflation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do provincial tax rates differ across Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each province and territory sets its own tax rates and brackets. For example, Ontario has a 5.05% lowest bracket while Alberta uses a flat 10% rate. Quebec, British Columbia, Manitoba, and the Atlantic provinces all have their own progressive systems. Territories like Nunavut and Yukon have lower rates to reflect higher living costs. Our calculator uses simplified blended provincial rates for estimation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are CPP contributions for 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2025, the Canada Pension Plan (CPP) contribution rate is 5.95% each for employees and employers (11.9% total for self-employed). The basic exemption is $3,500 and the maximum pensionable earnings are $73,200. That means the maximum employee contribution is approximately $4,109. Your actual contribution depends on your employment income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the basic personal amount (BPA) in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The basic personal amount (BPA) is a non-refundable tax credit that reduces your federal income tax. For 2025, the BPA is $16,375. This means you can earn up to this amount without paying federal income tax. The credit is calculated as 15% of the BPA, giving a federal tax reduction of about $2,456. Some provinces also have their own provincial BPA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between RRSP and TFSA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An RRSP (Registered Retirement Savings Plan) provides a tax deduction on contributions — you get a tax refund now, but withdrawals are taxed as income in retirement. A TFSA (Tax-Free Savings Account) offers no upfront deduction, but all investment growth and withdrawals are completely tax-free. For most Canadians, RRSPs are better if you earn more now than in retirement; TFSAs are more flexible for any savings goal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do GST/HST credits work in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The GST/HST credit is a tax-free quarterly payment from the Government of Canada to help low- and modest-income individuals and families offset the sales tax they pay. For the 2025-2026 benefit year, a single individual can receive up to roughly $519, and a couple with two children can receive up to around $1,069. The amount is based on your net income from the previous year's tax return."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do Quebec taxes compare to Ontario taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Quebec has higher provincial income tax rates than Ontario (up to 25.75% vs 13.16% top rates), but Quebec residents benefit from lower daycare costs, cheaper tuition, and a separate provincial pension plan (QPP) with different rates. Ontario's tax burden is generally lower for middle-income earners, but factors like housing costs and the Ontario Health Premium also affect the comparison."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does self-employment tax work in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Self-employed individuals in Canada pay both the employee and employer portions of CPP (11.9% total) on net business income above $3,500, up to the maximum pensionable earnings. However, you can deduct half of your CPP contributions as a business expense. Unlike the US, Canada does not have a separate self-employment tax — income tax is paid as part of your regular T1 return with the same brackets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are non-residents taxed in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non-residents of Canada are generally taxed only on Canadian-source income. This includes employment income earned in Canada, business income from a Canadian business, and rental income from Canadian property. Non-residents pay Part I tax on employment/business income at regular rates, and Part XIII tax (usually 25%) on passive income like dividends, interest, and royalties. Tax treaties may reduce these rates."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "Canada Income Tax Calculator 2026 — Federal & Provincial Tax Estimator | Free Tool",
+    "description": "Free Canada income tax calculator for 2026. Estimate your federal and provincial income tax, and take-home pay for any province or territory. Accurate progressive brackets for all 13 provinces."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

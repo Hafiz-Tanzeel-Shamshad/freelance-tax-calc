@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Capital Gains Tax Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/capital-gains-tax-calculator.html",
-  "description":"Free capital gains tax calculator for 2026. Estimate taxes on short-term and long-term capital gains based on your income and filing status.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Capital Gains Tax Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is the difference between short-term and long-term capital gains?","acceptedAnswer":{"@type":"Answer","text":"Short-term capital gains come from assets held for 1 year or less and are taxed as ordinary income at your marginal tax rate (10–37% in 2026). Long-term capital gains come from assets held for more than 1 year and are taxed at preferential rates of 0%, 15%, or 20%, depending on your total taxable income and filing status."}},
-    {"@type":"Question","name":"What is the 0% long-term capital gains rate in 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, the 0% long-term capital gains rate applies to single filers with total taxable income up to $47,025, married filing jointly up to $94,050, and head of household up to $63,000. If your total income (including long-term gains) falls within these thresholds, you pay no tax on your long-term capital gains."}},
-    {"@type":"Question","name":"How does the holding period work for capital gains?","acceptedAnswer":{"@type":"Answer","text":"The holding period is the time you own an asset before selling it. The holding period clock starts the day after you acquire the asset and ends on the day you sell it. If you hold for 1 year or less, any gain is a short-term capital gain taxed at ordinary income rates. If you hold for more than 1 year, it qualifies as a long-term capital gain taxed at 0%, 15%, or 20%. Selling on the one-year anniversary date counts as long-term since you held it more than one year."}},
-    {"@type":"Question","name":"How does my ordinary income affect my long-term capital gains tax rate?","acceptedAnswer":{"@type":"Answer","text":"Your ordinary income is stacked first, then long-term capital gains are stacked on top. This determines which long-term capital gains bracket you fall into. For example, a single filer with $40,000 of ordinary income has $7,025 of headroom before reaching the 15% long-term gains bracket (which starts at $47,025). Any long-term gains within that headroom are taxed at 0%; gains above it are taxed at 15%."}},
-    {"@type":"Question","name":"What are the 2026 long-term capital gains tax thresholds?","acceptedAnswer":{"@type":"Answer","text":"For 2026, the long-term capital gains tax brackets are: 0% rate — single up to $47,025, married filing jointly up to $94,050, head of household up to $63,000; 15% rate — single $47,026 to $518,900, married filing jointly $94,051 to $583,750, head of household $63,001 to $551,350; 20% rate — single over $518,900, married filing jointly over $583,750, head of household over $551,350."}},
-    {"@type":"Question","name":"Can I use capital losses to offset capital gains?","acceptedAnswer":{"@type":"Answer","text":"Yes. If you have capital losses, you can use them to offset capital gains dollar-for-dollar. If your losses exceed your gains, you can deduct up to $3,000 ($1,500 if married filing separately) of net losses against your ordinary income each year. Any remaining losses carry forward to future years indefinitely. This is known as tax-loss harvesting and is a common strategy to reduce your capital gains tax bill."}},
-    {"@type":"Question","name":"How much capital gains tax do I pay when I sell my primary residence?","acceptedAnswer":{"@type":"Answer","text":"If you sell your primary residence, you can exclude up to $250,000 of capital gains ($500,000 for married filing jointly) from tax, provided you have owned and lived in the home for at least 2 of the last 5 years (the 2-out-of-5-year rule). Any gain above these limits is taxed as a long-term capital gain at the applicable rate. This exclusion can be used once every 2 years."}},
-    {"@type":"Question","name":"Do I pay state tax on capital gains?","acceptedAnswer":{"@type":"Answer","text":"In most states, capital gains are taxed as ordinary income at the state level using the same rates as your regular income. Some states like California tax capital gains at high marginal rates up to 13.3%. States with no income tax (Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, Wyoming) do not tax capital gains at the state level."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Capital Gains Tax Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/capital-gains-tax-calculator.html",
+    "description": "Free capital gains tax calculator for 2026. Estimate taxes on short-term and long-term capital gains based on your income and filing status.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Capital Gains Tax Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between short-term and long-term capital gains?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Short-term capital gains come from assets held for 1 year or less and are taxed as ordinary income at your marginal tax rate (10–37% in 2026). Long-term capital gains come from assets held for more than 1 year and are taxed at preferential rates of 0%, 15%, or 20%, depending on your total taxable income and filing status."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 0% long-term capital gains rate in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the 0% long-term capital gains rate applies to single filers with total taxable income up to $47,025, married filing jointly up to $94,050, and head of household up to $63,000. If your total income (including long-term gains) falls within these thresholds, you pay no tax on your long-term capital gains."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the holding period work for capital gains?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The holding period is the time you own an asset before selling it. The holding period clock starts the day after you acquire the asset and ends on the day you sell it. If you hold for 1 year or less, any gain is a short-term capital gain taxed at ordinary income rates. If you hold for more than 1 year, it qualifies as a long-term capital gain taxed at 0%, 15%, or 20%. Selling on the one-year anniversary date counts as long-term since you held it more than one year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does my ordinary income affect my long-term capital gains tax rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your ordinary income is stacked first, then long-term capital gains are stacked on top. This determines which long-term capital gains bracket you fall into. For example, a single filer with $40,000 of ordinary income has $7,025 of headroom before reaching the 15% long-term gains bracket (which starts at $47,025). Any long-term gains within that headroom are taxed at 0%; gains above it are taxed at 15%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the 2026 long-term capital gains tax thresholds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the long-term capital gains tax brackets are: 0% rate — single up to $47,025, married filing jointly up to $94,050, head of household up to $63,000; 15% rate — single $47,026 to $518,900, married filing jointly $94,051 to $583,750, head of household $63,001 to $551,350; 20% rate — single over $518,900, married filing jointly over $583,750, head of household over $551,350."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use capital losses to offset capital gains?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If you have capital losses, you can use them to offset capital gains dollar-for-dollar. If your losses exceed your gains, you can deduct up to $3,000 ($1,500 if married filing separately) of net losses against your ordinary income each year. Any remaining losses carry forward to future years indefinitely. This is known as tax-loss harvesting and is a common strategy to reduce your capital gains tax bill."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much capital gains tax do I pay when I sell my primary residence?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you sell your primary residence, you can exclude up to $250,000 of capital gains ($500,000 for married filing jointly) from tax, provided you have owned and lived in the home for at least 2 of the last 5 years (the 2-out-of-5-year rule). Any gain above these limits is taxed as a long-term capital gain at the applicable rate. This exclusion can be used once every 2 years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I pay state tax on capital gains?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In most states, capital gains are taxed as ordinary income at the state level using the same rates as your regular income. Some states like California tax capital gains at high marginal rates up to 13.3%. States with no income tax (Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, Wyoming) do not tax capital gains at the state level."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ],
+    "name": "Capital Gains Tax Calculator 2026 — Short & Long Term Capital Gains Estimator | Free Tool",
+    "description": "Free capital gains tax calculator for 2026. Estimate taxes on short-term and long-term capital gains based on your income and filing status in the USA."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

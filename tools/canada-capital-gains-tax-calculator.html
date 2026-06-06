@@ -21,31 +21,157 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Canada Capital Gains Tax Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/canada-capital-gains-tax-calculator.html",
-  "description":"Free Canada capital gains tax calculator for 2026. Estimate how much tax you'll pay on investment gains with the 50% inclusion rate.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Canada Capital Gains Tax Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is the capital gains inclusion rate in Canada for 2026?","acceptedAnswer":{"@type":"Answer","text":"For 2026, the capital gains inclusion rate remains 50% in Canada. This means only half of your capital gain is added to your income and taxed at your marginal rate. For example, if you sell investments for a $10,000 gain, only $5,000 is taxable. The proposed increase to 66.67% was cancelled, keeping the rate at the long-standing 50% level."}},
-    {"@type":"Question","name":"How is capital gains tax calculated in Canada?","acceptedAnswer":{"@type":"Answer","text":"Canadian capital gains are calculated by taking 50% of your gain (the taxable portion) and adding it to your other income. The tax on that portion is then calculated at your marginal federal + provincial rate. Our calculator uses the marginal method: it calculates your tax without the gain, then with the gain included, and the difference is your capital gains tax."}},
-    {"@type":"Question","name":"What is the principal residence exemption?","acceptedAnswer":{"@type":"Answer","text":"The principal residence exemption is one of the most valuable tax breaks in Canada. If you sell your primary home, any capital gain is completely tax-free. You don't pay any capital gains tax when you sell your main residence. However, if you rented out part of your home or used it for business, a portion of the gain may be taxable. The exemption applies to one property per family unit per year."}},
-    {"@type":"Question","name":"Can I claim capital losses to offset gains?","acceptedAnswer":{"@type":"Answer","text":"Yes, capital losses can be used to offset capital gains in the same year, reducing your tax bill. If your losses exceed your gains, you can carry the net capital loss back three years or forward indefinitely to offset gains in other years. This is called a net capital loss. Only 50% of the loss can be claimed (matching the inclusion rate), unless you're claiming an allowable business investment loss (ABIL)."}},
-    {"@type":"Question","name":"How are Canadian dividends taxed vs capital gains?","acceptedAnswer":{"@type":"Answer","text":"Canadian dividends are taxed differently than capital gains. Eligible dividends from Canadian corporations receive a dividend tax credit that significantly reduces the tax paid. Capital gains benefit from the 50% inclusion rate. In most cases, capital gains are taxed more favourably than interest income but may be taxed higher or lower than dividends depending on your province and income level."}},
-    {"@type":"Question","name":"What investments generate capital gains in Canada?","acceptedAnswer":{"@type":"Answer","text":"Capital gains arise when you sell or dispose of capital property for more than its adjusted cost base. This includes: stocks, bonds, mutual funds, ETFs, real estate (except principal residence), land, cottages, cryptocurrency, and collectibles like art or antiques. When you sell any of these assets, the difference between your selling price and your adjusted cost base (plus expenses) is your capital gain or loss."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Canada Capital Gains Tax Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/canada-capital-gains-tax-calculator.html",
+    "description": "Free Canada capital gains tax calculator for 2026. Estimate how much tax you'll pay on investment gains with the 50% inclusion rate.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Canada Capital Gains Tax Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the capital gains inclusion rate in Canada for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the capital gains inclusion rate remains 50% in Canada. This means only half of your capital gain is added to your income and taxed at your marginal rate. For example, if you sell investments for a $10,000 gain, only $5,000 is taxable. The proposed increase to 66.67% was cancelled, keeping the rate at the long-standing 50% level."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is capital gains tax calculated in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Canadian capital gains are calculated by taking 50% of your gain (the taxable portion) and adding it to your other income. The tax on that portion is then calculated at your marginal federal + provincial rate. Our calculator uses the marginal method: it calculates your tax without the gain, then with the gain included, and the difference is your capital gains tax."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the principal residence exemption?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The principal residence exemption is one of the most valuable tax breaks in Canada. If you sell your primary home, any capital gain is completely tax-free. You don't pay any capital gains tax when you sell your main residence. However, if you rented out part of your home or used it for business, a portion of the gain may be taxable. The exemption applies to one property per family unit per year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I claim capital losses to offset gains?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, capital losses can be used to offset capital gains in the same year, reducing your tax bill. If your losses exceed your gains, you can carry the net capital loss back three years or forward indefinitely to offset gains in other years. This is called a net capital loss. Only 50% of the loss can be claimed (matching the inclusion rate), unless you're claiming an allowable business investment loss (ABIL)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are Canadian dividends taxed vs capital gains?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Canadian dividends are taxed differently than capital gains. Eligible dividends from Canadian corporations receive a dividend tax credit that significantly reduces the tax paid. Capital gains benefit from the 50% inclusion rate. In most cases, capital gains are taxed more favourably than interest income but may be taxed higher or lower than dividends depending on your province and income level."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What investments generate capital gains in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Capital gains arise when you sell or dispose of capital property for more than its adjusted cost base. This includes: stocks, bonds, mutual funds, ETFs, real estate (except principal residence), land, cottages, cryptocurrency, and collectibles like art or antiques. When you sell any of these assets, the difference between your selling price and your adjusted cost base (plus expenses) is your capital gain or loss."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ],
+    "name": "Canada Capital Gains Tax Calculator 2026 — 50% Inclusion Rate | Free Tool",
+    "description": "Free Canada capital gains tax calculator for 2026. Estimate tax on investment gains with the 50% inclusion rate. See how much tax you'll pay based on your province and income."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

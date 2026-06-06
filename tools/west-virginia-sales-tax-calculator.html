@@ -21,32 +21,165 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"West Virginia Sales Tax Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/west-virginia-sales-tax-calculator.html",
-  "description":"Free West Virginia sales tax calculator for 2026. Calculate WV sales tax at 6% state rate plus optional local rate up to 1%.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"West Virginia Sales Tax Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is the West Virginia sales tax rate for 2026?","acceptedAnswer":{"@type":"Answer","text":"The West Virginia state sales tax rate is 6% for 2026, unchanged from prior years. This rate applies to most retail sales of tangible personal property and certain services. Combined with local option taxes (up to 1%), the total rate you pay ranges from 6% to 7%, depending on the location of the purchase."}},
-    {"@type":"Question","name":"Are there local sales taxes in West Virginia?","acceptedAnswer":{"@type":"Answer","text":"Yes, West Virginia allows municipalities and counties to impose an additional local sales tax of up to 1%. Combined with the 6% state rate, the maximum total sales tax you can pay in West Virginia is 7%. As of 2026, many cities and counties have adopted the local option, so check your local rate using our calculator above."}},
-    {"@type":"Question","name":"What items are exempt from West Virginia sales tax?","acceptedAnswer":{"@type":"Answer","text":"Common exemptions include most groceries (food for home consumption), prescription drugs, over-the-counter medicines, gasoline (subject to separate excise tax), manufacturing machinery and equipment used directly in production, and purchases by qualifying nonprofit organizations. Services are generally not taxed unless specifically listed in state law."}},
-    {"@type":"Question","name":"How do I file West Virginia sales tax?","acceptedAnswer":{"@type":"Answer","text":"If you collect WV sales tax, file returns online through the WV Tax Division's MyTaxes portal. File monthly, quarterly, or annually depending on your volume. Returns are due the 20th of the month following the filing period. You must report both state and local sales tax collections separately. Late filing incurs a penalty of 5% per month up to 25%."}},
-    {"@type":"Question","name":"Who needs to collect West Virginia sales tax?","acceptedAnswer":{"@type":"Answer","text":"Any business with physical presence (nexus) in West Virginia must register and collect sales tax. Out-of-state sellers with economic nexus — more than $100,000 in gross revenue from WV sales or 200+ separate transactions in the current or prior calendar year — must also register. Marketplace facilitators are treated as the seller for sales tax purposes."}},
-    {"@type":"Question","name":"How does West Virginia's sales tax compare to other states?","acceptedAnswer":{"@type":"Answer","text":"West Virginia's 6% state sales tax is near the middle of the national average. Combined with local rates of up to 1%, the maximum rate of 7% is below the national average of about 8.5%. Neighboring states: Virginia (5.3% state + local up to ~7%), Kentucky (6% state + local up to ~7.5%), Ohio (5.75% state + local up to ~8%), Pennsylvania (6% state + local up to ~8%), and Maryland (6% state + local up to ~9%)."}},
-    {"@type":"Question","name":"How do I report West Virginia sales tax collected from customers?","acceptedAnswer":{"@type":"Answer","text":"Report sales tax collected on the WV Sales and Use Tax Return (Form WV/SST). You must report gross sales, exempt sales, taxable sales, and the tax due for both state and local jurisdictions. Keep detailed records of all sales transactions for at least three years. The WV Tax Division may audit your records to verify correct collection and remittance."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "West Virginia Sales Tax Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/west-virginia-sales-tax-calculator.html",
+    "description": "Free West Virginia sales tax calculator for 2026. Calculate WV sales tax at 6% state rate plus optional local rate up to 1%.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "West Virginia Sales Tax Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the West Virginia sales tax rate for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The West Virginia state sales tax rate is 6% for 2026, unchanged from prior years. This rate applies to most retail sales of tangible personal property and certain services. Combined with local option taxes (up to 1%), the total rate you pay ranges from 6% to 7%, depending on the location of the purchase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there local sales taxes in West Virginia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, West Virginia allows municipalities and counties to impose an additional local sales tax of up to 1%. Combined with the 6% state rate, the maximum total sales tax you can pay in West Virginia is 7%. As of 2026, many cities and counties have adopted the local option, so check your local rate using our calculator above."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What items are exempt from West Virginia sales tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common exemptions include most groceries (food for home consumption), prescription drugs, over-the-counter medicines, gasoline (subject to separate excise tax), manufacturing machinery and equipment used directly in production, and purchases by qualifying nonprofit organizations. Services are generally not taxed unless specifically listed in state law."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I file West Virginia sales tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you collect WV sales tax, file returns online through the WV Tax Division's MyTaxes portal. File monthly, quarterly, or annually depending on your volume. Returns are due the 20th of the month following the filing period. You must report both state and local sales tax collections separately. Late filing incurs a penalty of 5% per month up to 25%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who needs to collect West Virginia sales tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Any business with physical presence (nexus) in West Virginia must register and collect sales tax. Out-of-state sellers with economic nexus — more than $100,000 in gross revenue from WV sales or 200+ separate transactions in the current or prior calendar year — must also register. Marketplace facilitators are treated as the seller for sales tax purposes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does West Virginia's sales tax compare to other states?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "West Virginia's 6% state sales tax is near the middle of the national average. Combined with local rates of up to 1%, the maximum rate of 7% is below the national average of about 8.5%. Neighboring states: Virginia (5.3% state + local up to ~7%), Kentucky (6% state + local up to ~7.5%), Ohio (5.75% state + local up to ~8%), Pennsylvania (6% state + local up to ~8%), and Maryland (6% state + local up to ~9%)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I report West Virginia sales tax collected from customers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Report sales tax collected on the WV Sales and Use Tax Return (Form WV/SST). You must report gross sales, exempt sales, taxable sales, and the tax due for both state and local jurisdictions. Keep detailed records of all sales transactions for at least three years. The WV Tax Division may audit your records to verify correct collection and remittance."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "West Virginia Sales Tax Calculator 2026 — WV State + Local Sales Tax",
+    "description": "Free West Virginia sales tax calculator for 2026. Calculate WV sales tax at 6% state rate plus optional local rate up to 1%. Total combined rate for any purchase."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

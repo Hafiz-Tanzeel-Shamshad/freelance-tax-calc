@@ -22,30 +22,173 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script src="/assets/tax-calculator-core.js"></script>
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Self-Employed 401k Calculator USA",
-  "url":"https://freelancetaxcalc.online/tools/retirement-calculator.html",
-  "description":"Free USA retirement calculator for self-employed. Compare Solo 401k, SEP-IRA, and SIMPLE IRA with 2026 limits.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All"
-,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Retirement Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Can I have both a Solo 401k and a SEP-IRA?","acceptedAnswer":{"@type":"Answer","text":"You can have both accounts, but the total combined employer contributions across all plans cannot exceed the overall limits. For 2026, the total employer contribution is limited to 25% of compensation up to $70,000. Most financial advisors recommend choosing one plan rather than managing both."}},
-    {"@type":"Question","name":"What if I have employees?","acceptedAnswer":{"@type":"Answer","text":"If you have full-time employees (excluding a spouse), you cannot use a Solo 401(k) — it's designed for sole proprietors with no employees. A SEP-IRA requires you to contribute the same percentage for eligible employees. A SIMPLE IRA is best for small businesses with under 100 employees."}},
-    {"@type":"Question","name":"When do I need to set up a Solo 401k?","acceptedAnswer":{"@type":"Answer","text":"A Solo 401(k) must be established by December 31 of the tax year. However, employer profit-sharing contributions can be made up to the tax filing deadline (including extensions). Employee salary deferrals must be made by December 31. SEP-IRAs can be established and contributed to up to the tax filing deadline."}},
-    {"@type":"Question","name":"How much should self-employed people save for retirement?","acceptedAnswer":{"@type":"Answer","text":"Financial experts recommend saving 15-20% of your self-employment income for retirement. This is higher than the 10-15% recommendation for W-2 employees because you lack employer matching and pension benefits. The Solo 401(k) allows the highest contribution limits — up to $70,000 for 2026."}},
-    {"@type":"Question","name":"Are retirement contributions tax deductible?","acceptedAnswer":{"@type":"Answer","text":"Yes. Contributions to Solo 401(k)s, SEP-IRAs, SIMPLE IRAs, and Traditional IRAs are tax deductible in the year they are made, reducing your taxable self-employment income. Roth IRA contributions are not deductible but grow tax-free. The self-employed health insurance deduction is separate from retirement contributions."}},{"@type":"Question","name":"What is a Solo 401k and how does it work in the USA?","acceptedAnswer":{"@type":"Answer","text":"A Solo 401(k) is a retirement plan designed for self-employed individuals with no employees in the USA. It allows you to contribute as both employee (up to $23,500 in 2026, or $31,000 if 50+) and employer (up to 25% of compensation), with a combined maximum of $70,000 ($77,500 with catch-up). Contributions are tax-deductible and grow tax-deferred, or you can choose a Roth option for tax-free withdrawals."}},{"@type":"Question","name":"Can I contribute to both a SEP-IRA and a personal IRA in the USA?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can contribute to both a SEP-IRA and a Traditional or Roth IRA in the same year in the USA. However, the total combined employer contributions across all plans cannot exceed the overall limits. Your personal IRA contribution limit for 2026 is $7,000 ($8,000 if 50+), separate from your SEP-IRA or Solo 401k contributions. This strategy can maximize your total retirement savings."}},{"@type":"Question","name":"What are the 2026 catch-up contribution limits for self-employed retirement plans?","acceptedAnswer":{"@type":"Answer","text":"For 2026, if you're age 50 or older: Solo 401(k) allows an additional $7,500 catch-up (total employee deferral of $31,000), bringing the combined maximum to $77,500. SIMPLE IRA allows an additional $3,500 catch-up (total of $20,500). SEP-IRA has no catch-up provision. Traditional and Roth IRAs allow an additional $1,000 catch-up (total of $8,000)."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Self-Employed 401k Calculator USA",
+    "url": "https://freelancetaxcalc.online/tools/retirement-calculator.html",
+    "description": "Free USA retirement calculator for self-employed. Compare Solo 401k, SEP-IRA, and SIMPLE IRA with 2026 limits.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Retirement Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I have both a Solo 401k and a SEP-IRA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can have both accounts, but the total combined employer contributions across all plans cannot exceed the overall limits. For 2026, the total employer contribution is limited to 25% of compensation up to $70,000. Most financial advisors recommend choosing one plan rather than managing both."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I have employees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you have full-time employees (excluding a spouse), you cannot use a Solo 401(k) — it's designed for sole proprietors with no employees. A SEP-IRA requires you to contribute the same percentage for eligible employees. A SIMPLE IRA is best for small businesses with under 100 employees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When do I need to set up a Solo 401k?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Solo 401(k) must be established by December 31 of the tax year. However, employer profit-sharing contributions can be made up to the tax filing deadline (including extensions). Employee salary deferrals must be made by December 31. SEP-IRAs can be established and contributed to up to the tax filing deadline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should self-employed people save for retirement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Financial experts recommend saving 15-20% of your self-employment income for retirement. This is higher than the 10-15% recommendation for W-2 employees because you lack employer matching and pension benefits. The Solo 401(k) allows the highest contribution limits — up to $70,000 for 2026."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are retirement contributions tax deductible?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Contributions to Solo 401(k)s, SEP-IRAs, SIMPLE IRAs, and Traditional IRAs are tax deductible in the year they are made, reducing your taxable self-employment income. Roth IRA contributions are not deductible but grow tax-free. The self-employed health insurance deduction is separate from retirement contributions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a Solo 401k and how does it work in the USA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Solo 401(k) is a retirement plan designed for self-employed individuals with no employees in the USA. It allows you to contribute as both employee (up to $23,500 in 2026, or $31,000 if 50+) and employer (up to 25% of compensation), with a combined maximum of $70,000 ($77,500 with catch-up). Contributions are tax-deductible and grow tax-deferred, or you can choose a Roth option for tax-free withdrawals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I contribute to both a SEP-IRA and a personal IRA in the USA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can contribute to both a SEP-IRA and a Traditional or Roth IRA in the same year in the USA. However, the total combined employer contributions across all plans cannot exceed the overall limits. Your personal IRA contribution limit for 2026 is $7,000 ($8,000 if 50+), separate from your SEP-IRA or Solo 401k contributions. This strategy can maximize your total retirement savings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the 2026 catch-up contribution limits for self-employed retirement plans?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, if you're age 50 or older: Solo 401(k) allows an additional $7,500 catch-up (total employee deferral of $31,000), bringing the combined maximum to $77,500. SIMPLE IRA allows an additional $3,500 catch-up (total of $20,500). SEP-IRA has no catch-up provision. Traditional and Roth IRAs allow an additional $1,000 catch-up (total of $8,000)."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ],
+    "name": "Self-Employed 401k Calculator USA (SEP-IRA &amp; Solo 401k) | Free Tool 2026",
+    "description": "Compare Solo 401k, SEP-IRA, and SIMPLE IRA for self-employed in the USA. Free retirement calculator with 2026 contribution limits. Max your savings."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

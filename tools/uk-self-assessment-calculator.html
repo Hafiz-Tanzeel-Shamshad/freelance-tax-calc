@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"UK Self Assessment Tax Calculator 2025/26",
-  "url":"https://freelancetaxcalc.online/tools/uk-self-assessment-calculator.html",
-  "description":"Free UK Self Assessment tax calculator for 2025/26. Estimate your income tax, personal allowance, and take-home pay as a sole trader or freelancer in England, Wales, and Northern Ireland.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"UK Self Assessment Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Who needs to register for Self Assessment in the UK?","acceptedAnswer":{"@type":"Answer","text":"You must register for Self Assessment if you are self-employed as a sole trader with gross income over £1,000, a partner in a business partnership, or if you have untaxed income over £2,500 from investments, rental properties, or tips. You also need to register if your income from savings or investments exceeds £10,000, or if you need to pay the High Income Child Benefit Charge."}},
-    {"@type":"Question","name":"What are the UK income tax bands for 2025/26?","acceptedAnswer":{"@type":"Answer","text":"For 2025/26, the UK income tax bands are: Personal Allowance (0%) on income up to £12,570; Basic Rate (20%) on £12,571 to £50,270; Higher Rate (40%) on £50,271 to £125,140; and Additional Rate (45%) on income over £125,140. These rates apply to England, Wales, and Northern Ireland. Scotland has different bands set by the Scottish Parliament."}},
-    {"@type":"Question","name":"How does the Personal Allowance taper work for high earners?","acceptedAnswer":{"@type":"Answer","text":"Your Personal Allowance (normally £12,570) is reduced by £1 for every £2 your adjusted net income exceeds £100,000. This means your allowance is completely gone once your income reaches £125,140. This creates an effective marginal tax rate of 60% on income between £100,000 and £125,140, making this a crucial bracket for tax planning."}},
-    {"@type":"Question","name":"When is the Self Assessment deadline for 2025/26?","acceptedAnswer":{"@type":"Answer","text":"For the 2025/26 tax year, the key deadlines are: you must register for Self Assessment by 5 October 2026, file your online tax return by 31 January 2027, and pay any tax due by 31 January 2027. Payments on account may also be required if your tax bill exceeds £1,000. Missing the deadline incurs an automatic £100 penalty."}},
-    {"@type":"Question","name":"What business expenses can I claim as a sole trader?","acceptedAnswer":{"@type":"Answer","text":"As a sole trader, you can claim allowable expenses that are incurred wholly and exclusively for your business. Common expenses include office costs (rent, rates, insurance), travel expenses (fuel, parking, train fares), staff costs, stock and raw materials, professional fees (accountants, solicitors), and the cost of using your home for business (simplified flat rate of £6-£26 per month). Personal expenses are strictly not deductible."}},
-    {"@type":"Question","name":"How are dividends taxed compared to earned income in the UK?","acceptedAnswer":{"@type":"Answer","text":"Dividends are taxed at different rates than earned income. For 2025/26, the first £500 of dividend income is tax-free (dividend allowance). Above this, dividends are taxed at 8.75% (basic rate), 33.75% (higher rate), and 39.35% (additional rate). Dividends are treated as the top slice of your income and use up your basic and higher rate bands, making them more tax-efficient than salary in many cases."}},
-    {"@type":"Question","name":"Do I need to pay National Insurance as a sole trader?","acceptedAnswer":{"@type":"Answer","text":"Yes, self-employed sole traders pay two types of National Insurance: Class 2 NICs at £3.45 per week on profits over £12,570 (or voluntarily below that), and Class 4 NICs at 6% on profits between £12,570 and £50,270 and 2% on profits above £50,270. National Insurance counts toward your State Pension and certain benefits. Limited company directors have different NI rules via their salary."}},
-    {"@type":"Question","name":"When should I register for Self Assessment with HMRC?","acceptedAnswer":{"@type":"Answer","text":"You must register for Self Assessment with HMRC by 5 October following the end of the tax year in which you started self-employment. For example, if you started trading in the 2025/26 tax year (ending 5 April 2026), you must register by 5 October 2026. Registration can be done online via the HMRC website. You'll receive a Unique Taxpayer Reference (UTR) and need to file your first return by 31 January 2027."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "UK Self Assessment Tax Calculator 2025/26",
+    "url": "https://freelancetaxcalc.online/tools/uk-self-assessment-calculator.html",
+    "description": "Free UK Self Assessment tax calculator for 2025/26. Estimate your income tax, personal allowance, and take-home pay as a sole trader or freelancer in England, Wales, and Northern Ireland.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "UK Self Assessment Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who needs to register for Self Assessment in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You must register for Self Assessment if you are self-employed as a sole trader with gross income over £1,000, a partner in a business partnership, or if you have untaxed income over £2,500 from investments, rental properties, or tips. You also need to register if your income from savings or investments exceeds £10,000, or if you need to pay the High Income Child Benefit Charge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the UK income tax bands for 2025/26?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2025/26, the UK income tax bands are: Personal Allowance (0%) on income up to £12,570; Basic Rate (20%) on £12,571 to £50,270; Higher Rate (40%) on £50,271 to £125,140; and Additional Rate (45%) on income over £125,140. These rates apply to England, Wales, and Northern Ireland. Scotland has different bands set by the Scottish Parliament."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Personal Allowance taper work for high earners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your Personal Allowance (normally £12,570) is reduced by £1 for every £2 your adjusted net income exceeds £100,000. This means your allowance is completely gone once your income reaches £125,140. This creates an effective marginal tax rate of 60% on income between £100,000 and £125,140, making this a crucial bracket for tax planning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is the Self Assessment deadline for 2025/26?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For the 2025/26 tax year, the key deadlines are: you must register for Self Assessment by 5 October 2026, file your online tax return by 31 January 2027, and pay any tax due by 31 January 2027. Payments on account may also be required if your tax bill exceeds £1,000. Missing the deadline incurs an automatic £100 penalty."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What business expenses can I claim as a sole trader?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As a sole trader, you can claim allowable expenses that are incurred wholly and exclusively for your business. Common expenses include office costs (rent, rates, insurance), travel expenses (fuel, parking, train fares), staff costs, stock and raw materials, professional fees (accountants, solicitors), and the cost of using your home for business (simplified flat rate of £6-£26 per month). Personal expenses are strictly not deductible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are dividends taxed compared to earned income in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dividends are taxed at different rates than earned income. For 2025/26, the first £500 of dividend income is tax-free (dividend allowance). Above this, dividends are taxed at 8.75% (basic rate), 33.75% (higher rate), and 39.35% (additional rate). Dividends are treated as the top slice of your income and use up your basic and higher rate bands, making them more tax-efficient than salary in many cases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to pay National Insurance as a sole trader?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, self-employed sole traders pay two types of National Insurance: Class 2 NICs at £3.45 per week on profits over £12,570 (or voluntarily below that), and Class 4 NICs at 6% on profits between £12,570 and £50,270 and 2% on profits above £50,270. National Insurance counts toward your State Pension and certain benefits. Limited company directors have different NI rules via their salary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I register for Self Assessment with HMRC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You must register for Self Assessment with HMRC by 5 October following the end of the tax year in which you started self-employment. For example, if you started trading in the 2025/26 tax year (ending 5 April 2026), you must register by 5 October 2026. Registration can be done online via the HMRC website. You'll receive a Unique Taxpayer Reference (UTR) and need to file your first return by 31 January 2027."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "UK Self Assessment Tax Calculator 2025/26 — Free Tax Return Estimator | FreelanceTaxCalc",
+    "description": "Free UK Self Assessment tax calculator for 2025/26. Estimate your income tax, personal allowance, and take-home pay as a sole trader or freelancer in England, Wales, and Northern Ireland."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

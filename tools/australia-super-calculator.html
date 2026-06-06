@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Australia Superannuation Calculator 2025-26",
-  "url":"https://freelancetaxcalc.online/tools/australia-super-calculator.html",
-  "description":"Free Australia superannuation calculator for 2025-26. Estimate your Super Guarantee contributions, concessional cap, and net amount added to super after 15% tax.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Australia Superannuation Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is the Super Guarantee rate for 2025-26?","acceptedAnswer":{"@type":"Answer","text":"The Super Guarantee (SG) rate for 2025-26 is 12%, up from 11.5% in 2024-25. Your employer must contribute this amount on top of your ordinary time earnings. The SG rate is legislated to increase to 12.5% by 2028-29."}},
-    {"@type":"Question","name":"What is the concessional contributions cap for 2025-26?","acceptedAnswer":{"@type":"Answer","text":"The concessional (before-tax) contributions cap for 2025-26 is $30,000. This includes your employer's Super Guarantee contributions plus any salary sacrifice or personal deductible contributions you make. Exceeding this cap incurs excess contributions tax at your marginal rate."}},
-    {"@type":"Question","name":"How is contributions tax calculated on super?","acceptedAnswer":{"@type":"Answer","text":"Concessional contributions to your super fund are taxed at 15% — this is called the contributions tax. It's deducted from the contribution when it enters your fund. If your income exceeds $250,000, you may pay an additional 15% Division 293 tax on some or all of your concessional contributions."}},
-    {"@type":"Question","name":"What is the difference between salary sacrifice and after-tax contributions?","acceptedAnswer":{"@type":"Answer","text":"Salary sacrifice contributions are before-tax (concessional), taxed at 15% inside super. After-tax (non-concessional) contributions are made from your take-home pay and are not taxed in super. The non-concessional cap for 2025-26 is $120,000 (or up to $360,000 over three years using the bring-forward rule)."}},
-    {"@type":"Question","name":"Can I carry forward unused concessional cap amounts?","acceptedAnswer":{"@type":"Answer","text":"Yes, if your total super balance is under $500,000, you can carry forward unused concessional cap amounts from previous years (from 2018-19 onwards) for up to 5 years. This allows you to make larger concessional contributions in a single year without exceeding your cap."}},
-    {"@type":"Question","name":"How does the government co-contribution work?","acceptedAnswer":{"@type":"Answer","text":"The government co-contribution is for low-to-middle-income earners making after-tax super contributions. If your total income is less than $58,445, the government contributes up to $0.50 for every $1 you contribute, with a maximum co-contribution of $500. The amount reduces as income increases above $43,445."}},
-    {"@type":"Question","name":"Should I contribute extra to super or invest outside super?","acceptedAnswer":{"@type":"Answer","text":"Super offers tax advantages — concessional contributions are taxed at only 15% (vs your marginal rate), investment earnings are taxed at 15% or less, and withdrawals in retirement are tax-free. However, super is locked until preservation age (55-60). For long-term retirement savings, super is highly tax-effective. For shorter goals or flexibility, outside investments may be better."}},
-    {"@type":"Question","name":"When can I access my superannuation?","acceptedAnswer":{"@type":"Answer","text":"You can access your super when you reach preservation age and retire. Preservation age depends on your date of birth — ranging from 55 (born before July 1960) to 60 (born after June 1964). You can also access super earlier in limited circumstances such as severe financial hardship, compassionate grounds, or the First Home Super Saver Scheme."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Australia Superannuation Calculator 2025-26",
+    "url": "https://freelancetaxcalc.online/tools/australia-super-calculator.html",
+    "description": "Free Australia superannuation calculator for 2025-26. Estimate your Super Guarantee contributions, concessional cap, and net amount added to super after 15% tax.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "AUD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Australia Superannuation Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Super Guarantee rate for 2025-26?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Super Guarantee (SG) rate for 2025-26 is 12%, up from 11.5% in 2024-25. Your employer must contribute this amount on top of your ordinary time earnings. The SG rate is legislated to increase to 12.5% by 2028-29."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the concessional contributions cap for 2025-26?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The concessional (before-tax) contributions cap for 2025-26 is $30,000. This includes your employer's Super Guarantee contributions plus any salary sacrifice or personal deductible contributions you make. Exceeding this cap incurs excess contributions tax at your marginal rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is contributions tax calculated on super?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Concessional contributions to your super fund are taxed at 15% — this is called the contributions tax. It's deducted from the contribution when it enters your fund. If your income exceeds $250,000, you may pay an additional 15% Division 293 tax on some or all of your concessional contributions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between salary sacrifice and after-tax contributions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Salary sacrifice contributions are before-tax (concessional), taxed at 15% inside super. After-tax (non-concessional) contributions are made from your take-home pay and are not taxed in super. The non-concessional cap for 2025-26 is $120,000 (or up to $360,000 over three years using the bring-forward rule)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I carry forward unused concessional cap amounts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if your total super balance is under $500,000, you can carry forward unused concessional cap amounts from previous years (from 2018-19 onwards) for up to 5 years. This allows you to make larger concessional contributions in a single year without exceeding your cap."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the government co-contribution work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The government co-contribution is for low-to-middle-income earners making after-tax super contributions. If your total income is less than $58,445, the government contributes up to $0.50 for every $1 you contribute, with a maximum co-contribution of $500. The amount reduces as income increases above $43,445."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I contribute extra to super or invest outside super?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Super offers tax advantages — concessional contributions are taxed at only 15% (vs your marginal rate), investment earnings are taxed at 15% or less, and withdrawals in retirement are tax-free. However, super is locked until preservation age (55-60). For long-term retirement savings, super is highly tax-effective. For shorter goals or flexibility, outside investments may be better."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When can I access my superannuation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can access your super when you reach preservation age and retire. Preservation age depends on your date of birth — ranging from 55 (born before July 1960) to 60 (born after June 1964). You can also access super earlier in limited circumstances such as severe financial hardship, compassionate grounds, or the First Home Super Saver Scheme."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "self-employed"
+      }
+    ],
+    "name": "Australia Superannuation Calculator 2025-26 — Super Contribution Estimator",
+    "description": "Free Australia superannuation calculator for 2025-26. Estimate your Super Guarantee contributions, concessional cap, and net amount added to super after 15% tax."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

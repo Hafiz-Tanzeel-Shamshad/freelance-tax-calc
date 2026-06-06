@@ -21,33 +21,173 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-[{
-  "@context":"https://schema.org","@type":"WebApplication",
-  "name":"Wisconsin Estimated Tax Calculator 2026",
-  "url":"https://freelancetaxcalc.online/tools/wisconsin-estimated-taxes.html",
-  "description":"Free Wisconsin estimated state tax calculator for 2026. Calculate your quarterly WI estimated tax payments based on annual income.",
-  "applicationCategory":"FinanceApplication","operatingSystem":"All",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-},{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":2,"name":"Tools","item":"https://freelancetaxcalc.online/"},
-    {"@type":"ListItem","position":3,"name":"Wisconsin Estimated Tax Calculator"}
-  ]
-},{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is the Wisconsin income tax rate for 2026?","acceptedAnswer":{"@type":"Answer","text":"Wisconsin has a progressive income tax with four brackets for 2026: 3.50% on the first $13,000 of taxable income (single), 4.40% on income between $13,000 and $25,000, 5.30% on income between $25,000 and $280,000, and 7.65% on income over $280,000. Married filers have double the bracket widths. This calculator uses a simplified 5% average rate for estimation purposes."}},
-    {"@type":"Question","name":"Who needs to pay Wisconsin estimated taxes?","acceptedAnswer":{"@type":"Answer","text":"You must pay Wisconsin estimated taxes if you expect to owe $500 or more in Wisconsin income tax after subtracting withholding and credits. This typically applies to self-employed individuals, freelancers, gig workers, sole proprietors, and anyone with significant non-wage income such as business income, rental income, investment income, or retirement distributions."}},
-    {"@type":"Question","name":"What is the $500 threshold rule for Wisconsin estimated taxes?","acceptedAnswer":{"@type":"Answer","text":"Wisconsin requires you to make estimated tax payments if your total tax liability after withholding and credits is expected to be $500 or more. If you expect to owe less than $500, you can simply pay the full amount when you file your annual Wisconsin tax return by April 15. The $500 threshold applies to each tax year independently."}},
-    {"@type":"Question","name":"When are Wisconsin estimated tax payments due in 2026?","acceptedAnswer":{"@type":"Answer","text":"Wisconsin estimated tax payments follow the same schedule as IRS estimated taxes. For the 2026 tax year, payments are due: April 15, 2026 (Q1), June 15, 2026 (Q2), September 15, 2026 (Q3), and January 15, 2027 (Q4). If a due date falls on a weekend or holiday, the deadline moves to the next business day."}},
-    {"@type":"Question","name":"What is the safe harbor rule for Wisconsin estimated taxes?","acceptedAnswer":{"@type":"Answer","text":"Wisconsin's safe harbor rule lets you avoid underpayment penalties if you pay at least 90% of your current year tax liability or 100% of your prior year tax liability (110% if your prior year adjusted gross income exceeded $150,000). Meeting the safe harbor threshold ensures you won't face penalties even if your final tax bill is higher than estimated."}},
-    {"@type":"Question","name":"How do I pay Wisconsin estimated taxes online?","acceptedAnswer":{"@type":"Answer","text":"You can pay Wisconsin estimated taxes online through the Wisconsin Department of Revenue's website using their e-file and e-pay system. Options include direct debit from your bank account, credit or debit card payments, and electronic funds transfer. You can also mail payments using Form WI-ES with your check or money order."}},
-    {"@type":"Question","name":"What deductions can I take on my Wisconsin state tax return?","acceptedAnswer":{"@type":"Answer","text":"Wisconsin offers several deductions including: the standard or itemized deduction (similar to federal but with different amounts), deductions for contributions to Wisconsin's College Savings (EdVest) program, certain retirement income exclusions, capital gains from the sale of Wisconsin farmland, and deductions for health insurance premiums for self-employed individuals. Wisconsin also allows a deduction for Social Security benefits."}},
-    {"@type":"Question","name":"How does Wisconsin's tax system compare to other states?","acceptedAnswer":{"@type":"Answer","text":"Wisconsin's top marginal rate of 7.65% is higher than the national average but lower than neighbors like Minnesota (9.85%) and Illinois (flat 4.95%). Unlike states with no income tax (Texas, Florida), Wisconsin taxes all income. However, Wisconsin offers generous deductions and credits including a homestead credit for renters and homeowners, a retirement income exclusion, and a marriage penalty relief credit."}}
-  ]
-}]
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Wisconsin Estimated Tax Calculator 2026",
+    "url": "https://freelancetaxcalc.online/tools/wisconsin-estimated-taxes.html",
+    "description": "Free Wisconsin estimated state tax calculator for 2026. Calculate your quarterly WI estimated tax payments based on annual income.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freelancetaxcalc.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Wisconsin Estimated Tax Calculator"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Wisconsin income tax rate for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wisconsin has a progressive income tax with four brackets for 2026: 3.50% on the first $13,000 of taxable income (single), 4.40% on income between $13,000 and $25,000, 5.30% on income between $25,000 and $280,000, and 7.65% on income over $280,000. Married filers have double the bracket widths. This calculator uses a simplified 5% average rate for estimation purposes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who needs to pay Wisconsin estimated taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You must pay Wisconsin estimated taxes if you expect to owe $500 or more in Wisconsin income tax after subtracting withholding and credits. This typically applies to self-employed individuals, freelancers, gig workers, sole proprietors, and anyone with significant non-wage income such as business income, rental income, investment income, or retirement distributions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the $500 threshold rule for Wisconsin estimated taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wisconsin requires you to make estimated tax payments if your total tax liability after withholding and credits is expected to be $500 or more. If you expect to owe less than $500, you can simply pay the full amount when you file your annual Wisconsin tax return by April 15. The $500 threshold applies to each tax year independently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When are Wisconsin estimated tax payments due in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wisconsin estimated tax payments follow the same schedule as IRS estimated taxes. For the 2026 tax year, payments are due: April 15, 2026 (Q1), June 15, 2026 (Q2), September 15, 2026 (Q3), and January 15, 2027 (Q4). If a due date falls on a weekend or holiday, the deadline moves to the next business day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the safe harbor rule for Wisconsin estimated taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wisconsin's safe harbor rule lets you avoid underpayment penalties if you pay at least 90% of your current year tax liability or 100% of your prior year tax liability (110% if your prior year adjusted gross income exceeded $150,000). Meeting the safe harbor threshold ensures you won't face penalties even if your final tax bill is higher than estimated."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I pay Wisconsin estimated taxes online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can pay Wisconsin estimated taxes online through the Wisconsin Department of Revenue's website using their e-file and e-pay system. Options include direct debit from your bank account, credit or debit card payments, and electronic funds transfer. You can also mail payments using Form WI-ES with your check or money order."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What deductions can I take on my Wisconsin state tax return?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wisconsin offers several deductions including: the standard or itemized deduction (similar to federal but with different amounts), deductions for contributions to Wisconsin's College Savings (EdVest) program, certain retirement income exclusions, capital gains from the sale of Wisconsin farmland, and deductions for health insurance premiums for self-employed individuals. Wisconsin also allows a deduction for Social Security benefits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Wisconsin's tax system compare to other states?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wisconsin's top marginal rate of 7.65% is higher than the national average but lower than neighbors like Minnesota (9.85%) and Illinois (flat 4.95%). Unlike states with no income tax (Texas, Florida), Wisconsin taxes all income. However, Wisconsin offers generous deductions and credits including a homestead credit for renters and homeowners, a retirement income exclusion, and a marriage penalty relief credit."
+        }
+      }
+    ],
+    "image": "https://freelancetaxcalc.online/favicon.svg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreelanceTaxCalc",
+      "url": "https://freelancetaxcalc.online"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "freelance"
+      },
+      {
+        "@type": "Thing",
+        "name": "tax"
+      },
+      {
+        "@type": "Thing",
+        "name": "calculator"
+      },
+      {
+        "@type": "Thing",
+        "name": "quarterly"
+      },
+      {
+        "@type": "Thing",
+        "name": "deductions"
+      }
+    ],
+    "name": "Wisconsin Estimated Tax Calculator 2026 — Pay WI State Estimated Taxes",
+    "description": "Free Wisconsin estimated state tax calculator for 2026. Calculate your quarterly WI estimated tax payments based on annual income. Pay Wisconsin estimated taxes online."
+  }
+]
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

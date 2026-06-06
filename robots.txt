@@ -11,4 +11,4 @@ Disallow: /pre-launch-checklist.html
 
 # Sitemap & RSS feed
 Sitemap: https://freelancetaxcalc.online/sitemap.xml
-Sitemap: https://freelancetaxcalc.online/rss.xml
+Sitemap: https://freelancetaxcalc.online/feed.xml

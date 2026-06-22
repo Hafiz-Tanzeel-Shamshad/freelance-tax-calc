@@ -286,6 +286,47 @@ ul{list-style:none}
 .site-footer .rss-subscribe-link:hover{color:#00C896}
 .site-footer .rss-subscribe-link svg{flex-shrink:0}
 
+/* 3D CARD TILT */
+.tilt-container{perspective:1200px}
+.tilt-card{transform-style:preserve-3d;will-change:transform;transition:transform 0.15s ease-out}
+.tilt-card:hover{transform:rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg)) translateZ(6px)}
+.tilt-card .tilt-shine{position:absolute;inset:0;border-radius:14px;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--sx,50%) var(--sy,50%),rgba(0,200,150,0.1),transparent 60%);transition:opacity 0.3s ease;z-index:1}
+.tilt-card:hover .tilt-shine{opacity:1}
+
+/* FLOATING BG ORBS */
+.section-orbs{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.section-orbs .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.07}
+.section-orbs .orb:nth-child(1){width:500px;height:500px;background:#00C896;top:-15%;right:-8%;animation:orbA 14s ease-in-out infinite}
+.section-orbs .orb:nth-child(2){width:350px;height:350px;background:#FFD700;bottom:-10%;left:-6%;animation:orbB 18s ease-in-out infinite}
+.section-orbs .orb:nth-child(3){width:250px;height:250px;background:#00C896;top:30%;left:10%;animation:orbC 12s ease-in-out infinite}
+.section-orbs .orb:nth-child(4){width:200px;height:200px;background:#FFD700;bottom:20%;right:15%;animation:orbD 16s ease-in-out infinite}
+@keyframes orbA{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-25px) scale(1.06)}66%{transform:translate(-15px,20px) scale(0.95)}}
+@keyframes orbB{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-20px,30px) scale(0.95)}66%{transform:translate(25px,-15px) scale(1.05)}}
+@keyframes orbC{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(15px,-30px) scale(1.08)}}
+@keyframes orbD{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-20px,15px) scale(0.92)}}
+
+/* SECTION ENHANCEMENTS */
+.tools-section,.how-section,.target-section,.testimonial-section,.guides-section{position:relative;z-index:1}
+.stats-bar{position:relative;overflow:hidden}
+.stats-bar .glow-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(0,200,150,0.6),transparent);animation:glowPulse 3s ease-in-out infinite;z-index:2}
+@keyframes glowPulse{0%,100%{opacity:0.3}50%{opacity:1}}
+
+/* CARD POSITION FOR PSEUDO EFFECTS */
+.guide-card,.testimonial-card,.persona-card{position:relative}
+.tool-card,.guide-card,.testimonial-card,.step-card,.persona-card{backface-visibility:hidden}
+
+/* HERO CALC 3D TILT */
+.hero-calc{transform-style:preserve-3d;transition:transform 0.2s ease-out;backface-visibility:hidden}
+
+/* FOOTER 3D OVERRIDE */
+body .site-footer{position:relative;overflow:hidden}
+#footer-3d{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+#footer-3d canvas{display:block;width:100%!important;height:100%!important;opacity:0.25}
+
+/* ENHANCED HERO BADGE */
+.hero-badge{animation:badgePulse 4s ease-in-out infinite}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(0,200,150,0.2)}50%{box-shadow:0 0 0 8px rgba(0,200,150,0)}}
+
 /* RESPONSIVE */
 @media(max-width:1024px){
   .tools-grid{grid-template-columns:repeat(2,1fr)}
@@ -477,6 +518,7 @@ ul{list-style:none}
 
 <!-- STATS -->
 <section class="stats-bar" aria-label="Site statistics">
+  <div class="glow-line" aria-hidden="true"></div>
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item"><div class="stat-number" data-target="75000">0+</div><div class="stat-label">Calculations Done</div></div>
@@ -489,6 +531,7 @@ ul{list-style:none}
 
 <!-- TOOLS -->
 <section class="tools-section" id="tools" aria-label="Free tools">
+  <div class="section-orbs" aria-hidden="true"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
   <div class="container">
     <div class="tools-header fade-in">
       <h2>32 Free Tools &mdash; No Account Needed</h2>
@@ -763,6 +806,7 @@ ul{list-style:none}
 
 <!-- FOOTER -->
 <div id="footer-placeholder"></div>
+<div id="footer-3d" aria-hidden="true"></div>
 <script src="/assets/include-footer.js" defer></script>
 
 
@@ -1027,6 +1071,46 @@ ul{list-style:none}
   }, 100);
 })();
 </script>
+<script>
+(function(){
+  if('ontouchstart' in window) return;
+  var cards = document.querySelectorAll('.tool-card, .guide-card, .testimonial-card, .step-card, .persona-card');
+  cards.forEach(function(c){
+    var shine = document.createElement('div');
+    shine.className = 'tilt-shine';
+    c.appendChild(shine);
+    c.addEventListener('mousemove', function(e){
+      var r = this.getBoundingClientRect();
+      var x = e.clientX - r.left, y = e.clientY - r.top;
+      var cx = r.width / 2, cy = r.height / 2;
+      var tx = ((y - cy) / cy) * -8;
+      var ty = ((x - cx) / cx) * 8;
+      this.style.setProperty('--tx', tx + 'deg');
+      this.style.setProperty('--ty', ty + 'deg');
+      shine.style.setProperty('--sx', (x / r.width * 100) + '%');
+      shine.style.setProperty('--sy', (y / r.height * 100) + '%');
+    });
+    c.addEventListener('mouseleave', function(){
+      this.style.setProperty('--tx', '0deg');
+      this.style.setProperty('--ty', '0deg');
+    });
+  });
+  // Hero calc tilt
+  var hc = document.querySelector('.hero-calc');
+  if(hc){
+    hc.addEventListener('mousemove', function(e){
+      var r = this.getBoundingClientRect();
+      var x = e.clientX - r.left, y = e.clientY - r.top;
+      var tx = ((y - r.height/2) / r.height*2) * -6;
+      var ty = ((x - r.width/2) / r.width*2) * 6;
+      this.style.transform = 'rotateX('+tx+'deg) rotateY('+ty+'deg) translateZ(4px)';
+    });
+    hc.addEventListener('mouseleave', function(){
+      this.style.transform = '';
+    });
+  }
+})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
@@ -1146,6 +1230,86 @@ ul{list-style:none}
       // Resize handler
       function onResize(){
         var w = hero3d.clientWidth, h = hero3d.clientHeight;
+        if(w < 1) return;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      }
+      window.addEventListener('resize', onResize);
+    })();
+  }
+})();
+</script>
+<script>
+(function(){
+  var f3d = document.getElementById('footer-3d');
+  if(f3d && typeof THREE !== 'undefined'){
+    (function initFooter3D(){
+      var w = f3d.clientWidth, h = f3d.clientHeight;
+      if(w < 1) return;
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(50, w/h, 0.1, 100);
+      camera.position.set(0, 2, 20);
+      var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(w, h);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      f3d.appendChild(renderer.domElement);
+      var group = new THREE.Group();
+      scene.add(group);
+      // Rings
+      var fColors = [0x00C896, 0xFFD700, 0x00C896];
+      var rings = [];
+      for(var i=0;i<3;i++){
+        var g = new THREE.TorusGeometry(1.5 + i*0.3, 0.08, 10, 32);
+        var m = new THREE.MeshBasicMaterial({ color: fColors[i], transparent: true, opacity: 0.2 + i*0.08 });
+        var mesh = new THREE.Mesh(g, m);
+        mesh.position.set((i-1)*3.5, Math.sin(i*2)*1.5, -2 + i*2);
+        mesh.rotation.x = 0.5 + i*0.3;
+        mesh.rotation.z = i*0.4;
+        mesh.userData = { rx: 0.003 + i*0.002, ry: 0.005 + i*0.002, phase: i*2 };
+        group.add(mesh);
+        rings.push(mesh);
+      }
+      // Particles
+      var count = 200;
+      var pos = new Float32Array(count * 3);
+      var cols = new Float32Array(count * 3);
+      var pd = [];
+      for(var i=0;i<count;i++){
+        var i3 = i*3;
+        pos[i3] = (Math.random()-0.5)*30;
+        pos[i3+1] = (Math.random()-0.5)*16;
+        pos[i3+2] = (Math.random()-0.5)*12 - 2;
+        var c = Math.random()>0.5 ? new THREE.Color(0x00C896) : new THREE.Color(0xFFD700);
+        c.toArray(cols, i3);
+        pd.push({ baseY: pos[i3+1], speed: 0.001+Math.random()*0.004, amp: 0.1+Math.random()*0.4, phase: Math.random()*6.28 });
+      }
+      var pg = new THREE.BufferGeometry();
+      pg.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      pg.setAttribute('color', new THREE.BufferAttribute(cols, 3));
+      var pm = new THREE.PointsMaterial({ size: 0.15, vertexColors: true, transparent: true, opacity: 0.4, blending: THREE.AdditiveBlending, depthWrite: false });
+      var pts = new THREE.Points(pg, pm);
+      group.add(pts);
+      var time = 0;
+      function animate(){
+        requestAnimationFrame(animate);
+        time += 0.008;
+        for(var i=0;i<rings.length;i++){
+          rings[i].rotation.x += rings[i].userData.rx;
+          rings[i].rotation.y += rings[i].userData.ry;
+          rings[i].position.y += Math.sin(time + rings[i].userData.phase) * 0.002;
+        }
+        var p = pts.geometry.attributes.position.array;
+        for(var i=0;i<count;i++){
+          p[i*3+1] = pd[i].baseY + Math.sin(time * pd[i].speed + pd[i].phase) * pd[i].amp;
+        }
+        pts.geometry.attributes.position.needsUpdate = true;
+        group.rotation.y = Math.sin(time * 0.1) * 0.1;
+        renderer.render(scene, camera);
+      }
+      animate();
+      function onResize(){
+        var w = f3d.clientWidth, h = f3d.clientHeight;
         if(w < 1) return;
         camera.aspect = w / h;
         camera.updateProjectionMatrix();

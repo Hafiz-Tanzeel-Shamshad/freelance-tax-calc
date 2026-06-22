@@ -91,6 +91,8 @@ ul{list-style:none}
 .hero-bg .grad:nth-child(1){width:600px;height:600px;top:-20%;right:-10%;background:#00C896}
 .hero-bg .grad:nth-child(2){width:400px;height:400px;bottom:-10%;left:-5%;background:#00C896}
 .hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,200,150,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,150,0.04) 1px,transparent 1px);background-size:60px 60px}
+#hero-3d{position:absolute;inset:0;z-index:1;pointer-events:none}
+#hero-3d canvas{display:block;width:100%!important;height:100%!important;opacity:0.7}
 .hero-content{position:relative;z-index:2;text-align:left;max-width:600px}
 .hero-badge{display:inline-block;background:rgba(0,200,150,0.12);color:#00C896;padding:6px 18px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:24px;letter-spacing:0.3px}
 .hero h1{font-family:"DM Serif Display",serif;font-size:54px;line-height:1.12;color:#fff;margin-bottom:20px}
@@ -421,6 +423,7 @@ ul{list-style:none}
     <div class="grad"></div>
     <div class="grid"></div>
   </div>
+  <div id="hero-3d" aria-hidden="true"></div>
   <div class="hero-content">
     <h1>Free 2026 <span>Freelance Tax</span> Calculators</h1>
     <p class="hero-sub">Built for self-employed, gig workers &amp; 1099 contractors. Get instant answers — no signup, no cost, no jargon.</p>
@@ -1022,6 +1025,135 @@ ul{list-style:none}
     }
     startAutoplay();
   }, 100);
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var hero3d = document.getElementById('hero-3d');
+  if(hero3d && typeof THREE !== 'undefined'){
+    (function init3D(){
+      var w = hero3d.clientWidth, h = hero3d.clientHeight;
+      if(w < 1) return;
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(50, w/h, 0.1, 100);
+      camera.position.set(0, 0, 28);
+      var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(w, h);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      hero3d.appendChild(renderer.domElement);
+      // Objects
+      var group = new THREE.Group();
+      scene.add(group);
+      var objects = [];
+      // Torus rings (coins)
+      var colors = [0x00C896, 0xFFD700, 0x00C896, 0xFFD700, 0x00C896];
+      var color = new THREE.Color();
+      for(var i=0;i<5;i++){
+        var geo = new THREE.TorusGeometry(1.2 + i*0.15, 0.15 + i*0.03, 12, 28);
+        var mat = new THREE.MeshBasicMaterial({ color: colors[i], transparent: true, opacity: 0.3 + i*0.08 });
+        var mesh = new THREE.Mesh(geo, mat);
+        mesh.position.set(
+          (Math.random() - 0.5) * 18,
+          (Math.random() - 0.5) * 10,
+          (Math.random() - 0.5) * 8 - 2
+        );
+        mesh.rotation.x = Math.random() * Math.PI;
+        mesh.rotation.y = Math.random() * Math.PI;
+        mesh.userData = {
+          speed: 0.002 + Math.random() * 0.003,
+          floatSpeed: 0.005 + Math.random() * 0.01,
+          floatAmp: 0.3 + Math.random() * 0.5,
+          phase: Math.random() * Math.PI * 2,
+          rotX: 0.001 + Math.random() * 0.003,
+          rotY: 0.002 + Math.random() * 0.005
+        };
+        group.add(mesh);
+        objects.push(mesh);
+      }
+      // Small sphere particles
+      var particleCount = 300;
+      var positions = new Float32Array(particleCount * 3);
+      var sizes = new Float32Array(particleCount);
+      var particleColors = new Float32Array(particleCount * 3);
+      for(var i=0;i<particleCount;i++){
+        positions[i*3] = (Math.random() - 0.5) * 40;
+        positions[i*3+1] = (Math.random() - 0.5) * 24;
+        positions[i*3+2] = (Math.random() - 0.5) * 18 - 4;
+        sizes[i] = 0.08 + Math.random() * 0.15;
+        var c = Math.random() > 0.5 ? new THREE.Color(0x00C896) : new THREE.Color(0xFFD700);
+        c.toArray(particleColors, i*3);
+      }
+      var particleGeo = new THREE.BufferGeometry();
+      particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      particleGeo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+      particleGeo.setAttribute('color', new THREE.BufferAttribute(particleColors, 3));
+      var particleMat = new THREE.PointsMaterial({
+        size: 0.2,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.6,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false
+      });
+      var particles = new THREE.Points(particleGeo, particleMat);
+      var pUserData = [];
+      for(var i=0;i<particleCount;i++){
+        pUserData.push({
+          floatSpeed: 0.002 + Math.random() * 0.006,
+          floatAmp: 0.2 + Math.random() * 0.6,
+          phase: Math.random() * Math.PI * 2,
+          baseY: positions[i*3+1]
+        });
+      }
+      particles.userData = pUserData;
+      group.add(particles);
+      // Mouse tracking
+      var mouseX = 0, mouseY = 0;
+      document.addEventListener('mousemove', function(e){
+        var rect = hero3d.getBoundingClientRect();
+        mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      });
+      var targetRotX = 0, targetRotY = 0;
+      var time = 0;
+      function animate(){
+        requestAnimationFrame(animate);
+        time += 0.01;
+        // Smooth mouse follow
+        targetRotX += (mouseY * 0.1 - targetRotX) * 0.02;
+        targetRotY += (mouseX * 0.1 - targetRotY) * 0.02;
+        group.rotation.x = targetRotX;
+        group.rotation.y = targetRotY;
+        // Animate rings
+        for(var i=0;i<objects.length;i++){
+          var o = objects[i];
+          var d = o.userData;
+          o.rotation.x += d.rotX;
+          o.rotation.y += d.rotY;
+          o.position.y += Math.sin(time * d.floatSpeed + d.phase) * 0.003;
+        }
+        // Animate particles
+        var pos = particles.geometry.attributes.position.array;
+        var pd = particles.userData;
+        for(var i=0;i<particleCount;i++){
+          pos[i*3+1] = pd[i].baseY + Math.sin(time * pd[i].floatSpeed + pd[i].phase) * pd[i].floatAmp;
+        }
+        particles.geometry.attributes.position.needsUpdate = true;
+        renderer.render(scene, camera);
+      }
+      animate();
+      // Resize handler
+      function onResize(){
+        var w = hero3d.clientWidth, h = hero3d.clientHeight;
+        if(w < 1) return;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      }
+      window.addEventListener('resize', onResize);
+    })();
+  }
 })();
 </script>
 <script>

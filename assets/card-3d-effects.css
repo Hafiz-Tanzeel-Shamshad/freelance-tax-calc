@@ -1,0 +1,474 @@
+/* ============================================
+   3D CARD EFFECTS — Immersive Web Experience
+   Glassmorphism, Depth, Particles, Energy Rings
+   ============================================ */
+
+/* ---- Perspective Container ---- */
+.tools-grid,
+.guides-grid,
+.testimonial-grid,
+.steps-row,
+.blog-list,
+.persona-track,
+.tools-row {
+  perspective: 1400px;
+}
+
+/* ---- Section Ambient Backgrounds ---- */
+.tools-section,
+.how-section,
+.target-section,
+.testimonial-section,
+.guides-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.section-ambient .ambient-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0, 200, 150, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ---- Card Base: Glassmorphism + 3D ---- */
+.tool-card,
+.guide-card,
+.blog-card,
+.testimonial-card,
+.step-card,
+.persona-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    transform 0.1s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+  backface-visibility: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.tool-card:hover,
+.guide-card:hover,
+.blog-card:hover,
+.testimonial-card:hover,
+.step-card:hover,
+.persona-card:hover {
+  transform:
+    rotateX(var(--tx, 0deg))
+    rotateY(var(--ty, 0deg))
+    translateZ(16px);
+  border-color: rgba(0, 200, 150, 0.4);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 0 40px rgba(0, 200, 150, 0.1),
+    0 20px 60px rgba(0, 200, 150, 0.12),
+    0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ---- Tool Items (Directory) ---- */
+.tool-item {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    transform 0.1s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  backface-visibility: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.tool-item:hover {
+  transform:
+    rotateX(var(--tx, 0deg))
+    rotateY(var(--ty, 0deg))
+    translateZ(8px);
+  border-color: rgba(0, 200, 150, 0.4);
+  background: rgba(240, 253, 245, 0.9);
+  box-shadow:
+    0 8px 24px rgba(0, 200, 150, 0.15),
+    0 0 30px rgba(0, 200, 150, 0.05);
+}
+
+/* ---- Shine Overlay ---- */
+.tilt-shine {
+  position: absolute !important;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    circle at var(--sx, 50%) var(--sy, 50%),
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(0, 200, 150, 0.12) 25%,
+    rgba(255, 215, 0, 0.04) 45%,
+    transparent 65%
+  );
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
+
+.tool-card:hover > .tilt-shine,
+.guide-card:hover > .tilt-shine,
+.blog-card:hover > .tilt-shine,
+.testimonial-card:hover > .tilt-shine,
+.step-card:hover > .tilt-shine,
+.persona-card:hover > .tilt-shine,
+.tool-item:hover > .tilt-shine {
+  opacity: 1;
+}
+
+/* ---- 3D Depth Layers ---- */
+.tilt-depth-1 {
+  transform: translateZ(36px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tilt-depth-2 {
+  transform: translateZ(24px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tilt-depth-3 {
+  transform: translateZ(14px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tilt-depth-4 {
+  transform: translateZ(6px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tool-card:hover .tilt-depth-1,
+.guide-card:hover .tilt-depth-1,
+.blog-card:hover .tilt-depth-1,
+.testimonial-card:hover .tilt-depth-1,
+.step-card:hover .tilt-depth-1,
+.persona-card:hover .tilt-depth-1 {
+  transform: translateZ(48px);
+}
+
+.tool-card:hover .tilt-depth-2,
+.guide-card:hover .tilt-depth-2,
+.blog-card:hover .tilt-depth-2,
+.testimonial-card:hover .tilt-depth-2,
+.step-card:hover .tilt-depth-2,
+.persona-card:hover .tilt-depth-2 {
+  transform: translateZ(32px);
+}
+
+.tool-card:hover .tilt-depth-3,
+.guide-card:hover .tilt-depth-3,
+.blog-card:hover .tilt-depth-3,
+.testimonial-card:hover .tilt-depth-3,
+.step-card:hover .tilt-depth-3,
+.persona-card:hover .tilt-depth-3 {
+  transform: translateZ(20px);
+}
+
+.tool-card:hover .tilt-depth-4,
+.guide-card:hover .tilt-depth-4,
+.blog-card:hover .tilt-depth-4,
+.testimonial-card:hover .tilt-depth-4,
+.step-card:hover .tilt-depth-4,
+.persona-card:hover .tilt-depth-4 {
+  transform: translateZ(12px);
+}
+
+.tool-item:hover .tool-item-icon {
+  transform: scale(1.15) translateZ(12px);
+  box-shadow: 0 6px 20px rgba(0, 200, 150, 0.3);
+}
+
+/* ---- Floating Animation ---- */
+@keyframes floatAnim {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-6px);
+  }
+  66% {
+    transform: translateY(-2px);
+  }
+}
+
+.tool-card.fade-in.visible,
+.guide-card.fade-in.visible,
+.blog-card.fade-in.visible,
+.testimonial-card.fade-in.visible,
+.step-card.fade-in.visible,
+.persona-card.fade-in.visible {
+  animation: floatAnim 5s ease-in-out infinite;
+  animation-delay: calc(var(--float-delay, 0s) + 0.8s);
+}
+
+.tool-card.fade-in.visible:hover,
+.guide-card.fade-in.visible:hover,
+.blog-card.fade-in.visible:hover,
+.testimonial-card.fade-in.visible:hover,
+.step-card.fade-in.visible:hover,
+.persona-card.fade-in.visible:hover {
+  animation: none;
+  transform:
+    rotateX(var(--tx, 0deg))
+    rotateY(var(--ty, 0deg))
+    translateZ(16px);
+}
+
+.blog-list .blog-card {
+  animation: floatAnim 5s ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+}
+
+.blog-list .blog-card:hover {
+  animation: none;
+  transform:
+    rotateX(var(--tx, 0deg))
+    rotateY(var(--ty, 0deg))
+    translateZ(16px);
+}
+
+/* ---- Animated Glow Border ---- */
+.tool-card::before,
+.guide-card::before,
+.blog-card::before,
+.testimonial-card::before,
+.step-card::before,
+.persona-card::before,
+.tool-item::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--border-angle, 0deg),
+    transparent,
+    rgba(0, 200, 150, 0.6),
+    transparent 120deg,
+    rgba(255, 215, 0, 0.35) 240deg,
+    transparent
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tool-card:hover::before,
+.guide-card:hover::before,
+.blog-card:hover::before,
+.testimonial-card:hover::before,
+.step-card:hover::before,
+.persona-card:hover::before,
+.tool-item:hover::before {
+  opacity: 1;
+  animation: borderSpin 2s linear infinite;
+}
+
+@keyframes borderSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Glow Ring Behind Card ---- */
+.tool-card::after,
+.guide-card::after,
+.blog-card::after,
+.testimonial-card::after,
+.step-card::after,
+.persona-card::after,
+.tool-item::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--sx, 50%) var(--sy, 50%),
+    rgba(0, 200, 150, 0.15),
+    rgba(255, 215, 0, 0.05),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(20px);
+}
+
+.tool-card:hover::after,
+.guide-card:hover::after,
+.blog-card:hover::after,
+.testimonial-card:hover::after,
+.step-card:hover::after,
+.persona-card:hover::after,
+.tool-item:hover::after {
+  opacity: 1;
+}
+
+/* ---- Energy Ring on Click ---- */
+.energy-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 200, 150, 0.6);
+  pointer-events: none;
+  z-index: 5;
+  animation: energyRingAnim 0.8s ease-out forwards;
+}
+
+@keyframes energyRingAnim {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+/* ---- Particle Sparkles (created by JS) ---- */
+.tilt-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ---- Section Ambient Particle Container ---- */
+.section-ambient canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+
+/* ---- Tool Badge Glow on Hover ---- */
+.tool-badge,
+.guide-category {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tool-card:hover .tool-badge,
+.guide-card:hover .guide-category {
+  box-shadow: 0 0 20px rgba(0, 200, 150, 0.3);
+}
+
+/* ---- Blog Card Icon 3D ---- */
+.blog-card-icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.blog-card:hover .blog-card-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* ---- Persona Card Icon ---- */
+.persona-icon {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.persona-card:hover .persona-icon {
+  transform: scale(1.12) rotate(-4deg);
+  box-shadow: 0 8px 24px rgba(0, 200, 150, 0.2);
+}
+
+/* ---- Step Card Number ---- */
+.step-num {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover .step-num {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 200, 150, 0.25);
+}
+
+/* ---- Testimonial Stars ---- */
+.testimonial-stars {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-stars {
+  transform: scale(1.05);
+}
+
+/* ---- Responsive: Mobile / Touch Fallback ---- */
+@media (hover: none) {
+  .tool-card:hover,
+  .guide-card:hover,
+  .blog-card:hover,
+  .testimonial-card:hover,
+  .step-card:hover,
+  .persona-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 200, 150, 0.1);
+  }
+
+  .tool-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .tilt-shine,
+  .tool-card::before,
+  .guide-card::before,
+  .blog-card::before,
+  .testimonial-card::before,
+  .step-card::before,
+  .persona-card::before,
+  .tool-item::before,
+  .tool-card::after,
+  .guide-card::after,
+  .blog-card::after,
+  .testimonial-card::after,
+  .step-card::after,
+  .persona-card::after,
+  .tool-item::after,
+  .energy-ring {
+    display: none !important;
+  }
+
+  .tool-card.fade-in.visible,
+  .guide-card.fade-in.visible,
+  .blog-card.fade-in.visible,
+  .testimonial-card.fade-in.visible,
+  .step-card.fade-in.visible,
+  .persona-card.fade-in.visible {
+    animation: none;
+  }
+
+  .section-ambient {
+    display: none;
+  }
+}

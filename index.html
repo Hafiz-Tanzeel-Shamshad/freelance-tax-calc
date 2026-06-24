@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/card-3d-effects.css">
 <script type="application/ld+json">
 [
   {
@@ -285,13 +286,6 @@ ul{list-style:none}
 .site-footer .rss-subscribe-link{display:inline-flex;align-items:center;gap:6px;color:#8892A0;font-size:12px;margin-top:10px;transition:color 0.3s ease}
 .site-footer .rss-subscribe-link:hover{color:#00C896}
 .site-footer .rss-subscribe-link svg{flex-shrink:0}
-
-/* 3D CARD TILT */
-.tilt-container{perspective:1200px}
-.tilt-card{transform-style:preserve-3d;will-change:transform;transition:transform 0.15s ease-out}
-.tilt-card:hover{transform:rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg)) translateZ(6px)}
-.tilt-card .tilt-shine{position:absolute;inset:0;border-radius:14px;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--sx,50%) var(--sy,50%),rgba(0,200,150,0.1),transparent 60%);transition:opacity 0.3s ease;z-index:1}
-.tilt-card:hover .tilt-shine{opacity:1}
 
 /* FLOATING BG ORBS */
 .section-orbs{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
@@ -1073,29 +1067,6 @@ body .site-footer{position:relative;overflow:hidden}
 </script>
 <script>
 (function(){
-  if('ontouchstart' in window) return;
-  var cards = document.querySelectorAll('.tool-card, .guide-card, .testimonial-card, .step-card, .persona-card');
-  cards.forEach(function(c){
-    var shine = document.createElement('div');
-    shine.className = 'tilt-shine';
-    c.appendChild(shine);
-    c.addEventListener('mousemove', function(e){
-      var r = this.getBoundingClientRect();
-      var x = e.clientX - r.left, y = e.clientY - r.top;
-      var cx = r.width / 2, cy = r.height / 2;
-      var tx = ((y - cy) / cy) * -8;
-      var ty = ((x - cx) / cx) * 8;
-      this.style.setProperty('--tx', tx + 'deg');
-      this.style.setProperty('--ty', ty + 'deg');
-      shine.style.setProperty('--sx', (x / r.width * 100) + '%');
-      shine.style.setProperty('--sy', (y / r.height * 100) + '%');
-    });
-    c.addEventListener('mouseleave', function(){
-      this.style.setProperty('--tx', '0deg');
-      this.style.setProperty('--ty', '0deg');
-    });
-  });
-  // Hero calc tilt
   var hc = document.querySelector('.hero-calc');
   if(hc){
     hc.addEventListener('mousemove', function(e){
@@ -1111,6 +1082,7 @@ body .site-footer{position:relative;overflow:hidden}
   }
 })();
 </script>
+<script src="/assets/card-3d-effects.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){

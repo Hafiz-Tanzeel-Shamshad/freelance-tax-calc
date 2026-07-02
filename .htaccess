@@ -14,6 +14,10 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
 
+# --- Redirect /tools/quarterly-tax-calculator to .html file (before trailing-slash rule) ---
+RewriteRule ^tools/quarterly\-tax\-calculator$ /tools/quarterly-tax-calculator.html [R=301,L]
+RewriteRule ^tools/quarterly\-tax\-calculator/$ /tools/quarterly-tax-calculator.html [R=301,L]
+
 # --- Redirect clean URLs to .html (server needs explicit .html extension) ---
 RewriteRule ^tools/quarterly\-tax\-calculator/north\-carolina$ /tools/quarterly-tax-calculator/north-carolina.html [R=301,L]
 RewriteRule ^north\-carolina\.html$ /tools/quarterly-tax-calculator/north-carolina.html [R=301,L]
@@ -129,7 +133,6 @@ RewriteRule ^tools/first\-paycheck\-calculator$ /tools/first-paycheck-calculator
 RewriteRule ^first\-paycheck\-calculator\.html$ /tools/first-paycheck-calculator.html [R=301,L]
 RewriteRule ^tools/side\-hustle\-tax\-estimator$ /tools/side-hustle-tax-estimator.html [R=301,L]
 RewriteRule ^side\-hustle\-tax\-estimator\.html$ /tools/side-hustle-tax-estimator.html [R=301,L]
-RewriteRule ^tools/quarterly\-tax\-calculator$ /tools/quarterly-tax-calculator.html [R=301,L]
 RewriteRule ^quarterly\-tax\-calculator\.html$ /tools/quarterly-tax-calculator.html [R=301,L]
 RewriteRule ^tools/finance\-app\-recommender$ /tools/finance-app-recommender.html [R=301,L]
 RewriteRule ^finance\-app\-recommender\.html$ /tools/finance-app-recommender.html [R=301,L]
@@ -175,7 +178,8 @@ RewriteRule ^legal/about$ /legal/about.html [R=301,L]
 RewriteRule ^about\.html$ /legal/about.html [R=301,L]
 RewriteRule ^legal/terms$ /legal/terms.html [R=301,L]
 RewriteRule ^terms\.html$ /legal/terms.html [R=301,L]
-RewriteRule ^404$ /404.html [R=301,L]
+RewriteRule ^legal/contact\.html$ /contact/ [R=301,L]
+RewriteRule ^404$ /404.html [L]
 
 # --- Custom 404 page ---
 ErrorDocument 404 /404.html
